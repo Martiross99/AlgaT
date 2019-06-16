@@ -87,8 +87,9 @@ public class overViewController {
     }
 
     @FXML
-    void gotoConcept(MouseEvent event) {
-
+    void gotoConcept(MouseEvent event) throws IOException {
+         scenesChanger sc = new scenesChanger();
+         sc.mouseScene(event,"/views/concept.fxml");
     }
 
     @FXML
