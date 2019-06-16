@@ -1,7 +1,7 @@
 package views;
 
 import java.io.IOException;
-
+import javafx.scene.control.Alert;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,9 +13,9 @@ public class scenesChanger {
 	
 	public void changeScene (ActionEvent event,String viewName) throws IOException{
 		   Parent parent = FXMLLoader.load(getClass().getResource(viewName));
-		      Scene overView = new Scene(parent);
+		      Scene scene = new Scene(parent);
 		      Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		       window.setScene(overView);
+		       window.setScene(scene);
 		       window.show();
 	}
 
