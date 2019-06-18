@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="views.ideaController">
+   <children>
+      <VBox layoutX="124.0" layoutY="98.0" prefHeight="208.0" prefWidth="801.0">
+         <children>
+            <Label text="IDEA">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; L'algoritmo di Prim procede mantenendo in A un singolo Albero">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; L'albero parte da un vertice arbitrario ( r ) e cresce fino a ricoprire tutti quanti i vertici">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Ad ogni passo viene aggiunto un arco leggero che collega un vertice in VA (insieme di nodi raggiunti dall'iniseme  di archi in A) con unvertice di V-VA " wrappingWidth="760.95849609375">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <Button fx:id="back" layoutX="36.0" layoutY="35.0" mnemonicParsing="false" onAction="#goBack" text="Back">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="next" layoutX="976.0" layoutY="35.0" mnemonicParsing="false" onAction="#goNext" text="Next">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TilePane layoutX="152.0" layoutY="375.0" prefHeight="247.0" prefWidth="713.0" />
+   </children>
+</AnchorPane>
