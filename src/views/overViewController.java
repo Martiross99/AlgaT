@@ -8,6 +8,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -23,6 +25,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.scenesChanger;
 
 public class overViewController {
 
@@ -36,25 +39,14 @@ public class overViewController {
     private Button back;
     
     @FXML
+    private Button next;
+    
+    @FXML
     private Button alert;
+    
     @FXML
-    private Circle c2;
+    private StackPane sp1,sp2,sp3,sp4,sp5,sp6;
 
-    @FXML
-    private Circle c1;
-
-    @FXML
-    private Circle c5;
-
-    @FXML
-    private Circle c3;
-
-    @FXML
-    private Circle c4;
- 
-
-
-    private Circle cerchio[] = {c1,c2,c3,c4,c5};
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
@@ -63,22 +55,30 @@ public class overViewController {
     }
     
     @FXML
+    void goNext(ActionEvent event) throws IOException {
+    	scenesChanger sc = new scenesChanger();
+    	sc.changeScene(event,"/views/concept.fxml");
+    }
+    
+    @FXML
     void information(ActionEvent event) throws IOException {
          alertWindow aw = new alertWindow();
-         aw.createAlert(AlertType.WARNING,"Per iniziare questa demo devi aver letto i capitoli...");
+         aw.createAlert(AlertType.WARNING,"Per iniziare questa demo devi aver letto i capitoli...", "Nota Bene");
     }
     
 
     @FXML
-    void toFill(MouseEvent event) {
-      Circle x = (Circle) event.getSource();
-      x.setFill(Color.LIGHTCORAL);
+    void toFill(MouseEvent event)  throws IOException {
+    	StackPane x = (StackPane) event.getSource();
+    	Circle c = (Circle) x.getChildren().get(0);
+    	c.setFill(Color.LIGHTCORAL);
     }
 
     @FXML
-    void unfill(MouseEvent event) {
-    	Circle x = (Circle) event.getSource();
-        x.setFill(Color.WHITESMOKE);
+    void unfill(MouseEvent event)  throws IOException{
+    	StackPane x = (StackPane) event.getSource();
+    	Circle c = (Circle) x.getChildren().get(0);
+    	c.setFill(Color.WHITESMOKE);
     }
     
     @FXML
@@ -87,10 +87,17 @@ public class overViewController {
     }
 
     @FXML
-    void gotoConcept(MouseEvent event) throws IOException {
+    void gotoIdea(MouseEvent event) throws IOException {
          scenesChanger sc = new scenesChanger();
-         sc.mouseScene(event,"/views/concept.fxml");
+         sc.mouseScene(event,"/views/idea.fxml");
     }
+    
+    @FXML
+    void gotoCorrect(MouseEvent event) throws IOException {
+    	 scenesChanger sc = new scenesChanger();
+         sc.mouseScene(event,"/views/correttezza.fxml");
+    }
+
 
     @FXML
     void gotoEfficiency(MouseEvent event) {
@@ -109,13 +116,16 @@ public class overViewController {
 
     @FXML
     void initialize() {
-        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'overView.fxml'.";
         assert alert != null : "fx:id=\"alert\" was not injected: check your FXML file 'overView.fxml'.";
-        assert c4 != null : "fx:id=\"c4\" was not injected: check your FXML file 'overView.fxml'.";
-        assert c3 != null : "fx:id=\"c3\" was not injected: check your FXML file 'overView.fxml'.";
-        assert c5 != null : "fx:id=\"c5\" was not injected: check your FXML file 'overView.fxml'.";
-        assert c1 != null : "fx:id=\"c1\" was not injected: check your FXML file 'overView.fxml'.";
-        assert c2 != null : "fx:id=\"c2\" was not injected: check your FXML file 'overView.fxml'.";
+        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'overView.fxml'.";
+        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'overView.fxml'.";
+        assert sp5 != null : "fx:id=\"sp5\" was not injected: check your FXML file 'overView.fxml'.";
+        assert sp1 != null : "fx:id=\"sp1\" was not injected: check your FXML file 'overView.fxml'.";
+        assert sp3 != null : "fx:id=\"sp3\" was not injected: check your FXML file 'overView.fxml'.";
+        assert sp4 != null : "fx:id=\"sp4\" was not injected: check your FXML file 'overView.fxml'.";
+        assert sp2 != null : "fx:id=\"sp2\" was not injected: check your FXML file 'overView.fxml'.";
+        assert sp6 != null : "fx:id=\"sp6\" was not injected: check your FXML file 'overView.fxml'.";
+
     }
     
 }

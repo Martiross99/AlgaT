@@ -13,10 +13,10 @@ import javafx.stage.Modality;
 public class alertWindow {
 
     
-     protected void createAlert(AlertType type, String message) {
+     protected void createAlert(AlertType type, String message,String title) {
         Alert alert = new Alert(type, message);
         alert.initModality(Modality.APPLICATION_MODAL);
-
+        alert.setTitle(title);
 		alert.showAndWait();
 //		  .filter(response -> response == ButtonType.OK)
 //	      .ifPresent(response -> System.out.print("x"));

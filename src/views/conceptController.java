@@ -14,6 +14,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
+import model.scenesChanger;
 
 public class conceptController {
 
@@ -29,16 +30,16 @@ public class conceptController {
     private ChoiceBox<String> cbox ;
 
     @FXML
-    private CheckBox check1;
+    private CheckBox check1,check2,check3,check4;
 
-    @FXML
-    private CheckBox check2;
-
-    @FXML
-    private CheckBox check3;
-
-    @FXML
-    private CheckBox check4;
+//    @FXML
+//    private CheckBox check2;
+//
+//    @FXML
+//    private CheckBox check3;
+//
+//    @FXML
+//    private CheckBox check4;
 
     @FXML
     private Button done;
@@ -63,26 +64,23 @@ public class conceptController {
     }
 
     @FXML
-    void goOn(ActionEvent event) {
-        
+    void goOn(ActionEvent event) throws IOException {
+        scenesChanger sc = new scenesChanger();
+        sc.changeScene(event, "/views/defProblem.fxml");
     }
     
-    @FXML
-    void toChoose(MouseEvent event) {
-//    	cbox.setItems(definizioni);
-    }
 
     @FXML
     void tocheck(ActionEvent event) throws IOException {
         String s = cbox.getValue();
         alertWindow info = new alertWindow();
 		if(s == definizioni.get(1))
-             info.createAlert(AlertType.INFORMATION, "x");
+             info.createAlert(AlertType.INFORMATION, "x","Definizione Albero di copetura");
         else if (s==definizioni.get(2))
-        	 info.createAlert(AlertType.INFORMATION, "y");
+        	 info.createAlert(AlertType.INFORMATION, "y", "Definizione Albero di copertura minimo");
         else if (s==definizioni.get(3))
-        	 info.createAlert(AlertType.INFORMATION, "z");
-        else  info.createAlert(AlertType.INFORMATION, "w");
+        	 info.createAlert(AlertType.INFORMATION, "z", "Definizione Pesi");
+        else  info.createAlert(AlertType.INFORMATION, "w", "Definzione Grafo non orientato e connesso");
     }
 
     @FXML

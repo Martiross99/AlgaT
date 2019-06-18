@@ -1,4 +1,4 @@
-package views;
+package model;
 
 import java.io.IOException;
 import javafx.scene.control.Alert;
