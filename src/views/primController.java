@@ -11,10 +11,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import model.sceneController;
+import model.sceneLoader;
 import model.scenesChanger;
+import progetto.greedy.Main;
 
-public class primController {
 
+public class primController implements model.ISceneController {
+
+	sceneController sc;
+	
+	
     @FXML
     private ResourceBundle resources;
 
@@ -34,8 +41,7 @@ public class primController {
 
     @FXML
     void start(ActionEvent event) throws IOException {
-    	scenesChanger sc = new scenesChanger();
-    	sc.changeScene(event,"/views/overView.fxml");
+    	sc.setScene(sceneLoader.overView);
     }
 
     @FXML
@@ -44,4 +50,10 @@ public class primController {
         assert start != null : "fx:id=\"start\" was not injected: check your FXML file 'prim.fxml'.";
 
     }
+
+	@Override
+	public void setSceneParent(sceneController parent) {
+		sc = parent;
+		
+	}
 }

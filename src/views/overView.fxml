@@ -10,13 +10,13 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.overViewController">
    <children>
-      <Button fx:id="next" layoutX="907.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#goNext" text="Next">
+      <Button fx:id="next" layoutX="891.0" layoutY="693.0" mnemonicParsing="false" onAction="#goNext" text="&gt;&gt;">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="alert" layoutX="780.0" layoutY="662.0" mnemonicParsing="false" onAction="#information" text="NB" textAlignment="CENTER" textFill="#dd7017" />
-      <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" text="Back" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <Button fx:id="alert" layoutX="860.0" layoutY="43.0" mnemonicParsing="false" onAction="#information" text="NB" textAlignment="CENTER" textFill="#dd7017" />
+      <Button fx:id="back" layoutX="37.0" layoutY="693.0" mnemonicParsing="false" onAction="#goBack" text="&lt;&lt;" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="693.0">
          <font>
             <Font size="17.0" />
          </font>

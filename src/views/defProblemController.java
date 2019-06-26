@@ -10,10 +10,15 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import model.ISceneController;
+import model.sceneController;
+import model.sceneLoader;
 import model.scenesChanger;
 
-	public class defProblemController {
-
+	public class defProblemController implements ISceneController {
+     
+		sceneController sc;
+		
 	    @FXML
 	    private ResourceBundle resources;
 
@@ -34,14 +39,12 @@ import model.scenesChanger;
 
 	    @FXML
 	    void goBack(ActionEvent event) throws IOException{
-	    	scenesChanger sc = new scenesChanger();
-	    	sc.changeScene(event,"/views/concept.fxml");
+	    	sc.setScene(sceneLoader.concept);
 	    }
 
 	    @FXML
 	    void goNext(ActionEvent event) throws IOException {
-	    	scenesChanger sc = new scenesChanger();
-	    	sc.changeScene(event,"/views/idea.fxml");
+	    	sc.setScene(sceneLoader.idea);
 	    }
 	    
 	    @FXML
@@ -49,6 +52,11 @@ import model.scenesChanger;
 
 	    }
 
+		@Override
+		public void setSceneParent(sceneController sceneParent) {
+			sc = sceneParent;	
+		}
+	    
 	    @FXML
 	    void initialize() {
 	        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'idea.fxml'.";
@@ -56,4 +64,5 @@ import model.scenesChanger;
 	        assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'idea.fxml'.";
                 image.setImage(new Image("file:C:\\Users\\Erika\\Desktop\\programmi-java\\progettoAlgaT\\src\\Image/Minimum_spanning_tree.png"));
 	    }
+
 	}

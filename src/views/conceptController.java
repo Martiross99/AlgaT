@@ -14,10 +14,14 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
+import model.sceneController;
+import model.sceneLoader;
 import model.scenesChanger;
 
-public class conceptController {
+public class conceptController implements model.ISceneController {
 
+	sceneController sc;
+	
 	ObservableList<String> definizioni = FXCollections.observableArrayList("Grafo non orientato e connesso","Albero di copertura", "Albero di copertura minimo", "Pesi");
 	
     @FXML
@@ -26,20 +30,12 @@ public class conceptController {
     @FXML
     private URL location;
 
-    @FXML
+
+	@FXML
     private ChoiceBox<String> cbox ;
 
     @FXML
     private CheckBox check1,check2,check3,check4;
-
-//    @FXML
-//    private CheckBox check2;
-//
-//    @FXML
-//    private CheckBox check3;
-//
-//    @FXML
-//    private CheckBox check4;
 
     @FXML
     private Button done;
@@ -49,11 +45,18 @@ public class conceptController {
 
     @FXML
     private Button back;
+    
+    
+    
+    @Override
+	public void setSceneParent(sceneController parent) {   
+    	sc = parent;
+	}
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-    	scenesChanger sc = new scenesChanger();
-    	sc.changeScene(event,"/views/overView.fxml");
+//    	scenesChanger sc = new scenesChanger();
+//    	sc.changeScene(event,"/views/overView.fxml");
     }
 
     @FXML
@@ -65,9 +68,9 @@ public class conceptController {
 
     @FXML
     void goOn(ActionEvent event) throws IOException {
-        scenesChanger sc = new scenesChanger();
-        sc.changeScene(event, "/views/defProblem.fxml");
+          sc.setScene(sceneLoader.defProblem);
     }
+    
     
 
     @FXML

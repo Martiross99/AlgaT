@@ -6,10 +6,14 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import model.sceneController;
+import model.sceneLoader;
 import model.scenesChanger;
 
-public class ideaController {
+public class ideaController implements model.ISceneController{
 
+	sceneController sc;
+	
     @FXML
     private ResourceBundle resources;
 
@@ -24,16 +28,12 @@ public class ideaController {
 
     @FXML
     void goBack(ActionEvent event) throws IOException{
-    	scenesChanger sc = new scenesChanger();
-    	sc.changeScene(event,"/views/defProblem.fxml");
-
+       sc.setScene(sceneLoader.defProblem);
     }
 
     @FXML
     void goNext(ActionEvent event) throws IOException {
-    	scenesChanger sc = new scenesChanger();
-    	sc.changeScene(event,"/views/correttezza.fxml");
-
+    	sc.setScene(sceneLoader.correttezza);
     }
 
     @FXML
@@ -42,4 +42,9 @@ public class ideaController {
         assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'idea.fxml'.";
 
     }
+
+	@Override
+	public void setSceneParent(sceneController sceneParent) {
+		sc = sceneParent;
+	}
 }

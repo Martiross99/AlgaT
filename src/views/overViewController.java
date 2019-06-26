@@ -25,10 +25,15 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.sceneController;
+import model.sceneLoader;
 import model.scenesChanger;
+import progetto.greedy.Main;
 
-public class overViewController {
+public class overViewController implements model.ISceneController {
 
+	sceneController sc;
+	
     @FXML
     private ResourceBundle resources;
 
@@ -50,14 +55,12 @@ public class overViewController {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-    	scenesChanger sc = new scenesChanger();
-    	sc.changeScene(event,"/views/prim.fxml");
+    	sc.setScene(sceneLoader.prim);
     }
     
     @FXML
     void goNext(ActionEvent event) throws IOException {
-    	scenesChanger sc = new scenesChanger();
-    	sc.changeScene(event,"/views/concept.fxml");
+    	sc.setScene(sceneLoader.concept);
     }
     
     @FXML
@@ -66,6 +69,37 @@ public class overViewController {
          aw.createAlert(AlertType.WARNING,"Per iniziare questa demo devi aver letto i capitoli...", "Nota Bene");
     }
     
+    @FXML
+    void gotoApp(MouseEvent event) {
+    	//sc.setScene(sceneLoader.applicazioni);
+    }
+
+    @FXML
+    void gotoIdea(MouseEvent event) throws IOException {
+        sc.setScene(sceneLoader.idea);
+    }
+    
+    @FXML
+    void gotoCorrect(MouseEvent event) throws IOException {
+    	 sc.setScene(sceneLoader.correttezza);
+    }
+
+
+    @FXML
+    void gotoEfficiency(MouseEvent event) {
+    	//sc.setScene(sceneLoader.efficienza);
+    }
+
+    @FXML
+    void gotoEsercizi(MouseEvent event) {
+    //   sc.setScene(sceneLoader.esercizi);
+    }
+
+    @FXML
+    void gotoImplementation(MouseEvent event) throws IOException {
+    	sc.setScene(sceneLoader.implementation);
+    }
+
 
     @FXML
     void toFill(MouseEvent event)  throws IOException {
@@ -81,39 +115,13 @@ public class overViewController {
     	c.setFill(Color.WHITESMOKE);
     }
     
-    @FXML
-    void gotoApp(MouseEvent event) {
-
-    }
-
-    @FXML
-    void gotoIdea(MouseEvent event) throws IOException {
-         scenesChanger sc = new scenesChanger();
-         sc.mouseScene(event,"/views/idea.fxml");
-    }
     
-    @FXML
-    void gotoCorrect(MouseEvent event) throws IOException {
-    	 scenesChanger sc = new scenesChanger();
-         sc.mouseScene(event,"/views/correttezza.fxml");
-    }
-
-
-    @FXML
-    void gotoEfficiency(MouseEvent event) {
-
-    }
-
-    @FXML
-    void gotoEsercizi(MouseEvent event) {
-
-    }
-
-    @FXML
-    void gotoImplementation(MouseEvent event) {
-
-    }
-
+	@Override
+	public void setSceneParent(sceneController parent) {	 
+		sc = parent;	
+	}
+    
+	
     @FXML
     void initialize() {
         assert alert != null : "fx:id=\"alert\" was not injected: check your FXML file 'overView.fxml'.";

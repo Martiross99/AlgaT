@@ -6,10 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import model.sceneController;
+import model.sceneLoader;
 import model.scenesChanger;
 
-public class correttezzaController {
+public class correttezzaController implements model.ISceneController {
 
+	sceneController sc;
+	
     @FXML
     private ResourceBundle resources;
 
@@ -42,15 +46,19 @@ public class correttezzaController {
 
     @FXML
     void goBack(ActionEvent event) throws IOException{
-    	scenesChanger sc = new scenesChanger();
-    	sc.changeScene(event,"/views/idea.fxml");
+    	sc.setScene(sceneLoader.idea);
     }
 
     @FXML
     void goNext(ActionEvent event) {
-
+    	sc.setScene(sceneLoader.implementation);
     }
 
+    @Override
+	public void setSceneParent(sceneController sceneParent) {
+	     sc = sceneParent;	
+	}
+    
     @FXML
     void initialize() {
         assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'correttezza.fxml'.";
@@ -58,5 +66,7 @@ public class correttezzaController {
         assert definition != null : "fx:id=\"definition\" was not injected: check your FXML file 'correttezza.fxml'.";
         assert corollary != null : "fx:id=\"corollary\" was not injected: check your FXML file 'correttezza.fxml'.";
     }
+
+
 }
 
