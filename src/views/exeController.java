@@ -27,7 +27,8 @@ public class exeController implements ISceneController {
     @FXML
     private StackPane spB,spC,spD,spE,spF,spG,spH;
     
-    StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
+    private StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
+    private Integer index = 0;
 
     @FXML
     private CubicCurve firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut;
@@ -40,10 +41,18 @@ public class exeController implements ISceneController {
     void toFill(MouseEvent event) {
     	
     	StackPane x = (StackPane) event.getSource();
-    	
-    	if(x.equals(nodi[0])) {
-    		Circle c = (Circle) x.getChildren().get(0);
-        	c.setStroke(Color.CORAL);
+    	if(index < nodi.length ) {
+   		 if (x.equals(nodi[index])) {
+   		Circle c = (Circle) x.getChildren().get(0);
+       	c.setStroke(Color.rgb(201, 86, 24));
+       	c.setFill(Color.rgb(231,196,183));
+       	//curve[index].setOpacity(0.0);
+       	if (index < nodi.length-1) {
+       		nodi[index + 1].setDisable(false);
+       		//curve[index+1].setOpacity(1);
+       	}
+       	index = index +1;
+   	     }
     	}
     }
     
@@ -69,7 +78,8 @@ public class exeController implements ISceneController {
          assert fifthCut != null : "fx:id=\"fifthCut\" was not injected: check your FXML file 'esecuzione.fxml'.";
          assert seventhCut != null : "fx:id=\"seventhCut\" was not injected: check your FXML file 'esecuzione.fxml'.";
          assert sixthCut != null : "fx:id=\"sixthCut\" was not injected: check your FXML file 'esecuzione.fxml'.";
-
+        
+         nodi[0] = spC; nodi[1] = spE; nodi[2] = spG; nodi[3] = spF; nodi[4] = spD; nodi[5] = spB; nodi[6] = spH;
      }
 
 }

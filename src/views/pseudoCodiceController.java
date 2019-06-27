@@ -45,7 +45,7 @@ public class pseudoCodiceController implements ISceneController {
         assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'pesudocodice.fxml'.";
         assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'pesudocodice.fxml'.";
         assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'pesudocodice.fxml'.";
-        image.setImage(new Image("/Image/PrimAlg.jpg"));
+        image.setImage(new Image("file:C:\\Users\\Erika\\Desktop\\programmi-java\\progettoAlgaT\\src\\Image/PrimAlg.jpg"));
     }
 
 	@Override

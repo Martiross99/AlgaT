@@ -42,7 +42,7 @@
                         <Line endX="84.0" endY="-85.0" layoutX="302.0" layoutY="143.0" startX="-93.0" startY="87.0" />
                         <StackPane layoutY="99.0">
                            <children>
-                              <Circle fill="#f2f2f2" radius="40.0" stroke="#c95618" strokeType="INSIDE" strokeWidth="2.5" />
+                              <Circle fill="#e7c4b7" radius="40.0" stroke="#c95618" strokeType="INSIDE" strokeWidth="2.5" />
                               <Label text="A">
                                  <font>
                                     <Font name="System Bold" size="24.0" />
