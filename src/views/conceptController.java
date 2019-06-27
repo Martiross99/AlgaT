@@ -55,13 +55,11 @@ public class conceptController implements model.ISceneController {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-//    	scenesChanger sc = new scenesChanger();
-//    	sc.changeScene(event,"/views/overView.fxml");
+       sc.setScene(sceneLoader.overView);
     }
 
     @FXML
     void verify(ActionEvent event) {
-    	//CheckBox[] cb = {check1,check2,check3,check4};
         if(check1.isSelected() && check2.isSelected() && check3.isSelected() && check4.isSelected()) done.setDisable(false);
         if(!check1.isSelected() || !check2.isSelected() || !check3.isSelected() || !check4.isSelected()) done.setDisable(true);
     }

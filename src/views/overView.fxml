@@ -1,65 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.overViewController">
    <children>
-      <Button fx:id="next" layoutX="891.0" layoutY="693.0" mnemonicParsing="false" onAction="#goNext" text="&gt;&gt;">
+      <Button fx:id="next" layoutX="893.0" layoutY="655.0" mnemonicParsing="false" onAction="#goNext" text="&gt;&gt;">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="alert" layoutX="860.0" layoutY="43.0" mnemonicParsing="false" onAction="#information" text="NB" textAlignment="CENTER" textFill="#dd7017" />
-      <Button fx:id="back" layoutX="37.0" layoutY="693.0" mnemonicParsing="false" onAction="#goBack" text="&lt;&lt;" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="693.0">
+      <Button fx:id="back" layoutX="40.0" layoutY="655.0" mnemonicParsing="false" onAction="#goBack" text="&lt;&lt;" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="655.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Group layoutX="72.0" layoutY="145.0">
-         <children>
-            <StackPane fx:id="sp5" layoutX="155.0" layoutY="298.0" onMouseClicked="#gotoApp" onMouseEntered="#toFill" onMouseExited="#unfill">
+      <BorderPane layoutX="102.0" layoutY="44.0" prefHeight="602.0" prefWidth="824.0">
+         <top>
+            <Button fx:id="alert" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#information" text="NOTA BENE" textAlignment="CENTER" textFill="#dd7017" BorderPane.alignment="CENTER_RIGHT">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Button>
+         </top>
+         <center>
+            <Group BorderPane.alignment="CENTER">
                <children>
-                  <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
-                  <Label text="Applicazioni" />
+                  <StackPane fx:id="sp5" layoutX="155.0" layoutY="298.0" onMouseClicked="#gotoApp" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Applicazioni" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp1" layoutX="137.0" onMouseClicked="#gotoIdea" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label prefHeight="24.0" prefWidth="33.0" text="Idea" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp3" layoutX="257.0" layoutY="149.0" onMouseClicked="#gotoImplementation" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label prefHeight="38.0" prefWidth="118.0" text="Implementazione" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp4" layoutX="455.0" layoutY="149.0" onMouseClicked="#gotoEfficiency" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Efficienza" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp2" layoutX="595.0" onMouseClicked="#gotoCorrect" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Correttezza" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp6" layoutX="595.0" layoutY="292.0" onMouseClicked="#gotoEsercizi" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Esercizi" />
+                     </children>
+                  </StackPane>
                </children>
-            </StackPane>
-            <StackPane fx:id="sp1" layoutX="137.0" onMouseClicked="#gotoIdea" onMouseEntered="#toFill" onMouseExited="#unfill">
-               <children>
-                  <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
-                  <Label prefHeight="24.0" prefWidth="33.0" text="Idea" />
-               </children>
-            </StackPane>
-            <StackPane fx:id="sp3" layoutX="580.0" layoutY="114.0" onMouseClicked="#gotoImplementation" onMouseEntered="#toFill" onMouseExited="#unfill">
-               <children>
-                  <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
-                  <Label prefHeight="38.0" prefWidth="118.0" text="Implementazione" />
-               </children>
-            </StackPane>
-            <StackPane fx:id="sp4" layoutX="342.0" layoutY="184.0" onMouseClicked="#gotoEfficiency" onMouseEntered="#toFill" onMouseExited="#unfill">
-               <children>
-                  <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
-                  <Label text="Efficienza" />
-               </children>
-            </StackPane>
-            <StackPane fx:id="sp2" layoutX="397.0" layoutY="14.0" onMouseClicked="#gotoCorrect" onMouseEntered="#toFill" onMouseExited="#unfill">
-               <children>
-                  <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
-                  <Label text="Correttezza" />
-               </children>
-            </StackPane>
-            <StackPane fx:id="sp6" layoutX="595.0" layoutY="292.0" onMouseClicked="#gotoEsercizi" onMouseEntered="#toFill" onMouseExited="#unfill">
-               <children>
-                  <Circle fill="#fbf6f6" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
-                  <Label text="Esercizi" />
-               </children>
-            </StackPane>
-         </children>
-      </Group>
+            </Group>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>

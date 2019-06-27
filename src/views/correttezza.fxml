@@ -11,12 +11,12 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.correttezzaController">
    <children>
-      <Button fx:id="back" layoutX="47.0" layoutY="37.0" mnemonicParsing="false" onAction="#goBack" text="Back">
+      <Button fx:id="back" layoutX="31.0" layoutY="653.0" mnemonicParsing="false" onAction="#goBack" text="&lt;&lt;">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="next" layoutX="973.0" layoutY="37.0" mnemonicParsing="false" onAction="#goNext" text="Next">
+      <Button fx:id="next" layoutX="988.0" layoutY="653.0" mnemonicParsing="false" onAction="#goNext" text="&gt;&gt;">
          <font>
             <Font size="17.0" />
          </font>
@@ -48,16 +48,16 @@
                   </Text>
                </children>
             </VBox>
-            <VBox prefHeight="92.0" prefWidth="164.0">
+            <VBox prefHeight="78.0" prefWidth="157.0">
                <children>
-                  <Button fx:id="definition" mnemonicParsing="false" onAction="#checkDefinition" text="Definizione">
-                     <VBox.margin>
-                        <Insets left="20.0" top="50.0" />
-                     </VBox.margin>
-                  </Button>
                   <Button fx:id="corollary" mnemonicParsing="false" onAction="#checkCorollary" text="Corollario">
                      <VBox.margin>
-                        <Insets left="20.0" top="30.0" />
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="definition" mnemonicParsing="false" onAction="#checkDefinition" text="Definizione">
+                     <VBox.margin>
+                        <Insets top="35.0" />
                      </VBox.margin>
                   </Button>
                </children>
