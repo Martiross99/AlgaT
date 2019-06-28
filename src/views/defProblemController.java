@@ -59,10 +59,11 @@ import model.scenesChanger;
 	    
 	    @FXML
 	    void initialize() {
-	        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'idea.fxml'.";
-	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'idea.fxml'.";
-	        assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'idea.fxml'.";
-                image.setImage(new Image("file:C:\\Users\\Erika\\Desktop\\programmi-java\\progettoAlgaT\\src\\Image/Minimum_spanning_tree.png"));
+	    	 assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'defProblem.fxml'.";
+	         assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'defProblem.fxml'.";
+	         assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'defProblem.fxml'.";
+	         assert kruskal != null : "fx:id=\"kruskal\" was not injected: check your FXML file 'defProblem.fxml'.";
+                image.setImage(new Image("/Image/Minimum_spanning_tree.png"));
 	    }
 
 	}

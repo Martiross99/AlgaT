@@ -55,7 +55,7 @@ public class conceptController implements model.ISceneController {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-       sc.setScene(sceneLoader.overView);
+       sc.goBack();
     }
 
     @FXML
@@ -66,7 +66,7 @@ public class conceptController implements model.ISceneController {
 
     @FXML
     void goOn(ActionEvent event) throws IOException {
-          sc.setScene(sceneLoader.defProblem);
+          sc.goNext();
     }
     
     

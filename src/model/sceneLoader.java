@@ -42,7 +42,7 @@ public class sceneLoader extends Application{
 		 main.loadScene(pseudoCodice, codiceScene);
 		 main.loadScene(esecuzione, exeScene);
 		 
-		 main.setScene(sceneLoader.prim);
+		 main.setScene(sceneLoader.concept);
 	        
 	        Group root = new Group();
 	        root.getChildren().add(main);

@@ -67,8 +67,25 @@ public class sceneController extends StackPane{
     }
    }
    
-    
-    public void goBack(final Integer n) {
-    	
+    public void goBack() {
+       	try {
+      		 Node actualScene =  getChildren().get(0);
+      		 Integer x = (getIndex(actualScene));
+      		 setScene(x - 1);
+      	} catch (Exception e) {
+              System.out.println(e.getMessage());             
+          }
     }
+    
+    public void goNext() {
+    	try {
+   		 Node n =  getChildren().get(0);
+   		 Integer x = (getIndex(n));
+   		 setScene(x + 1);
+   	} catch (Exception e) {
+           System.out.println(e.getMessage());
+          
+       }
+    }
+    
 }
