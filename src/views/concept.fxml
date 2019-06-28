@@ -48,7 +48,7 @@
             </CheckBox>
          </children>
       </VBox>
-      <Button fx:id="done" defaultButton="true" disable="true" layoutX="480.0" layoutY="605.0" mnemonicParsing="false" onAction="#goOn" text="FATTO">
+      <Button fx:id="next" defaultButton="true" disable="true" layoutX="480.0" layoutY="605.0" mnemonicParsing="false" onAction="#goNext" text="FATTO">
          <font>
             <Font size="19.0" />
          </font>

@@ -2,7 +2,10 @@ package views;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -16,19 +19,21 @@ public class exeController implements ISceneController {
 
 	sceneController sc;
 	
-	
-    @FXML
-    private ResourceBundle resources;
 
     @FXML
-    private URL location;
-
+    private Button back, next;
 
     @FXML
     private StackPane spB,spC,spD,spE,spF,spG,spH;
     
     private StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
     private Integer index = 0;
+    
+    @FXML
+    private Line firstLine,secondLine,thirdLine,fourthLine,fifthLine,sixthLine,seventhLine,eigthLine,ninthLine,tenthLine,eleventhLine,twelfthLine;
+    private Integer iLine = 0;
+    private Integer iHatch = 2;
+
 
     @FXML
     private CubicCurve firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut;
@@ -39,21 +44,46 @@ public class exeController implements ISceneController {
 
     @FXML
     void toFill(MouseEvent event) {
+    	StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
+    	CubicCurve curve[] = {firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut};
+    	Line[] linee = {firstLine,secondLine,thirdLine,fourthLine,fifthLine,sixthLine,eleventhLine,tenthLine,seventhLine,twelfthLine,eigthLine,ninthLine};
     	
     	StackPane x = (StackPane) event.getSource();
+    	      
     	if(index < nodi.length ) {
-   		 if (x.equals(nodi[index])) {
-   		Circle c = (Circle) x.getChildren().get(0);
-       	c.setStroke(Color.rgb(201, 86, 24));
-       	c.setFill(Color.rgb(231,196,183));
-       	//curve[index].setOpacity(0.0);
-       	if (index < nodi.length-1) {
-       		nodi[index + 1].setDisable(false);
-       		//curve[index+1].setOpacity(1);
-       	}
-       	index = index +1;
-   	     }
+   		         if (x.equals(nodi[index])) {
+   		        	 
+   		            Circle c = (Circle) x.getChildren().get(0);
+                	c.setStroke(Color.rgb(201, 86, 24));
+       	            c.setFill(Color.rgb(231,196,183));
+                   	curve[index].setOpacity(0.0);
+                   	linee[iLine].setStroke(Color.STEELBLUE);
+                   	linee[iLine].setStrokeWidth(4);
+                   	if(iLine == iHatch) {
+                   		linee[iLine+5].getStrokeDashArray().addAll(20d,15d);
+                   		if(iLine == 4) linee[11].getStrokeDashArray().addAll(25d,10d);
+                   		iHatch = iHatch +1;
+                   	}
+                   
+                  	if (index < nodi.length-1) {
+       	            	nodi[index + 1].setDisable(false);
+       		            curve[index+1].setOpacity(1);
+       	            	
+                 	}
+                 	index = index + 1;
+                 	iLine = iLine + 1;
+   	            }
     	}
+    }
+
+    @FXML
+    void goBack(ActionEvent event) {
+       sc.goBack();
+    }
+
+    @FXML
+    void goNext(ActionEvent event) {
+      sc.goNext();
     }
     
 	@Override
@@ -63,6 +93,20 @@ public class exeController implements ISceneController {
 
     @FXML
     void initialize() {
+    	
+    	assert thirdLine != null : "fx:id=\"thirdLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert sixthLine != null : "fx:id=\"sixthLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert secondLine != null : "fx:id=\"secondLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert fifthLine != null : "fx:id=\"fifthLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert firstLine != null : "fx:id=\"firstLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert eigthLine != null : "fx:id=\"eigthLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert twelfthLine != null : "fx:id=\"twelfthLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert eleventhLine != null : "fx:id=\"eleventhLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert tenthLine != null : "fx:id=\"tenthLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert seventhLine != null : "fx:id=\"seventhLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert fourthLine != null : "fx:id=\"fourthLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+        assert ninthLine != null : "fx:id=\"ninthLine\" was not injected: check your FXML file 'esecuzione.fxml'.";
+
     	 assert spE != null : "fx:id=\"spE\" was not injected: check your FXML file 'esecuzione.fxml'.";
          assert spD != null : "fx:id=\"spD\" was not injected: check your FXML file 'esecuzione.fxml'.";
          assert spB != null : "fx:id=\"spB\" was not injected: check your FXML file 'esecuzione.fxml'.";

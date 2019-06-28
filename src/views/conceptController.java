@@ -25,6 +25,14 @@ public class conceptController implements model.ISceneController {
 	
 	ObservableList<String> definizioni = FXCollections.observableArrayList("Grafo non orientato e connesso","Albero di copertura", "Albero di copertura minimo", "Pesi");
 	
+    @FXML
+    private Button back, next, controlla;
+    
+    @FXML
+    private ImageView image;
+
+    @FXML
+    private Label kruskal;
 
 
 	@FXML
@@ -33,43 +41,14 @@ public class conceptController implements model.ISceneController {
     @FXML
     private CheckBox check1,check2,check3,check4;
 
-    @FXML
-    private Button done;
     
-    @FXML
-    private Button controlla;
-
-    @FXML
-    private Button back;
+//FUNZIONI CHE GESTISCNO L'FXML CONCEPT
     
-
-    @FXML
-    private Button next;
-    
-    
-    @FXML
-    void goBack(ActionEvent event) throws IOException {
-       sc.goBack();
-    }
-    
-
-
     @FXML
     void verify(ActionEvent event) {
-        if(check1.isSelected() && check2.isSelected() && check3.isSelected() && check4.isSelected()) done.setDisable(false);
-        if(!check1.isSelected() || !check2.isSelected() || !check3.isSelected() || !check4.isSelected()) done.setDisable(true);
+        if(check1.isSelected() && check2.isSelected() && check3.isSelected() && check4.isSelected()) next.setDisable(false);
+        if(!check1.isSelected() || !check2.isSelected() || !check3.isSelected() || !check4.isSelected()) next.setDisable(true);
     }
-
-    @FXML
-    void goOn(ActionEvent event) throws IOException {
-          sc.goNext();
-    }
-    
-    @Override
-	public void setSceneParent(sceneController parent) {   
-    	sc = parent;
-	}
-    
 
     @FXML
     void tocheck(ActionEvent event) throws IOException {
@@ -84,17 +63,46 @@ public class conceptController implements model.ISceneController {
         else  info.createAlert(AlertType.INFORMATION, "w", "Definzione Grafo non orientato e connesso");
     }
 
+  //FUNZIONI CHE GESTISCONO L'FXML DEFPROBLEM
+    
+    @FXML
+    void gotoKruskal(MouseEvent event) {
+
+    }
+    
+    @FXML
+    void goBack(ActionEvent event) throws IOException {
+       sc.goBack();
+    }
+    
+    @FXML
+    void goNext(ActionEvent event) throws IOException {
+          sc.goNext();
+    }
+    
+    
+    @Override
+	public void setSceneParent(sceneController parent) {   
+    	sc = parent;
+	}
+    
+    
     @FXML
     void initialize() {
+    	
+    	  assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'defProblem.fxml'.";
+	      assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'defProblem.fxml'.";
+	      
     	  assert cbox != null : "fx:id=\"cbox\" was not injected: check your FXML file 'concept.fxml'.";
           assert check1 != null : "fx:id=\"check1\" was not injected: check your FXML file 'concept.fxml'.";
           assert check3 != null : "fx:id=\"check3\" was not injected: check your FXML file 'concept.fxml'.";
           assert check2 != null : "fx:id=\"check2\" was not injected: check your FXML file 'concept.fxml'.";
           assert check4 != null : "fx:id=\"check4\" was not injected: check your FXML file 'concept.fxml'.";
-          assert done != null : "fx:id=\"done\" was not injected: check your FXML file 'concept.fxml'.";
-          assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'concept.fxml'.";
           assert controlla != null : "fx:id=\"controlla\" was not injected: check your FXML file 'concept.fxml'.";
-           cbox.setValue("Pesi");
-           cbox.setItems(definizioni);
+          if(cbox != null) { cbox.setValue("Pesi"); cbox.setItems(definizioni); }
+          
+	      assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'defProblem.fxml'.";
+	      assert kruskal != null : "fx:id=\"kruskal\" was not injected: check your FXML file 'defProblem.fxml'.";
+           if(image!=null)   image.setImage(new Image("/Image/Minimum_spanning_tree.png"));
     }
 }
