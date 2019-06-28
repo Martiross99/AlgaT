@@ -1,22 +1,23 @@
 package views;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import model.sceneController;
 import model.sceneLoader;
-import model.scenesChanger;
+
 
 public class conceptController implements model.ISceneController {
 
@@ -24,11 +25,6 @@ public class conceptController implements model.ISceneController {
 	
 	ObservableList<String> definizioni = FXCollections.observableArrayList("Grafo non orientato e connesso","Albero di copertura", "Albero di copertura minimo", "Pesi");
 	
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
 
 	@FXML
@@ -46,17 +42,17 @@ public class conceptController implements model.ISceneController {
     @FXML
     private Button back;
     
-    
-    
-    @Override
-	public void setSceneParent(sceneController parent) {   
-    	sc = parent;
-	}
 
+    @FXML
+    private Button next;
+    
+    
     @FXML
     void goBack(ActionEvent event) throws IOException {
        sc.goBack();
     }
+    
+
 
     @FXML
     void verify(ActionEvent event) {
@@ -69,6 +65,10 @@ public class conceptController implements model.ISceneController {
           sc.goNext();
     }
     
+    @Override
+	public void setSceneParent(sceneController parent) {   
+    	sc = parent;
+	}
     
 
     @FXML
@@ -86,15 +86,15 @@ public class conceptController implements model.ISceneController {
 
     @FXML
     void initialize() {
-        assert check1 != null : "fx:id=\"check1\" was not injected: check your FXML file 'concept.fxml'.";
-        assert check2 != null : "fx:id=\"check2\" was not injected: check your FXML file 'concept.fxml'.";
-        assert check3 != null : "fx:id=\"check3\" was not injected: check your FXML file 'concept.fxml'.";
-        assert check4 != null : "fx:id=\"check4\" was not injected: check your FXML file 'concept.fxml'.";
-        assert done != null : "fx:id=\"done\" was not injected: check your FXML file 'concept.fxml'.";
-        assert cbox != null : "fx:id=\"cbox\" was not injected: check your FXML file 'concept.fxml'.";
-        cbox.setValue("Pesi");
-        cbox.setItems(definizioni);
-        assert controlla != null : "fx:id=\"controlla\" was not injected: check your FXML file 'concept.fxml'.";
-        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'concept.fxml'.";
+    	  assert cbox != null : "fx:id=\"cbox\" was not injected: check your FXML file 'concept.fxml'.";
+          assert check1 != null : "fx:id=\"check1\" was not injected: check your FXML file 'concept.fxml'.";
+          assert check3 != null : "fx:id=\"check3\" was not injected: check your FXML file 'concept.fxml'.";
+          assert check2 != null : "fx:id=\"check2\" was not injected: check your FXML file 'concept.fxml'.";
+          assert check4 != null : "fx:id=\"check4\" was not injected: check your FXML file 'concept.fxml'.";
+          assert done != null : "fx:id=\"done\" was not injected: check your FXML file 'concept.fxml'.";
+          assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'concept.fxml'.";
+          assert controlla != null : "fx:id=\"controlla\" was not injected: check your FXML file 'concept.fxml'.";
+           cbox.setValue("Pesi");
+           cbox.setItems(definizioni);
     }
 }

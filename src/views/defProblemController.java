@@ -18,18 +18,10 @@ import model.scenesChanger;
 	public class defProblemController implements ISceneController {
      
 		sceneController sc;
-		
-	    @FXML
-	    private ResourceBundle resources;
+
 
 	    @FXML
-	    private URL location;
-
-	    @FXML
-	    private Button back;
-
-	    @FXML
-	    private Button next;
+	    private Button back, next;
 	    
 	    @FXML
 	    private ImageView image;
@@ -39,12 +31,12 @@ import model.scenesChanger;
 
 	    @FXML
 	    void goBack(ActionEvent event) throws IOException{
-	    	sc.setScene(sceneLoader.concept);
+	    	sc.goBack();
 	    }
 
 	    @FXML
 	    void goNext(ActionEvent event) throws IOException {
-	    	sc.setScene(sceneLoader.idea);
+	    	sc.goNext();
 	    }
 	    
 	    @FXML
