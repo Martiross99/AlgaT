@@ -30,7 +30,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Per il corollario, gli archi leggeri che attraversano il taglio sono sicuri">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Per il corollario, gli archi leggeri che attraversano il taglio sono sicuri">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -38,7 +38,7 @@
                         <Insets top="30.0" />
                      </VBox.margin>
                   </Text>
-                  <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; V-VA è un taglio che rispetta A (per definizione)">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; V-VA è un taglio che rispetta A (per definizione)">
                      <font>
                         <Font size="17.0" />
                      </font>
