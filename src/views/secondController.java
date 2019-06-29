@@ -1,6 +1,7 @@
 package views;
 
 import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,7 +17,10 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import model.sceneController;
 
-public class ideaController implements model.ISceneController{
+
+//classe per la gestione dei seguenti file : idea.fxml, correttezza.fxml, implementation.fxml
+
+public class secondController implements model.ISceneController{
 
 	sceneController sc;
 
@@ -31,8 +35,9 @@ public class ideaController implements model.ISceneController{
     @FXML
     private Button definition, corollary; //fxml correttezza
     
+    
     @FXML
-    private ImageView image;    //fxml pseudocodice
+    private ImageView immagine;    //fxml pseudocode
 
 
     
@@ -85,6 +90,8 @@ public class ideaController implements model.ISceneController{
     	c.setStroke(Color.CORAL);
     }
     
+ 
+ //funzioni che gestiscono il cambio delle scene   
     
     @FXML
     void goBack(ActionEvent event) throws IOException{
@@ -95,6 +102,11 @@ public class ideaController implements model.ISceneController{
     void goNext(ActionEvent event) throws IOException {
     	sc.goNext();
     }
+    
+	@Override
+	public void setSceneParent(sceneController sceneParent) {
+		sc = sceneParent;
+	}
 
     @FXML
     void initialize() {
@@ -109,18 +121,11 @@ public class ideaController implements model.ISceneController{
         assert c1 != null : "fx:id=\"c1\" was not injected: check your FXML file 'implementation.fxml'.";
         assert c2 != null : "fx:id=\"c2\" was not injected: check your FXML file 'implementation.fxml'.";   
         assert answer != null : "fx:id=\"answer\" was not injected: check your FXML file 'implementation.fxml'.";
-        
-        assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'pesudocodice.fxml'.";
-        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'pesudocodice.fxml'.";
-        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'pesudocodice.fxml'.";
-        if(image != null) {
-        	 image.setImage(new Image("/Image/PrimAlg.jpg"));
-        }       
+     
+
+       assert immagine != null : "fx:id=\"immagine\" was not injected: check your FXML file 'pseudocodice.fxml'.";
+        if(immagine!=null) immagine.setImage(new Image("/Image/Immagine.png"));
        
     }
 
-	@Override
-	public void setSceneParent(sceneController sceneParent) {
-		sc = sceneParent;
-	}
 }
