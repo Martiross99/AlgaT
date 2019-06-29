@@ -124,7 +124,7 @@ public class secondController implements model.ISceneController{
      
 
        assert immagine != null : "fx:id=\"immagine\" was not injected: check your FXML file 'pseudocodice.fxml'.";
-        if(immagine!=null) immagine.setImage(new Image("/Image/Immagine.png"));
+        if(immagine!=null) immagine.setImage(new Image("/Image/prim.jpg"));
        
     }
 

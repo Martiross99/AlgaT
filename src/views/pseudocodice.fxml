@@ -9,32 +9,30 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.secondController">
    <children>
       <HBox layoutY="158.0" prefHeight="374.0" prefWidth="1080.0">
          <children>
-            <TextFlow prefHeight="631.0" prefWidth="526.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tutti i nodi vengono inseriti nella coda con priorità + , tranne il nodo radice che ha priorità 0. &#10;La priorità del nodo u corrisponde al peso minimo di un arco che raggiunge u a partire da un arco&#10;compreso in A, mentre pos[u] è la posizione che u occupa nello heap. Quando un nodo viene estratto &#10;dalla cosa, [p[u], u] rappresenta l'arco con peso minore fra quelli che escono dall'albero.  Ogni volta che si trova un arco di costo inferiori che colleghi un nodo non ancora inserito in A, la priorità viene aggiornata così come il vettore dei padri." wrappingWidth="528.3599243164062">
-                     <font>
-                        <Font name="Calibri Light Italic" size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </TextFlow>
-            <ImageView fx:id="immagine" fitHeight="460.0" fitWidth="455.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="immagine" fitHeight="401.0" fitWidth="548.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Image/Immagine.png" />
+                  <Image url="@../Image/prim.jpg" />
                </image>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
             </ImageView>
+            <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutti i nodi vengono inseriti nella coda con priorità +∞, tranne il nodo radice che ha priorità 0.  La priorità del nodo u corrisponde al peso minimo di un arco che raggiunge u a partire da un arco compreso in A, mentre pos[u] è la posizione che u occupa nello heap. Quando un nodo viene estratto dalla cosa, [p[u], u] rappresenta l'arco con peso minore fra quelli che escono dall'albero.  &#10;Ogni volta che si trova un arco di costo inferiori che colleghi un nodo non ancora inserito in A, la priorità viene aggiornata così come il vettore dei padri.&#10;" wrappingWidth="427.623046875">
+               <HBox.margin>
+                  <Insets left="30.0" right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
          </children>
       </HBox>
-      <Label layoutX="45.0" layoutY="110.0" prefHeight="21.0" prefWidth="163.0" text="PSEUDOCODICE">
+      <Label layoutX="45.0" layoutY="110.0" prefHeight="21.0" prefWidth="163.0" text="PSEUDOCODICE" textFill="#f27e7e">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
