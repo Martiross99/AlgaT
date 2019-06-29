@@ -4,17 +4,20 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.conceptController">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.firstController">
    <children>
-      <VBox layoutX="139.0" layoutY="173.0" prefHeight="330.0" prefWidth="341.0">
+      <VBox layoutX="137.0" layoutY="183.0" prefHeight="396.0" prefWidth="353.0">
          <children>
-            <ChoiceBox fx:id="cbox" prefHeight="31.0" prefWidth="308.0" />
-            <CheckBox fx:id="check1" mnemonicParsing="false" onAction="#verify" prefHeight="26.0" prefWidth="378.0" text="Grafo non orientato e connesso">
+            <ChoiceBox fx:id="cbox" prefHeight="31.0" prefWidth="308.0">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></ChoiceBox>
+            <CheckBox fx:id="check1" mnemonicParsing="false" onAction="#verify" prefHeight="26.0" prefWidth="378.0" text="Grafo non orientato e connesso" textFill="#f27e7e">
                <font>
                   <Font size="17.0" />
                </font>
@@ -22,7 +25,7 @@
                   <Insets top="45.0" />
                </VBox.margin>
             </CheckBox>
-            <CheckBox fx:id="check3" mnemonicParsing="false" onAction="#verify" text="Pesi">
+            <CheckBox fx:id="check3" mnemonicParsing="false" onAction="#verify" text="Pesi" textFill="#f27e7e">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>
@@ -30,7 +33,7 @@
                   <Font size="17.0" />
                </font>
             </CheckBox>
-            <CheckBox fx:id="check2" mnemonicParsing="false" onAction="#verify" prefHeight="21.0" prefWidth="232.0" text="Albero di copertura ">
+            <CheckBox fx:id="check2" mnemonicParsing="false" onAction="#verify" prefHeight="21.0" prefWidth="232.0" text="Albero di copertura " textFill="#f27e7e">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>
@@ -38,7 +41,7 @@
                   <Font size="17.0" />
                </font>
             </CheckBox>
-            <CheckBox fx:id="check4" mnemonicParsing="false" onAction="#verify" text="Albero di copertura di peso minimo">
+            <CheckBox fx:id="check4" mnemonicParsing="false" onAction="#verify" text="Albero di copertura di peso minimo" textFill="#f27e7e">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>
@@ -48,26 +51,25 @@
             </CheckBox>
          </children>
       </VBox>
-      <Button fx:id="next" defaultButton="true" disable="true" layoutX="480.0" layoutY="605.0" mnemonicParsing="false" onAction="#goNext" text="FATTO">
+      <Button fx:id="next" defaultButton="true" disable="true" layoutX="480.0" layoutY="605.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="FATTO">
          <font>
-            <Font size="19.0" />
+            <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="back" layoutX="34.0" layoutY="682.0" mnemonicParsing="false" onAction="#goBack" text="&lt;&lt;">
+      <Button fx:id="back" layoutX="34.0" layoutY="682.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="controlla" layoutX="480.0" layoutY="173.0" mnemonicParsing="false" onAction="#tocheck" text="Controlla" />
-      <VBox layoutX="82.0" layoutY="71.0" prefHeight="68.0" prefWidth="652.0">
-         <children>
-            <Label prefHeight="31.0" prefWidth="399.0" text="Definizioni base necessarie alla comprensione: " wrapText="true">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label text="(spunta quelle che già conosci o controllane il significato e vai avanti)" />
-         </children>
-      </VBox>
+      <Button fx:id="controlla" layoutX="480.0" layoutY="214.0" mnemonicParsing="false" onAction="#tocheck" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="CONTROLLA">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Text fill="#f27e7e" layoutX="120.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definizioni base necessarie alla comprensione: &#10;(spunta quelle che già conosci o controllane il significato e vai avanti)&#10;" wrappingWidth="592.92138671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

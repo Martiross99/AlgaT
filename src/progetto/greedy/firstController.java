@@ -54,6 +54,6 @@ public class firstController {
         for (Node p: pages.getChildren()) {
             p.setVisible(false);
         }
-        pages.getChildren().get().setVisible(true);
+    //    pages.getChildren().get().setVisible(true);
     }
 }

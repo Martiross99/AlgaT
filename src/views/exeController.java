@@ -15,6 +15,9 @@ import javafx.scene.shape.Line;
 import model.ISceneController;
 import model.sceneController;
 
+
+//gestisce il file esecuzione.fxml
+
 public class exeController implements ISceneController {
 
 	sceneController sc;
@@ -55,9 +58,9 @@ public class exeController implements ISceneController {
    		        	 
    		            Circle c = (Circle) x.getChildren().get(0);
                 	c.setStroke(Color.rgb(201, 86, 24));
-       	            c.setFill(Color.rgb(231,196,183));
+       	            c.setFill(Color.rgb(195,151,135));
                    	curve[index].setOpacity(0.0);
-                   	linee[iLine].setStroke(Color.STEELBLUE);
+                   	linee[iLine].setStroke(Color.rgb(201, 86, 24));
                    	linee[iLine].setStrokeWidth(4);
                    	if(iLine == iHatch) {
                    		linee[iLine+5].getStrokeDashArray().addAll(20d,15d);
