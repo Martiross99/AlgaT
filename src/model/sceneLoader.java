@@ -1,6 +1,10 @@
 package model;
 
 import javafx.application.Application;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -27,6 +31,10 @@ public class sceneLoader extends Application{
 	 public static String exeScene = "/views/esecuzione.fxml";
 	 public static Integer efficienza = 10;
 	 public static String efficiencyScene = "/views/efficienza.fxml";
+	 public static Integer esercizi = 11;
+	 public static String eserciziScene = "/views/esercizi.fxml";
+	 public static Integer esercizi2 = 12;
+	 public static String esercizi2Scene = "/views/esercizi2.fxml";
 	 
      public Stage stage;
      
@@ -44,15 +52,22 @@ public class sceneLoader extends Application{
 		 main.loadScene(pseudoCodice, codiceScene);
 		 main.loadScene(esecuzione, exeScene);
 		 main.loadScene(efficienza, efficiencyScene);
+		 main.loadScene(esercizi, eserciziScene);
+		 main.loadScene(esercizi2, esercizi2Scene);
 		 
-		 main.setScene(sceneLoader.prim);
+		 main.setScene(sceneLoader.esercizi2);
 	        
 	        Group root = new Group();
 	        root.getChildren().add(main);
+	        
+//	        DoubleProperty size = new SimpleDoubleProperty(primaryStage.getHeight());
+//	        DoubleProperty x = new SimpleDoubleProperty();
+//	        x.bind(size);
+//	        
 	        Scene scene = new Scene(root,1080,720);
-	     
 	        
 	        primaryStage.setScene(scene);
+	        
 	       // primaryStage.setResizable(false);
 	        primaryStage.show();
 	}

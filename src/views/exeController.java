@@ -125,8 +125,7 @@ public class exeController implements ISceneController {
          assert fifthCut != null : "fx:id=\"fifthCut\" was not injected: check your FXML file 'esecuzione.fxml'.";
          assert seventhCut != null : "fx:id=\"seventhCut\" was not injected: check your FXML file 'esecuzione.fxml'.";
          assert sixthCut != null : "fx:id=\"sixthCut\" was not injected: check your FXML file 'esecuzione.fxml'.";
-        
-         nodi[0] = spC; nodi[1] = spE; nodi[2] = spG; nodi[3] = spF; nodi[4] = spD; nodi[5] = spB; nodi[6] = spH;
+    
      }
 
 }

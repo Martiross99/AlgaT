@@ -22,7 +22,7 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <BorderPane layoutX="102.0" layoutY="44.0" prefHeight="602.0" prefWidth="824.0">
+      <BorderPane layoutX="105.0" layoutY="59.0" prefHeight="602.0" prefWidth="824.0">
          <top>
             <Button fx:id="alert" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#information" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="NOTA BENE" textAlignment="CENTER" textFill="#dd7017" BorderPane.alignment="CENTER_RIGHT">
                <BorderPane.margin>

@@ -54,7 +54,7 @@ public class sceneController extends StackPane{
         if (!getChildren().isEmpty()) {    //if there is more than one sceen
   
                     getChildren().remove(0);                    //remove the displayed sceen
-                    getChildren().add(0,map.get(n));     //add the sceen
+                    getChildren().add(0,map.get(n));     //add the sceen       
             }
 
         else {

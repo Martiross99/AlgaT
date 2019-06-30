@@ -2,6 +2,8 @@ package views;
 
 import java.io.IOException;
 
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +16,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -31,6 +34,9 @@ public class firstController implements model.ISceneController {
 			
 	    @FXML
 	    private Button start, back, next, alert,controlla;
+	    
+	    @FXML
+	    private AnchorPane ap;
 		    
 	    @FXML
 		private StackPane sp1,sp2,sp3,sp4,sp5,sp6;    //stackPanes FXML overView
@@ -80,7 +86,7 @@ public class firstController implements model.ISceneController {
 
 		    @FXML
 		    void gotoEsercizi(MouseEvent event) {
-		    //   sc.setScene(sceneLoader.esercizi);
+		      sc.setScene(sceneLoader.esercizi);
 		    }
 
 		    @FXML
@@ -137,12 +143,24 @@ public class firstController implements model.ISceneController {
 		 
         @FXML
 		 void goBack(ActionEvent event) throws IOException {
-		  sc.goBack();
+		  //sc.goBack();
+        	   if(ap!=null) {
+   		    	 System.out.println(ap.getHeight());
+   		    }
 		  }
 		    
 		@FXML
 		  void goNext(ActionEvent event) throws IOException {
 		    sc.goNext();
+		    
+//		    if(ap!=null) {
+//                DoubleProperty x = new SimpleDoubleProperty(sc.getScene().getHeight());
+//                DoubleProperty y = new SimpleDoubleProperty();
+//                 y.bind(x);
+//                 ap.he;
+//		    	 System.out.println(ap.getHeight());
+//		    }
+		   
 		    }		    
 
 		@Override
@@ -157,6 +175,7 @@ public class firstController implements model.ISceneController {
 	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'overView.fxml'.";
 	        
 	        //FXML prim
+	        assert ap != null : "fx:id=\"ap\" was not injected: check your FXML file 'prim.fxml'.";
 	        assert start != null : "fx:id=\"start\" was not injected: check your FXML file 'prim.fxml'.";
 	        
 	        //FXML overView
