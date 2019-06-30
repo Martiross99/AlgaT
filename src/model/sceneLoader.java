@@ -35,6 +35,9 @@ public class sceneLoader extends Application{
 	 public static String eserciziScene = "/views/esercizi.fxml";
 	 public static Integer esercizi2 = 12;
 	 public static String esercizi2Scene = "/views/esercizi2.fxml";
+	 public static Integer esercizi3 = 13;
+	 public static String esercizi3Scene = "/views/esercizi3.fxml";
+	 
 	 
      public Stage stage;
      
@@ -54,8 +57,9 @@ public class sceneLoader extends Application{
 		 main.loadScene(efficienza, efficiencyScene);
 		 main.loadScene(esercizi, eserciziScene);
 		 main.loadScene(esercizi2, esercizi2Scene);
+		 main.loadScene(esercizi3, esercizi3Scene);
 		 
-		 main.setScene(sceneLoader.esercizi2);
+		 main.setScene(sceneLoader.esercizi3);
 	        
 	        Group root = new Group();
 	        root.getChildren().add(main);
