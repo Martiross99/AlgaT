@@ -39,3 +39,12 @@
     -fx-background-color: #474747;
     -fx-text-fill: #ff7979;
 }
+
+.myDialog1{
+    -fx-background-color: #e7a516;
+     -fx-text-fill: #dac3c3;
+}
+
+.myDialog2{
+    -fx-background-color: #4281e0;
+}

@@ -1,0 +1,2 @@
+Per iniziare questa lezione dei aver letto i capitoli 4.2 e 10 del libro di testo
+Sia G=(V,E) un grafo non orientato e connesso, T=(V,P) e' albero di copertura di G se P e' incluso in E e T contiene tutti i nodi di G.

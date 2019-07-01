@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -100,6 +101,7 @@ public class eserciziController  implements model.ISceneController{
 			if(prova.length()!=0) {
 			try {	
 				Scanner scanner = new Scanner (new File("src/views/risposte.txt"));
+				scanner.skip(Pattern.compile("..57"));
 				boolean found = false;
 				while(scanner.hasNext()) {
 					if(scanner.nextLine().equals(prova)) {
@@ -134,8 +136,19 @@ public class eserciziController  implements model.ISceneController{
 	@FXML
 	  void goNext(ActionEvent event) throws IOException {
 	    sc.goNext();
+	    pulisciSchermata();
       }		    
 
+	public void pulisciSchermata() {
+		 if(sc.getIndex(sc.getChildren().get(0)) == 11  || sc.getIndex(sc.getChildren().get(0)) == 12) { 
+		        risposta.clear();
+	        	tentativo.clear();
+	        	inserisci.setDisable(false);
+	        	riprova.setDisable(true);
+		   }
+		   risposta.clear();
+	}
+	
 	@Override
 	public void setSceneParent(sceneController parent) {
 		sc = parent;	

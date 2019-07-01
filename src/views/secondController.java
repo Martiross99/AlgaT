@@ -44,15 +44,15 @@ public class secondController implements model.ISceneController{
 //FUNZIONI DI GESTIONE DELL'FXML CORRETTEZZA
     
     @FXML
-    void checkCorollary(ActionEvent event) {
+    void checkCorollary(ActionEvent event) throws IOException {
          alertWindow corollario = new alertWindow();
-         corollario.createAlert(AlertType.INFORMATION, "boh", "Definizione di taglio");
+       //  corollario.createAlert(AlertType.INFORMATION, "boh", "Definizione di taglio");
     }
 
     @FXML
-    void checkDefinition(ActionEvent event) {
+    void checkDefinition(ActionEvent event) throws IOException {
     	alertWindow corollario = new alertWindow();
-        corollario.createAlert(AlertType.INFORMATION, "boh", "Corollario");
+     //   corollario.createAlert(AlertType.INFORMATION, "boh", "Corollario");
     }
    
 //FUNZIONI DI GESTIONE DELL'FXML IMPLEMENTAZIONE

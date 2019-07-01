@@ -7,6 +7,8 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class sceneLoader extends Application{
@@ -59,21 +61,20 @@ public class sceneLoader extends Application{
 		 main.loadScene(esercizi2, esercizi2Scene);
 		 main.loadScene(esercizi3, esercizi3Scene);
 		 
-		 main.setScene(sceneLoader.esercizi3);
+		 main.setScene(sceneLoader.overView);
+	     StackPane root = new StackPane();
+	     root.getChildren().add(main);
+	     
 	        
-	        Group root = new Group();
-	        root.getChildren().add(main);
 	        
-//	        DoubleProperty size = new SimpleDoubleProperty(primaryStage.getHeight());
-//	        DoubleProperty x = new SimpleDoubleProperty();
-//	        x.bind(size);
-//	        
-	        Scene scene = new Scene(root,1080,720);
+	     Scene scene = new Scene(root);
+	     primaryStage.setScene(scene);
+	
+//	     primaryStage.setMaximized(true);
 	        
-	        primaryStage.setScene(scene);
 	        
-	       // primaryStage.setResizable(false);
-	        primaryStage.show();
+	   //primaryStage.setResizable(false);
+	     primaryStage.show();
 	}
 	
 

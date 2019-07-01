@@ -1,6 +1,9 @@
 package views;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -58,9 +61,19 @@ public class firstController implements model.ISceneController {
 		
 	//FUNZIONI CHE GESTISCONO L'FXML OVERVIEW
 		    @FXML
-		    void information(ActionEvent event) throws IOException {
+		    void information(ActionEvent event) throws FileNotFoundException {
 		         alertWindow aw = new alertWindow();
-		         aw.createAlert(AlertType.WARNING,"Per iniziare questa demo devi aver letto i capitoli...", "Nota Bene");
+		         String alert = new String();
+//		         String alert = new String();
+//		         try {	
+//		 			Scanner scanner = new Scanner (new File("src/views/avvisi.txt")); 
+//		 			alert = scanner.nextLine();
+//		 			 scanner.close();
+//		 		}    catch(FileNotFoundException ex) {
+//		 	        System.out.println(
+//		 	                "Unable to open file 'avvisi.txt'");                
+//		 	        }
+		         aw.createAlert(AlertType.WARNING,1, "Nota Bene");
 		    }
 		    
 		    @FXML
@@ -69,7 +82,7 @@ public class firstController implements model.ISceneController {
 		    }
 
 		    @FXML
-		    void gotoIdea(MouseEvent event) throws IOException {
+		    void gotoIdea(MouseEvent event) {
 		        sc.setScene(sceneLoader.idea);
 		    }
 		    
@@ -123,12 +136,12 @@ public class firstController implements model.ISceneController {
 		        String s = cbox.getValue();
 		        alertWindow info = new alertWindow();
 				if(s == definizioni.get(1))
-		             info.createAlert(AlertType.INFORMATION, "x","Definizione Albero di copetura");
-		        else if (s==definizioni.get(2))
-		        	 info.createAlert(AlertType.INFORMATION, "y", "Definizione Albero di copertura minimo");
-		        else if (s==definizioni.get(3))
-		        	 info.createAlert(AlertType.INFORMATION, "z", "Definizione Pesi");
-		        else  info.createAlert(AlertType.INFORMATION, "w", "Definzione Grafo non orientato e connesso");
+		             info.createAlert(AlertType.INFORMATION, 2,"Definizione Albero di copetura");
+//		        else if (s==definizioni.get(2))
+//		        	 info.createAlert(AlertType.INFORMATION, "y", "Definizione Albero di copertura minimo");
+//		        else if (s==definizioni.get(3))
+//		        	 info.createAlert(AlertType.INFORMATION, "z", "Definizione Pesi");
+//		        else  info.createAlert(AlertType.INFORMATION, "w", "Definzione Grafo non orientato e connesso");
 		    }	    
 	    
  //FUNZIONI CHE GESTISCONO L'FXML DEFPROBLEM
@@ -143,25 +156,13 @@ public class firstController implements model.ISceneController {
 		 
         @FXML
 		 void goBack(ActionEvent event) throws IOException {
-		  //sc.goBack();
-        	   if(ap!=null) {
-   		    	 System.out.println(ap.getHeight());
-   		    }
+		  sc.goBack();
 		  }
 		    
 		@FXML
 		  void goNext(ActionEvent event) throws IOException {
-		    sc.goNext();
-		    
-//		    if(ap!=null) {
-//                DoubleProperty x = new SimpleDoubleProperty(sc.getScene().getHeight());
-//                DoubleProperty y = new SimpleDoubleProperty();
-//                 y.bind(x);
-//                 ap.he;
-//		    	 System.out.println(ap.getHeight());
-//		    }
-		   
-		    }		    
+		    sc.goNext();   
+		  }		    
 
 		@Override
 		public void setSceneParent(sceneController parent) {
