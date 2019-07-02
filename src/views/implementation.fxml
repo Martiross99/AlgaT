@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.implementController">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.secondController">
    <children>
       <VBox layoutX="122.0" layoutY="117.0" prefHeight="353.0" prefWidth="205.0">
          <children>
-            <Label text="IMPLEMENTAZIONE">
+            <Label text="IMPLEMENTAZIONE" textFill="#bc5e39">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -80,26 +80,26 @@
       </VBox>
       <Group layoutX="698.0" layoutY="173.5">
          <children>
-            <Line endX="-71.0" endY="-18.0" layoutX="140.0" layoutY="93.0" startX="-100.0" />
-            <Text layoutX="-16.0" layoutY="-6.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In questo caso, quale nodo aggiungeresti?" wrappingWidth="298.8515625">
+            <Line endX="-71.0" endY="-18.0" layoutX="140.0" layoutY="93.0" startX="-100.0" stroke="#da5c18" />
+            <Text fill="#e16b0b" layoutX="-16.0" layoutY="-6.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In questo caso, quale nodo aggiungeresti?" wrappingWidth="298.8515625">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Line endX="-100.0" endY="199.0" layoutX="234.0" startX="-100.0" startY="19.5" />
+            <Line endX="-100.0" endY="199.0" layoutX="234.0" startX="-100.0" startY="19.5" stroke="#d2f4fc" />
             <Label layoutX="116.0" layoutY="208.5" text="taglio" />
             <Label fx:id="answer" alignment="CENTER" disable="true" layoutX="71.0" layoutY="230.0" opacity="0.0" prefHeight="43.0" prefWidth="142.0" text="Corretto!" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Line endX="106.0" layoutX="51.0" layoutY="77.0" startX="57.0" />
-            <Line endX="96.0" endY="0.5" layoutX="61.0" layoutY="133.0" startX="47.0" />
-            <Line endX="96.0" endY="-1.5" layoutX="-26.0" layoutY="130.0" startX="60.0" startY="-20.5" />
+            <Line endX="106.0" layoutX="51.0" layoutY="77.0" startX="57.0" stroke="#d2f4fc" />
+            <Line endX="96.0" endY="0.5" layoutX="61.0" layoutY="133.0" startX="47.0" stroke="#d2f4fc" />
+            <Line endX="96.0" endY="-1.5" layoutX="-26.0" layoutY="130.0" startX="60.0" startY="-20.5" stroke="#da5c18" />
             <VBox layoutX="157.0" layoutY="54.5" prefHeight="102.0" prefWidth="46.0">
                <children>
-                  <Circle fx:id="c1" fill="#e7e9eb" onMouseClicked="#getAnswer" onMouseEntered="#toColor" onMouseExited="#toUncolor" radius="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
-                  <Circle fx:id="c2" fill="#e7e9eb" onMouseClicked="#getAnswer" onMouseEntered="#toColor" onMouseExited="#toUncolor" radius="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+                  <Circle fx:id="c1" fill="#a0ccd3" onMouseClicked="#getAnswer" onMouseEntered="#toColor" onMouseExited="#toUncolor" radius="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Circle fx:id="c2" fill="#a0ccd3" onMouseClicked="#getAnswer" onMouseEntered="#toColor" onMouseExited="#toUncolor" radius="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -108,8 +108,8 @@
             </VBox>
             <VBox layoutX="63.0" layoutY="54.5" prefHeight="102.0" prefWidth="46.0">
                <children>
-                  <Circle fill="#e7e9eb" radius="23.0" stroke="#da5c18" strokeType="INSIDE" strokeWidth="2.0" />
-                  <Circle fill="#e7e9eb" radius="23.0" stroke="#da5c18" strokeType="INSIDE" strokeWidth="2.0">
+                  <Circle fill="#a0ccd3" radius="23.0" stroke="#da5c18" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Circle fill="#a0ccd3" radius="23.0" stroke="#da5c18" strokeType="INSIDE" strokeWidth="2.0">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -118,7 +118,7 @@
             </VBox>
             <VBox layoutY="54.5" prefHeight="102.0" prefWidth="35.0">
                <children>
-                  <Circle fill="#e7e9eb" radius="23.0" stroke="#da5c18" strokeType="INSIDE" strokeWidth="2.0">
+                  <Circle fill="#a0ccd3" radius="23.0" stroke="#da5c18" strokeType="INSIDE" strokeWidth="2.0">
                      <VBox.margin>
                         <Insets top="25.0" />
                      </VBox.margin>
@@ -137,12 +137,12 @@
             </Label>
          </children>
       </Group>
-      <Button fx:id="back" layoutX="24.0" layoutY="655.0" mnemonicParsing="false" onAction="#goBack" text="&lt;&lt;">
+      <Button fx:id="back" layoutX="24.0" layoutY="655.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="next" layoutX="993.0" layoutY="655.0" mnemonicParsing="false" onAction="#goNext" text="&gt;&gt;">
+      <Button fx:id="next" layoutX="993.0" layoutY="655.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&gt;&gt;">
          <font>
             <Font size="17.0" />
          </font>

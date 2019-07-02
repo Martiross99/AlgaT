@@ -25,6 +25,8 @@ public class sceneLoader extends Application{
 	 public static String codiceScene = "/views/pseudocodice.fxml";
 	 public static Integer esecuzione = 9;
 	 public static String exeScene = "/views/esecuzione.fxml";
+	 public static Integer efficienza = 10;
+	 public static String efficiencyScene = "/views/efficienza.fxml";
 	 
      public Stage stage;
      
@@ -41,15 +43,17 @@ public class sceneLoader extends Application{
 		 main.loadScene(implementation, implementScene);
 		 main.loadScene(pseudoCodice, codiceScene);
 		 main.loadScene(esecuzione, exeScene);
+		 main.loadScene(efficienza, efficiencyScene);
 		 
 		 main.setScene(sceneLoader.prim);
 	        
 	        Group root = new Group();
 	        root.getChildren().add(main);
-	        Scene scene = new Scene(root);
+	        Scene scene = new Scene(root,1080,720);
 	     
 	        
 	        primaryStage.setScene(scene);
+	       // primaryStage.setResizable(false);
 	        primaryStage.show();
 	}
 	
