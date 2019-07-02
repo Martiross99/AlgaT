@@ -10,11 +10,11 @@
 <?import javafx.scene.text.TextFlow?>
 
 
-<Group xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progetto.greedy.firstController">
+<Group xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lezione1.navController">
    <children>
       <AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #474747;">
          <children>
-            <Button fx:id="next" layoutX="975.0" layoutY="646.0" mnemonicParsing="false" onAction="#changePage" styleClass=".button" stylesheets="@../progetto/greedy/application.css" text="&gt;&gt;" textFill="#ff7979" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0">
+            <Button fx:id="next" layoutX="975.0" layoutY="646.0" mnemonicParsing="false" onAction="#goNext" styleClass=".button" stylesheets="@../stylesheets/application.css" text="&gt;&gt;" textFill="#ff7979" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>
@@ -33,7 +33,7 @@
                   </Text>
                </children>
             </TextFlow>
-            <Button id="BLEZ" layoutX="246.0" layoutY="378.0" mnemonicParsing="false" stylesheets="@../progetto/greedy/application.css" text="&quot;qual è la miglior cosa da fare a questo punto?&quot;">
+            <Button id="BLEZ" layoutX="246.0" layoutY="378.0" mnemonicParsing="false" stylesheets="@../stylesheets/application.css" text="&quot;qual è la miglior cosa da fare a questo punto?&quot;">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>
