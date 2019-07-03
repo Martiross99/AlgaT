@@ -1,6 +1,9 @@
 package progetto.greedy;
 
 import model.sceneController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import model.sceneLoader;
 import views.introLoad;
 
@@ -18,17 +21,20 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		
+
 		try {
-			sceneLoader sl = new sceneLoader();
-			sceneController Prim = sl.Load();
+			sceneController main = new sceneController();
 			
-			introLoad introduzione = new introLoad();
-			sceneController Intro = introduzione.Load();
-			Prim.addMap(Intro);
+			sceneLoader sl = new sceneLoader();
+			
+			introLoad intro = new introLoad();
+			
+			sl.Load(main);
+			intro.Load(main);
 			
 		    StackPane root = new StackPane();
-		    root.getChildren().addAll(Intro);   
+		    
+		    root.getChildren().add(main);   
 		
 		    Scene scene = new Scene(root);
 		    primaryStage.setScene(scene);
@@ -36,8 +42,15 @@ public class Main extends Application {
 //		     primaryStage.setMaximized(true);   
 //		     primaryStage.setResizable(false);
 		     primaryStage.show();
+
+//		try{
+//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
+//			Scene mScene = new Scene(mPane);
+//			primaryStage.setScene(mScene);
+//			primaryStage.show();
+//
 		}catch(Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 	}
 	

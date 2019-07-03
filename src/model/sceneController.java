@@ -34,8 +34,8 @@ public class sceneController extends StackPane{
     	    return null;
     }
     
-    public HashMap<Integer,Node> getMap() {
-    	return(this.map);
+    public HashMap<Integer,Node> getMap(sceneController sc) {
+    	return(sc.map);
     }
 	
     public boolean loadScene(Integer n, String resource) {
@@ -54,17 +54,31 @@ public class sceneController extends StackPane{
          }
     }
 
-    
-    public AnchorPane radice(String resource) {
+    public void addMap(sceneController sc) {
     	try {
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-        AnchorPane ap = (AnchorPane) loader.load();
-        return(ap);
-    	} catch (Exception e) {
-            System.out.println(e.getMessage());
-            return (null);
-        }
+    		HashMap<Integer,Node> mappa = getMap(sc);
+    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
+    	        this.addScene(entry.getKey(), entry.getValue());
+    	        System.out.println(entry.getKey());
+    	        }
+    	    } catch (Exception e) {
+    	    	System.out.println(e.getMessage());
+    	}
     }
+    
+    
+//PROVA    
+    
+//    public AnchorPane radice(String resource) {
+//    	try {
+//    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
+//        AnchorPane ap = (AnchorPane) loader.load();
+//        return(ap);
+//    	} catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            return (null);
+//        }
+//    }
     
     public boolean setScene(final Integer n) {
     	if (map.get(n) != null) {   //sceen loaded
@@ -106,15 +120,5 @@ public class sceneController extends StackPane{
        }
     }
     
-    public void addMap(sceneController sc) {
-    	try {
-    		HashMap<Integer,Node> mappa = sc.getMap();
-    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
-    	        this.addScene(entry.getKey(), entry.getValue());
-    	        }
-    	    } catch (Exception e) {
-    	    	System.out.println(e.getMessage());
-    	}
-    }
     
 }

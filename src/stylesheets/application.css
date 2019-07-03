@@ -1,0 +1,88 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.anchorp{
+    -fx-background-color: #474747;
+}
+
+.button{
+    -fx-background-color: #474747;
+}
+
+#BLEZ{
+    -fx-text-fill: #ff7979;
+    -fx-border-color: #ff7979;
+}
+#BLEZ:hover{
+    -fx-background-color: #ff7979;
+    -fx-text-fill: #474747;
+}
+
+.lessons{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #ff7979;
+}
+
+.lessons:hover{
+    -fx-background-color: #ff7979;
+}
+
+.highlight {
+    -fx-text-fill: #ff7979;
+    -fx-border-color: #ff7979;
+}
+
+#BGAME{
+    -fx-text-fill: #90f0ff;
+    -fx-border-color: #90f0ff;
+}
+#BGAME:hover{
+    -fx-background-color: #90f0ff;
+    -fx-text-fill: #474747;
+}
+
+.buttonlez{
+    -fx-background-color: #474747;
+    -fx-text-fill: #ff7979;
+}
+
+.testi{
+    -fx-fill: white;
+}
+
+.titoli{
+    -fx-text-fill: #ff7979;
+}
+
+.buttongame{
+    -fx-background-color: #90f0ff;
+    -fx-text-fill: #474747;
+}
+
+.hmonete{
+    -fx-text-fill: #90f0ff;
+}
+
+.money{
+    -fx-background-size: 170px 80px;
+}
+#money1{
+    -fx-background-image: url("../Image/game/001.png");
+}
+#money5{
+    -fx-background-image: url("../Image/game/005.png");
+}
+#money10 {
+    -fx-background-image: url("../Image/game/010.png");
+}
+#money20{
+    -fx-background-image: url("../Image/game/020.png");
+}
+#money50{
+    -fx-background-image: url("../Image/game/050.png");
+}
+#money100{
+    -fx-background-image: url("../Image/game/100.png");
+}
+#money500{
+    -fx-background-image: url("../Image/game/500.png");
+}
