@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
-
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
@@ -23,8 +22,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import model.primLoad;
 import model.sceneController;
-import model.sceneLoader;
 
 //gestisce i seguenti file FXML : prim.fxml, overView.fxml, concept.fxml, defProblem.fxml
 
@@ -73,28 +72,28 @@ public class firstController implements model.ISceneController {
 
 		    @FXML
 		    void gotoIdea(MouseEvent event) {
-		        sc.setScene(sceneLoader.idea);
+		        sc.setScene(primLoad.idea);
 		    }
 		    
 		    @FXML
 		    void gotoCorrect(MouseEvent event) throws IOException {
-		    	 sc.setScene(sceneLoader.correttezza);
+		    	 sc.setScene(primLoad.correttezza);
 		    }
 
 
 		    @FXML
 		    void gotoEfficiency(MouseEvent event) {
-		    	sc.setScene(sceneLoader.efficienza);
+		    	sc.setScene(primLoad.efficienza);
 		    }
 
 		    @FXML
 		    void gotoEsercizi(MouseEvent event) {
-		      sc.setScene(sceneLoader.esercizi);
+		      sc.setScene(primLoad.esercizi);
 		    }
 
 		    @FXML
 		    void gotoImplementation(MouseEvent event) throws IOException {
-		    	sc.setScene(sceneLoader.implementation);
+		    	sc.setScene(primLoad.implementation);
 		    }
 
 

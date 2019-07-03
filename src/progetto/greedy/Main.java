@@ -4,8 +4,8 @@ import model.sceneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import model.sceneLoader;
 import views.introLoad;
+import model.primLoad;
 
 import java.util.HashMap;
 
@@ -25,11 +25,11 @@ public class Main extends Application {
 		try {
 			sceneController main = new sceneController();
 			
-			sceneLoader sl = new sceneLoader();
+			primLoad prim = new primLoad();
 			
 			introLoad intro = new introLoad();
 			
-			sl.Load(main);
+			prim.Load(main);
 			intro.Load(main);
 			
 		    StackPane root = new StackPane();

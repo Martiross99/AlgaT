@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.sceneController;
-import model.sceneLoader;
 import progetto.greedy.Main;
 
 public class introLoad {
