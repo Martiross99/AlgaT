@@ -49,9 +49,18 @@
     -fx-text-fill: #ff7979;
 }
 
+.hmonete{
+    fx-text-fill: #90f0ff;
+}
+
+.buttongame{
+    -fx-background-color: #90f0ff;
+    -fx-text-fill: #474747;
+}
+
 .myDialog1{
     -fx-background-color: #e7a516;
-     -fx-text-fill: #dac3c3;
+    -fx-text-fill: #dac3c3;
 }
 
 .myDialog2{
@@ -66,6 +75,34 @@
 .textFieldq {
 	 -fx-control-inner-background: #474747;
 	  -fx-text-fill: #ffffff; 
+}
+
+.money{
+    -fx-background-size: 170px 80px;
+}
+
+#money1{
+    -fx-background-image: url("../Image/game/001.png");
+}
+
+#money5{
+    -fx-background-image: url("../Image/game/005.png");
+}
+
+#money10{
+    -fx-background-image: url("../Image/game/010.png");
+}
+
+#money20{
+    -fx-background-image: url("../Image/game/020.png");
+}
+
+#money50{
+    -fx-background-image: url("../Image/game/050.png");
+}
+
+#money100{
+    -fx-background-image: url("../Image/game/100.png");
 }
 
 #money500{

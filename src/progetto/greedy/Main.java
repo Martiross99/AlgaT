@@ -4,8 +4,8 @@ import model.sceneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import model.introLoad;
-import model.primLoad;
+//import model.introLoad;
+//import model.primLoad;
 
 import java.util.HashMap;
 
@@ -22,7 +22,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 
-		try {
+		/*try {
 			sceneController main = new sceneController();
 			
 			primLoad prim = new primLoad();
@@ -43,13 +43,13 @@ public class Main extends Application {
 		     
 //		     primaryStage.setMaximized(true);   
 //		     primaryStage.setResizable(false);
-		     primaryStage.show();
+		     primaryStage.show();*/
 
-//		try{
-//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
-//			Scene mScene = new Scene(mPane);
-//			primaryStage.setScene(mScene);
-//			primaryStage.show();
+		try{
+			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
+			Scene mScene = new Scene(mPane);
+			primaryStage.setScene(mScene);
+			primaryStage.show();
 
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
