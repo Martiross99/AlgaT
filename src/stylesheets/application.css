@@ -49,13 +49,35 @@
     -fx-text-fill: #ff7979;
 }
 
-.hmonete{
-    fx-text-fill: #90f0ff;
+.lessons{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #ff7979;
+}
+
+.lessons:hover{
+    -fx-background-color: #ff7979;
+}
+
+.highlight {
+    -fx-text-fill: #ff7979;
+    -fx-border-color: #ff7979;
+}
+
+.testi{
+    -fx-fill: white;
+}
+
+.titoli{
+    -fx-text-fill: #ff7979;
 }
 
 .buttongame{
     -fx-background-color: #90f0ff;
     -fx-text-fill: #474747;
+}
+
+.hmonete{
+    -fx-text-fill: #90f0ff;
 }
 
 .myDialog1{

@@ -1,7 +1,5 @@
 package progetto.greedy;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +9,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.introSceneLoader;
 
-public class lezioniController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class algoritmiController {
 
     @FXML
     private ResourceBundle resources;
@@ -23,7 +24,7 @@ public class lezioniController {
     private AnchorPane lessonP;
 
     @FXML
-    void openLesson1(ActionEvent event) {
+    void openIntro(ActionEvent event) {
         introSceneLoader intro = new introSceneLoader();
         Stage primaryStage = (Stage) lessonP.getScene().getWindow();
         try {
@@ -34,16 +35,13 @@ public class lezioniController {
     }
 
     @FXML
-    void openAlgoritmi(ActionEvent event) {
-        try{
-            AnchorPane mPane = FXMLLoader.load(getClass().getResource("algoritmi.fxml"));
-            Scene mScene = new Scene(mPane);
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(mScene);
-            window.show();
-        }catch(Exception e) {
-            System.out.println(e.getMessage());
-        }
+    void openKruskal(ActionEvent event) {
+
+    }
+
+    @FXML
+    void openPrim (ActionEvent event){
+
     }
 
     @FXML
