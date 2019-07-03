@@ -44,7 +44,13 @@ public class algoritmiController {
 
     @FXML
     void openPrim (ActionEvent event){
-
+        primLoad Prim = new primLoad();
+        Stage primaryStage = (Stage) lessonP.getScene().getWindow();
+        try {
+            Prim.start(primaryStage);
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

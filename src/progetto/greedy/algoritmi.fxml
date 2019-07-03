@@ -17,12 +17,12 @@
             <Font name="Arial Black" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="340.0" layoutY="474.0" mnemonicParsing="false" onAction="#openKruskal" prefHeight="100.0" prefWidth="400.0" styleClass="lessons" stylesheets="@../../stylesheets/application.css" text="Algoritmo di Prim">
+      <Button layoutX="340.0" layoutY="474.0" mnemonicParsing="false" onAction="#openPrim" prefHeight="100.0" prefWidth="400.0" styleClass="lessons" stylesheets="@../../stylesheets/application.css" text="Algoritmo di Prim">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="340.0" layoutY="341.0" mnemonicParsing="false" onAction="#openPrim" prefHeight="100.0" prefWidth="400.0" styleClass="lessons" stylesheets="@../../stylesheets/application.css" text="Algoritmo di Kruskal">
+      <Button layoutX="340.0" layoutY="341.0" mnemonicParsing="false" onAction="#openKruskal" prefHeight="100.0" prefWidth="400.0" styleClass="lessons" stylesheets="@../../stylesheets/application.css" text="Algoritmo di Kruskal">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
