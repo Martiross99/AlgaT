@@ -24,13 +24,10 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 
 
-		try{
-
+		try {
 			
 //			primLoad intro = new primLoad();
 //			intro.start(primaryStage);
-			
-
 
 			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
 			Scene mScene = new Scene(mPane);
