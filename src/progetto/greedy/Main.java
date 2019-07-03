@@ -25,14 +25,14 @@ public class Main extends Application {
 
 
 		try{
-//			
-//			introLoad intro = new introLoad();
-//			intro.start(primaryStage);
 			
-			BorderPane mPane = FXMLLoader.load(getClass().getResource("/intro_KP/views/introduzione.fxml"));
-			Scene mScene = new Scene(mPane);
-			primaryStage.setScene(mScene);
-			primaryStage.show();
+			introLoad intro = new introLoad();
+			intro.start(primaryStage);
+//			
+//			BorderPane mPane = FXMLLoader.load(getClass().getResource("/intro_KP/views/introduzione.fxml"));
+//			Scene mScene = new Scene(mPane);
+//			primaryStage.setScene(mScene);
+//			primaryStage.show();
 
 		}catch(Exception e) {
 			System.out.println(e.getMessage());

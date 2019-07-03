@@ -49,8 +49,26 @@
     -fx-text-fill: #ff7979;
 }
 
-.hmonete{
-    fx-text-fill: #90f0ff;
+.lessons{
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #ff7979;
+}
+
+.lessons:hover{
+    -fx-background-color: #ff7979;
+}
+
+.highlight {
+    -fx-text-fill: #ff7979;
+    -fx-border-color: #ff7979;
+}
+
+.testi{
+    -fx-fill: white;
+}
+
+.titoli{
+    -fx-text-fill: #ff7979;
 }
 
 .buttongame{
@@ -58,24 +76,10 @@
     -fx-text-fill: #474747;
 }
 
-.myDialog1{
-    -fx-background-color: #e7a516;
-    -fx-text-fill: #dac3c3;
+.hmonete{
+    -fx-text-fill: #90f0ff;
 }
 
-.myDialog2{
-    -fx-background-color: #4281e0;
-}
-
-.textAreaq {
-	 -fx-control-inner-background: #474747;
-	  -fx-text-fill: #ffffff; 
-}
-
-.textFieldq {
-	 -fx-control-inner-background: #474747;
-	  -fx-text-fill: #ffffff; 
-}
 
 .money{
     -fx-background-size: 170px 80px;

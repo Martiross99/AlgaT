@@ -16,11 +16,11 @@ public class introLoad extends Application {
 	public static Integer introI = 1;
 	public static String firstIntro = "/intro_KP/views/introduzione.fxml";
 	public static Integer introII = 2;
-	public static String secondIntro = "/views/introduzione2.fxml";
+	public static String secondIntro = "/intro_KP/views/introduzione2.fxml";
 	public static Integer introIII = 3;
-	public static String thirdIntro = "/views/introduzione3.fxml";
+	public static String thirdIntro = "/intro_KP/views/introduzione3.fxml";
 	public static Integer introIV = 4;
-	public static String fourthIntro = "/views/introduzione4.fxml";
+	public static String fourthIntro = "/intro_KP/views/introduzione4.fxml";
 	
 	public Stage stage;
 	
