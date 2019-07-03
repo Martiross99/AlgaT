@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -25,12 +26,14 @@ public class algoritmiController {
 
     @FXML
     void openIntro(ActionEvent event) {
-        introSceneLoader intro = new introSceneLoader();
-        Stage primaryStage = (Stage) lessonP.getScene().getWindow();
-        try {
-            intro.start(primaryStage);
-        }catch(Exception e) {
-            e.printStackTrace();
+        try{
+            Parent subPane = FXMLLoader.load(getClass().getResource("../../intro_KP/views/introduzione.fxml"));
+            Scene subScene = new Scene(subPane);
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(subScene);
+            window.show();
+        } catch(Exception e){
+            System.out.println(e.getMessage());
         }
     }
 
