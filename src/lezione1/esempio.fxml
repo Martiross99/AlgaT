@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #474747;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.moneteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #474747;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lezione1.esempioController">
    <children>
       <AnchorPane id="centerPane" layoutX="191.0" prefHeight="726.0" prefWidth="889.0" styleClass="anchorp" stylesheets="@../stylesheets/application.css">
          <children>
-            <Label alignment="CENTER" layoutX="238.0" layoutY="179.0" prefHeight="98.0" prefWidth="413.0" styleClass="hmonete" stylesheets="@../stylesheets/application.css" text="importo rimanente:" textAlignment="CENTER" textFill="#90f0ff" wrapText="true">
+            <Label alignment="CENTER" layoutX="238.0" layoutY="179.0" prefHeight="98.0" prefWidth="413.0" styleClass="buttonlez" stylesheets="@../stylesheets/application.css" text="importo rimanente:" textAlignment="CENTER" textFill="#90f0ff" wrapText="true">
                <font>
                   <Font name="Arial Black" size="36.0" />
                </font>
@@ -56,16 +56,7 @@
                   <Font name="Arial Black" size="96.0" />
                </font>
             </Label>
-            <Label id="result" fx:id="result" layoutX="211.0" layoutY="488.0" prefHeight="130.0" prefWidth="468.0" textFill="WHITE">
-               <font>
-                  <Font name="Arial Black" size="96.0" />
-               </font>
-            </Label>
-            <Button id="continua" fx:id="continua" layoutX="480.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#nextPage" prefWidth="94.0" styleClass="buttongame" stylesheets="@../stylesheets/application.css" text="Menu">
-               <font>
-                  <Font name="Arial Black" size="15.0" />
-               </font></Button>
-            <Button id="riprova" fx:id="riprova" layoutX="316.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#retry" prefHeight="33.0" prefWidth="94.0" styleClass="buttongame" text="Riprova">
+            <Button id="continua" fx:id="continua" layoutX="398.0" layoutY="517.0" mnemonicParsing="false" onAction="#nextPage" prefWidth="94.0" styleClass="buttonesempio" stylesheets="@../stylesheets/application.css" text="Menu">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font></Button>
@@ -76,12 +67,12 @@
             <VBox prefHeight="720.0" prefWidth="191.0" style="-fx-spacing: 23; -fx-padding: 10; -fx-background-color: #575757;" stylesheets="@../stylesheets/application.css" AnchorPane.leftAnchor="0.0">
                <children>
                   <Pane id="money1" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
-                  <Pane id="money5" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
-                  <Pane id="money10" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
-                  <Pane id="money20" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
-                  <Pane id="money50" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
-                  <Pane id="money100" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
-                  <Pane id="money500" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
+                  <Pane id="money5" fx:id="money5" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
+                  <Pane id="money10" fx:id="money10" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
+                  <Pane id="money20" fx:id="money20" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
+                  <Pane id="money50" fx:id="money50" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
+                  <Pane id="money100" fx:id="money100" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
+                  <Pane id="money500" fx:id="money500" maxWidth="170.0" onMouseClicked="#clickMoney" prefHeight="86.0" prefWidth="170.0" styleClass="money" stylesheets="@../stylesheets/application.css" />
                </children>
             </VBox>
          </children>

@@ -1,26 +1,28 @@
-package game;
+package lezione1;
 
 
-import java.net.URL;
-import java.util.Random;
-import java.util.ResourceBundle;
-
-//import com.sun.xml.internal.bind.XmlAccessorFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.sceneController;
 
-public class moneteController {
+import java.net.URL;
+import java.util.Random;
+import java.util.ResourceBundle;
 
+//import com.sun.xml.internal.bind.XmlAccessorFactory;
+
+public class esempioController implements model.ISceneController{
+
+    sceneController sc;
     private AnchorPane root;
     private Scene scene;
     int[] values = new int[]{1,5,10,20,50,100,500};
@@ -219,11 +221,30 @@ public class moneteController {
             System.out.println(e.getMessage());
         }
     }
+
+    @FXML
+    void nextPage(ActionEvent event){
+        sc.goNext();
+    }
+
     @FXML
     void retry(){
         //gioco finito, l'utente preme riprova
         startGame();
     }
 
+    void disablePanes(){
+        money1.setDisable(true);
+        money5.setDisable(true);
+        money10.setDisable(true);
+        money20.setDisable(true);
+        money50.setDisable(true);
+        money100.setDisable(true);
+        money500.setDisable(true);
+    }
 
+    @Override
+    public void setSceneParent(sceneController sceneParent) {
+        sc = sceneParent;
+    }
 }
