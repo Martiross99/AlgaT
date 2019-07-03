@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.firstController">
+   <children>
+      <Button fx:id="next" layoutX="893.0" layoutY="655.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="45.0" layoutY="633.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <VBox layoutX="217.0" layoutY="68.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="alert" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#information" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="NOTA BENE" textAlignment="CENTER" textFill="#dd7017">
+               <VBox.margin>
+                  <Insets left="500.0" />
+               </VBox.margin>
+            </Button>
+            <Group>
+               <children>
+                  <Line endX="340.0" layoutX="308.0" layoutY="100.0" startX="-100.0" stroke="#149da4" strokeWidth="3.0" />
+                  <Line endX="95.0" endY="-39.0" layoutX="548.0" layoutY="136.0" startX="-359.0" startY="206.0" stroke="#149da4" strokeWidth="3.0" />
+                  <Line endX="363.0" endY="-2.5" layoutX="288.0" layoutY="343.0" startX="-100.0" stroke="#149da4" strokeWidth="3.0" />
+                  <StackPane fx:id="sp5" layoutX="348.0" layoutY="269.0" onMouseClicked="#gotoCode" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#c4e5f2" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Pseudo-codice">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp1" layoutX="117.0" layoutY="30.0" onMouseClicked="#gotoIdea" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#c4e5f2" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label prefHeight="24.0" prefWidth="33.0" text="Idea">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp3" layoutX="583.0" layoutY="31.0" onMouseClicked="#gotoImplementation" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#c4e5f2" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label prefHeight="38.0" prefWidth="125.0" text="Implementazione">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp4" layoutX="119.0" layoutY="269.0" onMouseClicked="#gotoEfficiency" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#c4e5f2" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Efficienza">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp2" layoutX="349.0" layoutY="30.0" onMouseClicked="#gotoCorrect" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#c4e5f2" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Correttezza">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="sp6" layoutX="581.0" layoutY="270.0" onMouseClicked="#gotoEsercizi" onMouseEntered="#toFill" onMouseExited="#unfill">
+                     <children>
+                        <Circle fill="#c4e5f2" radius="70.0" stroke="#149da4" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Label text="Esercizi">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="80.0" />
+               </VBox.margin>
+            </Group>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

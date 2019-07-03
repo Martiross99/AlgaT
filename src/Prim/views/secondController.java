@@ -1,4 +1,4 @@
-package views;
+package Prim.views;
 
 import java.io.IOException;
 
@@ -15,6 +15,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import model.introLoad;
+import model.primLoad;
 import model.sceneController;
 
 
@@ -44,15 +46,14 @@ public class secondController implements model.ISceneController{
 //FUNZIONI DI GESTIONE DELL'FXML CORRETTEZZA
     
     @FXML
-    void checkCorollary(ActionEvent event) {
-         alertWindow corollario = new alertWindow();
-         corollario.createAlert(AlertType.INFORMATION, "boh", "Definizione di taglio");
+    void checkCorollary(ActionEvent event) throws IOException {
+         sc.setScene(introLoad.introIV);
     }
 
     @FXML
-    void checkDefinition(ActionEvent event) {
-    	alertWindow corollario = new alertWindow();
-        corollario.createAlert(AlertType.INFORMATION, "boh", "Corollario");
+    void checkDefinition(ActionEvent event) throws IOException {
+    	alertWindow definizione = new alertWindow();
+    	definizione.createAlert(AlertType.INFORMATION, 4, "Definizione Taglio");
     }
    
 //FUNZIONI DI GESTIONE DELL'FXML IMPLEMENTAZIONE

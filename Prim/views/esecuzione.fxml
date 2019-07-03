@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.exeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../src/stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.exeController">
    <children>
       <VBox layoutY="44.0" maxHeight="780.0" maxWidth="1080.0" prefHeight="537.0" prefWidth="1080.0">
          <children>
@@ -27,7 +27,7 @@
             </Text>
             <AnchorPane prefHeight="440.0" prefWidth="978.0">
                <children>
-                  <Group layoutX="124.0" layoutY="67.0">
+                  <Group layoutX="120.0" layoutY="67.0">
                      <children>
                         <Line fx:id="sixthLine" endX="94.0" layoutX="290.0" layoutY="38.0" startX="-77.0" stroke="#8ab5b1" strokeWidth="2.0" />
                         <Line fx:id="thirdLine" endX="40.0" layoutX="554.0" layoutY="245.0" startX="-100.0" stroke="#8ab5b1" strokeWidth="2.0" />
@@ -51,34 +51,54 @@
                               </Label>
                            </children>
                         </StackPane>
-                        <StackPane fx:id="spE" disable="true" layoutX="376.0" layoutY="206.0" onMouseClicked="#toFill">
+                        <StackPane fx:id="spE" layoutX="376.0" layoutY="206.0" onMouseClicked="#toFill">
                            <children>
                               <Circle fill="#8ab5b1" radius="40.0" stroke="#078d79" strokeType="INSIDE" strokeWidth="2.5" />
+                              <Label text="C">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </StackPane>
-                        <Label layoutX="407.0" layoutY="228.0" text="C">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <StackPane fx:id="spD" disable="true" layoutX="376.0" onMouseClicked="#toFill">
+                        <StackPane fx:id="spD" layoutX="376.0" onMouseClicked="#toFill">
                            <children>
                               <Circle fill="#8ab5b1" radius="40.0" stroke="#078d79" strokeType="INSIDE" strokeWidth="2.5" />
+                              <Label text="D">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </StackPane>
-                        <StackPane fx:id="spB" disable="true" layoutX="140.0" onMouseClicked="#toFill">
+                        <StackPane fx:id="spB" layoutX="140.0" onMouseClicked="#toFill">
                            <children>
                               <Circle fill="#8ab5b1" radius="40.0" stroke="#078d79" strokeType="INSIDE" strokeWidth="2.5" />
+                              <Label text="B">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </StackPane>
-                        <StackPane fx:id="spG" disable="true" layoutX="585.0" layoutY="206.0" onMouseClicked="#toFill">
+                        <StackPane fx:id="spG" layoutX="585.0" layoutY="206.0" onMouseClicked="#toFill">
                            <children>
                               <Circle fill="#8ab5b1" radius="40.0" stroke="#078d79" strokeType="INSIDE" strokeWidth="2.5" />
+                              <Label text="G">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </StackPane>
-                        <StackPane fx:id="spF" disable="true" layoutX="594.0" onMouseClicked="#toFill">
+                        <StackPane fx:id="spF" layoutX="594.0" onMouseClicked="#toFill">
                            <children>
                               <Circle fill="#8ab5b1" radius="40.0" stroke="#078d79" strokeType="INSIDE" strokeWidth="2.5" />
+                              <Label text="F">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </StackPane>
                         <StackPane fx:id="spC" layoutX="140.0" layoutY="206.0" onMouseClicked="#toFill">
@@ -91,9 +111,14 @@
                               </Label>
                            </children>
                         </StackPane>
-                        <StackPane fx:id="spH" disable="true" layoutX="761.0" layoutY="99.0" onMouseClicked="#toFill">
+                        <StackPane fx:id="spH" layoutX="761.0" layoutY="99.0" onMouseClicked="#toFill">
                            <children>
                               <Circle fill="#8ab5b1" radius="40.0" stroke="#078d79" strokeType="INSIDE" strokeWidth="2.5" />
+                              <Label text="H">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </StackPane>
                         <Label layoutX="23.0" layoutY="70.0" text="Root" textFill="#8ab5b1">
@@ -168,31 +193,6 @@
                         <CubicCurve fx:id="fifthCut" controlX1="-107.0" controlX2="51.0" controlY2="63.0" endX="94.0" endY="-17.0" fill="#ebeced00" layoutX="653.0" layoutY="92.0" opacity="0.0" startX="-165.0" startY="-82.0" stroke="#c95618" />
                         <CubicCurve fx:id="seventhCut" controlX1="-66.0" controlX2="25.0" controlY1="-31.0" controlY2="81.0" endX="-21.0" endY="117.70709228515625" fill="#ffffff00" layoutX="734.0" layoutY="127.0" opacity="0.0" startX="-21.0" startY="-100.0" stroke="#c95618" />
                         <CubicCurve fx:id="sixthCut" controlX1="4.0" controlX2="13.0" controlY1="72.0" controlY2="107.29290771484375" endX="4.0" endY="144.0" fill="#e8e9eb00" layoutX="303.0" layoutY="-50.0" opacity="0.0" startX="4.0" startY="34.0" stroke="#c95618" />
-                        <Label layoutX="171.0" layoutY="21.0" text="B">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="408.0" layoutY="21.0" text="D">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="626.0" layoutY="21.0" text="F">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="792.0" layoutY="123.0" text="H">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="616.0" layoutY="228.0" text="G">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
                      </children>
                   </Group>
                </children>

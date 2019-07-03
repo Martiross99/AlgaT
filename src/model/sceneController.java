@@ -1,16 +1,17 @@
 package model;
 
+import java.util.HashMap;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
 
 public class sceneController extends StackPane{
 
-	TreeMap<Integer,Node> map = new TreeMap<>();
+	HashMap<Integer,Node> map = new HashMap<>();
 	
 	public sceneController() {
 		super();
@@ -32,13 +33,19 @@ public class sceneController extends StackPane{
     	    }
     	    return null;
     }
+    
+    public HashMap<Integer,Node> getMap(sceneController sc) {
+    	return(sc.map);
+    }
 	
     public boolean loadScene(Integer n, String resource) {
     	 try {
              FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
+          //   AnchorPane ap = (AnchorPane) loader.load();
              Parent loadScene = (Parent) loader.load();
              ISceneController sceneController = ((ISceneController) loader.getController());
              sceneController.setSceneParent(this);
+             
              addScene(n, loadScene);      //add this scene to the hashmap
              return true;
          } catch (Exception e) {
@@ -47,14 +54,39 @@ public class sceneController extends StackPane{
          }
     }
 
+    public void addMap(sceneController sc) {
+    	try {
+    		HashMap<Integer,Node> mappa = getMap(sc);
+    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
+    	        this.addScene(entry.getKey(), entry.getValue());
+    	        System.out.println(entry.getKey());
+    	        }
+    	    } catch (Exception e) {
+    	    	System.out.println(e.getMessage());
+    	}
+    }
+    
+    
+//PROVA    
+    
+//    public AnchorPane radice(String resource) {
+//    	try {
+//    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
+//        AnchorPane ap = (AnchorPane) loader.load();
+//        return(ap);
+//    	} catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            return (null);
+//        }
+//    }
     
     public boolean setScene(final Integer n) {
-    	if (map.get(n) != null) {   //sceen loaded
+    	if (map.get(n) != null) {   //se la scena è nella mappa
 
-        if (!getChildren().isEmpty()) {    //if there is more than one sceen
+         if (!getChildren().isEmpty()) {    //if there is more than one sceen
   
                     getChildren().remove(0);                    //remove the displayed sceen
-                    getChildren().add(0,map.get(n));     //add the sceen
+                    getChildren().add(0,map.get(n));     //add the sceen       
             }
 
         else {
@@ -87,5 +119,6 @@ public class sceneController extends StackPane{
           
        }
     }
+    
     
 }

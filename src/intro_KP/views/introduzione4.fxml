@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane prefHeight="720.0" prefWidth="1080.0" styleClass="borderp" stylesheets="@../../src/stylesheets/application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="views.introController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="COROLLARIO" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="90.0" top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="   &gt; Sia G = (V, E) un grafo non orientato e connesso&#10;&#10;   &gt; Sia w : V × V → R (insieme dei pesi)&#10;&#10;   &gt; Sia A ⊆ E un sottoinsieme contenuto in un qualche albero di copertura minimo per G&#10;&#10;   &gt; Sia C una componente connessa (un albero) nella foresta G° = (V, A)&#10;&#10;   &gt; Sia [u, v] un arco leggero che connette C a qualche altra componente in G°&#10;&#10;Allora l’arco [u, v] è SICURO per A" wrappingWidth="975.4140625">
+               <VBox.margin>
+                  <Insets left="90.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&lt;&lt;">
+               <HBox.margin>
+                  <Insets left="45.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="next" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&gt;&gt;">
+               <HBox.margin>
+                  <Insets left="890.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

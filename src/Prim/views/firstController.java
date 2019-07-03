@@ -1,7 +1,11 @@
-package views;
+package Prim.views;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-
+import java.util.Scanner;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,11 +18,12 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import model.primLoad;
 import model.sceneController;
-import model.sceneLoader;
 
 //gestisce i seguenti file FXML : prim.fxml, overView.fxml, concept.fxml, defProblem.fxml
 
@@ -27,10 +32,13 @@ public class firstController implements model.ISceneController {
 	
 		sceneController sc;
 		
-		ObservableList<String> definizioni = FXCollections.observableArrayList("Grafo non orientato e connesso","Albero di copertura", "Albero di copertura minimo", "Pesi");
+		ObservableList<String> definizioni = FXCollections.observableArrayList("Grafo non orientato e connesso","Albero di copertura", "Albero di copertura minimo", "Taglio","Arco sicuro");
 			
 	    @FXML
 	    private Button start, back, next, alert,controlla;
+	    
+	    @FXML
+	    private AnchorPane ap;
 		    
 	    @FXML
 		private StackPane sp1,sp2,sp3,sp4,sp5,sp6;    //stackPanes FXML overView
@@ -47,45 +55,45 @@ public class firstController implements model.ISceneController {
 	    private ChoiceBox<String> cbox ;
 
 	    @FXML
-	    private CheckBox check1,check2,check3,check4;
+	    private CheckBox check1,check2,check3,check4,check5;
 
 		
 	//FUNZIONI CHE GESTISCONO L'FXML OVERVIEW
 		    @FXML
-		    void information(ActionEvent event) throws IOException {
+		    void information(ActionEvent event) throws FileNotFoundException {
 		         alertWindow aw = new alertWindow();
-		         aw.createAlert(AlertType.WARNING,"Per iniziare questa demo devi aver letto i capitoli...", "Nota Bene");
+		         aw.createAlert(AlertType.WARNING,1, "Nota Bene");
 		    }
 		    
 		    @FXML
-		    void gotoApp(MouseEvent event) {
-		    	//sc.setScene(sceneLoader.applicazioni);
+		    void gotoCode(MouseEvent event) {
+		    	sc.setScene(primLoad.pseudoCodice);
 		    }
 
 		    @FXML
-		    void gotoIdea(MouseEvent event) throws IOException {
-		        sc.setScene(sceneLoader.idea);
+		    void gotoIdea(MouseEvent event) {
+		        sc.setScene(primLoad.idea);
 		    }
 		    
 		    @FXML
 		    void gotoCorrect(MouseEvent event) throws IOException {
-		    	 sc.setScene(sceneLoader.correttezza);
+		    	 sc.setScene(primLoad.correttezza);
 		    }
 
 
 		    @FXML
 		    void gotoEfficiency(MouseEvent event) {
-		    	sc.setScene(sceneLoader.efficienza);
+		    	sc.setScene(primLoad.efficienza);
 		    }
 
 		    @FXML
 		    void gotoEsercizi(MouseEvent event) {
-		    //   sc.setScene(sceneLoader.esercizi);
+		      sc.setScene(primLoad.esercizi);
 		    }
 
 		    @FXML
 		    void gotoImplementation(MouseEvent event) throws IOException {
-		    	sc.setScene(sceneLoader.implementation);
+		    	sc.setScene(primLoad.implementation);
 		    }
 
 
@@ -108,8 +116,15 @@ public class firstController implements model.ISceneController {
 		    
 		    @FXML
 		    void verify(ActionEvent event) {
-		        if(check1.isSelected() && check2.isSelected() && check3.isSelected() && check4.isSelected()) next.setDisable(false);
-		        if(!check1.isSelected() || !check2.isSelected() || !check3.isSelected() || !check4.isSelected()) next.setDisable(true);
+		    	CheckBox[] check = {check1,check2,check3,check4,check5};
+		    	boolean selected = true;
+		    	for(int i = 0; i < check.length; i++) {
+		    		if(!check[i].isSelected()) selected = false;
+		    	}
+		    	if (selected) next.setDisable(false);
+		    	else next.setDisable(true);
+//		        if(check1.isSelected() && check2.isSelected() && check3.isSelected() && check4.isSelected()) next.setDisable(false);
+//		        if(!check1.isSelected() || !check2.isSelected() || !check3.isSelected() || !check4.isSelected()) next.setDisable(true);
 		    }
 
 		    @FXML
@@ -117,12 +132,14 @@ public class firstController implements model.ISceneController {
 		        String s = cbox.getValue();
 		        alertWindow info = new alertWindow();
 				if(s == definizioni.get(1))
-		             info.createAlert(AlertType.INFORMATION, "x","Definizione Albero di copetura");
+		             info.createAlert(AlertType.INFORMATION, 2,"Definizione Albero di copetura");
 		        else if (s==definizioni.get(2))
-		        	 info.createAlert(AlertType.INFORMATION, "y", "Definizione Albero di copertura minimo");
+		        	 info.createAlert(AlertType.INFORMATION, 3, "Definizione Albero di copertura minimo");
 		        else if (s==definizioni.get(3))
-		        	 info.createAlert(AlertType.INFORMATION, "z", "Definizione Pesi");
-		        else  info.createAlert(AlertType.INFORMATION, "w", "Definzione Grafo non orientato e connesso");
+		        	 info.createAlert(AlertType.INFORMATION, 4, "Definizione Taglio");
+		        else if (s==definizioni.get(4))
+		        	info.createAlert(AlertType.INFORMATION, 6, "Definzione Arco sicuro");
+		        else info.createAlert(AlertType.INFORMATION, 5, "Definzione Grafo non orientato e connesso");
 		    }	    
 	    
  //FUNZIONI CHE GESTISCONO L'FXML DEFPROBLEM
@@ -143,7 +160,7 @@ public class firstController implements model.ISceneController {
 		@FXML
 		  void goNext(ActionEvent event) throws IOException {
 		    sc.goNext();
-		    }		    
+		  }		    
 
 		@Override
 		public void setSceneParent(sceneController parent) {
@@ -157,6 +174,7 @@ public class firstController implements model.ISceneController {
 	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'overView.fxml'.";
 	        
 	        //FXML prim
+	        assert ap != null : "fx:id=\"ap\" was not injected: check your FXML file 'prim.fxml'.";
 	        assert start != null : "fx:id=\"start\" was not injected: check your FXML file 'prim.fxml'.";
 	        
 	        //FXML overView
@@ -174,8 +192,9 @@ public class firstController implements model.ISceneController {
 	        assert check3 != null : "fx:id=\"check3\" was not injected: check your FXML file 'concept.fxml'.";
 	        assert check2 != null : "fx:id=\"check2\" was not injected: check your FXML file 'concept.fxml'.";
 	        assert check4 != null : "fx:id=\"check4\" was not injected: check your FXML file 'concept.fxml'.";
+	        assert check5 != null : "fx:id=\"check4\" was not injected: check your FXML file 'concept.fxml'.";
 	        assert controlla != null : "fx:id=\"controlla\" was not injected: check your FXML file 'concept.fxml'.";
-	        if(cbox != null) { cbox.setValue("Pesi"); cbox.setItems(definizioni); }
+	        if(cbox != null) { cbox.setValue("Grafo non orientato e connesso"); cbox.setItems(definizioni); }
 
 	        //FXML defProblem
 	        assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'defProblem.fxml'.";
