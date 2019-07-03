@@ -2,11 +2,15 @@ package model;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 
 public class sceneController extends StackPane{
@@ -120,5 +124,15 @@ public class sceneController extends StackPane{
        }
     }
     
-    
+    public void gotoMenu(ActionEvent event) {
+       try{
+           AnchorPane mPane = FXMLLoader.load(getClass().getResource("/progetto/greedy/menu.fxml"));
+           Scene mScene = new Scene(mPane);
+           Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+           window.setScene(mScene);
+           window.show();
+       } catch(Exception e) {
+          System.out.println(e.getMessage());
+       }
+    }
 }
