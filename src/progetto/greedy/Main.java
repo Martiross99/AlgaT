@@ -25,11 +25,14 @@ public class Main extends Application {
 
 
 		try{
+
 			
 //			primLoad intro = new primLoad();
 //			intro.start(primaryStage);
 			
-			AnchorPane mPane = FXMLLoader.load(getClass().getResource("/Prim/views/prim.fxml"));
+
+
+			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
 			Scene mScene = new Scene(mPane);
 			primaryStage.setScene(mScene);
 			primaryStage.show();

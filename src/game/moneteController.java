@@ -50,6 +50,22 @@ public class moneteController {
     Label count500;
     @FXML
     Label imp;
+
+    @FXML
+    private Pane money1;
+    @FXML
+    private Pane money5;
+    @FXML
+    private Pane money10;
+    @FXML
+    private Pane money20;
+    @FXML
+    private Pane money50;
+    @FXML
+    private Pane money100;
+    @FXML
+    private Pane money500;
+
     @FXML
     private ResourceBundle resources;
 
@@ -207,6 +223,16 @@ public class moneteController {
     void retry(){
         //gioco finito, l'utente preme riprova
         startGame();
+    }
+
+    void disablePanes(){
+        money1.setDisable(true);
+        money5.setDisable(true);
+        money10.setDisable(true);
+        money20.setDisable(true);
+        money50.setDisable(true);
+        money100.setDisable(true);
+        money500.setDisable(true);
     }
 
 }

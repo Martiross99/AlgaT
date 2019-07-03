@@ -1,9 +1,12 @@
 package progetto.greedy;
 
+import Prim.model.primLoad;
+import intro_KP.model.introLoad;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -25,10 +28,10 @@ public class algoritmiController {
 
     @FXML
     void openIntro(ActionEvent event) {
-        introSceneLoader intro = new introSceneLoader();
+        introLoad introPK = new introLoad();
         Stage primaryStage = (Stage) lessonP.getScene().getWindow();
         try {
-            intro.start(primaryStage);
+            introPK.start(primaryStage);
         }catch(Exception e) {
             e.printStackTrace();
         }
