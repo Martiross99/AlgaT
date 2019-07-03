@@ -17,6 +17,8 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import intro_KP.model.introLoad;
 import Prim.model.primLoad;
+//import Prim.model.introLoad;
+//import Prim.model.primLoad;
 import model.sceneController;
 
 
@@ -45,10 +47,10 @@ public class secondController implements model.ISceneController{
     
 //FUNZIONI DI GESTIONE DELL'FXML CORRETTEZZA
     
-    @FXML
+   /* @FXML
     void checkCorollary(ActionEvent event) throws IOException {
          sc.setScene(introLoad.introIV);
-    }
+    }*/
 
     @FXML
     void checkDefinition(ActionEvent event) throws IOException {

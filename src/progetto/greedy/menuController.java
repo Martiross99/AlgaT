@@ -26,9 +26,22 @@ public class menuController {
     private Button BGAME;
 
     @FXML
-    void openSection(ActionEvent event, String page) {
+    void openLezioni(ActionEvent event) {
         try{
-            AnchorPane subPane = FXMLLoader.load(getClass().getResource(page + ".fxml"));
+            AnchorPane subPane = FXMLLoader.load(getClass().getResource("lezioni.fxml"));
+            Scene subScene = new Scene(subPane);
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(subScene);
+            window.show();
+        } catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @FXML
+    void openMonete(ActionEvent event) {
+        try{
+            AnchorPane subPane = FXMLLoader.load(getClass().getResource("../../game/monete.fxml"));
             Scene subScene = new Scene(subPane);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(subScene);
@@ -41,9 +54,9 @@ public class menuController {
     @FXML
     void initialize() {
         assert BLEZ != null : "fx:id=\"BLEZ\" was not injected: check your FXML file 'menu.fxml'.";
-        BLEZ.setOnAction(event -> openSection(event, BLEZ.getText()));
+        BLEZ.setOnAction(event -> openLezioni(event));
         assert BGAME != null : "fx:id=\"BGAME\" was not injected: check your FXML file 'menu.fxml'.";
-        BGAME.setOnAction(event -> openSection(event, BLEZ.getText()));
+        BGAME.setOnAction(event -> openMonete(event));
 
     }
 
