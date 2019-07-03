@@ -48,7 +48,7 @@ public class domandeController  implements model.ISceneController{
   		 }		 
 
   		try {	
-  			Scanner scanner = new Scanner (new File("Prim/views/risposte.txt")); 
+  			Scanner scanner = new Scanner (new File("src/Prim/views/risposte.txt")); 
   			String anno = scanner.nextLine();
 //  				if(scanner.hasNextInt()) System.out.println(scanner.next()); System.out.println(s);
   				if(anno.equals(prova)) {
@@ -74,10 +74,9 @@ public class domandeController  implements model.ISceneController{
     void controlla3(ActionEvent event) throws FileNotFoundException { 
 		String prova = tentativo.getText();
 		prova = prova.trim();
-		System.out.println(prova);
 		if(prova.length()!=0) {
 		try {	
-			Scanner scanner = new Scanner (new File("Prim/views/risposte.txt"));
+			Scanner scanner = new Scanner (new File("src/Prim/views/risposte.txt"));
 			scanner.skip(Pattern.compile("..57"));
 			boolean found = false;
 			while(scanner.hasNext()) {

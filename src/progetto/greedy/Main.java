@@ -26,13 +26,13 @@ public class Main extends Application {
 
 		try{
 			
-			introLoad intro = new introLoad();
-			intro.start(primaryStage);
-//			
-//			BorderPane mPane = FXMLLoader.load(getClass().getResource("/intro_KP/views/introduzione.fxml"));
-//			Scene mScene = new Scene(mPane);
-//			primaryStage.setScene(mScene);
-//			primaryStage.show();
+//			primLoad intro = new primLoad();
+//			intro.start(primaryStage);
+			
+			AnchorPane mPane = FXMLLoader.load(getClass().getResource("/Prim/views/prim.fxml"));
+			Scene mScene = new Scene(mPane);
+			primaryStage.setScene(mScene);
+			primaryStage.show();
 
 		}catch(Exception e) {
 			System.out.println(e.getMessage());

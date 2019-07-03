@@ -36,7 +36,7 @@ public class alertWindow {
      public String findMessage(Integer line) throws FileNotFoundException {
     	 String message = new String();
          try {	
- 			Scanner scanner = new Scanner (new File("Prim/views/avvisi.txt")); 
+ 			Scanner scanner = new Scanner (new File("src/Prim/views/avvisi.txt")); 
  			//scanner.skip(Pattern.compile(alert));
  			while(line > 0) {
  				message = scanner.nextLine();
