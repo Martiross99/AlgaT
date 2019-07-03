@@ -51,8 +51,8 @@ public class secondController implements model.ISceneController{
 
     @FXML
     void checkDefinition(ActionEvent event) throws IOException {
-    	alertWindow corollario = new alertWindow();
-     //   corollario.createAlert(AlertType.INFORMATION, "boh", "Corollario");
+    	alertWindow definizione = new alertWindow();
+    	definizione.createAlert(AlertType.INFORMATION, 4, "Definizione Taglio");
     }
    
 //FUNZIONI DI GESTIONE DELL'FXML IMPLEMENTAZIONE

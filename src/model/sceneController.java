@@ -1,16 +1,17 @@
 package model;
 
+import java.util.HashMap;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
 
 public class sceneController extends StackPane{
 
-	TreeMap<Integer,Node> map = new TreeMap<>();
+	HashMap<Integer,Node> map = new HashMap<>();
 	
 	public sceneController() {
 		super();
@@ -32,10 +33,15 @@ public class sceneController extends StackPane{
     	    }
     	    return null;
     }
+    
+    public HashMap<Integer,Node> getMap() {
+    	return(this.map);
+    }
 	
     public boolean loadScene(Integer n, String resource) {
     	 try {
              FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
+          //   AnchorPane ap = (AnchorPane) loader.load();
              Parent loadScene = (Parent) loader.load();
              ISceneController sceneController = ((ISceneController) loader.getController());
              sceneController.setSceneParent(this);
@@ -48,6 +54,17 @@ public class sceneController extends StackPane{
          }
     }
 
+    
+    public AnchorPane radice(String resource) {
+    	try {
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
+        AnchorPane ap = (AnchorPane) loader.load();
+        return(ap);
+    	} catch (Exception e) {
+            System.out.println(e.getMessage());
+            return (null);
+        }
+    }
     
     public boolean setScene(final Integer n) {
     	if (map.get(n) != null) {   //sceen loaded
@@ -87,6 +104,17 @@ public class sceneController extends StackPane{
            System.out.println(e.getMessage());
           
        }
+    }
+    
+    public void addMap(sceneController sc) {
+    	try {
+    		HashMap<Integer,Node> mappa = sc.getMap();
+    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
+    	        this.addScene(entry.getKey(), entry.getValue());
+    	        }
+    	    } catch (Exception e) {
+    	    	System.out.println(e.getMessage());
+    	}
     }
     
 }

@@ -55,7 +55,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <TextArea fx:id="risposta" prefHeight="28.0" prefWidth="305.0">
+            <TextArea fx:id="risposta" editable="false" prefHeight="28.0" prefWidth="305.0">
                <VBox.margin>
                   <Insets left="300.0" right="300.0" top="25.0" />
                </VBox.margin>
@@ -63,6 +63,6 @@
          </children>
       </VBox>
       <Button fx:id="back" layoutX="40.0" layoutY="648.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
-      <Button fx:id="next" disable="true" layoutX="972.0" layoutY="656.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&gt;&gt;" />
+      <Button fx:id="next" disable="true" layoutX="972.0" layoutY="656.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
    </children>
 </AnchorPane>

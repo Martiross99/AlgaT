@@ -3,13 +3,9 @@ package views;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner;
-import java.util.regex.Pattern;
-
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 import javafx.stage.Modality;
 
@@ -25,10 +21,11 @@ public class alertWindow {
     	String message = findMessage(line);
         Alert avviso = new Alert(type, message);
         avviso.initModality(Modality.APPLICATION_MODAL);
-        DialogPane dp = avviso.getDialogPane();
-        dp.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
-        if(avviso.getAlertType() == AlertType.WARNING) dp.getStyleClass().add("myDialog1");
-        if(avviso.getAlertType() == AlertType.INFORMATION) dp.getStyleClass().add("myDialog2");
+       
+      //  DialogPane dp = avviso.getDialogPane();
+      //  dp.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
+     //   if(avviso.getAlertType() == AlertType.WARNING) dp.getStyleClass().add("myDialog1");
+     //   if(avviso.getAlertType() == AlertType.INFORMATION) dp.getStyleClass().add("myDialog2");
         avviso.setTitle(title);
 		avviso.showAndWait();
     	 } catch(Exception e) {

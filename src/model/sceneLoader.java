@@ -1,17 +1,24 @@
 package model;
 
+import java.util.HashMap;
+
 import javafx.application.Application;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import views.introLoad;
 
-public class sceneLoader extends Application{
+public class sceneLoader {
 	
 	 public static Integer prim = 1;
 	 public static String primScene = "/views/prim.fxml";
@@ -39,43 +46,38 @@ public class sceneLoader extends Application{
 	 public static String esercizi2Scene = "/views/esercizi2.fxml";
 	 public static Integer esercizi3 = 13;
 	 public static String esercizi3Scene = "/views/esercizi3.fxml";
-	 
-	 
+
      public Stage stage;
      
-	@Override
-	public void start(Stage primaryStage) throws Exception {
+     
+    public sceneController Load() {
+			try {
+			sceneController main = new sceneController();
+			 main.loadScene(prim, primScene);
+			 main.loadScene(overView, overViewScene);
+			 main.loadScene(concept, conceptScene);
+			 main.loadScene(defProblem, defProblemScene);
+			 main.loadScene(idea, ideaScene);
+			 main.loadScene(correttezza, correttezzaScene);
+			 main.loadScene(implementation, implementScene);
+			 main.loadScene(pseudoCodice, codiceScene);
+			 main.loadScene(esecuzione, exeScene);
+			 main.loadScene(efficienza, efficiencyScene);
+			 main.loadScene(esercizi, eserciziScene);
+			 main.loadScene(esercizi2, esercizi2Scene);
+			 main.loadScene(esercizi3, esercizi3Scene);
+			 
+//			 main.setScene(sceneLoader.prim);
+ 
+		     return(main);
+			 
+			} catch (Exception e) {
+				
+				System.out.println(e.getMessage());
+				return(null);
+			}
 		
-		 sceneController main = new sceneController();
-		 main.loadScene(prim, primScene);
-		 main.loadScene(overView, overViewScene);
-		 main.loadScene(concept, conceptScene);
-		 main.loadScene(defProblem, defProblemScene);
-		 main.loadScene(idea, ideaScene);
-		 main.loadScene(correttezza, correttezzaScene);
-		 main.loadScene(implementation, implementScene);
-		 main.loadScene(pseudoCodice, codiceScene);
-		 main.loadScene(esecuzione, exeScene);
-		 main.loadScene(efficienza, efficiencyScene);
-		 main.loadScene(esercizi, eserciziScene);
-		 main.loadScene(esercizi2, esercizi2Scene);
-		 main.loadScene(esercizi3, esercizi3Scene);
+		}
 		 
-		 main.setScene(sceneLoader.overView);
-	     StackPane root = new StackPane();
-	     root.getChildren().add(main);
-	     
-	        
-	        
-	     Scene scene = new Scene(root);
-	     primaryStage.setScene(scene);
-	
-//	     primaryStage.setMaximized(true);
-	        
-	        
-	   //primaryStage.setResizable(false);
-	     primaryStage.show();
-	}
-	
 
 }
