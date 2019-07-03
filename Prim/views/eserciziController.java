@@ -32,6 +32,9 @@ public class eserciziController  implements model.ISceneController{
 
     @FXML
     private TextArea risposta;
+    
+    @FXML
+    private Text secondQuestion;
 
 
     @FXML
@@ -44,10 +47,14 @@ public class eserciziController  implements model.ISceneController{
 	 void verifica(ActionEvent event) {
 		    risposta.clear();
 		    rb1.setToggleGroup(rb);rb2.setToggleGroup(rb);rb3.setToggleGroup(rb);rb4.setToggleGroup(rb);
-            if(rb2.isSelected()) {
+            if(rb2.isSelected() && (secondQuestion == null)) {
             	risposta.appendText("Corretto!");
             	next.setDisable(false); 
             }
+            else if (rb4.isSelected() && (secondQuestion != null)) {
+            	risposta.appendText("Corretto!");
+            	next.setDisable(false); 	
+            } 
             else {
             	risposta.setText("Sbagliato, riprova");
             	next.setDisable(true);
@@ -81,18 +88,19 @@ public class eserciziController  implements model.ISceneController{
 
 
     @FXML
-	void initialize() {
+	void initialize() {        
     	
+     //FXML esercizi 1-2 
         assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'esercizi.fxml'.";
-        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'esercizi.fxml'.";
-        
-    	
-     //FXML esercizi 	
+        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'esercizi.fxml'.";	
 	    assert rb1 != null : "fx:id=\"rb1\" was not injected: check your FXML file 'esercizi.fxml'.";
 	    assert rb2 != null : "fx:id=\"rb2\" was not injected: check your FXML file 'esercizi.fxml'.";
 	    assert rb3 != null : "fx:id=\"rb3\" was not injected: check your FXML file 'esercizi.fxml'.";
 	    assert rb4 != null : "fx:id=\"rb4\" was not injected: check your FXML file 'esercizi.fxml'.";
         assert done != null : "fx:id=\"done\" was not injected: check your FXML file 'esercizi.fxml'.";
         assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'esercizi.fxml'.";
+        
+     //FXML esercizi2
+        assert secondQuestion != null : "fx:id=\"secondQuestion\" was not injected: check your FXML file 'esercizi2.fxml'.";
     }
 }

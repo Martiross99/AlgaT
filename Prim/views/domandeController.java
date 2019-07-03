@@ -45,7 +45,7 @@ public class domandeController  implements model.ISceneController{
   		 }		 
 
   		try {	
-  			Scanner scanner = new Scanner (new File("src/views/risposte.txt")); 
+  			Scanner scanner = new Scanner (new File("Prim/views/risposte.txt")); 
   			Scanner anno = scanner.useDelimiter("[^1-9]+"); 
   				String s =	pr.toString();
 //  				if(scanner.hasNextInt()) System.out.println(scanner.next()); System.out.println(s);
@@ -74,7 +74,7 @@ public class domandeController  implements model.ISceneController{
 		String prova = tentativo.getText();
 		if(prova.length()!=0) {
 		try {	
-			Scanner scanner = new Scanner (new File("src/views/risposte.txt"));
+			Scanner scanner = new Scanner (new File("Prim/views/risposte.txt"));
 			scanner.skip(Pattern.compile("..57"));
 			boolean found = false;
 			while(scanner.hasNext()) {
@@ -133,15 +133,15 @@ public class domandeController  implements model.ISceneController{
 	 @FXML
 		void initialize() {
 	    	
-	        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'esercizi2.fxml'.";
-	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'esercizi2.fxml'.";
+	        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'domande.fxml'.";
+	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'domande.fxml'.";
 	        
 	          
 	     //FXML esercizi2/esercizi3   
-	        assert inserisci != null : "fx:id=\"inserisci\" was not injected: check your FXML file 'esercizi2.fxml'.";  
-	        assert tentativo != null : "fx:id=\"tentativo\" was not injected: check your FXML file 'esercizi2.fxml'.";
-	        assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'esercizi2.fxml'.";
-	        assert riprova != null : "fx:id=\"riprova\" was not injected: check your FXML file 'esercizi3.fxml'.";
+	        assert inserisci != null : "fx:id=\"inserisci\" was not injected: check your FXML file 'domande.fxml'.";  
+	        assert tentativo != null : "fx:id=\"tentativo\" was not injected: check your FXML file 'domande.fxml'.";
+	        assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'domande.fxml'.";
+	        assert riprova != null : "fx:id=\"riprova\" was not injected: check your FXML file 'domande2.fxml'.";
 	    }
 
 }

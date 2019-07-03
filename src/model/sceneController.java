@@ -81,9 +81,9 @@ public class sceneController extends StackPane{
 //    }
     
     public boolean setScene(final Integer n) {
-    	if (map.get(n) != null) {   //sceen loaded
+    	if (map.get(n) != null) {   //se la scena è nella mappa
 
-        if (!getChildren().isEmpty()) {    //if there is more than one sceen
+         if (!getChildren().isEmpty()) {    //if there is more than one sceen
   
                     getChildren().remove(0);                    //remove the displayed sceen
                     getChildren().add(0,map.get(n));     //add the sceen       

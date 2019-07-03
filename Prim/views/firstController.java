@@ -66,8 +66,8 @@ public class firstController implements model.ISceneController {
 		    }
 		    
 		    @FXML
-		    void gotoApp(MouseEvent event) {
-		    	//sc.setScene(sceneLoader.applicazioni);
+		    void gotoCode(MouseEvent event) {
+		    	sc.setScene(primLoad.pseudoCodice);
 		    }
 
 		    @FXML

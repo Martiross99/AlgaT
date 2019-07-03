@@ -4,7 +4,7 @@ import model.sceneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import views.introLoad;
+import model.introLoad;
 import model.primLoad;
 
 import java.util.HashMap;
@@ -34,8 +34,10 @@ public class Main extends Application {
 			
 		    StackPane root = new StackPane();
 		    
-		    root.getChildren().add(main);   
-		
+		    root.getChildren().add(main); 
+		    root.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
+		    root.getStyleClass().add("stackp");
+		    
 		    Scene scene = new Scene(root);
 		    primaryStage.setScene(scene);
 		     

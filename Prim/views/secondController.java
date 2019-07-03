@@ -15,6 +15,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import model.introLoad;
+import model.primLoad;
 import model.sceneController;
 
 
@@ -45,8 +47,7 @@ public class secondController implements model.ISceneController{
     
     @FXML
     void checkCorollary(ActionEvent event) throws IOException {
-         alertWindow corollario = new alertWindow();
-       //  corollario.createAlert(AlertType.INFORMATION, "boh", "Definizione di taglio");
+         sc.setScene(introLoad.introIV);
     }
 
     @FXML

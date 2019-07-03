@@ -27,10 +27,13 @@ public class primLoad {
 		 public static String efficiencyScene = "/views/efficienza.fxml";
 		 public static Integer esercizi = 15;
 		 public static String eserciziScene = "/views/esercizi.fxml";
-		 public static Integer esercizi2 = 16;
+		 public static Integer domande = 16;
+		 public static String domandeScene = "/views/domande.fxml";
+		 public static Integer domande2 = 17;
+		 public static String domande2Scene = "/views/domande2.fxml";
+		 public static Integer esercizi2 = 18;
 		 public static String esercizi2Scene = "/views/esercizi2.fxml";
-		 public static Integer esercizi3 = 17;
-		 public static String esercizi3Scene = "/views/esercizi3.fxml";
+
 
 	     public Stage stage;
 	     
@@ -49,8 +52,10 @@ public class primLoad {
 				 main.loadScene(esecuzione, exeScene);
 				 main.loadScene(efficienza, efficiencyScene);
 				 main.loadScene(esercizi, eserciziScene);
+				 main.loadScene(domande, domandeScene);
+				 main.loadScene(domande2, domande2Scene);
 				 main.loadScene(esercizi2, esercizi2Scene);
-				 main.loadScene(esercizi3, esercizi3Scene);
+				 
 	             // main.setScene(prim);
 	 
 			     return(main);
