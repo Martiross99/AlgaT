@@ -86,3 +86,7 @@
 #money500{
     -fx-background-image: url("../Image/game/500.png");
 }
+
+#domanda{
+    -fx-text-fill: #ff7979;
+}
