@@ -1,4 +1,4 @@
-package views;
+package Prim.views;
 
 import java.io.File;
 import java.io.FileNotFoundException;

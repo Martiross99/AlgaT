@@ -30,7 +30,7 @@
             </Text>
             <HBox prefHeight="33.0" prefWidth="584.0">
                <children>
-                  <TextField fx:id="tentativo" prefHeight="31.0" prefWidth="327.0" />
+                  <TextField fx:id="tentativo" prefHeight="31.0" prefWidth="327.0" styleClass="textFieldq" stylesheets="@../../src/progetto/greedy/application.css" />
                   <Button fx:id="inserisci" mnemonicParsing="false" onAction="#controlla3" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="Inserisci">
                      <HBox.margin>
                         <Insets left="50.0" />
@@ -43,7 +43,7 @@
             </HBox>
             <HBox prefHeight="17.0" prefWidth="701.0">
                <children>
-                  <TextArea fx:id="risposta" editable="false" prefHeight="48.0" prefWidth="327.0" />
+                  <TextArea fx:id="risposta" editable="false" prefHeight="48.0" prefWidth="327.0" styleClass="textAreaq" stylesheets="@../../src/progetto/greedy/application.css" />
                   <Button fx:id="riprova" disable="true" mnemonicParsing="false" onAction="#clean" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="Riprova">
                      <HBox.margin>
                         <Insets left="50.0" />

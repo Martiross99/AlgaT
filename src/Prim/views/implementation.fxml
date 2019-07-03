@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../src/stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.secondController">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.secondController">
    <children>
       <VBox layoutX="122.0" layoutY="117.0" prefHeight="353.0" prefWidth="205.0">
          <children>
@@ -137,12 +137,12 @@
             </Label>
          </children>
       </Group>
-      <Button fx:id="back" layoutX="24.0" layoutY="655.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0">
+      <Button fx:id="back" layoutX="24.0" layoutY="655.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="next" layoutX="993.0" layoutY="655.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&gt;&gt;">
+      <Button fx:id="next" layoutX="993.0" layoutY="655.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&gt;&gt;">
          <font>
             <Font size="17.0" />
          </font>

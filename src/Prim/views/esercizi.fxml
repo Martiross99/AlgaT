@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../src/stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.eserciziController">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.eserciziController">
    <children>
       <VBox layoutX="81.0" layoutY="63.0" prefHeight="551.0" prefWidth="905.0">
          <children>
@@ -47,7 +47,7 @@
                   <Insets top="50.0" />
                </VBox.margin>
             </RadioButton>
-            <Button fx:id="done" mnemonicParsing="false" onAction="#verifica" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="OK">
+            <Button fx:id="done" mnemonicParsing="false" onAction="#verifica" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="OK">
                <VBox.margin>
                   <Insets left="430.0" top="50.0" />
                </VBox.margin>
@@ -63,7 +63,7 @@
             </TextArea>
          </children>
       </VBox>
-      <Button fx:id="back" layoutX="40.0" layoutY="648.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
-      <Button fx:id="next" disable="true" layoutX="972.0" layoutY="656.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
+      <Button fx:id="back" layoutX="40.0" layoutY="648.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
+      <Button fx:id="next" disable="true" layoutX="972.0" layoutY="656.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
    </children>
 </AnchorPane>

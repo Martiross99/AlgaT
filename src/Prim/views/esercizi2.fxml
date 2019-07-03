@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../src/stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.eserciziController">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../progetto/greedy/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.eserciziController">
    <children>
       <VBox layoutX="235.0" layoutY="75.0" prefHeight="200.0" prefWidth="100.0">
          <children>
@@ -47,7 +47,7 @@
                   <Insets top="60.0" />
                </VBox.margin>
             </RadioButton>
-            <Button fx:id="done" mnemonicParsing="false" onAction="#verifica" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="OK">
+            <Button fx:id="done" mnemonicParsing="false" onAction="#verifica" styleClass="buttonlez" stylesheets="@../progetto/greedy/application.css" text="OK">
                <VBox.margin>
                   <Insets left="280.0" top="50.0" />
                </VBox.margin>
