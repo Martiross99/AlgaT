@@ -43,6 +43,11 @@ public class introController implements model.ISceneController{
     void goNext(ActionEvent event) {
        sc.goNext();
     }
+    
+    @FXML
+    void gotoMenu(ActionEvent event) {
+       sc.gotoMenu(event);
+    }
 	
 	@Override
 	public void setSceneParent(sceneController parent) {

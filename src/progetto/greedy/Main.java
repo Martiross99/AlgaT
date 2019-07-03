@@ -4,6 +4,7 @@ import model.sceneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import intro_KP.model.introLoad;
 import Prim.model.primLoad;
 
@@ -22,33 +23,13 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 
-		try {
-//			sceneController main = new sceneController();
-//			
-			primLoad prim = new primLoad();
-			prim.start(primaryStage);
 
-//			
-//			introLoad intro = new introLoad();
-//			
-//			prim.Load(main);
-//			intro.Load(main);
+		try{
 			
-//		    StackPane root = new StackPane();
-//		    
-//		    root.getChildren().add(main); 
-//		    root.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
-//		    root.getStyleClass().add("stackp");
-		    
-//		    Scene scene = new Scene(root);
-//		    primaryStage.setScene(scene);
-		     
-//		     primaryStage.setMaximized(true);   
-//		     primaryStage.setResizable(false);
-//		     primaryStage.show();
-
-//		try{
-//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
+			introLoad intro = new introLoad();
+			intro.start(primaryStage);
+//			
+//			BorderPane mPane = FXMLLoader.load(getClass().getResource("/intro_KP/views/introduzione.fxml"));
 //			Scene mScene = new Scene(mPane);
 //			primaryStage.setScene(mScene);
 //			primaryStage.show();

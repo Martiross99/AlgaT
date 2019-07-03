@@ -80,24 +80,6 @@
     -fx-text-fill: #90f0ff;
 }
 
-.myDialog1{
-    -fx-background-color: #e7a516;
-    -fx-text-fill: #dac3c3;
-}
-
-.myDialog2{
-    -fx-background-color: #4281e0;
-}
-
-.textAreaq {
-	 -fx-control-inner-background: #474747;
-	  -fx-text-fill: #ffffff; 
-}
-
-.textFieldq {
-	 -fx-control-inner-background: #474747;
-	  -fx-text-fill: #ffffff; 
-}
 
 .money{
     -fx-background-size: 170px 80px;
