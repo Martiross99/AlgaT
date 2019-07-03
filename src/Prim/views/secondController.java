@@ -47,10 +47,10 @@ public class secondController implements model.ISceneController{
     
 //FUNZIONI DI GESTIONE DELL'FXML CORRETTEZZA
     
-   /* @FXML
+   @FXML
     void checkCorollary(ActionEvent event) throws IOException {
          sc.setScene(introLoad.introIV);
-    }*/
+    }
 
     @FXML
     void checkDefinition(ActionEvent event) throws IOException {
