@@ -14,7 +14,7 @@ import progetto.greedy.Main;
 public class introLoad extends Application {
 
 	public static Integer introI = 1;
-	public static String firstIntro = "/views/introduzione.fxml";
+	public static String firstIntro = "/intro_KP/views/introduzione.fxml";
 	public static Integer introII = 2;
 	public static String secondIntro = "/views/introduzione2.fxml";
 	public static Integer introIII = 3;

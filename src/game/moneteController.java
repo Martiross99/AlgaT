@@ -1,11 +1,10 @@
 package game;
 
-//import java.awt.*;
+
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-//import com.sun.xml.internal.bind.XmlAccessorFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
