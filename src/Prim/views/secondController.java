@@ -15,6 +15,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import intro_KP.model.introLoad;
+import Prim.model.primLoad;
 //import Prim.model.introLoad;
 //import Prim.model.primLoad;
 import model.sceneController;

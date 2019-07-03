@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane prefHeight="720.0" prefWidth="1080.0" styleClass="borderp" stylesheets="@../../src/stylesheets/application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="views.introController">
+<BorderPane prefHeight="720.0" prefWidth="1080.0" styleClass="borderp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.introController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -36,12 +35,12 @@
    <bottom>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&lt;&lt;">
+            <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;">
                <HBox.margin>
                   <Insets left="45.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="next" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../src/stylesheets/application.css" text="&gt;&gt;">
+            <Button fx:id="menu" mnemonicParsing="false" onAction="#gotoMenu" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="MENU">
                <HBox.margin>
                   <Insets left="890.0" />
                </HBox.margin>

@@ -4,8 +4,8 @@ import model.sceneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-//import model.introLoad;
-//import model.primLoad;
+import intro_KP.model.introLoad;
+import Prim.model.primLoad;
 
 import java.util.HashMap;
 
@@ -22,34 +22,36 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 
-		/*try {
-			sceneController main = new sceneController();
-			
+		try {
+//			sceneController main = new sceneController();
+//			
 			primLoad prim = new primLoad();
+			prim.start(primaryStage);
+
+//			
+//			introLoad intro = new introLoad();
+//			
+//			prim.Load(main);
+//			intro.Load(main);
 			
-			introLoad intro = new introLoad();
-			
-			prim.Load(main);
-			intro.Load(main);
-			
-		    StackPane root = new StackPane();
+//		    StackPane root = new StackPane();
+//		    
+//		    root.getChildren().add(main); 
+//		    root.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
+//		    root.getStyleClass().add("stackp");
 		    
-		    root.getChildren().add(main); 
-		    root.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
-		    root.getStyleClass().add("stackp");
-		    
-		    Scene scene = new Scene(root);
-		    primaryStage.setScene(scene);
+//		    Scene scene = new Scene(root);
+//		    primaryStage.setScene(scene);
 		     
 //		     primaryStage.setMaximized(true);   
 //		     primaryStage.setResizable(false);
-		     primaryStage.show();*/
+//		     primaryStage.show();
 
-		try{
-			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
-			Scene mScene = new Scene(mPane);
-			primaryStage.setScene(mScene);
-			primaryStage.show();
+//		try{
+//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
+//			Scene mScene = new Scene(mPane);
+//			primaryStage.setScene(mScene);
+//			primaryStage.show();
 
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
