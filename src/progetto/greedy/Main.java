@@ -35,8 +35,8 @@ public class Main extends Application {
 		    StackPane root = new StackPane();
 		    
 		    root.getChildren().add(main); 
-		    root.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
-		    root.getStyleClass().add("stackp");
+//		    root.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
+//		    root.getStyleClass().add("stackp");
 		    
 		    Scene scene = new Scene(root);
 		    primaryStage.setScene(scene);
