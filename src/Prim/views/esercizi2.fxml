@@ -12,13 +12,8 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Prim.views.eserciziController">
    <children>
-      <VBox layoutX="235.0" layoutY="75.0" prefHeight="200.0" prefWidth="100.0">
+      <VBox layoutX="235.0" layoutY="105.0" prefHeight="508.0" prefWidth="610.0">
          <children>
-            <Label text="ESERCIZI" textFill="#f27e7e">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
             <Text fx:id="secondQuestion" fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Qual è la differenza principale tra l'algoritmo di Prim e l'algoritmo di Kruskal?">
                <VBox.margin>
                   <Insets top="40.0" />
@@ -47,7 +42,7 @@
                   <Insets top="60.0" />
                </VBox.margin>
             </RadioButton>
-            <Button fx:id="done" mnemonicParsing="false" onAction="#verifica" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="OK">
+            <Button fx:id="done" mnemonicParsing="false" onAction="#verifica" styleClass="borderButton" stylesheets="@../../stylesheets/application.css" text="OK">
                <VBox.margin>
                   <Insets left="280.0" top="50.0" />
                </VBox.margin>
@@ -61,5 +56,10 @@
       </VBox>
       <Button fx:id="next" layoutX="953.0" layoutY="644.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
       <Button fx:id="back" layoutX="58.0" layoutY="644.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
+      <Label layoutX="100.0" layoutY="62.0" styleClass="titoli" text="ESERCIZI" textFill="#f27e7e">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

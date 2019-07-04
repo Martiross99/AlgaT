@@ -29,12 +29,15 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
             </Label>
             <HBox prefHeight="374.0" prefWidth="1080.0">
                <children>
                   <ImageView fx:id="immagine" fitHeight="401.0" fitWidth="548.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Image/prim.jpg" />
+                        <Image url="@../../Image/prim.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets left="30.0" />

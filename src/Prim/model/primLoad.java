@@ -9,7 +9,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.sceneController;
 
-public class primLoad extends Application{
+public class primLoad {
 
 		 public static Integer prim = 5;
 		 public static String primScene = "/Prim/views/prim.fxml";
@@ -44,67 +44,71 @@ public class primLoad extends Application{
 	     public Stage stage;
 	     
 	     
-//	    public sceneController Load(sceneController main) {
-//				try {
-//
-//				 main.loadScene(prim, primScene);
-//				 main.loadScene(overView, overViewScene);
-//				 main.loadScene(concept, conceptScene);
-//				 main.loadScene(defProblem, defProblemScene);
-//				 main.loadScene(idea, ideaScene);
-//				 main.loadScene(correttezza, correttezzaScene);
-//				 main.loadScene(implementation, implementScene);
-//				 main.loadScene(pseudoCodice, codiceScene);
-//				 main.loadScene(esecuzione, exeScene);
-//				 main.loadScene(efficienza, efficiencyScene);
-//				 main.loadScene(esercizi, eserciziScene);
-//				 main.loadScene(domande, domandeScene);
-//				 main.loadScene(domande2, domande2Scene);
-//				 main.loadScene(esercizi2, esercizi2Scene);
-//				 
-//	             // main.setScene(prim);
-//	 
-//			     return(main);
-//				 
-//				} catch (Exception e) {
-//					
-//					System.out.println(e.getMessage());
-//					return(null);
-//				}
+	    public sceneController Load(sceneController main) {
+				try {
+
+				 main.loadScene(prim, primScene);
+				 main.loadScene(overView, overViewScene);
+				 main.loadScene(concept, conceptScene);
+				 main.loadScene(defProblem, defProblemScene);
+				 main.loadScene(idea, ideaScene);
+				 main.loadScene(correttezza, correttezzaScene);
+				 main.loadScene(implementation, implementScene);
+				 main.loadScene(pseudoCodice, codiceScene);
+				 main.loadScene(esecuzione, exeScene);
+				 main.loadScene(efficienza, efficiencyScene);
+				 main.loadScene(esercizi, eserciziScene);
+				 main.loadScene(domande, domandeScene);
+				 main.loadScene(domande2, domande2Scene);
+				 main.loadScene(esercizi2, esercizi2Scene);
+				 
+	             // main.setScene(prim);
+	 
+			     return(main);
+				 
+				} catch (Exception e) {
+					
+					System.out.println(e.getMessage());
+					return(null);
+				}
+			
+			}
+
+
+//		@Override
+//		public void start(Stage primaryStage) throws Exception {
 //			
-//			}
-
-
-		@Override
-		public void start(Stage primaryStage) throws Exception {
-			
-			sceneController main = new sceneController();
-			
-			 main.loadScene(prim, primScene);
-			 main.loadScene(overView, overViewScene);
-			 main.loadScene(concept, conceptScene);
-			 main.loadScene(defProblem, defProblemScene);
-			 main.loadScene(idea, ideaScene);
-			 main.loadScene(correttezza, correttezzaScene);
-			 main.loadScene(implementation, implementScene);
-			 main.loadScene(pseudoCodice, codiceScene);
-			 main.loadScene(esecuzione, exeScene);
-			 main.loadScene(efficienza, efficiencyScene);
-			 main.loadScene(esercizi, eserciziScene);
-			 main.loadScene(domande, domandeScene);
-			 main.loadScene(domande2, domande2Scene);
-			 main.loadScene(esercizi2, esercizi2Scene);
-			 
-             main.setScene(prim);
-             
-         	StackPane root = new StackPane();
-    		root.getChildren().add(main);
-    		Scene scene = new Scene(root);
-
-
-    		primaryStage.setScene(scene);
-    		primaryStage.show();
-			
-		}
+//			sceneController main = new sceneController();
+//			
+//			 main.loadScene(prim, primScene);
+//			 main.loadScene(overView, overViewScene);
+//			 main.loadScene(concept, conceptScene);
+//			 main.loadScene(defProblem, defProblemScene);
+//			 main.loadScene(idea, ideaScene);
+//			 main.loadScene(correttezza, correttezzaScene);
+//			 main.loadScene(implementation, implementScene);
+//			 main.loadScene(pseudoCodice, codiceScene);
+//			 main.loadScene(esecuzione, exeScene);
+//			 main.loadScene(efficienza, efficiencyScene);
+//			 main.loadScene(esercizi, eserciziScene);
+//			 main.loadScene(domande, domandeScene);
+//			 main.loadScene(domande2, domande2Scene);
+//			 main.loadScene(esercizi2, esercizi2Scene);
+//			 
+//             main.setScene(prim);
+//             
+//         	StackPane root = new StackPane();
+//    		root.getChildren().add(main);
+//    		
+//    		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
+//    	    root.getStyleClass().add("stackp");
+//    		
+//    		Scene scene = new Scene(root);
+//
+//
+//    		primaryStage.setScene(scene);
+//    		primaryStage.show();
+//			
+//		}
 
 }

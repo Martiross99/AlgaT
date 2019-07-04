@@ -1,5 +1,6 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
+
 .anchorp{
     -fx-background-color: #474747;
 }
@@ -15,6 +16,12 @@
 
 .button{
     -fx-background-color: #474747;
+}
+
+.borderButton{
+	-fx-background-color: #474747;
+	-fx-text-fill: #bc8686;
+	-fx-border-color: #bc8686;
 }
 
 #BLEZ{
@@ -122,14 +129,24 @@
     -fx-text-fill: #ff7979;
 }
 
-.myDialog1{
+
+.alertWarn {
     -fx-background-color: #e7a516;
-    -fx-text-fill: #dac3c3;
 }
 
-.myDialog2{
+.alertInfo {
     -fx-background-color: #4281e0;
 }
+
+.dialog-pane .button{
+   -fx-background-color: #474747;
+   -fx-text-fill: white;
+   -fx-wrap-text: true;
+   -fx-effect: dropshadow( three-pass-box, white, 10.0, 0.0, 0.0, 0.0);
+
+ }
+
+
 
 .textAreaq {
     -fx-control-inner-background: #474747;

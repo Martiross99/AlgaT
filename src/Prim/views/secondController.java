@@ -49,7 +49,8 @@ public class secondController implements model.ISceneController{
     
    @FXML
     void checkCorollary(ActionEvent event) throws IOException {
-         sc.setScene(introLoad.introIV);
+	     introLoad introPK = new introLoad();
+         sc.setScene(introPK.introIV);
     }
 
     @FXML
@@ -80,17 +81,17 @@ public class secondController implements model.ISceneController{
     @FXML
     void toColor(MouseEvent event) {
        Circle c = (Circle) event.getSource();
-       c.setStroke(Color.CORAL);
+       c.setStroke(Color.rgb(168,103,103));
     }
 
     @FXML
     void toUncolor(MouseEvent event) {
     	Circle c = (Circle) event.getSource();
-        c.setStroke(Color.BLACK);;
+        c.setStroke(Color.rgb(72,111,117));;
     }
     
     void toColor(Circle c) {
-    	c.setStroke(Color.CORAL);
+    	c.setStroke(Color.rgb(168,103,103));
     }
     
  

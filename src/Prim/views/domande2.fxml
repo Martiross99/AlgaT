@@ -31,10 +31,13 @@
             <HBox prefHeight="33.0" prefWidth="584.0">
                <children>
                   <TextField fx:id="tentativo" prefHeight="31.0" prefWidth="327.0" styleClass="textFieldq" stylesheets="@../../stylesheets/application.css" />
-                  <Button fx:id="inserisci" mnemonicParsing="false" onAction="#controlla3" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="Inserisci">
+                  <Button fx:id="inserisci" mnemonicParsing="false" onAction="#controlla3" prefHeight="33.0" prefWidth="85.0" styleClass="borderButton" stylesheets="@../../stylesheets/application.css" text="Inserisci">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                   </Button>
                </children>
                <VBox.margin>
@@ -44,10 +47,13 @@
             <HBox prefHeight="17.0" prefWidth="701.0">
                <children>
                   <TextArea fx:id="risposta" editable="false" prefHeight="48.0" prefWidth="327.0" styleClass="textAreaq" stylesheets="@../../stylesheets/application.css" />
-                  <Button fx:id="riprova" disable="true" mnemonicParsing="false" onAction="#clean" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="Riprova">
+                  <Button fx:id="riprova" disable="true" mnemonicParsing="false" onAction="#clean" prefHeight="33.0" prefWidth="85.0" styleClass="borderButton" stylesheets="@../../stylesheets/application.css" text="Riprova">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                   </Button>
                </children>
                <VBox.margin>
@@ -56,7 +62,7 @@
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="back" layoutX="52.0" layoutY="636.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;" />
-      <Button fx:id="next" disable="true" layoutX="971.0" layoutY="639.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" />
+      <Button fx:id="back" layoutX="52.0" layoutY="636.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
+      <Button fx:id="next" disable="true" layoutX="971.0" layoutY="639.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
    </children>
 </AnchorPane>

@@ -22,10 +22,10 @@ public class alertWindow {
         Alert avviso = new Alert(type, message);
         avviso.initModality(Modality.APPLICATION_MODAL);
        
-      //  DialogPane dp = avviso.getDialogPane();
-      //  dp.getStylesheets().add(getClass().getResource("/progetto/greedy/application.css").toExternalForm());
-     //   if(avviso.getAlertType() == AlertType.WARNING) dp.getStyleClass().add("myDialog1");
-     //   if(avviso.getAlertType() == AlertType.INFORMATION) dp.getStyleClass().add("myDialog2");
+        DialogPane dp = avviso.getDialogPane();
+        dp.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
+        if(avviso.getAlertType() == AlertType.WARNING) dp.getStyleClass().add("alertWarn");
+        if(avviso.getAlertType() == AlertType.INFORMATION) dp.getStyleClass().add("alertInfo");
         avviso.setTitle(title);
 		avviso.showAndWait();
     	 } catch(Exception e) {

@@ -22,7 +22,7 @@
             </Text>
          </center>
          <bottom>
-            <Button fx:id="start" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" text="INIZIA" BorderPane.alignment="CENTER">
+            <Button fx:id="start" mnemonicParsing="false" onAction="#goNext" styleClass="borderButton" text="INIZIA" BorderPane.alignment="CENTER">
                <font>
                   <Font size="23.0" />
                </font>
