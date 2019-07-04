@@ -10,6 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
@@ -22,13 +23,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 import Prim.model.primLoad;
 import model.sceneController;
+import progetto.greedy.sceneLoader;
 
 //gestisce i seguenti file FXML : prim.fxml, overView.fxml, concept.fxml, defProblem.fxml
 
 public class firstController implements model.ISceneController {
 	
+	    sceneLoader menu;
 	
 		sceneController sc;
 		
@@ -160,13 +164,21 @@ public class firstController implements model.ISceneController {
 		@FXML
 		  void goNext(ActionEvent event) throws IOException {
 		    sc.goNext();
-		  }		    
+		  }		  
+		
+		@FXML
+		  void gotoMenu(ActionEvent event) throws IOException {
+			sceneLoader menu = new sceneLoader();
+		    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		    menu.gotoMenu(window);	
+		  }		  
 
 		@Override
 		public void setSceneParent(sceneController parent) {
 			sc = parent;
 			
 		}
+		
 
 	    @FXML
 	    void initialize() {

@@ -13,11 +13,11 @@ import javafx.stage.Stage;
 public class scenesChanger {
 	
 	public void changeScene (ActionEvent event,String viewName) throws IOException{
-		   Parent parent = FXMLLoader.load(getClass().getResource(viewName));
+		      Parent parent = FXMLLoader.load(getClass().getResource(viewName));
 		      Scene scene = new Scene(parent);
 		      Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		       window.setScene(scene);
-		       window.show();
+		      window.setScene(scene);
+		      window.show();
 	}
 
 	public void mouseScene (MouseEvent event,String viewName) throws IOException{

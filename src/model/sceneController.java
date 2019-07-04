@@ -48,8 +48,7 @@ public class sceneController extends StackPane{
           //   AnchorPane ap = (AnchorPane) loader.load();
              Parent loadScene = (Parent) loader.load();
              ISceneController sceneController = ((ISceneController) loader.getController());
-             sceneController.setSceneParent(this);
-             
+             sceneController.setSceneParent(this);             
              addScene(n, loadScene);      //add this scene to the hashmap
              return true;
          } catch (Exception e) {

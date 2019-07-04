@@ -11,37 +11,37 @@ import model.sceneController;
 
 public class primLoad {
 
-		 public static Integer prim = 5;
+		 public static Integer prim = 1;
 		 public static String primScene = "/Prim/views/prim.fxml";
-		 public static Integer overView = 6;
+		 public static Integer overView = 2;
 		 public static String overViewScene = "/Prim/views/overView.fxml";
-		 public static Integer concept = 7;
+		 public static Integer concept = 3;
 		 public static String conceptScene = "/Prim/views/concept.fxml";
-		 public static Integer defProblem = 8;
+		 public static Integer defProblem = 4;
 		 public static String defProblemScene = "/Prim/views/defProblem.fxml";
-		 public static Integer idea = 9;
+		 public static Integer idea = 5;
 		 public static String ideaScene = "/Prim/views/idea.fxml";
-		 public static Integer correttezza = 10;
+		 public static Integer correttezza = 6;
 		 public static String correttezzaScene = "/Prim/views/correttezza.fxml";
-		 public static Integer implementation = 11;
+		 public static Integer implementation = 7;
 		 public static String implementScene = "/Prim/views/implementation.fxml";
-		 public static Integer pseudoCodice = 12;
+		 public static Integer pseudoCodice = 8;
 		 public static String codiceScene = "/Prim/views/pseudocodice.fxml";
-		 public static Integer esecuzione = 13;
+		 public static Integer esecuzione = 9;
 		 public static String exeScene = "/Prim/views/esecuzione.fxml";
-		 public static Integer efficienza = 14;
+		 public static Integer efficienza = 10;
 		 public static String efficiencyScene = "/Prim/views/efficienza.fxml";
-		 public static Integer esercizi = 15;
+		 public static Integer esercizi = 11;
 		 public static String eserciziScene = "/Prim/views/esercizi.fxml";
-		 public static Integer domande = 16;
+		 public static Integer domande = 12;
 		 public static String domandeScene = "/Prim/views/domande.fxml";
-		 public static Integer domande2 = 17;
+		 public static Integer domande2 = 13;
 		 public static String domande2Scene = "/Prim/views/domande2.fxml";
-		 public static Integer esercizi2 = 18;
+		 public static Integer esercizi2 = 14;
 		 public static String esercizi2Scene = "/Prim/views/esercizi2.fxml";
 
 
-	     public Stage stage;
+	//     public Stage stage;
 	     
 	     
 	    public sceneController Load(sceneController main) {
@@ -62,7 +62,7 @@ public class primLoad {
 				 main.loadScene(domande2, domande2Scene);
 				 main.loadScene(esercizi2, esercizi2Scene);
 				 
-	             // main.setScene(prim);
+	             main.setScene(prim);
 	 
 			     return(main);
 				 

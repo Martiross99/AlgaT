@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import model.sceneController;
 import progetto.greedy.Main;
 
-public class introLoad extends Application {
+public class introLoad {
 
 	public static Integer introI = 1;
 	public static String firstIntro = "/intro_KP/views/introduzione.fxml";
@@ -25,50 +25,50 @@ public class introLoad extends Application {
 	public Stage stage;
 	
 
-//	public sceneController Load(sceneController main) {		
-//		try {
-//		main.loadScene(introI, firstIntro);
-//		main.loadScene(introII, secondIntro);
-//		main.loadScene(introIII, thirdIntro);
-//		main.loadScene(introIV, fourthIntro);
-//        main.setScene(introI);
-//        
-//	     return(main);
-//		 
-//		} catch (Exception e) {
-//			
-//			System.out.println(e.getMessage());
-//			return(null);
-//		}
-//	
-//	}
-
-
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-
-         sceneController main = new sceneController();	
-         
-         main.loadScene(introI, firstIntro);
- 		 main.loadScene(introII, secondIntro);
- 		 main.loadScene(introIII, thirdIntro);
- 		 main.loadScene(introIV, fourthIntro);
-         main.setScene(introI);
-         
-     	StackPane root = new StackPane();
-		root.getChildren().add(main);
-		
-		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
-	    root.getStyleClass().add("stackp");
-	    
-		Scene scene = new Scene(root);
-
-
-		primaryStage.setScene(scene);
-		primaryStage.show();
-         
-         
+	public sceneController Load(sceneController main) {		
+		try {
+		main.loadScene(introI, firstIntro);
+		main.loadScene(introII, secondIntro);
+		main.loadScene(introIII, thirdIntro);
+		main.loadScene(introIV, fourthIntro);
+        main.setScene(introI);
+        
+	     return(main);
+		 
+		} catch (Exception e) {
+			
+			System.out.println(e.getMessage());
+			return(null);
+		}
+	
 	}
+
+
+//	@Override
+//	public void start(Stage primaryStage) throws Exception {
+//
+//         sceneController main = new sceneController();	
+//         
+//         main.loadScene(introI, firstIntro);
+// 		 main.loadScene(introII, secondIntro);
+// 		 main.loadScene(introIII, thirdIntro);
+// 		 main.loadScene(introIV, fourthIntro);
+//         main.setScene(introI);
+//         
+//     	StackPane root = new StackPane();
+//		root.getChildren().add(main);
+//		
+//		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
+//	    root.getStyleClass().add("stackp");
+//	    
+//		Scene scene = new Scene(root);
+//
+//
+//		primaryStage.setScene(scene);
+//		primaryStage.show();
+//         
+//         
+//	}
 	 
 
 }

@@ -26,13 +26,28 @@ public class Main extends Application {
 
 		try {
 			
-//			primLoad intro = new primLoad();
-//			intro.start(primaryStage);
+			sceneLoader progetto = new sceneLoader();
+			progetto.load();
+			progetto.start(primaryStage);
+//		    StackPane root = new StackPane();
+//		    
+//		    root.getChildren().addAll(menu.getController(0),menu.getController(1)); 
+//		    root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
+//		    root.getStyleClass().add("stackp");
+//		    
+//		    Scene scene = new Scene(root);
+//		    primaryStage.setScene(scene);
+		     
+//		     primaryStage.setMaximized(true);   
+//		     primaryStage.setResizable(false);
+//		     primaryStage.show();
+			
 
-			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
-			Scene mScene = new Scene(mPane);
-			primaryStage.setScene(mScene);
-			primaryStage.show();
+
+//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
+//			Scene mScene = new Scene(mPane);
+//			primaryStage.setScene(mScene);
+//			primaryStage.show();
 
 		}catch(Exception e) {
 			System.out.println(e.getMessage());

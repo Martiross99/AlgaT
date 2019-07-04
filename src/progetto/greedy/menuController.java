@@ -10,9 +10,13 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.ISceneController;
+import model.sceneController;
 
-public class menuController {
+public class menuController implements ISceneController {
 
+	sceneController sc;
+	
     @FXML
     private ResourceBundle resources;
 
@@ -27,15 +31,16 @@ public class menuController {
 
     @FXML
     void openLezioni(ActionEvent event) {
-        try{
-            AnchorPane subPane = FXMLLoader.load(getClass().getResource("lezioni.fxml"));
-            Scene subScene = new Scene(subPane);
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(subScene);
-            window.show();
-        } catch(Exception e){
-            System.out.println(e.getMessage());
-        }
+//        try{
+//            AnchorPane subPane = FXMLLoader.load(getClass().getResource("lezioni.fxml"));
+//            Scene subScene = new Scene(subPane);
+//            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//            window.setScene(subScene);
+//            window.show();
+//        } catch(Exception e){
+//            System.out.println(e.getMessage());
+//        }
+    	sc.goNext();
     }
 
     @FXML
@@ -59,5 +64,11 @@ public class menuController {
         BGAME.setOnAction(event -> openMonete(event));
 
     }
+
+	@Override
+	public void setSceneParent(sceneController sceneParent) {
+		sc = sceneParent;
+		
+	}
 
 }
