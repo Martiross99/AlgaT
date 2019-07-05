@@ -41,6 +41,8 @@ public class primLoad {
 		 public static String esercizi2Scene = "/Prim/views/esercizi2.fxml";
 		 public static Integer domande3 = 15;
 		 public static String domande3Scene = "/Prim/views/domande3.fxml";
+		 public static Integer domande4 = 16;
+		 public static String domande4Scene = "/Prim/views/domande4.fxml";
 
 	//     public Stage stage;
 	     
@@ -63,6 +65,7 @@ public class primLoad {
 				 controller.loadScene(domande2, domande2Scene);
 				 controller.loadScene(esercizi2, esercizi2Scene);
 				 controller.loadScene(domande3, domande3Scene);
+				 controller.loadScene(domande4, domande4Scene);
 				 
 	             controller.setScene(prim);
 	 

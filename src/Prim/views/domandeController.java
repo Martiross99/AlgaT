@@ -8,10 +8,12 @@ import java.util.regex.Pattern;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import model.sceneController;
 
 public class domandeController  implements model.ISceneController{
@@ -19,7 +21,7 @@ public class domandeController  implements model.ISceneController{
 	sceneController sc;
 
     @FXML
-    private Button back, next, inserisci,done, riprova;
+    private Button back, next, menu, inserisci,done, riprova;
     
     @FXML
     private TextField tentativo;
@@ -28,7 +30,7 @@ public class domandeController  implements model.ISceneController{
     private TextArea risposta;
     
     @FXML
-    private Text thirdQuestion;
+    private Text thirdQuestion,fourthQuestion;
     
     
   //Funzioni che gestiscono il file esercizi2.fxml
@@ -53,8 +55,8 @@ public class domandeController  implements model.ISceneController{
 
   		try {	
   			Scanner scanner = new Scanner (new File("src/Prim/views/risposte.txt")); 
-  			String anno = scanner.nextLine();
-//  				if(scanner.hasNextInt()) System.out.println(scanner.next()); System.out.println(s);
+  			String anno = scanner.next();
+  			//System.out.println(prova + anno);
   				if(anno.equals(prova)) {
   					    risposta.appendText("Corretto!"); 
   		            	next.setDisable(false);
@@ -62,14 +64,13 @@ public class domandeController  implements model.ISceneController{
   				else risposta.appendText("Hai sbagliato, riprova");
   			 scanner.close();
   		}    catch(FileNotFoundException ex) {
-  	        System.out.println(
-  	                "Unable to open file 'risposte.txt'");                
+  	        System.out.println("Unable to open file 'risposte.txt'");                
   	        }
   		 }
 
          }	
   	 
-   
+  
     
     
   //funzioni che gestiscono il file esercizi3.fxml
@@ -80,12 +81,20 @@ public class domandeController  implements model.ISceneController{
 		prova = prova.trim();
 		if(prova.length()!=0) {
 		try {	
-			Scanner scanner = new Scanner (new File("src/Prim/views/risposte.txt"));
-			if(thirdQuestion != null) scanner.nextLine();
-			else scanner.skip(Pattern.compile("..57"));
-			 scanner.useDelimiter("/");
+			Scanner s = new Scanner (new File("src/Prim/views/risposte.txt"));
+			Integer line = 0;
+			if(thirdQuestion != null) line = 3;
+			else if(fourthQuestion != null) line = 4;
+			else line = 2;
+			
+			String riga = getLine(s,line);
+		//	System.out.println(riga);
+			
+			Scanner scanner = new Scanner(riga);
+			scanner.useDelimiter("/");
+			
 			boolean found = false;
-			while(scanner.hasNext()) {
+			while(scanner.hasNext() ) {
 				String a = scanner.next();
 				if(a.equals(prova)) {
 					risposta.appendText("Corretto!"); 
@@ -93,14 +102,29 @@ public class domandeController  implements model.ISceneController{
 				}
 			}
 		    if(!found) risposta.appendText("Sbagliato, riprova");
-		    if(found) next.setDisable(false);
+		    if((found) && (line < 4)) next.setDisable(false);
+		    else menu.setDisable(false);
+		    
 		    inserisci.setDisable(true);
 		    riprova.setDisable(false);
+		    
            scanner.close();
+           
 		}    catch(FileNotFoundException ex) {
-	        System.out.println("Unable to open file 'risposte.txt'");                
+			
+	        System.out.println("Unable to open file 'risposte.txt'");  
+	        
 	        }
 		}
+    }
+    
+    String getLine(Scanner s, Integer line) {
+    	String riga = new String();
+    	while(line > 0) {
+    		    riga = s.nextLine();
+				line = line-1;
+    	}
+    	return(riga);
     }
     
     @FXML
@@ -131,6 +155,14 @@ public class domandeController  implements model.ISceneController{
 		   risposta.clear();
 	}
 	
+	   @FXML
+	     void gotoMenu(ActionEvent event) throws IOException {
+	 
+	    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	 	    sc.getProgetto().gotoMenu(window);
+
+	     }
+	
 	@Override
 	public void setSceneParent(sceneController parent) {
 		sc = parent;	
@@ -154,6 +186,10 @@ public class domandeController  implements model.ISceneController{
 	        
 	     //FXML domande3
 	        assert thirdQuestion != null : "fx:id=\"thirdQuestion\" was not injected: check your FXML file 'domande3.fxml'.";
+	        
+	     //FXML domande4
+	        assert fourthQuestion != null : "fx:id=\"fourthQuestion\" was not injected: check your FXML file 'domande4.fxml'.";
+	        assert menu != null : "fx:id=\"menu\" was not injected: check your FXML file 'domande4.fxml'.";
 	        
 	    }
 

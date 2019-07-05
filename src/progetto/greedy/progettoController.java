@@ -101,7 +101,7 @@ public class progettoController extends Application {
 			try {
 			   this.start(window);
 			} catch (Exception e) {
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 		}
 		
@@ -110,7 +110,7 @@ public class progettoController extends Application {
 			try {
 				this.start(window);
 			} catch (Exception e) {
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 		}
 		
