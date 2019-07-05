@@ -19,15 +19,16 @@ public class menuLoad {
 //	public static Integer defProblem = 4;
 //	public static String defProblemScene = "/Prim/views/defProblem.fxml";
 
-	 public sceneController Load(sceneController main) {
+	 public sceneController Load(sceneController controller) {
+		 
 			try {
 
-			 main.loadScene(menu, menuScene);
-			 main.loadScene(lezioni, lezioniScene);
-			 main.loadScene(algoritmi, algoritmiScene);
-             main.setScene(menu);
+			 controller.loadScene(menu, menuScene);
+			 controller.loadScene(lezioni, lezioniScene);
+			 controller.loadScene(algoritmi, algoritmiScene);
+             controller.setScene(menu);
 
-		     return(main);
+		     return(controller);
 			 
 			} catch (Exception e) {
 				

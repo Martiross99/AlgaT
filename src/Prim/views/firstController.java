@@ -26,20 +26,20 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import Prim.model.primLoad;
 import model.sceneController;
-import progetto.greedy.sceneLoader;
+import progetto.greedy.progettoController;
 
 //gestisce i seguenti file FXML : prim.fxml, overView.fxml, concept.fxml, defProblem.fxml
 
 public class firstController implements model.ISceneController {
 	
-	    sceneLoader menu;
+
 	
 		sceneController sc;
 		
 		ObservableList<String> definizioni = FXCollections.observableArrayList("Grafo non orientato e connesso","Albero di copertura", "Albero di copertura minimo", "Taglio","Arco sicuro");
 			
 	    @FXML
-	    private Button start, back, next, alert,controlla;
+	    private Button start, back, next, menu, alert,controlla;
 	    
 	    @FXML
 	    private AnchorPane ap;
@@ -168,9 +168,8 @@ public class firstController implements model.ISceneController {
 		
 		@FXML
 		  void gotoMenu(ActionEvent event) throws IOException {
-			sceneLoader menu = new sceneLoader();
 		    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		    menu.gotoMenu(window);	
+		    sc.getProgetto().gotoMenu(window);	
 		  }		  
 
 		@Override
@@ -188,6 +187,7 @@ public class firstController implements model.ISceneController {
 	        //FXML prim
 	        assert ap != null : "fx:id=\"ap\" was not injected: check your FXML file 'prim.fxml'.";
 	        assert start != null : "fx:id=\"start\" was not injected: check your FXML file 'prim.fxml'.";
+	        assert menu != null : "fx:id=\"menu\" was not injected: check your FXML file 'prim.fxml'.";
 	        
 	        //FXML overView
 	        assert alert != null : "fx:id=\"alert\" was not injected: check your FXML file 'overView.fxml'.";

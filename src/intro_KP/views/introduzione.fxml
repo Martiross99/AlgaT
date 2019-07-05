@@ -56,9 +56,9 @@
       </VBox>
    </center>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="64.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;">
+            <Button fx:id="menu" mnemonicParsing="false" onAction="#gotoMenu" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="MENU">
                <HBox.margin>
                   <Insets left="45.0" />
                </HBox.margin>

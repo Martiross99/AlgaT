@@ -41,9 +41,9 @@ public class algoritmiController implements ISceneController {
 //            e.printStackTrace();
 //        }
     	
-    	 sceneLoader menu = new sceneLoader();
+    	// progettoController menu = new progettoController();
 	     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	     menu.loadController(1,window);
+	     sc.getProgetto().loadController(1,window);
     }
 
     @FXML
@@ -60,9 +60,12 @@ public class algoritmiController implements ISceneController {
 //        }catch(Exception e) {
 //            e.printStackTrace();
 //        }
-    	 sceneLoader menu = new sceneLoader();
-	     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	     menu.loadController(2,window);
+//    	 progettoController menu = new progettoController ();
+	    
+//	     menu.loadController(2,window);
+    	
+    	 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	 sc.getProgetto().loadController(2, window);
     }
 
     @FXML
@@ -77,9 +80,9 @@ public class algoritmiController implements ISceneController {
 //            System.out.println(e.getMessage());
 //        }
     	
-			sceneLoader menu = new sceneLoader();
-		    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		    menu.gotoMenu(window);	
+    	
+	    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    sc.goBack();	
 
     }
 
@@ -89,8 +92,7 @@ public class algoritmiController implements ISceneController {
     }
 
 	@Override
-	public void setSceneParent(sceneController sceneParent) {
-		
+	public void setSceneParent(sceneController sceneParent) {		
 		sc = sceneParent;
 	}
 }

@@ -26,7 +26,7 @@ public class Main extends Application {
 
 		try {
 			
-			sceneLoader progetto = new sceneLoader();
+			progettoController progetto = new progettoController();
 			progetto.load();
 			progetto.start(primaryStage);
 //		    StackPane root = new StackPane();

@@ -9,55 +9,80 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.sceneController;
 
-public class sceneLoader extends Application{
+//classe che gestisce tutti controller delle lezioni, li inserisce in un array e gestisce le funzioni di interscambio
+
+public class progettoController extends Application {
+
 
         protected Integer controllerCorrente;
-		protected sceneController[] progetto = new sceneController[3] ; 
+        
+		protected sceneController[] progetto ; 
 		
 		
-		public sceneLoader() {
+		public progettoController() {
+		
+//		super();
 			this.controllerCorrente = 0;
-			try {
-				this.load();
-			} catch (Exception e) {
-				System.out.println(e.getMessage());
-			}
+			this.progetto = new sceneController[3];
+//			try {
+//				this.load();
+//			} catch (Exception e) {
+//				System.out.println(e.getMessage());
+//			}
+		}
+		
+		
+		public Integer getLength() {
+			return(this.progetto.length);
 		}
 		
 		public void load() {
 		   	try {
-		   		
+				
 		   		sceneController mainController = new sceneController();
 				menuLoad main = new menuLoad();
-				main.Load(mainController);
-		   		
-	            sceneController primController = new sceneController();
-				primLoad prim = new primLoad();
-				prim.Load(primController);
+				mainController = main.Load(mainController);
 				
+				sceneController primController = new sceneController();
+				primLoad prim = new primLoad();
+				primController = prim.Load(primController);
+				
+
 				sceneController introController = new sceneController();
 				introLoad intro = new introLoad();	
-				intro.Load(introController);
-				
+				introController = intro.Load(introController);
+		   		
+		   		
+		   		
+
+		   		
 				progetto[0] = mainController;
 				progetto[2] = primController;
 				progetto[1] = introController;
 				
+				this.setStructure();
 
 		 
-		     }catch(Exception e) {
+		     } catch(Exception e) {
 			e.printStackTrace();
 		   }
+		   	
 	     }
 		
 		
-		public sceneController getController(Integer i) {
-			return(progetto[i]);
-		}
+//		public sceneController getController(Integer i) {
+//			return(progetto[i]);
+//		}
 
-
+        public void setStructure() {
+        	for(int i = 0; i < progetto.length; i++) {
+        		progetto[i].setProgetto(this);
+        	}
+        }
+		
 		@Override
 		public void start(Stage primaryStage) throws Exception {
+			
 			StackPane root = new StackPane();
     		root.getChildren().add(progetto[controllerCorrente]);
     		
@@ -68,12 +93,13 @@ public class sceneLoader extends Application{
 
     		primaryStage.setScene(scene);
     		primaryStage.show();
+    		
 		}
 		
 		public void gotoMenu(Stage window) throws IOException {
 			controllerCorrente = 0;
 			try {
-			this.start(window);
+			   this.start(window);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -87,4 +113,11 @@ public class sceneLoader extends Application{
 				e.printStackTrace();
 			}
 		}
+		
+		public void loadScene(Integer i, Stage window, String viewName) throws IOException {
+			
+//			this.loadController(i,window);
+			
+		}
+
 }

@@ -29,13 +29,13 @@ public class lezioniController implements ISceneController {
 
     @FXML
     void openLesson1(ActionEvent event) {
-        introSceneLoader intro = new introSceneLoader();
-        Stage primaryStage = (Stage) lessonP.getScene().getWindow();
-        try {
-            intro.start(primaryStage);
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
+//        introSceneLoader intro = new introSceneLoader();
+//        Stage primaryStage = (Stage) lessonP.getScene().getWindow();
+//        try {
+//            intro.start(primaryStage);
+//        }catch(Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
     @FXML

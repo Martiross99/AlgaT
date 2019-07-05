@@ -23,7 +23,7 @@ import Prim.model.primLoad;
 //import Prim.model.primLoad;
 import model.sceneController;
 import model.scenesChanger;
-import progetto.greedy.sceneLoader;
+import progetto.greedy.progettoController;
 
 
 //classe per la gestione dei seguenti file : idea.fxml, correttezza.fxml, implementation.fxml
@@ -53,7 +53,7 @@ public class secondController implements model.ISceneController{
     
    @FXML
     void checkCorollary(ActionEvent event) throws IOException {
-	     sceneLoader menu = new sceneLoader();
+	     progettoController menu = new progettoController();
 	     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 	     menu.gotoMenu(window);
     }
