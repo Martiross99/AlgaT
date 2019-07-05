@@ -13,12 +13,15 @@
    <children>
       <VBox layoutX="87.0" layoutY="85.0" prefHeight="429.0" prefWidth="737.0">
          <children>
-            <Label prefHeight="21.0" prefWidth="85.0" text="PROBLEMA" textFill="#d37373">
+            <Label prefHeight="26.0" prefWidth="100.0" styleClass="titoli" stylesheets="@../../stylesheets/application.css" text="PROBLEMA" textFill="#d37373">
                <VBox.margin>
                   <Insets left="30.0" top="30.0" />
                </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
             </Label>
-            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Dato un grafo pesato, determinare come interconnettere tutti i suoi nodi minimizzando il costo del peso associato ai suoi archi. Ovvero determinare un albero di copertura di peso minimo per il grafo dato." wrappingWidth="744.000006198883">
+            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Dato un grafo pesato, determinare come interconnettere tutti i suoi nodi minimizzando il costo del peso associato ai suoi archi. Ovvero determinare un albero di copertura di peso minimo per il grafo dato." wrappingWidth="744.000006198883">
                <font>
                   <Font size="18.0" />
                </font>
@@ -26,28 +29,15 @@
                   <Insets left="30.0" top="20.0" />
                </VBox.margin>
             </Text>
-            <Label text="DEFINIZIONE DEL PROBLEMA" textFill="#d37373">
+            <Label styleClass="titoli" stylesheets="@../../stylesheets/application.css" text="DEFINIZIONE DEL PROBLEMA" textFill="#d37373">
                <VBox.margin>
                   <Insets left="30.0" top="40.0" />
                </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
             </Label>
-            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; G (V, E) grafo non orientato e connesso">
-               <VBox.margin>
-                  <Insets left="30.0" top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text=" &gt; w: V x V -&gt;R : funzione di peso (rappresenta il costo di connessione)    se [u, v] ∈ E allora w(u, v) è il peso dell'arco [u, v], mentre se [u, v] ∉  E allora w(u, v) =+∞ perchè tale peso non è ancora stato determinato" textOrigin="CENTER" wrappingWidth="580.162109375">
-               <VBox.margin>
-                  <Insets left="30.0" top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; G non è orientato, pertanto w (u, v) = w (v, u)">
+            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="&gt; G (V, E) grafo non orientato e connesso  &#10;&#10;&gt; w: V x V -&gt;R : funzione di peso (rappresenta il costo di connessione)&#10;   se [u, v] ∈ E allora w(u, v) è il peso dell'arco [u, v], mentre se [u, v] ∉  E &#10;   allora w(u, v) =+∞ perchè tale peso non è ancora stato determinato&#10;&#10;&gt; G non è orientato, pertanto w (u, v) = w (v, u)">
                <VBox.margin>
                   <Insets left="30.0" top="20.0" />
                </VBox.margin>
@@ -68,12 +58,18 @@
          </font>
       </Button>
       <ImageView fx:id="image" fitHeight="205.0" fitWidth="306.0" layoutX="691.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true" />
-      <Text fill="#f27e7e" layoutX="111.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algoritmi Greedy (&quot;golosi&quot;) per gli alberi di coprtura minima sono: ">
+      <Text fill="#f27e7e" layoutX="111.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Algoritmi Greedy (&quot;golosi&quot;) per gli alberi di coprtura minima sono: ">
          <font>
-            <Font size="16.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <Label fx:id="kruskal" layoutX="588.0" layoutY="595.0" onMouseClicked="#gotoKruskal" text="Algoritmo di Kruskal" textFill="#2c7c90" />
-      <Text fill="#f27e7e" layoutX="732.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="e Algoritmo di Prim" />
+      <Label fx:id="kruskal" layoutX="641.0" layoutY="593.0" onMouseClicked="#gotoKruskal" text="Algoritmo di Kruskal" textFill="#5dbfc9">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Text fill="#f27e7e" layoutX="815.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="e Algoritmo di Prim">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
    </children>
 </AnchorPane>

@@ -11,11 +11,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import progetto.greedy.progettoController;
 
 
-public class sceneController extends StackPane{
+public class sceneController extends StackPane {
 
-	HashMap<Integer,Node> map = new HashMap<>();
+	protected HashMap<Integer,Node> map = new HashMap<>();
+	protected progettoController padre;
 	
 	public sceneController() {
 		super();
@@ -42,14 +44,16 @@ public class sceneController extends StackPane{
     	return(sc.map);
     }
 	
+
+    
+    
     public boolean loadScene(Integer n, String resource) {
     	 try {
              FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
           //   AnchorPane ap = (AnchorPane) loader.load();
              Parent loadScene = (Parent) loader.load();
              ISceneController sceneController = ((ISceneController) loader.getController());
-             sceneController.setSceneParent(this);
-             
+             sceneController.setSceneParent(this);             
              addScene(n, loadScene);      //add this scene to the hashmap
              return true;
          } catch (Exception e) {
@@ -70,6 +74,15 @@ public class sceneController extends StackPane{
     	}
     }
     
+    
+    
+    public void setProgetto(progettoController progetto) {
+    	padre = progetto;
+    }
+    
+    public progettoController getProgetto() {
+    	return(padre);
+    }
     
 //PROVA    
     

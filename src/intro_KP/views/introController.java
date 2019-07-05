@@ -1,11 +1,17 @@
 package intro_KP.views;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.stage.Stage;
 import model.sceneController;
+import progetto.greedy.progettoController;
+
 
 
 //gestisce i file FXML : introduzione1, introduzione2, introduzione3, introduzione4.fxml
@@ -20,7 +26,7 @@ public class introController implements model.ISceneController{
     private Line line1, line2, taglio;
 	
 	@FXML
-	private Button back, next,change;
+	private Button back, next, menu, change;
 	
 	
 //Funzioni che gestiscono l'FXML introduzione3.fxml
@@ -45,10 +51,12 @@ public class introController implements model.ISceneController{
     }
     
     @FXML
-    void gotoMenu(ActionEvent event) {
-       sc.gotoMenu(event);
-    }
-	
+    void gotoMenu(ActionEvent event) throws IOException {
+    	//progettoController menu = new progettoController ();
+	    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    sc.getProgetto().gotoMenu(window);    
+       }
+
 	@Override
 	public void setSceneParent(sceneController parent) {
 		sc = parent;
@@ -70,5 +78,6 @@ public class introController implements model.ISceneController{
 	    
     	assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'introduzione.fxml'.";
         assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'introduzione.fxml'.";
+        assert menu != null : "fx:id=\"menu\" was not injected: check your FXML file 'introduzione.fxml'.";
     }
 }

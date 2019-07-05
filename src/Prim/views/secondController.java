@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Alert.AlertType;
@@ -15,11 +16,14 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 import intro_KP.model.introLoad;
 import Prim.model.primLoad;
 //import Prim.model.introLoad;
 //import Prim.model.primLoad;
 import model.sceneController;
+import model.scenesChanger;
+import progetto.greedy.progettoController;
 
 
 //classe per la gestione dei seguenti file : idea.fxml, correttezza.fxml, implementation.fxml
@@ -49,7 +53,9 @@ public class secondController implements model.ISceneController{
     
    @FXML
     void checkCorollary(ActionEvent event) throws IOException {
-         sc.setScene(introLoad.introIV);
+	     progettoController menu = new progettoController();
+	     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	     menu.gotoMenu(window);
     }
 
     @FXML
@@ -80,17 +86,17 @@ public class secondController implements model.ISceneController{
     @FXML
     void toColor(MouseEvent event) {
        Circle c = (Circle) event.getSource();
-       c.setStroke(Color.CORAL);
+       c.setStroke(Color.rgb(168,103,103));
     }
 
     @FXML
     void toUncolor(MouseEvent event) {
     	Circle c = (Circle) event.getSource();
-        c.setStroke(Color.BLACK);;
+        c.setStroke(Color.rgb(72,111,117));;
     }
     
     void toColor(Circle c) {
-    	c.setStroke(Color.CORAL);
+    	c.setStroke(Color.rgb(168,103,103));
     }
     
  
