@@ -14,7 +14,7 @@
    <children>
       <VBox layoutX="235.0" layoutY="105.0" prefHeight="508.0" prefWidth="610.0">
          <children>
-            <Text fx:id="secondQuestion" fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Qual è la differenza principale tra l'algoritmo di Prim e l'algoritmo di Kruskal?">
+            <Text fx:id="secondExercise" fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Qual è la differenza principale tra l'algoritmo di Prim e l'algoritmo di Kruskal?">
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>

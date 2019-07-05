@@ -16,23 +16,25 @@ import progetto.greedy.progettoController;
 
 public class sceneController extends StackPane {
 
-	protected HashMap<Integer,Node> map = new HashMap<>();
-	protected progettoController padre;
+	protected HashMap<Integer,Node> mappa = new HashMap<>();
+	protected progettoController mainProject;
 	
 	public sceneController() {
 		super();
 	}
 	
+	
 	public void addScene(Integer n, Node scene) {
-		map.put(n, scene);
+		mappa.put(n, scene);
 	}
 
     public Node getScene(Integer n) {
-	  return(map.get(n));
+	  return(mappa.get(n));
     }
     
+    
     public Integer getIndex (Node scene) {
-    	 for (Entry<Integer, Node> entry : map.entrySet()) {
+    	 for (Entry<Integer, Node> entry : mappa.entrySet()) {
     	        if (scene.equals(entry.getValue())) {
     	            return entry.getKey();
     	        }
@@ -41,7 +43,7 @@ public class sceneController extends StackPane {
     }
     
     public HashMap<Integer,Node> getMap(sceneController sc) {
-    	return(sc.map);
+    	return(sc.mappa);
     }
 	
 
@@ -50,11 +52,11 @@ public class sceneController extends StackPane {
     public boolean loadScene(Integer n, String resource) {
     	 try {
              FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-          //   AnchorPane ap = (AnchorPane) loader.load();
-             Parent loadScene = (Parent) loader.load();
+             AnchorPane ap = (AnchorPane) loader.load();
+             //Parent loadScene = (Parent) loader.load();
              ISceneController sceneController = ((ISceneController) loader.getController());
              sceneController.setSceneParent(this);             
-             addScene(n, loadScene);      //add this scene to the hashmap
+             addScene(n, ap);      //add this scene to the hashmap
              return true;
          } catch (Exception e) {
              System.out.println(e.getMessage());
@@ -77,11 +79,11 @@ public class sceneController extends StackPane {
     
     
     public void setProgetto(progettoController progetto) {
-    	padre = progetto;
+    	mainProject = progetto;
     }
     
     public progettoController getProgetto() {
-    	return(padre);
+    	return(mainProject);
     }
     
 //PROVA    
@@ -98,16 +100,17 @@ public class sceneController extends StackPane {
 //    }
     
     public boolean setScene(final Integer n) {
-    	if (map.get(n) != null) {   //se la scena è nella mappa
+    	
+    	if (mappa.get(n) != null) {   //la scena deve essere stata caricata nella mappa
 
-         if (!getChildren().isEmpty()) {    //if there is more than one sceen
+         if (!getChildren().isEmpty()) {    // se è presente più di una scena nella mappa
   
-                    getChildren().remove(0);                    //remove the displayed sceen
-                    getChildren().add(0,map.get(n));     //add the sceen       
+                    getChildren().remove(0);                    //viene rimosso il figlio attualmente in posizione zero
+                    getChildren().add(0,mappa.get(n));     //viene aggiunta la scena corrente in posizione zero      
             }
 
         else {
-            getChildren().add(map.get(n));       //no one else been displayed, then just show
+            getChildren().add(mappa.get(n));       //se c'è solo una scena da mostrare viene aggiunta e mostrata
         }
         return true;
     } else {
@@ -137,15 +140,15 @@ public class sceneController extends StackPane {
        }
     }
     
-    public void gotoMenu(ActionEvent event) {
-       try{
-           AnchorPane mPane = FXMLLoader.load(getClass().getResource("/progetto/greedy/menu.fxml"));
-           Scene mScene = new Scene(mPane);
-           Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-           window.setScene(mScene);
-           window.show();
-       } catch(Exception e) {
-          System.out.println(e.getMessage());
-       }
-    }
+//    public void gotoMenu(ActionEvent event) {
+//       try{
+//           AnchorPane mPane = FXMLLoader.load(getClass().getResource("/progetto/greedy/menu.fxml"));
+//           Scene mScene = new Scene(mPane);
+//           Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//           window.setScene(mScene);
+//           window.show();
+//       } catch(Exception e) {
+//          System.out.println(e.getMessage());
+//       }
+//    }
 }

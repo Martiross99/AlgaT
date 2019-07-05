@@ -10,14 +10,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Prim.views.secondController">
    <children>
-      <VBox layoutX="87.0" layoutY="30.0" prefHeight="366.0" prefWidth="906.0">
+      <VBox layoutX="87.0" layoutY="56.0" prefHeight="366.0" prefWidth="906.0">
          <children>
             <Label styleClass="titoli" stylesheets="@../../stylesheets/application.css" text="EFFICIENZA" textFill="#f27e7e">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Text fill="#f2f0f0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'effficienza dell'algoritmo di Prim dipende dall'implementazione della relativa coda con priorità.&#10;  Se si utilizza uno heap binario allora:&#10;&#10;     - l'inizializzazione ha costo: O (n*log n)&#10;     - il ciclo principale che viene eseguito ogni volta in cui viene aggiunto un nodo &#10;       alla coda è eseguito O(n-1) volte e ogni operazione deleteMin() ha costo O(log n)&#10;     - il ciclo interno viene invece eseguito O(m) volte ed ogni operazione decreaseKey() ha costo O(log n)&#10;&#10;Quindi il costo tolate è:  O(n*log n + (n - 1)*(log n) + m*log n) = O(m*log n),&#10;  che asintoticamente corrisponde a quello dell'algoritmo di Kruskal.&#10;&#10;  Se, invece, si utilizza un vettore non ordinato:&#10;      - l'inizializzazione costa O(n)&#10;      - il ciclo principale viene eseguito O(n) volte, ma ogni operazione di deleteMin() ha costo O(n)  -&gt; O(n^2)&#10;      - il ciclo interno viene eseguito O(m) volte ed ogni operazione decreaseKey() costa O(1)   -&gt; O(m)&#10;&#10; Quindi il costo totale in questo caso è: O(m + n + n^2) = O(n^2)&#10;" wrappingWidth="906.41748046875">
+            <Text fill="#f2f0f0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'effficienza dell'algoritmo di Prim dipende dall'implementazione della relativa coda con priorità.&#10;  Se si utilizza uno heap binario allora:&#10;&#10;     - l'inizializzazione ha costo: O (n*log n)&#10;     - il ciclo principale, che viene eseguito ogni volta in cui viene aggiunto un nodo &#10;       alla coda, è eseguito O(n-1) volte e ogni operazione deleteMin() ha costo O(log n)&#10;     - il ciclo interno viene invece eseguito O(m) volte ed ogni operazione decreaseKey() ha costo O(log n)&#10;&#10;Quindi il costo tolate è:  O(n*log n + (n - 1)*(log n) + m*log n) = O(m*log n),&#10;  che asintoticamente corrisponde a quello dell'algoritmo di Kruskal.&#10;&#10;  Se, invece, si utilizza un vettore non ordinato:&#10;      - l'inizializzazione costa O(n)&#10;      - il ciclo principale viene eseguito O(n) volte, ma ogni operazione di deleteMin() ha costo O(n)  -&gt; O(n^2)&#10;      - il ciclo interno viene eseguito O(m) volte ed ogni operazione decreaseKey() costa O(1)   -&gt; O(m)&#10;&#10; Quindi il costo totale in questo caso è: O(m + n + n^2) = O(n^2)&#10;" wrappingWidth="906.41748046875">
                <font>
                   <Font size="18.0" />
                </font>

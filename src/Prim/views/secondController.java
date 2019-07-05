@@ -53,9 +53,8 @@ public class secondController implements model.ISceneController{
     
    @FXML
     void checkCorollary(ActionEvent event) throws IOException {
-	     progettoController menu = new progettoController();
 	     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	     menu.gotoMenu(window);
+	     sc.getProgetto().loadScene(1,window, 4);
     }
 
     @FXML

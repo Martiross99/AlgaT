@@ -23,7 +23,7 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
+      <VBox layoutX="47.0" layoutY="82.0" prefHeight="472.0" prefWidth="1075.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="82.0">
          <children>
             <Label prefHeight="21.0" prefWidth="163.0" text="PSEUDOCODICE" textFill="#f27e7e">
                <font>
@@ -35,7 +35,7 @@
             </Label>
             <HBox prefHeight="374.0" prefWidth="1080.0">
                <children>
-                  <ImageView fx:id="immagine" fitHeight="401.0" fitWidth="548.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="immagine" fitHeight="445.0" fitWidth="567.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Image/prim.jpg" />
                      </image>
@@ -43,7 +43,7 @@
                         <Insets left="30.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutti i nodi vengono inseriti nella coda con priorità +∞, tranne il nodo radice che ha priorità 0.  La priorità del nodo u corrisponde al peso minimo di un arco che raggiunge u a partire da un arco compreso in A, mentre pos[u] è la posizione che u occupa nello heap. Quando un nodo viene estratto dalla cosa, [p[u], u] rappresenta l'arco con peso minore fra quelli che escono dall'albero.  &#10;Ogni volta che si trova un arco di costo inferiori che colleghi un nodo non ancora inserito in A, la priorità viene aggiornata così come il vettore dei padri.&#10;" wrappingWidth="427.623046875">
+                  <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutti i nodi vengono inseriti nella coda con priorità +∞, tranne il nodo radice che ha priorità 0.  La priorità del nodo u corrisponde al peso minimo di un arco che raggiunge u a partire da un arco compreso in A, mentre pos[u] è la posizione che u occupa nello heap. Quando un nodo viene estratto dalla coda, [p[u], u] rappresenta l'arco con peso minore fra quelli che escono dall'albero.  &#10;Ogni volta che si trova un arco di costo inferiore che colleghi un nodo non ancora inserito in A, la priorità viene aggiornata così come il vettore dei padri.&#10;" wrappingWidth="377.623046875">
                      <HBox.margin>
                         <Insets left="30.0" right="20.0" />
                      </HBox.margin>

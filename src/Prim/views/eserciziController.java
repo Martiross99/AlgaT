@@ -34,7 +34,7 @@ public class eserciziController  implements model.ISceneController{
     private TextArea risposta;
     
     @FXML
-    private Text secondQuestion;
+    private Text secondExercise;
 
 
     @FXML
@@ -47,11 +47,11 @@ public class eserciziController  implements model.ISceneController{
 	 void verifica(ActionEvent event) {
 		    risposta.clear();
 		    rb1.setToggleGroup(rb);rb2.setToggleGroup(rb);rb3.setToggleGroup(rb);rb4.setToggleGroup(rb);
-            if(rb2.isSelected() && (secondQuestion == null)) {
+            if(rb2.isSelected() && (secondExercise == null)) {
             	risposta.appendText("Corretto!");
             	next.setDisable(false); 
             }
-            else if (rb4.isSelected() && (secondQuestion != null)) {
+            else if (rb4.isSelected() && (secondExercise != null)) {
             	risposta.appendText("Corretto!");
             	next.setDisable(false); 	
             } 
@@ -101,6 +101,6 @@ public class eserciziController  implements model.ISceneController{
         assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'esercizi.fxml'.";
         
      //FXML esercizi2
-        assert secondQuestion != null : "fx:id=\"secondQuestion\" was not injected: check your FXML file 'esercizi2.fxml'.";
+        assert secondExercise != null : "fx:id=\"secondQuestion\" was not injected: check your FXML file 'esercizi2.fxml'.";
     }
 }

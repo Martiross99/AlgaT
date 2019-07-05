@@ -1,10 +1,2 @@
-1957
-
-heap binario
-Heap binario
-HEAP BINARIO
-heap
-heap 
-Heap
-Heap 
- 
+1957  /heap binario/Heap binario/HEAP BINARIO/heap/Heap/ 
+/O(1)/costante/Costante/COSTANTE/Costo costante/costo costante/

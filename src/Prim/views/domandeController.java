@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import model.sceneController;
 
 public class domandeController  implements model.ISceneController{
@@ -25,6 +26,9 @@ public class domandeController  implements model.ISceneController{
 
     @FXML
     private TextArea risposta;
+    
+    @FXML
+    private Text thirdQuestion;
     
     
   //Funzioni che gestiscono il file esercizi2.fxml
@@ -77,10 +81,12 @@ public class domandeController  implements model.ISceneController{
 		if(prova.length()!=0) {
 		try {	
 			Scanner scanner = new Scanner (new File("src/Prim/views/risposte.txt"));
-			scanner.skip(Pattern.compile("..57"));
+			if(thirdQuestion != null) scanner.nextLine();
+			else scanner.skip(Pattern.compile("..57"));
+			 scanner.useDelimiter("/");
 			boolean found = false;
 			while(scanner.hasNext()) {
-				String a = scanner.nextLine();
+				String a = scanner.next();
 				if(a.equals(prova)) {
 					risposta.appendText("Corretto!"); 
 					found = true;
@@ -140,11 +146,15 @@ public class domandeController  implements model.ISceneController{
 	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'domande.fxml'.";
 	        
 	          
-	     //FXML esercizi2/esercizi3   
+	     //FXML domande  
 	        assert inserisci != null : "fx:id=\"inserisci\" was not injected: check your FXML file 'domande.fxml'.";  
 	        assert tentativo != null : "fx:id=\"tentativo\" was not injected: check your FXML file 'domande.fxml'.";
 	        assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'domande.fxml'.";
-	        assert riprova != null : "fx:id=\"riprova\" was not injected: check your FXML file 'domande2.fxml'.";
+	        assert riprova != null : "fx:id=\"riprova\" was not injected: check your FXML file 'domande.fxml'.";
+	        
+	     //FXML domande3
+	        assert thirdQuestion != null : "fx:id=\"thirdQuestion\" was not injected: check your FXML file 'domande3.fxml'.";
+	        
 	    }
 
 }

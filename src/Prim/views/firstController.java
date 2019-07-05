@@ -105,7 +105,7 @@ public class firstController implements model.ISceneController {
 		    void toFill(MouseEvent event)  throws IOException {
 		    	StackPane x = (StackPane) event.getSource();
 		    	Circle c = (Circle) x.getChildren().get(0);
-		    	c.setFill(Color.LIGHTCORAL);
+		    	c.setFill(Color.rgb(228,160,160));
 		    }
 
 		    @FXML

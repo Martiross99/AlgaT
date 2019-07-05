@@ -3,14 +3,14 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="720.0" prefWidth="1080.0" styleClass="borderp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intro_KP.views.introController">
-   <center>
-      <VBox prefHeight="543.0" prefWidth="985.0" BorderPane.alignment="CENTER">
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intro_KP.views.introController">
+   <children>
+      <VBox prefHeight="543.0" prefWidth="985.0">
          <children>
             <Label text="INTRODUZIONE" textFill="WHITE">
                <VBox.margin>
@@ -54,21 +54,7 @@
             </Text>
          </children>
       </VBox>
-   </center>
-   <bottom>
-      <HBox prefHeight="64.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="menu" mnemonicParsing="false" onAction="#gotoMenu" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="MENU">
-               <HBox.margin>
-                  <Insets left="45.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="next" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;">
-               <HBox.margin>
-                  <Insets left="890.0" />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
-   </bottom>
-</BorderPane>
+      <Button fx:id="menu" layoutX="50.0" layoutY="660.0" mnemonicParsing="false" onAction="#gotoMenu" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="MENU" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
+      <Button fx:id="next" layoutX="985.0" layoutY="660.0" mnemonicParsing="false" onAction="#goNext" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
+   </children>
+</AnchorPane>

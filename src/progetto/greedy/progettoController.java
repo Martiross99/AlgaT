@@ -114,9 +114,15 @@ public class progettoController extends Application {
 			}
 		}
 		
-		public void loadScene(Integer i, Stage window, String viewName) throws IOException {
+		public void loadScene(Integer i, Stage window, Integer scena) throws IOException {
 			
-//			this.loadController(i,window);
+			this.loadController(i,window);
+			
+			sceneController attuale = this.progetto[controllerCorrente];
+			
+			while( attuale.getChildren().get(0) != attuale.getScene(scena)) {
+				attuale.goNext();
+			}
 			
 		}
 

@@ -53,7 +53,7 @@
 
 .buttonlez{
     -fx-background-color: #474747;
-    -fx-text-fill: #ff7979;
+    -fx-text-fill: #e4a0a0;
 }
 
 .lessons{
@@ -72,10 +72,13 @@
 
 .testi{
     -fx-fill: white;
+    -fx-font-size: 18px ;
 }
 
 .titoli{
-    -fx-text-fill: #ff7979;
+    -fx-text-fill: #e4a0a0;
+    -fx-font-size: 17px ;
+    -fx-font-weight: bold;
 }
 
 .buttonesempio{
