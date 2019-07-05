@@ -17,6 +17,9 @@ public class CKruskal_456 implements model.ISceneController {
 	
 	sceneController sc;
 	
+	@FXML
+    private Button PrevB, NextB;
+	
 	//scena4
     @FXML
     private ImageView pseudoK;
@@ -55,8 +58,6 @@ public class CKruskal_456 implements model.ISceneController {
     }
     
     //cambio scena - in comune
-    @FXML
-    private Button PrevB, NextB;
     
 	@Override
 	public void setSceneParent(sceneController parent) {
@@ -82,20 +83,20 @@ public class CKruskal_456 implements model.ISceneController {
         assert NextB != null : "fx:id=\"NextB\" was not injected: check your FXML file 'scena4.fxml'.";
         assert Ripasso != null : "fx:id=\"Ripasso\" was not injected: check your FXML file 'scena4.fxml'.";
         assert pseudoK != null : "fx:id=\"pseudoK\" was not injected: check your FXML file 'scena4.fxml'.";
-        pseudoK.setImage(new Image("/image/kruskal.png"));
+        if(pseudoK != null)pseudoK.setImage(new Image("/image/kruskal.png"));
         
         //
         assert imMFSET != null : "fx:id=\"imMFSET\" was not injected: check your FXML file 'scena4bis.fxml'.";
-        imMFSET.setImage(new Image("/image/MFSET.png"));
+        if(imMFSET != null)imMFSET.setImage(new Image("/image/MFSET.png"));
         assert Back != null : "fx:id=\"Back\" was not injected: check your FXML file 'scena4bis.fxml'.";
         
         //
         assert costoK != null : "fx:id=\"costoK\" was not injected: check your FXML file 'scena5.fxml'.";
-        costoK.setImage(new Image("/image/costoK.png"));
+        if(costoK != null)costoK.setImage(new Image("/image/costoK.png"));
         
         //
         assert pseudoTotK != null : "fx:id=\"pseudoTotK\" was not injected: check your FXML file 'scena6.fxml'.";
-        pseudoTotK.setImage(new Image("/image/pseudoTotK.png"));
+        if(pseudoTotK != null)pseudoTotK.setImage(new Image("/image/pseudoTotK.png"));
         
     }
 }

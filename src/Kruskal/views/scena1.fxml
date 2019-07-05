@@ -7,15 +7,15 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../Desktop/progettoAlgaT/src/stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.ControllerS1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.ControllerS1">
    <children>
       <Label layoutX="110.0" layoutY="70.0" styleClass="titoli" text="14.3 - MINIMO ALBERO DI COPERTURA" textFill="#ff7979" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="101.0">
          <font>
             <Font name="Cambria Bold" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="PrevB" layoutX="26.0" layoutY="436.0" mnemonicParsing="false" onAction="#PrevB" styleClass="buttonlez" stylesheets="@../AlgaT/bin/algatgiusto/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
-      <Button fx:id="NextB" layoutX="647.0" layoutY="438.0" mnemonicParsing="false" onAction="#NextB" styleClass="buttonlez" stylesheets="@../AlgaT/bin/algatgiusto/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
+      <Button fx:id="PrevB" layoutX="26.0" layoutY="436.0" mnemonicParsing="false" onAction="#PrevB" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
+      <Button fx:id="NextB" layoutX="647.0" layoutY="438.0" mnemonicParsing="false" onAction="#NextB" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
       <Label layoutX="184.0" layoutY="115.0" prefHeight="30.0" prefWidth="212.0" styleClass="testi" text="Minimum Spanning Tree" textFill="WHITE" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="120.0">
          <font>
             <Font name="Cambria" size="20.0" />
@@ -26,7 +26,7 @@
             <Font name="Cambria" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="ES" layoutX="154.0" layoutY="324.0" mnemonicParsing="false" onAction="#ApriAlertBox" styleClass="buttonlez" stylesheets="@../AlgaT/bin/algatgiusto/application.css" text="Hai capito?" />
+      <Button fx:id="ES" layoutX="154.0" layoutY="324.0" mnemonicParsing="false" onAction="#ApriAlertBox" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="Hai capito?" />
       <AnchorPane layoutX="651.0" layoutY="143.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="177.0" prefWidth="311.0">
          <children>
             <Line endX="10.666671752929688" endY="-17.800010681152344" layoutX="122.0" layoutY="125.0" startX="-7.733314514160156" startY="6.4666748046875" stroke="WHITE" />
@@ -152,7 +152,7 @@
                   <Font name="Cambria Bold" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="Opt1" layoutX="176.0" layoutY="242.0" mnemonicParsing="false" onAction="#WrongOpt" styleClass="buttonlez" stylesheets="@../AlgaT/bin/algatgiusto/application.css" text="1" AnchorPane.topAnchor="242.0" />
+            <Button fx:id="Opt1" layoutX="176.0" layoutY="242.0" mnemonicParsing="false" onAction="#WrongOpt" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="1" AnchorPane.topAnchor="242.0" />
             <Button fx:id="Opt2" layoutX="500.0" layoutY="367.0" mnemonicParsing="false" onAction="#RightOpt" styleClass="buttonlez" text="2" AnchorPane.topAnchor="242.0" />
             <Label fx:id="Risposta" disable="true" layoutX="310.0" layoutY="248.0" opacity="0.0" prefHeight="18.0" prefWidth="116.0">
                <font>
