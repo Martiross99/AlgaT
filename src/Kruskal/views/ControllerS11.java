@@ -30,7 +30,7 @@ public class ControllerS11 implements model.ISceneController {
     private TextArea Risultato;
 
     @FXML
-    private Button PrevB, NextB;
+    private Button PrevB;
 
     @FXML
     private Button AlgoritmiMenu;
@@ -46,7 +46,6 @@ public class ControllerS11 implements model.ISceneController {
     		Risultato.setFont(Font.font("Cambria", FontWeight.NORMAL, FontPosture.REGULAR, 18));
         	Risultato.setOpacity(1.00);
         	Risultato.appendText("Corretto!");
-        	NextB.setDisable(false);
         	AlgoritmiMenu.setDisable(false);
     	}
     	
@@ -88,7 +87,6 @@ public class ControllerS11 implements model.ISceneController {
         assert Es2 != null : "fx:id=\"Es2\" was not injected: check your FXML file 'scena11.fxml'.";
         assert Risultato != null : "fx:id=\"Risultato\" was not injected: check your FXML file 'scena11.fxml'.";
         assert PrevB != null : "fx:id=\"PrevB\" was not injected: check your FXML file 'scena11.fxml'.";
-        assert NextB != null : "fx:id=\"NextB\" was not injected: check your FXML file 'scena11.fxml'.";
 
     }
 }

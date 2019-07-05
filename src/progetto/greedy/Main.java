@@ -10,6 +10,7 @@ import Prim.model.primLoad;
 
 import java.util.HashMap;
 
+import Kruskal.model.SceneLoader_Kruskal;
 import javafx.application.Application;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -29,7 +30,7 @@ public class Main extends Application {
 			progettoController progetto = new progettoController();
 			progetto.load();
 			progetto.start(primaryStage);
-//		    StackPane root = new StackPane();
+		    StackPane root = new StackPane();
 //		    
 //		    root.getChildren().addAll(menu.getController(0),menu.getController(1)); 
 //		    root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
@@ -42,9 +43,23 @@ public class Main extends Application {
 //		     primaryStage.setResizable(false);
 //		     primaryStage.show();
 			
+//			SceneLoader_Kruskal sc = new SceneLoader_Kruskal();
+//			sceneController main = new sceneController();
+//			main=sc.Load(main);
+//			StackPane root = new StackPane();
+//		    
+//		    root.getChildren().add(main); 
+//		    root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
+//		    root.getStyleClass().add("stackp");
+//		    
+//		    Scene scene = new Scene(root);
+//		    primaryStage.setScene(scene);		     
+//		     primaryStage.setMaximized(true);   
+//		     primaryStage.setResizable(false);
+//		     primaryStage.show();
+//			
 
-
-//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
+//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("/Kruskal/views/Intro.fxml"));
 //			Scene mScene = new Scene(mPane);
 //			primaryStage.setScene(mScene);
 //			primaryStage.show();

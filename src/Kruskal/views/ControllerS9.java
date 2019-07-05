@@ -48,7 +48,7 @@ public class ControllerS9 implements model.ISceneController {
     	prova = prova.trim();
     	if(prova.length()!=0) {
     		try {	
-    			Scanner scanner = new Scanner (new File("src/Kruskal.views/risposte_K.txt"));
+    			Scanner scanner = new Scanner (new File("src/Kruskal/views/risposte_K.txt"));
     			boolean found = false;
     			while(scanner.hasNext()) {
     				String a = scanner.nextLine();
