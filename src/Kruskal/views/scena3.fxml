@@ -27,13 +27,13 @@
             <Line fx:id="A11" endX="16.0" endY="24.0" layoutX="335.0" layoutY="70.0" onMouseClicked="#toColor" onMouseEntered="#Fill" onMouseExited="#Unfill" startX="-44.0" startY="-38.0" stroke="WHITE" strokeWidth="3.0" />
             <Line fx:id="A5" endX="38.0" endY="23.0" layoutX="50.0" layoutY="186.0" onMouseClicked="#toColor" onMouseEntered="#Fill" onMouseExited="#Unfill" startX="-24.0" startY="-42.0" stroke="WHITE" strokeWidth="3.0" />
             <Line fx:id="A4" endX="28.0" endY="-17.0" layoutX="50.0" layoutY="52.0" onMouseClicked="#toColor" onMouseEntered="#Fill" onMouseExited="#Unfill" startX="-26.0" startY="46.0" stroke="WHITE" strokeWidth="3.0" />
-            <Circle fill="#ff7979" layoutX="351.0" layoutY="119.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
-            <Circle fill="#ff7979" layoutX="274.0" layoutY="34.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.rightAnchor="79.0" />
-            <Circle fill="#ff7979" layoutX="146.0" layoutY="118.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
-            <Circle fill="#ff7979" layoutX="101.0" layoutY="29.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.topAnchor="181.0" />
-            <Circle fill="#ff7979" layoutX="270.0" layoutY="206.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="83.0" />
-            <Circle fill="#ff7979" layoutX="101.0" layoutY="34.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.bottomAnchor="182.0" AnchorPane.topAnchor="9.0" />
-            <Circle fill="#ff7979" layoutX="26.0" layoutY="119.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+            <Circle fill="#cbe6ff" layoutX="351.0" layoutY="119.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+            <Circle fill="#cbe6ff" layoutX="274.0" layoutY="34.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.rightAnchor="79.0" />
+            <Circle fill="#cbe6ff" layoutX="146.0" layoutY="118.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+            <Circle fill="#cbe6ff" layoutX="101.0" layoutY="29.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.topAnchor="181.0" />
+            <Circle fill="#cbe6ff" layoutX="270.0" layoutY="206.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="83.0" />
+            <Circle fill="#cbe6ff" layoutX="101.0" layoutY="34.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.bottomAnchor="182.0" AnchorPane.topAnchor="9.0" />
+            <Circle fill="#cbe6ff" layoutX="26.0" layoutY="119.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
             <Label layoutX="20.0" layoutY="105.0" prefHeight="25.0" prefWidth="11.0" text="A">
                <font>
                   <Font name="System Bold" size="18.0" />
@@ -141,8 +141,8 @@
             <AnchorPane fx:id="V1" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="16.0" layoutY="7.0" prefHeight="4.0" prefWidth="1.0" text="B">
                      <font>
                         <Font size="18.0" />
@@ -158,8 +158,8 @@
             <AnchorPane fx:id="V2" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="15.0" layoutY="7.0" text="C">
                      <font>
                         <Font size="18.0" />
@@ -175,8 +175,8 @@
             <AnchorPane fx:id="V3" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="15.0" layoutY="8.0" text="E">
                      <font>
                         <Font size="18.0" />
@@ -192,8 +192,8 @@
             <AnchorPane fx:id="V4" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="15.0" layoutY="84.0" text="C">
                      <font>
                         <Font size="18.0" />
@@ -209,8 +209,8 @@
             <AnchorPane fx:id="V5" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="16.0" layoutY="84.0" text="B">
                      <font>
                         <Font size="18.0" />
@@ -226,8 +226,8 @@
             <AnchorPane fx:id="V6" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="16.0" layoutY="84.0" text="B">
                      <font>
                         <Font size="18.0" />
@@ -243,8 +243,8 @@
             <AnchorPane fx:id="V7" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="15.0" layoutY="9.0" text="D">
                      <font>
                         <Font size="18.0" />
@@ -260,8 +260,8 @@
             <AnchorPane fx:id="V8" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" fill="WHITE" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="15.0" layoutY="84.0" text="G">
                      <font>
                         <Font size="18.0" />
@@ -277,8 +277,8 @@
             <AnchorPane fx:id="V9" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="17.0" layoutY="83.0" text="F">
                      <font>
                         <Font size="18.0" />
@@ -294,8 +294,8 @@
             <AnchorPane fx:id="V10" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="15.0" layoutY="8.0" prefHeight="4.0" prefWidth="1.0" text="B">
                      <font>
                         <Font size="18.0" />
@@ -311,8 +311,8 @@
             <AnchorPane fx:id="V11" prefHeight="120.0" prefWidth="46.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="16.0" layoutY="8.0" prefHeight="3.0" prefWidth="0.0" text="F">
                      <font>
                         <Font size="18.0" />
@@ -328,8 +328,8 @@
             <AnchorPane fx:id="V12" prefHeight="120.0" prefWidth="50.0" visible="false">
                <children>
                   <Line endX="-26.0" endY="13.0" layoutX="47.0" layoutY="70.0" startX="-26.0" startY="-33.20001220703125" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="21.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="21.0" layoutY="97.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="15.0" layoutY="8.0" text="D">
                      <font>
                         <Font size="18.0" />
@@ -344,15 +344,11 @@
             </AnchorPane>
          </children>
       </HBox>
-      <Text fill="WHITE" layoutX="104.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Inizialmente è necessario riordinare gli archi affinché poi,&#10;durante lo svolgimento, si possano esaminare in ordine &#10;di peso.&#10;&#10;Affinché questo ordinamento sia possibile l'input della&#10;funzione (che verrà proposta in seguito) non sarà un &#10;grafo ma un vettore di archi.&#10;&#10;" wrappingWidth="479.0751953125" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="152.896484375">
+      <Text fill="WHITE" layoutX="104.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Inizialmente è necessario riordinare gli archi affinché poi,&#10;durante lo svolgimento, si possano esaminare in ordine &#10;di peso.&#10;&#10;Affinché questo ordinamento sia possibile l'input della&#10;funzione (che verrà proposta in seguito) non sarà un &#10;grafo ma un vettore di archi." wrappingWidth="479.0751953125" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="152.896484375">
          <font>
             <Font name="Cambria" size="18.0" />
          </font>
       </Text>
-      <Text fill="#ff7979" layoutX="121.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titoli" text="1. L'ORDINAMENTO DEGLI ARCHI" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="101.0">
-         <font>
-            <Font name="Cambria Bold" size="22.0" />
-         </font>
-      </Text>
+      <Label layoutX="180.0" layoutY="109.0" styleClass="titoli" text="1. L'ORDINAMENTO DEGLI ARCHI" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="101.0" />
    </children>
 </AnchorPane>

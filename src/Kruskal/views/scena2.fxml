@@ -10,8 +10,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.CKruskal_02">
    <children>
-      <Button fx:id="NextB" layoutX="653.0" layoutY="436.0" mnemonicParsing="false" onAction="#NextB" styleClass="buttonlez" stylesheets="@../AlgaT/bin/algatgiusto/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
-      <Button fx:id="PrevB" layoutX="10.0" layoutY="437.0" mnemonicParsing="false" onAction="#PrevB" styleClass="buttonlez" stylesheets="@../AlgaT/bin/algatgiusto/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
+      <Button fx:id="NextB" layoutX="653.0" layoutY="436.0" mnemonicParsing="false" onAction="#NextB" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
+      <Button fx:id="PrevB" layoutX="10.0" layoutY="437.0" mnemonicParsing="false" onAction="#PrevB" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
       <Label layoutX="121.0" layoutY="110.0" prefHeight="25.0" prefWidth="367.0" styleClass="titoli" text="14.3.1 - L'ALGORITMO DI KRUSKAL" textFill="#ff7979" AnchorPane.bottomAnchor="585.0" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="101.0">
          <font>
             <Font name="Cambria Bold" size="22.0" />
@@ -22,17 +22,12 @@
             <Font name="Cambria" size="18.0" />
          </font>
       </Text>
-      <Text fill="#ff7979" layoutX="121.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titoli" text="IDEA" AnchorPane.leftAnchor="121.0">
-         <font>
-            <Font name="Cambria" size="20.0" />
-         </font>
-      </Text>
       <Text fill="WHITE" layoutX="105.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="L'algoritmo di Kruskal analizza gli archi in ordine &#10;crescente di peso; un generico arco è aggiunto all'albero T &#10;se non forma circuiti con gli archi inseriti in T." AnchorPane.leftAnchor="105.0">
          <font>
             <Font name="Cambria" size="18.0" />
          </font>
       </Text>
-      <AnchorPane layoutX="619.0" layoutY="107.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="177.0" prefWidth="311.0">
+      <AnchorPane layoutX="605.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="177.0" prefWidth="311.0" AnchorPane.bottomAnchor="440.0" AnchorPane.leftAnchor="605.0">
          <children>
             <Line endX="10.666671752929688" endY="-17.800010681152344" layoutX="122.0" layoutY="125.0" startX="-7.733314514160156" startY="6.4666748046875" stroke="WHITE" />
             <Line endX="10.133346557617188" endY="-17.800010681152344" layoutX="122.0" layoutY="89.0" startX="-8.800010681152344" startY="-42.59999465942383" stroke="WHITE" />
@@ -42,13 +37,13 @@
             <Line endX="12.0" endY="24.0" layoutX="271.0" layoutY="42.0" startX="-28.0" startY="-13.0" stroke="WHITE" />
             <Line endX="38.0" endY="23.0" layoutX="38.0" layoutY="125.0" startX="-11.0" startY="-12.0" stroke="WHITE" />
             <Line endX="26.0" endY="-23.0" fill="#ff7979" layoutX="50.0" layoutY="52.0" startX="-23.0" startY="15.0" stroke="WHITE" />
-            <Circle fill="#ff7979" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
             <Label layoutX="21.0" layoutY="75.0" prefHeight="25.0" prefWidth="11.0" text="A">
                <font>
                   <Font size="18.0" />
@@ -59,7 +54,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="94.0" layoutY="14.0" text="C">
+            <Label layoutX="94.0" layoutY="14.0" text="C" AnchorPane.leftAnchor="93.0">
                <font>
                   <Font size="19.0" />
                </font>
@@ -74,7 +69,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="138.0" layoutY="76.0" text="D">
+            <Label layoutX="138.0" layoutY="76.0" text="D" AnchorPane.rightAnchor="159.0">
                <font>
                   <Font size="18.0" />
                </font>
@@ -150,5 +145,6 @@
             </Label>
          </children>
       </AnchorPane>
+      <Label layoutX="121.0" layoutY="280.0" styleClass="titoli" text="IDEA" />
    </children>
 </AnchorPane>

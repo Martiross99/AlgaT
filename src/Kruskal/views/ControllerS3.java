@@ -4,8 +4,9 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import Kruskal.views.alertWindow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -54,7 +55,7 @@ public class ControllerS3 implements model.ISceneController {
     @FXML
     void Unfill(MouseEvent event) {
     	Line x = (Line) event.getSource();
-    	x.setStroke(Color.BLACK);
+    	x.setStroke(Color.WHITE);
     	x.setStrokeWidth(3);
     }
     
@@ -81,6 +82,11 @@ public class ControllerS3 implements model.ISceneController {
     @FXML
     void NextB(ActionEvent event) throws IOException {
     	sc.goNext();
+    	
+    	AnchorPane[] panes = {V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12};
+    	
+    	for(int i=0; i<12; i++)
+    		panes[i].setVisible(false);
     	
     }
 

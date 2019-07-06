@@ -37,13 +37,13 @@
             <Line endX="12.0" endY="24.0" layoutX="271.0" layoutY="42.0" startX="-28.0" startY="-13.0" stroke="WHITE" />
             <Line endX="38.0" endY="23.0" layoutX="38.0" layoutY="125.0" startX="-11.0" startY="-12.0" stroke="WHITE" />
             <Line endX="26.0" endY="-23.0" fill="#ff7979" layoutX="50.0" layoutY="52.0" startX="-23.0" startY="15.0" stroke="WHITE" />
-            <Circle fill="#ff7979" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ff7979" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#cbe6ff" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
             <Label layoutX="21.0" layoutY="75.0" prefHeight="25.0" prefWidth="11.0" text="A">
                <font>
                   <Font size="18.0" />
@@ -54,7 +54,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="94.0" layoutY="14.0" text="C">
+            <Label layoutX="94.0" layoutY="14.0" text="C" AnchorPane.leftAnchor="93.0">
                <font>
                   <Font size="19.0" />
                </font>
@@ -154,7 +154,7 @@
             </Label>
             <Button fx:id="Opt1" layoutX="176.0" layoutY="242.0" mnemonicParsing="false" onAction="#WrongOpt" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="1" AnchorPane.topAnchor="242.0" />
             <Button fx:id="Opt2" layoutX="500.0" layoutY="367.0" mnemonicParsing="false" onAction="#RightOpt" styleClass="buttonlez" text="2" AnchorPane.topAnchor="242.0" />
-            <Label fx:id="Risposta" disable="true" layoutX="310.0" layoutY="248.0" opacity="0.0" prefHeight="18.0" prefWidth="116.0">
+            <Label fx:id="Risposta" disable="true" layoutX="310.0" layoutY="248.0" opacity="0.0" prefHeight="23.0" prefWidth="199.0" styleClass="testi" textFill="WHITE" AnchorPane.leftAnchor="270.0">
                <font>
                   <Font name="Cambria Bold" size="14.0" />
                </font>
@@ -166,13 +166,13 @@
                   <Line endX="13.266677856445312" endY="26.26666259765625" layoutX="189.0" layoutY="106.0" startX="-27.266677856445312" startY="-5.73333740234375" stroke="WHITE" />
                   <Line endX="48.0" endY="-14.0" layoutX="235.0" layoutY="126.0" startX="8.0" startY="22.0" stroke="WHITE" />
                   <Line endX="26.0" endY="-23.0" fill="#ff7979" layoutX="50.0" layoutY="52.0" startX="-23.0" startY="15.0" stroke="WHITE" />
-                  <Circle fill="#ff7979" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="21.0" layoutY="75.0" prefHeight="25.0" prefWidth="11.0" text="A">
                      <font>
                         <Font size="18.0" />
@@ -247,13 +247,13 @@
                   <Line endX="31.600021362304688" endY="-14.73333740234375" layoutX="172.0" layoutY="59.0" startX="-14.0" startY="15.400001525878906" stroke="WHITE" />
                   <Line endX="38.0" endY="23.0" layoutX="38.0" layoutY="125.0" startX="-11.0" startY="-12.0" stroke="WHITE" />
                   <Line endX="26.0" endY="-23.0" fill="#ff7979" layoutX="50.0" layoutY="52.0" startX="-23.0" startY="15.0" stroke="WHITE" />
-                  <Circle fill="#ff7979" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Circle fill="#ff7979" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="283.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="220.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="145.0" layoutY="89.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="99.0" layoutY="29.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="220.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="99.0" layoutY="148.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#cbe6ff" layoutX="27.0" layoutY="90.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="21.0" layoutY="75.0" prefHeight="25.0" prefWidth="11.0" text="A">
                      <font>
                         <Font size="18.0" />

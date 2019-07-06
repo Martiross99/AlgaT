@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.CKruskal_02">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.CKruskal_02">
    <children>
-      <Label layoutX="315.0" layoutY="224.0" prefHeight="272.0" prefWidth="451.0" styleClass="titoli" text="L'ALGORITMO &#10;DI &#10;KRUSKAL" textAlignment="CENTER" textFill="#ff7979">
+      <Label layoutX="309.0" layoutY="224.0" prefHeight="272.0" prefWidth="462.0" text="L'ALGORITMO &#10;DI &#10;KRUSKAL" textAlignment="CENTER" textFill="#cbe6ff">
          <font>
-            <Font name="Cambria" size="70.0" />
+            <Font name="Segoe UI" size="70.0" />
          </font>
       </Label>
       <Button fx:id="NextB" layoutX="644.0" layoutY="435.0" mnemonicParsing="false" onAction="#NextB" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />

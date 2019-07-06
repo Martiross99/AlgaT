@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,17 +15,13 @@
          <center>
             <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Text fill="#ff7979" layoutX="121.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titoli" text="PSEUDOCODICE">
-                     <font>
-                        <Font name="Cambria Bold" size="22.0" />
-                     </font>
-                  </Text>
-                  <ImageView fx:id="pseudoTotK" fitHeight="398.0" fitWidth="666.0" layoutX="101.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" />
-                  <Text fill="WHITE" layoutX="101.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Per risparmiare iterazioni inutili dopo che è stata raggiunta la soluzione ottima, la procedura kruskal() introduce una variabile intera c che conta il numero di inserimenti nell'albero di copertura T, uscendo dal ciclo appena sono stati effettuati n-1 inserimenti." wrappingWidth="854.6923217773438">
+                  <ImageView fx:id="pseudoTotK" fitHeight="398.0" fitWidth="666.0" layoutX="101.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fill="WHITE" layoutX="101.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Per risparmiare iterazioni inutili dopo che è stata raggiunta la soluzione ottima, la procedura kruskal() introduce una variabile intera c che conta il numero di inserimenti nell'albero di copertura T, uscendo dal ciclo appena sono stati effettuati n-1 inserimenti." wrappingWidth="854.6923217773438">
                      <font>
                         <Font name="Cambria" size="18.0" />
                      </font>
                   </Text>
+                  <Label layoutX="121.0" layoutY="101.0" styleClass="titoli" text="PSEUDOCODICE" />
                </children>
             </Pane>
          </center>

@@ -40,9 +40,8 @@ public class ControllerS1 implements model.ISceneController {
     @FXML
     void RightOpt(ActionEvent event) {
     	
-    	Risposta.setFont(Font.font("Cambria", FontWeight.BOLD, FontPosture.REGULAR, 18));
     	Risposta.setOpacity(1.00);
-    	Risposta.setText("CORRETTO!");
+    	Risposta.setText("CORRETTO, BRAVO!");
     	Risposta.setDisable(false);
     	
     }
@@ -50,7 +49,6 @@ public class ControllerS1 implements model.ISceneController {
     @FXML
     void WrongOpt(ActionEvent event) {
 
-    	Risposta.setFont(Font.font("Cambria", FontWeight.BOLD, FontPosture.REGULAR, 18));
     	Risposta.setOpacity(1.00);
     	Risposta.setText("SBAGLIATO");
     	Risposta.setDisable(false);
@@ -67,6 +65,8 @@ public class ControllerS1 implements model.ISceneController {
     @FXML
     void NextB(ActionEvent event) throws IOException {
     	sc.goNext();
+    	
+    	Esercizio.setVisible(false);
     }
 
     @FXML
