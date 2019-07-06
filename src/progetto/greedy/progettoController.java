@@ -1,6 +1,7 @@
 package progetto.greedy;	
 import java.io.IOException;
 
+import Kruskal.model.SceneLoader_Kruskal;
 import Prim.model.primLoad;
 import intro_KP.model.introLoad;
 import javafx.application.Application;
@@ -23,7 +24,7 @@ public class progettoController extends Application {
 		
 //		super();
 			this.controllerCorrente = 0;
-			this.progetto = new sceneController[3];
+			this.progetto = new sceneController[4];
 //			try {
 //				this.load();
 //			} catch (Exception e) {
@@ -43,6 +44,10 @@ public class progettoController extends Application {
 				menuLoad main = new menuLoad();
 				mainController = main.Load(mainController);
 				
+				sceneController kruskalController = new sceneController();
+				SceneLoader_Kruskal kruskal = new SceneLoader_Kruskal();
+				kruskalController = kruskal.Load(kruskalController);
+				
 				sceneController primController = new sceneController();
 				primLoad prim = new primLoad();
 				primController = prim.Load(primController);
@@ -57,8 +62,9 @@ public class progettoController extends Application {
 
 		   		
 				progetto[0] = mainController;
-				progetto[2] = primController;
 				progetto[1] = introController;
+				progetto[3] = kruskalController;
+				progetto[2] = primController;
 				
 				this.setStructure();
 

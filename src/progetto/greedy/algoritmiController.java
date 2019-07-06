@@ -47,8 +47,9 @@ public class algoritmiController implements ISceneController {
     }
 
     @FXML
-    void openKruskal(ActionEvent event) {
-
+    void openKruskal(ActionEvent event) throws IOException{
+    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	     sc.getProgetto().loadController(3,window);
     }
 
     @FXML

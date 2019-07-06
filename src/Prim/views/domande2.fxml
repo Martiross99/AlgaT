@@ -20,7 +20,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Text fill="#fffdfd" strokeType="OUTSIDE" strokeWidth="0.0" text="Per un grafo sparso, quale delle due implementazioni viste, avrebbe più senso utilizzare?">
+            <Text fill="#fffdfd" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Per un grafo sparso, quale delle due implementazioni viste, avrebbe più senso utilizzare?">
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>

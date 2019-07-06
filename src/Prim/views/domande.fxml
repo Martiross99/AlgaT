@@ -13,14 +13,14 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Prim.views.domandeController">
    <children>
-      <VBox layoutX="121.0" layoutY="102.0" prefHeight="293.0" prefWidth="609.0">
+      <VBox layoutX="121.0" layoutY="102.0" prefHeight="293.0" prefWidth="609.0" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="120.0">
          <children>
-            <Label text="ESERCIZI" textFill="#f27e7e">
+            <Label styleClass="titoli" text="ESERCIZI" textFill="#f27e7e">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Text fill="#e1dcdc" strokeType="OUTSIDE" strokeWidth="0.0" text="In quale anno è stato pubblicato l'algoritmo di Prim?">
+            <Text fill="#e1dcdc" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="In quale anno è stato pubblicato l'algoritmo di Prim?" wrappingWidth="429.1025390625">
                <font>
                   <Font size="20.0" />
                </font>

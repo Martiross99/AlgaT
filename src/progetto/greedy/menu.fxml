@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progetto.greedy.menuController">
    <children>
-      <Button fx:id="BLEZ" layoutX="331.0" layoutY="308.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="439.0" text="lezioni" textAlignment="CENTER" textFill="#ff7979" underline="true">
+      <Button fx:id="BLEZ" layoutX="332.0" layoutY="274.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="439.0" text="Lezioni" textAlignment="CENTER" textFill="#ff7979" underline="true">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
@@ -16,14 +16,14 @@
             <URL value="@../../stylesheets/application.css" />
          </stylesheets>
       </Button>
-      <Button fx:id="BGAME" layoutX="331.0" layoutY="478.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="439.0" stylesheets="@../../stylesheets/application.css" text="minigame" textFill="#90f0ff" underline="true">
+      <Button fx:id="BGAME" layoutX="332.0" layoutY="441.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="439.0" stylesheets="@../../stylesheets/application.css" text="Minigame" textFill="#90f0ff" underline="true">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="306.0" layoutY="108.0" text="Algoritmi e strutture dati&#10;GREEDY" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="301.0" layoutY="88.0" prefHeight="106.0" prefWidth="500.0" text="Algoritmi e strutture dati Greedy" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Arial Black" size="36.0" />
+            <Font name="Segoe UI Light" size="36.0" />
          </font>
       </Label>
    </children>

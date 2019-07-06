@@ -16,20 +16,34 @@
 
 .button{
     -fx-background-color: #474747;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16px ;
 }
 
 .borderButton{
 	-fx-background-color: #474747;
 	-fx-text-fill: #bc8686;
 	-fx-border-color: #bc8686;
+	-fx-font-family: "Segoe UI";
+    -fx-font-size: 16px ;
+}
+
+.startButton{
+	-fx-background-color: #474747;
+	-fx-text-fill: #bc8686;
+	-fx-border-color: #bc8686;
+	-fx-font-family: "Segoe UI";
+    -fx-font-size: 25px ;
 }
 
 #BLEZ{
-    -fx-text-fill: #ff7979;
-    -fx-border-color: #ff7979;
+    -fx-text-fill: #e79292;
+    -fx-border-color: #e79292;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 30px ;
 }
 #BLEZ:hover{
-    -fx-background-color: #ff7979;
+    -fx-background-color: #e79292;
     -fx-text-fill: #474747;
 }
 
@@ -43,43 +57,70 @@
 }
 
 #BGAME{
-    -fx-text-fill: #90f0ff;
-    -fx-border-color: #90f0ff;
+    -fx-text-fill: #7ab4b5;
+    -fx-border-color: #7ab4b5;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 30px ;
 }
 #BGAME:hover{
-    -fx-background-color: #90f0ff;
+    -fx-background-color: #7ab4b5;
     -fx-text-fill: #474747;
+
 }
 
 .buttonlez{
     -fx-background-color: #474747;
     -fx-text-fill: #e4a0a0;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 17px ;
 }
 
 .lessons{
-    -fx-text-fill: #FFFFFF;
-    -fx-border-color: #ff7979;
+    -fx-text-fill: #e79292;
+    -fx-border-color: #e79292;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 30px ;
 }
 
 .lessons:hover{
-    -fx-background-color: #ff7979;
+    -fx-background-color: #e79292;
+    -fx-text-fill: #474747;
 }
+
+.algoritmi{
+    -fx-text-fill: #8ac2ac;
+    -fx-border-color: #8ac2ac;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 30px ;
+}
+
+.algoritmi:hover{
+    -fx-background-color: #8ac2ac;
+    -fx-text-fill: #474747;
+}
+
 
 .highlight {
     -fx-text-fill: #ff7979;
     -fx-border-color: #ff7979;
 }
 
+
 .testi{
     -fx-fill: white;
     -fx-font-size: 18px ;
+    -fx-font-family: "Segoe UI";
 }
+
 
 .titoli{
     -fx-text-fill: #e4a0a0;
-    -fx-font-size: 17px ;
+    -fx-font-size: 19px ;
     -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI SemiBold";
 }
+
+
 
 .buttonesempio{
     -fx-background-color: #ff7979;
@@ -148,7 +189,6 @@
    -fx-effect: dropshadow( three-pass-box, white, 10.0, 0.0, 0.0, 0.0);
 
  }
-
 
 
 .textAreaq {

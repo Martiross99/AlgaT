@@ -7,12 +7,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intro_KP.views.introController">
    <children>
       <VBox prefHeight="543.0" prefWidth="985.0">
          <children>
-            <Label text="INTRODUZIONE" textFill="WHITE">
+            <Label styleClass="titoli" stylesheets="@../../stylesheets/application.css" text="INTRODUZIONE" textFill="WHITE">
                <VBox.margin>
                   <Insets left="90.0" top="70.0" />
                </VBox.margin>

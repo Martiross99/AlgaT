@@ -17,12 +17,12 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Text fill="#f2eeee" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; L'algoritmo di Prim procede mantenendo in A un singolo Albero&#10;&#10;&gt; L'albero parte da un vertice arbitrario ( r ) e cresce fino a ricoprire tutti quanti i vertici&#10;&#10;&gt; Ad ogni passo viene aggiunto un arco leggero che collega un vertice in VA (insieme di nodi raggiunti dall'iniseme  di archi in A) con unvertice di V-VA " wrappingWidth="837.91162109375">
+            <Text fill="#f2eeee" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; L'algoritmo di Prim procede mantenendo in A un singolo Albero&#10;&#10;&#10;&gt; L'albero parte da un vertice arbitrario ( r ) e cresce fino a ricoprire tutti quanti i vertici&#10;&#10;&#10;&gt; Ad ogni passo viene aggiunto un arco leggero che collega un vertice in VA (insieme di nodi raggiunti dall'iniseme  di archi in A) con unvertice di V-VA " wrappingWidth="837.91162109375">
                <VBox.margin>
                   <Insets top="60.0" />
                </VBox.margin>
                <font>
-                  <Font size="20.0" />
+                  <Font name="Segoe UI" size="18.0" />
                </font>
             </Text>
          </children>

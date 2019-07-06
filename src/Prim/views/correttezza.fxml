@@ -30,14 +30,14 @@
             </Label>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Per il corollario, gli archi leggeri che attraversano il taglio sono sicuri" wrappingWidth="559.568359375">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="&gt; Per il corollario, gli archi leggeri che attraversano il taglio sono sicuri" wrappingWidth="559.568359375">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Text>
                   <Button fx:id="corollary" mnemonicParsing="false" onAction="#checkCorollary" styleClass="borderButton" stylesheets="@../../stylesheets/application.css" text="Vai al corollario">
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets left="50.0" />
                      </HBox.margin>
                   </Button>
                </children>
@@ -47,7 +47,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; V - VA è un taglio che rispetta A (per definizione)">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="&gt; V - VA è un taglio che rispetta A (per definizione)">
                      <font>
                         <Font size="17.0" />
                      </font>
