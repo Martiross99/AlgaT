@@ -17,13 +17,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import intro_KP.model.introLoad;
-import Prim.model.primLoad;
-//import Prim.model.introLoad;
-//import Prim.model.primLoad;
 import model.sceneController;
-import model.scenesChanger;
-import progetto.greedy.progettoController;
 
 
 //classe per la gestione dei seguenti file : idea.fxml, correttezza.fxml, implementation.fxml
@@ -34,6 +28,7 @@ public class secondController implements model.ISceneController{
 
     @FXML
     private Button back, next;
+    
     @FXML
     private Circle c1,c2;   //fxml implementazione
     

@@ -66,8 +66,6 @@ public class algoritmiController implements ISceneController {
 //	     menu.loadController(2,window);
     	
     	 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//    	 System.out.println(window.getHeight());
-//    	 System.out.println(window.getWidth());
     	 sc.getProgetto().loadController(2, window);
     }
 

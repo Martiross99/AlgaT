@@ -1,12 +1,5 @@
 package Prim.model;
 
-import java.util.HashMap;
-
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import model.sceneController;
 
 public class primLoad {
@@ -43,8 +36,6 @@ public class primLoad {
 		 public static String domande3Scene = "/Prim/views/domande3.fxml";
 		 public static Integer domande4 = 16;
 		 public static String domande4Scene = "/Prim/views/domande4.fxml";
-
-	//     public Stage stage;
 	     
 	     
 	    public sceneController Load(sceneController controller) {

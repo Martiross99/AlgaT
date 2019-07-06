@@ -7,10 +7,7 @@ import intro_KP.model.introLoad;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.NumberBinding;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.sceneController;
@@ -20,29 +17,19 @@ import model.sceneController;
 public class progettoController extends Application {
 
 
-        protected Integer controllerCorrente;
+        protected Integer controllerCorrente;     //mantiene l'indice del sceneController attualmente in esecuzione
         
-		protected sceneController[] progetto ; 
+		protected sceneController[] progetto ;    //array che contiene tutti i sceneController del progetto
 		
 		
 		public progettoController() {
-		
-//		super();
 			this.controllerCorrente = 0;
 			this.progetto = new sceneController[4];
-//			try {
-//				this.load();
-//			} catch (Exception e) {
-//				System.out.println(e.getMessage());
-//			}
 		}
 		
 		
-		public Integer getLength() {
-			return(this.progetto.length);
-		}
-		
-		public void load() {
+		public void load() {                        //carica i sceneController dentro l'array
+			
 		   	try {
 				
 		   		sceneController mainController = new sceneController();
@@ -61,17 +48,14 @@ public class progettoController extends Application {
 				sceneController introController = new sceneController();
 				introLoad intro = new introLoad();	
 				introController = intro.Load(introController);
-		   		
-		   		
-		   		
-
+	
 		   		
 				progetto[0] = mainController;
 				progetto[1] = introController;
 				progetto[3] = kruskalController;
 				progetto[2] = primController;
 				
-				this.setStructure();
+				this.setStructure();                     
 
 		 
 		     } catch(Exception e) {
@@ -85,60 +69,59 @@ public class progettoController extends Application {
 //			return(progetto[i]);
 //		}
 
-        public void setStructure() {
+        public void setStructure() {       //comunica ad ogni sceneController il progetto al quale devono fare riferimento
         	
         	for(int i = 0; i < progetto.length; i++) {
         		progetto[i].setProgetto(this);
         	}
+        	
         }
 		
 		@Override
 		public void start(Stage primaryStage) throws Exception {
-			
-			
-			StackPane root = new StackPane();
+			try {																//crea uno stackPane e imposta come figlio il sceneController corrente
+			StackPane root = new StackPane();										
     		root.getChildren().add(progetto[controllerCorrente]);
     		//System.out.println(root.getScene().getHeight());
     		
     		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
     	    root.getStyleClass().add("stackp");
     		
-//    	    root.setScaleX(0.5);
-//    	    root.setScaleY(0.5);
 
-    	    
-
-    	    NumberBinding ScaleX = Bindings.divide(root.widthProperty(), 1080);
-    	    NumberBinding ScaleY = Bindings.divide(root.heightProperty(), 720);
+    	    NumberBinding ScaleX = Bindings.divide(root.widthProperty(), 1080);     //scala le dimensioni dello stackPane in relazione
+    	    NumberBinding ScaleY = Bindings.divide(root.heightProperty(), 720);     //al ridimensionamento della finestra
 
     	    progetto[controllerCorrente].scaleXProperty().bind(ScaleX);
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
 
-    	 //   Scene scene = new Scene(root, 1080, 720);
-    		Scene scene = new Scene(root,primaryStage.getWidth(),primaryStage.getHeight());
-    		
+    	  //  Scene scene = new Scene(root, 1080, 720);
+    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
     		
 
     		primaryStage.setScene(scene);
     		//primaryStage.setMaximized(true);
-    	
-    		
+
     		primaryStage.show();
+    		
+			} catch (Exception e) {	
+				System.out.println(e.getMessage());
+			}
     		
 		}
 		
-		public void gotoMenu(Stage window) throws IOException {
-			controllerCorrente = 0;
-			try {
+		public void gotoMenu(Stage window) throws IOException {	
+			controllerCorrente = 0;                       //per andare al menu prende il sceneController in posizione zero nell'array
+			try {                                             //e lo carica
 			//	System.out.println(window.getHeight());
 			   this.start(window);
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
+			
 		}
 		
-		public void loadController(Integer i, Stage window) throws IOException {
-			controllerCorrente = i;
+		public void loadController(Integer i, Stage window) throws IOException {  //prende in input l'indice relativo al sceneController 
+			controllerCorrente = i;                             						//che si vuole caricare e chiama la funzione start per caricarlo
 			try {
 				this.start(window);
 			} catch (Exception e) {
@@ -146,16 +129,17 @@ public class progettoController extends Application {
 			}
 		}
 		
-		public void loadScene(Integer i, Stage window, Integer scena) throws IOException {
-			
+		public void loadScene(Integer i, Stage window, Integer scena) throws IOException {   //prende in input l'indice del sceneController e l'indice della scena desiderata
+																						      
 			this.loadController(i,window);
 			
-			sceneController attuale = this.progetto[controllerCorrente];
+			sceneController attuale = this.progetto[controllerCorrente];          //prende il sceneController e va avanti fino alla scena richiesta                
 			
-			while( attuale.getChildren().get(0) != attuale.getScene(scena)) {
+			if(attuale.getMap(attuale).containsKey(scena)) {
+			while(attuale.getChildren().get(0) != attuale.getScene(scena)) {
 				attuale.goNext();
 			}
-			
+		  }
 		}
 
 }

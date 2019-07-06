@@ -30,6 +30,7 @@ public class Main extends Application {
 			progettoController progetto = new progettoController();
 			progetto.load();
 			progetto.start(primaryStage);
+			
 		//    StackPane root = new StackPane();
 //		    
 //		    root.getChildren().addAll(menu.getController(0),menu.getController(1)); 

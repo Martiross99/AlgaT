@@ -1,8 +1,5 @@
 package Prim.views;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,7 +26,7 @@ public class exeController implements ISceneController {
     @FXML
     private StackPane spB,spC,spD,spE,spF,spG,spH;
     
-    private StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
+   // final StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
     private Integer index = 0;
     
     @FXML
@@ -47,9 +44,10 @@ public class exeController implements ISceneController {
 
     @FXML
     void toFill(MouseEvent event) {
-    	StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
-    	CubicCurve curve[] = {firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut};
-    	Line[] linee = {firstLine,secondLine,thirdLine,fourthLine,fifthLine,sixthLine,eleventhLine,tenthLine,seventhLine,twelfthLine,eigthLine,ninthLine};
+    	final StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
+    	final CubicCurve curve[] = {firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut};
+    	final Line[] linee = {firstLine,secondLine,thirdLine,fourthLine,fifthLine,sixthLine,eleventhLine,tenthLine,seventhLine,twelfthLine,eigthLine,ninthLine};
+    	
     	
     	StackPane x = (StackPane) event.getSource();
     	      

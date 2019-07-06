@@ -3,14 +3,11 @@ package model;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import progetto.greedy.progettoController;
 
 
@@ -45,49 +42,35 @@ public class sceneController extends StackPane {
     public HashMap<Integer,Node> getMap(sceneController sc) {
     	return(sc.mappa);
     }
-	
-
+	    
     
-    
-    public boolean loadScene(Integer n, String resource) {
+  public void loadScene(Integer n, String resource) {
     	 try {
              FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
              AnchorPane ap = (AnchorPane) loader.load();
              //Parent loadScene = (Parent) loader.load();
              ISceneController sceneController = ((ISceneController) loader.getController());
              sceneController.setSceneParent(this);             
-             addScene(n, ap);      //add this scene to the hashmap
-             return true;
+             addScene(n, ap);           //add this scene to the hashmap
          } catch (Exception e) {
              System.out.println(e.getMessage());
-             return false;
          }
     }
 
-    public void addMap(sceneController sc) {
-    	try {
-    		HashMap<Integer,Node> mappa = getMap(sc);
-    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
-    	        this.addScene(entry.getKey(), entry.getValue());
-    	        System.out.println(entry.getKey());
-    	        }
-    	    } catch (Exception e) {
-    	    	System.out.println(e.getMessage());
-    	}
-    }
+//    public void addMap(sceneController sc) {
+//    	try {
+//    		HashMap<Integer,Node> mappa = getMap(sc);
+//    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
+//    	        this.addScene(entry.getKey(), entry.getValue());
+//    	        System.out.println(entry.getKey());
+//    	        }
+//    	    } catch (Exception e) {
+//    	    	System.out.println(e.getMessage());
+//    	}
+//    }    
     
     
-    
-    public void setProgetto(progettoController progetto) {
-    	mainProject = progetto;
-    }
-    
-    public progettoController getProgetto() {
-    	return(mainProject);
-    }
-    
-//PROVA    
-    
+//PROVA        
 //    public AnchorPane radice(String resource) {
 //    	try {
 //    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
@@ -99,7 +82,7 @@ public class sceneController extends StackPane {
 //        }
 //    }
     
-    public boolean setScene(final Integer n) {
+    public void setScene(Integer n) {     //final?
     	
     	if (mappa.get(n) != null) {   //la scena deve essere stata caricata nella mappa
 
@@ -112,18 +95,17 @@ public class sceneController extends StackPane {
         else {
             getChildren().add(mappa.get(n));       //se c'è solo una scena da mostrare viene aggiunta e mostrata
         }
-        return true;
-    } else {
+      } else {
         System.out.println("Questa scena non è stata caricata\n");
-        return false;
     }
+    	
    }
    
     public void goBack() {
        	try {
-      		 Node actualScene =  getChildren().get(0);
-      		 Integer x = (getIndex(actualScene));
-      		 setScene(x - 1);
+      		 Node actualScene =  getChildren().get(0);    //prende il nodo attualmente visibile
+      		 Integer x = (getIndex(actualScene));         //recupera il suo indice, ovvero il valore associato nell'HashMap
+      		 setScene(x - 1);                              //setta la scena precedente
       	} catch (Exception e) {
               System.out.println(e.getMessage());             
           }
@@ -133,11 +115,21 @@ public class sceneController extends StackPane {
     	try {
    		 Node n =  getChildren().get(0);
    		 Integer x = (getIndex(n));
-   		 setScene(x + 1);
+   		 setScene(x + 1); 								//setta la scena successiva
    	} catch (Exception e) {
            System.out.println(e.getMessage());
           
        }
+    }
+    
+    
+    
+    public void setProgetto(progettoController progetto) {       //questa funzione comunica al sceneController qual è il progetto (progettoController)
+    	mainProject = progetto;                                   //al quale deve fare riferimento
+    }
+    
+    public progettoController getProgetto() {                   //ritorna il progetto al quale il sceneController è associato
+    	return(mainProject);
     }
     
 //    public void gotoMenu(ActionEvent event) {
