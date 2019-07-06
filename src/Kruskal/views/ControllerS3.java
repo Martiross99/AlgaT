@@ -28,8 +28,6 @@ public class ControllerS3 implements model.ISceneController {
     @FXML
     private Line A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12;
     
-    //private Line[] lines = {A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12};
-    
 
     @FXML
     private Button OrdAB;
@@ -37,7 +35,6 @@ public class ControllerS3 implements model.ISceneController {
     @FXML
     private AnchorPane V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12;
     
-    //private AnchorPane[] panes = {V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12};
 
     @FXML
     void FaiOrdinare(ActionEvent event) {

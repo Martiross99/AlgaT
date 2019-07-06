@@ -44,7 +44,7 @@
          </center>
       </BorderPane>
       <Button fx:id="PrevB" layoutX="57.0" layoutY="669.0" mnemonicParsing="false" onAction="#PrevB" styleClass="buttonlez" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
-      <Button fx:id="AlgoritmiMenu" disable="true" layoutX="962.0" layoutY="657.0" mnemonicParsing="false" onAction="#GoToMenu" styleClass="buttonlez" text="MENÙ " AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0">
+      <Button fx:id="AlgoritmiMenu" disable="true" layoutX="962.0" layoutY="657.0" mnemonicParsing="false" onAction="#GoToMenu" styleClass="buttonlez" text="MENU" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0">
          <font>
             <Font size="18.0" />
          </font>

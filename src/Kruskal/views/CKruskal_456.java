@@ -3,7 +3,6 @@ package Kruskal.views;
 import java.io.IOException;
 
 import Kruskal.model.SceneLoader_Kruskal;
-import Prim.model.primLoad;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
