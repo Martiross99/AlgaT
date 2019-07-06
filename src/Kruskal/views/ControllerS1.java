@@ -28,7 +28,7 @@ public class ControllerS1 implements model.ISceneController {
     private Label Risposta;
 
     @FXML
-    void ApriAlertBox(ActionEvent event) {
+    void ApriEsercizio(ActionEvent event) {
     	Esercizio.setVisible(true);
     }
     
@@ -63,7 +63,8 @@ public class ControllerS1 implements model.ISceneController {
     void NextB(ActionEvent event) throws IOException {
     	sc.goNext();
     	
-    	Esercizio.setVisible(false);
+    	Esercizio.setVisible(false); //resetta l'esercizio a invisibile
+    	Risposta.setDisable(true);   //toglie il risultato dell'es
     }
 
     @FXML

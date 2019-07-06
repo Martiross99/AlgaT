@@ -17,13 +17,10 @@ import model.sceneController;
 public class ControllerS3 implements model.ISceneController {
 	
 	sceneController sc;
-	Integer index=0;
+	Integer index=0;  //setto l'indice per l'ordinamento degli archi, fuori dalla funzione perché si resetterebbe ogni volta
     
 	@FXML
-    private Button NextB;
-
-    @FXML
-    private Button PrevB;
+    private Button NextB, PrevB;
 
     @FXML
     private Line A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12;
