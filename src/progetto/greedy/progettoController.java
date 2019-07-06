@@ -5,7 +5,12 @@ import Kruskal.model.SceneLoader_Kruskal;
 import Prim.model.primLoad;
 import intro_KP.model.introLoad;
 import javafx.application.Application;
+import javafx.beans.binding.Bindings;
+import javafx.beans.binding.NumberBinding;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.sceneController;
@@ -81,6 +86,7 @@ public class progettoController extends Application {
 //		}
 
         public void setStructure() {
+        	
         	for(int i = 0; i < progetto.length; i++) {
         		progetto[i].setProgetto(this);
         	}
@@ -89,15 +95,34 @@ public class progettoController extends Application {
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			
+			
 			StackPane root = new StackPane();
     		root.getChildren().add(progetto[controllerCorrente]);
+    		//System.out.println(root.getScene().getHeight());
     		
     		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
     	    root.getStyleClass().add("stackp");
     		
-    		Scene scene = new Scene(root);
+//    	    root.setScaleX(0.5);
+//    	    root.setScaleY(0.5);
+
+    	    
+
+    	    NumberBinding ScaleX = Bindings.divide(root.widthProperty(), 1080);
+    	    NumberBinding ScaleY = Bindings.divide(root.heightProperty(), 720);
+
+    	    progetto[controllerCorrente].scaleXProperty().bind(ScaleX);
+    	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
+
+    	 //   Scene scene = new Scene(root, 1080, 720);
+    		Scene scene = new Scene(root,primaryStage.getWidth(),primaryStage.getHeight());
+    		
+    		
 
     		primaryStage.setScene(scene);
+    		//primaryStage.setMaximized(true);
+    	
+    		
     		primaryStage.show();
     		
 		}
@@ -105,6 +130,7 @@ public class progettoController extends Application {
 		public void gotoMenu(Stage window) throws IOException {
 			controllerCorrente = 0;
 			try {
+			//	System.out.println(window.getHeight());
 			   this.start(window);
 			} catch (Exception e) {
 				System.out.println(e.getMessage());

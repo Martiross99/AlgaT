@@ -149,8 +149,9 @@ public class firstController implements model.ISceneController {
  //FUNZIONI CHE GESTISCONO L'FXML DEFPROBLEM
 		    
 		 @FXML
-		  void gotoKruskal(MouseEvent event) {
-
+		  void gotoKruskal(MouseEvent event) throws IOException {
+			    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                sc.getProgetto().loadController(3,window);
 		    }		    
 		    
 		    
