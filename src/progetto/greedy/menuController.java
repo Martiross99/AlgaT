@@ -5,6 +5,8 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -31,39 +33,21 @@ public class menuController implements ISceneController {
 
     @FXML
     void openLezioni(ActionEvent event) {
-//        try{
-//            AnchorPane subPane = FXMLLoader.load(getClass().getResource("lezioni.fxml"));
-//            Scene subScene = new Scene(subPane);
-//            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//            window.setScene(subScene);
-//            window.show();
-//        } catch(Exception e){
-//            System.out.println(e.getMessage());
-//        }
-    	sc.goNext();
+        sc.goNext();
     }
 
     @FXML
     void openMonete(ActionEvent event) {
-//        try{
-//            AnchorPane subPane = FXMLLoader.load(getClass().getResource("../../game/monete.fxml"));
-//            Scene subScene = new Scene(subPane);
-//            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//            window.setScene(subScene);
-//            window.show();
-//        } catch(Exception e){
-//            System.out.println(e.getMessage());
-//        }
-    	
-//    	sc.goNext();
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        sc.getProgetto().loadController(5, window);
     }
 
     @FXML
-    void initialize() {
+    void initialize(){
         assert BLEZ != null : "fx:id=\"BLEZ\" was not injected: check your FXML file 'menu.fxml'.";
         BLEZ.setOnAction(event -> openLezioni(event));
         assert BGAME != null : "fx:id=\"BGAME\" was not injected: check your FXML file 'menu.fxml'.";
-    //    BGAME.setOnAction(event -> openMonete(event));
+        BGAME.setOnAction(event -> openMonete(event));
 
     }
 

@@ -16,7 +16,7 @@
             <URL value="@../../stylesheets/application.css" />
          </stylesheets>
       </Button>
-      <Button fx:id="BGAME" layoutX="332.0" layoutY="441.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="439.0" stylesheets="@../../stylesheets/application.css" text="Minigame" textFill="#90f0ff" underline="true">
+      <Button fx:id="BGAME" layoutX="332.0" layoutY="441.0" onAction="#openMonete" mnemonicParsing="false" prefHeight="105.0" prefWidth="439.0" stylesheets="@../../stylesheets/application.css" text="Minigame" textFill="#90f0ff" underline="true">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
