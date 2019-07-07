@@ -27,6 +27,7 @@ public class Main extends Application {
 
 		try {
 
+			primaryStage.setTitle("AlgaT: il greedy");
 			progettoController progetto = new progettoController();
 			progetto.load();
 			progetto.start(primaryStage);
