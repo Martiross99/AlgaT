@@ -114,7 +114,7 @@
 
 
 .buttonesempio{
-    -fx-background-color: #ff7979;
+    -fx-background-color: #e4a0a0;
     -fx-text-fill: #474747;
 }
 
@@ -161,7 +161,7 @@
 }
 
 #domanda{
-    -fx-text-fill: #ff7979;
+    -fx-text-fill: #e4a0a0;
 }
 
 

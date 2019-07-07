@@ -10,8 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lezione1.introSceneLoader;
 import model.ISceneController;
-import model.introSceneLoader;
 import model.sceneController;
 
 import java.io.IOException;
@@ -33,15 +33,6 @@ public class algoritmiController implements ISceneController {
 
     @FXML
     void openIntro(ActionEvent event) throws IOException {
-//        introLoad introPK = new introLoad();
-//        Stage primaryStage = (Stage) lessonP.getScene().getWindow();
-//        try {
-//            introPK.start(primaryStage);
-//        }catch(Exception e) {
-//            e.printStackTrace();
-//        }
-    	
-    	// progettoController menu = new progettoController();
 	     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 	     sc.getProgetto().loadController(1,window);
     }
@@ -54,36 +45,14 @@ public class algoritmiController implements ISceneController {
 
     @FXML
     void openPrim (ActionEvent event) throws IOException {
-//        primLoad Prim = new primLoad();
-//        Stage primaryStage = (Stage) lessonP.getScene().getWindow();
-//        try {
-//            Prim.start(primaryStage);
-//        }catch(Exception e) {
-//            e.printStackTrace();
-//        }
-//    	 progettoController menu = new progettoController ();
-	    
-//	     menu.loadController(2,window);
-    	
+
     	 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
     	 sc.getProgetto().loadController(2, window);
     }
 
     @FXML
     void openMenu(ActionEvent event) throws IOException  {
-//        try{
-//            AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
-//            Scene mScene = new Scene(mPane);
-//            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//            window.setScene(mScene);
-//            window.show();
-//        }catch(Exception e) {
-//            System.out.println(e.getMessage());
-//        }
-    	
-    
 	    sc.goBack();	
-
     }
 
     @FXML

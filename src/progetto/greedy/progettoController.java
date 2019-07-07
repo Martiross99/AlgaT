@@ -10,6 +10,7 @@ import javafx.beans.binding.NumberBinding;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import lezione1.introSceneLoader;
 import model.sceneController;
 
 //classe che gestisce tutti controller delle lezioni, li inserisce in un array e gestisce le funzioni di interscambio
@@ -45,15 +46,21 @@ public class progettoController extends Application {
 				primController = prim.Load(primController);
 				
 
-				sceneController introController = new sceneController();
-				introLoad intro = new introLoad();	
-				introController = intro.Load(introController);
+				sceneController introKPController = new sceneController();
+				introLoad introKP = new introLoad();	
+				introKPController = introKP.Load(introKPController);
+				
+//				sceneController introController = new sceneController();
+//				introSceneLoader intro = new introSceneLoader();	
+//				introController = intro.Load(introController);
 	
 		   		
 				progetto[0] = mainController;
-				progetto[1] = introController;
+				progetto[1] = introKPController;
 				progetto[3] = kruskalController;
 				progetto[2] = primController;
+				
+			//	progetto[4] = introController;
 				
 				this.setStructure();                     
 

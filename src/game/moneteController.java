@@ -28,10 +28,6 @@ public class moneteController {
     int[] correctCounters = new int[]{0,0,0,0,0,0,0};
 
     @FXML
-    Label result;
-    @FXML
-    Button continua;
-    @FXML
     Button riprova;
 
     @FXML
@@ -50,6 +46,21 @@ public class moneteController {
     Label count500;
     @FXML
     Label imp;
+
+    @FXML
+    private Label correct1;
+    @FXML
+    private Label correct5;
+    @FXML
+    private Label correct10;
+    @FXML
+    private Label correct20;
+    @FXML
+    private Label correct50;
+    @FXML
+    private Label correct100;
+    @FXML
+    private Label correct500;
 
     @FXML
     private Pane money1;
@@ -81,7 +92,6 @@ public class moneteController {
         }
 
         riprova.setVisible(false);
-        continua.setVisible(false);
 
         Random r = new Random();
         importo = r.nextInt((5000 - 1000) + 1) + 1000;
@@ -98,9 +108,10 @@ public class moneteController {
             }
         }
 
+        setCorrects();
+
         imp.setText(Integer.toString(importo));
         updateLabels();
-        result.setText("");
 
     }
 
@@ -129,7 +140,24 @@ public class moneteController {
         }
     }
 
+    void setCorrects(){
+        correct1.setText(Integer.toString(labelCounters[0]));
+        correct5.setText(Integer.toString(labelCounters[1]));
+        correct10.setText(Integer.toString(labelCounters[2]));
+        correct20.setText(Integer.toString(labelCounters[3]));
+        correct50.setText(Integer.toString(labelCounters[4]));
+        correct100.setText(Integer.toString(labelCounters[5]));
+        correct500.setText(Integer.toString(labelCounters[6]));
+    }
+
     void updateLabels(){
+        correct1.setVisible(false);
+        correct5.setVisible(false);
+        correct10.setVisible(false);
+        correct20.setVisible(false);
+        correct50.setVisible(false);
+        correct100.setVisible(false);
+        correct500.setVisible(false);
         count1.setText(Integer.toString(labelCounters[0]));
         count5.setText(Integer.toString(labelCounters[1]));
         count10.setText(Integer.toString(labelCounters[2]));
@@ -189,12 +217,23 @@ public class moneteController {
         }
 
         if(wrong){
-            result.setText("Riprova");
+            count1.setStyle("-fx-text-fill: red;");
+            count5.setStyle("-fx-text-fill: red;");
+            count10.setStyle("-fx-text-fill: red;");
+            count20.setStyle("-fx-text-fill: red;");
+            count50.setStyle("-fx-text-fill: red;");
+            count100.setStyle("-fx-text-fill: red;");
+            count500.setStyle("-fx-text-fill: red;");
             riprova.setVisible(true);
         } else{
-            result.setText("Continua");
+            count1.setStyle("-fx-text-fill: green;");
+            count5.setStyle("-fx-text-fill: green;");
+            count10.setStyle("-fx-text-fill: green;");
+            count20.setStyle("-fx-text-fill: green;");
+            count50.setStyle("-fx-text-fill: green;");
+            count100.setStyle("-fx-text-fill: green;");
+            count500.setStyle("-fx-text-fill: green;");
             riprova.setVisible(true);
-            continua.setVisible(true);
         }
 
     }
