@@ -11,10 +11,7 @@ import java.nio.file.Paths;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-<<<<<<< HEAD
 //import com.sun.xml.internal.bind.XmlAccessorFactory;
-=======
->>>>>>> branch 'master' of https://github.com/erikalena/progettoAlgaT.git
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;

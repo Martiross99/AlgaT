@@ -21,8 +21,14 @@
                         <Font name="Cambria" size="18.0" />
                      </font>
                   </Text>
-                  <TextArea fx:id="Risultato" layoutX="167.0" layoutY="300.0" prefHeight="44.0" prefWidth="269.0" />
-                  <TextField fx:id="Tentativo" layoutX="130.0" layoutY="173.0" prefHeight="84.0" prefWidth="339.0" />
+                  <TextArea fx:id="Risultato" layoutX="167.0" layoutY="300.0" prefHeight="44.0" prefWidth="269.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextArea>
+                  <TextField fx:id="Tentativo" layoutX="130.0" layoutY="173.0" prefHeight="84.0" prefWidth="339.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
                   <Button fx:id="Dom1" layoutX="490.0" layoutY="197.0" mnemonicParsing="false" onAction="#GetAnswer" styleClass="buttonlez" text="FATTO" />
                   <Button fx:id="Riprova" layoutX="490.0" layoutY="308.0" mnemonicParsing="false" onAction="#Clear" styleClass="buttonlez" text="RIPROVA" />
                   <Label layoutX="121.0" layoutY="101.0" styleClass="titoli" text="DOMANDE:" />
