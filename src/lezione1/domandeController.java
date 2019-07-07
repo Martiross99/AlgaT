@@ -1,9 +1,10 @@
-package sample;
+package lezione1;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 
 //import java.awt.*;
+import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,6 +12,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 import com.sun.xml.internal.bind.XmlAccessorFactory;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,14 +26,19 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import model.sceneController;
 
-public class Controller{
+public class domandeController implements model.ISceneController {
 
     private AnchorPane root;
     private Scene scene;
+    sceneController sc;
 
     @FXML
     Label domanda;
+    @FXML
+    private Button menu;
 
     @FXML
     Button risposta1;
@@ -141,21 +148,34 @@ public class Controller{
         System.out.println(tmp.getText());
         System.out.println(corretta);
         if(tmp.getText().equals(corretta)){
-            prossimadomanda.setVisible(true);
+            menu.setVisible(true);
+            menu.setDisable(false);
         }
     }
 
     @FXML
     void initialize() {
-        System.out.println("Working Directory = " +
-                System.getProperty("user.dir"));
+        menu.setDisable(true);
+        menu.setVisible(false);
         try {
 
-            f = Files.newBufferedReader((Paths.get("out/production/untitled/sample/lezione1/domande.txt")));
+            f = Files.newBufferedReader((Paths.get("src/lezione1/domande.txt")));
         } catch (Exception e){
             System.out.println(e);
         }
          parseDomanda();
     }
 
+    @Override
+    public void setSceneParent(sceneController sceneParent) {
+        sc = sceneParent;
+    }
+
+    @FXML
+    void gotoMenu(ActionEvent event) throws IOException {
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        sc.getProgetto().gotoMenu(window);
+
+    }
 }
