@@ -26,11 +26,16 @@ public class Main extends Application {
 
 
 		try {
-			
+
 			progettoController progetto = new progettoController();
 			progetto.load();
 			progetto.start(primaryStage);
 			
+
+			//progettoController progetto = new progettoController();
+			//progetto.load();
+			//progetto.start(primaryStage);
+
 		//    StackPane root = new StackPane();
 //		    
 //		    root.getChildren().addAll(menu.getController(0),menu.getController(1)); 
@@ -59,8 +64,8 @@ public class Main extends Application {
 //		     primaryStage.setResizable(false);
 //		     primaryStage.show();
 //			
-//
-//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("../../game/monete.fxml"));
+
+//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("/lezione1/esempio.fxml"));
 //			Scene mScene = new Scene(mPane);
 //			primaryStage.setScene(mScene);
 //			primaryStage.show();

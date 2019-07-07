@@ -1,5 +1,6 @@
 package progetto.greedy;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -9,8 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lezione1.introSceneLoader;
 import model.ISceneController;
-import model.introSceneLoader;
 import model.sceneController;
 
 public class lezioniController implements ISceneController {
@@ -28,41 +29,22 @@ public class lezioniController implements ISceneController {
     private AnchorPane lessonP;
 
     @FXML
-    void openLesson1(ActionEvent event) {
-//        introSceneLoader intro = new introSceneLoader();
-//        Stage primaryStage = (Stage) lessonP.getScene().getWindow();
-//        try {
-//            intro.start(primaryStage);
-//        }catch(Exception e) {
-//            e.printStackTrace();
-//        }
+    void openLesson1(ActionEvent event) throws IOException {
+    	
+//    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//   	    sc.getProgetto().loadController(4, window);
+    	
     }
 
     @FXML
     void openAlgoritmi(ActionEvent event) {
-//        try{
-//            AnchorPane mPane = FXMLLoader.load(getClass().getResource("algoritmi.fxml"));
-//            Scene mScene = new Scene(mPane);
-//            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//            window.setScene(mScene);
-//            window.show();
-//        }catch(Exception e) {
-//            System.out.println(e.getMessage());
-//        }
     	sc.goNext();
     }
 
     @FXML
-    void openMenu(ActionEvent event) {
-//        try{
-//            AnchorPane mPane = FXMLLoader.load(getClass().getResource("menu.fxml"));
-//            Scene mScene = new Scene(mPane);
-//            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//            window.setScene(mScene);
-//            window.show();
-//        }catch(Exception e) {
-//            System.out.println(e.getMessage());
-//        }
+    void openMenu(ActionEvent event) throws IOException {
+//    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//    	sc.getProgetto().gotoMenu(window);
     	sc.goBack();
     }
 

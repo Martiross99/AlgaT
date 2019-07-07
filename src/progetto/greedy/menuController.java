@@ -45,15 +45,17 @@ public class menuController implements ISceneController {
 
     @FXML
     void openMonete(ActionEvent event) {
-        try{
-            AnchorPane subPane = FXMLLoader.load(getClass().getResource("../../game/monete.fxml"));
-            Scene subScene = new Scene(subPane);
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(subScene);
-            window.show();
-        } catch(Exception e){
-            System.out.println(e.getMessage());
-        }
+//        try{
+//            AnchorPane subPane = FXMLLoader.load(getClass().getResource("../../game/monete.fxml"));
+//            Scene subScene = new Scene(subPane);
+//            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//            window.setScene(subScene);
+//            window.show();
+//        } catch(Exception e){
+//            System.out.println(e.getMessage());
+//        }
+    	
+//    	sc.goNext();
     }
 
     @FXML
@@ -61,7 +63,7 @@ public class menuController implements ISceneController {
         assert BLEZ != null : "fx:id=\"BLEZ\" was not injected: check your FXML file 'menu.fxml'.";
         BLEZ.setOnAction(event -> openLezioni(event));
         assert BGAME != null : "fx:id=\"BGAME\" was not injected: check your FXML file 'menu.fxml'.";
-        BGAME.setOnAction(event -> openMonete(event));
+    //    BGAME.setOnAction(event -> openMonete(event));
 
     }
 

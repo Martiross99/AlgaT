@@ -1,4 +1,6 @@
-package model;
+package lezione1;
+
+import model.sceneController;
 
 public class introSceneLoader{
 

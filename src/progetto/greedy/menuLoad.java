@@ -10,20 +10,20 @@ public class menuLoad {
       
 	public static Integer menu = 1;
 	public static String menuScene = "/progetto/greedy/menu.fxml";
+//	public static Integer game = 2;
+//	public static String gameScene = "../../game/monete.fxml";
 	public static Integer lezioni = 2;
 	public static String lezioniScene = "/progetto/greedy/lezioni.fxml";
 	public static Integer algoritmi = 3;
 	public static String algoritmiScene = "/progetto/greedy/algoritmi.fxml";
-//	public static Integer concept = 3;
-//	public static String conceptScene = "/Prim/views/concept.fxml";
-//	public static Integer defProblem = 4;
-//	public static String defProblemScene = "/Prim/views/defProblem.fxml";
+
 
 	 public sceneController Load(sceneController controller) {
 		 
 			try {
 
 			 controller.loadScene(menu, menuScene);
+		//	 controller.loadScene(game, gameScene);
 			 controller.loadScene(lezioni, lezioniScene);
 			 controller.loadScene(algoritmi, algoritmiScene);
              controller.setScene(menu);
