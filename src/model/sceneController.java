@@ -47,7 +47,7 @@ public class sceneController extends StackPane {
   public void loadScene(Integer n, String resource) {
     	 try {
              FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-             AnchorPane ap = (AnchorPane) loader.load();
+             AnchorPane ap = loader.load();
              //Parent loadScene = (Parent) loader.load();
              ISceneController sceneController = ((ISceneController) loader.getController());
              sceneController.setSceneParent(this);             

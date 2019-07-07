@@ -1,12 +1,6 @@
 package model;
 
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-
-public class introSceneLoader extends Application{
+public class introSceneLoader{
 
 
 	public static Integer intro = 1;
@@ -20,28 +14,19 @@ public class introSceneLoader extends Application{
 	public static Integer end = 5;
 	public static String endScene = "/views/1_5.fxml";
 
-	 
-    public Stage stage;
-     
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		
-		sceneController main = new sceneController();
-		main.loadScene(intro, introScene);
-		main.loadScene(proprieta, proprietaScene);
-		main.loadScene(esempio, esempioScene);
-		main.loadScene(gioco, giocoScene);
-		main.loadScene(end, endScene);
-
-		main.setScene(intro);
-
-		StackPane root = new StackPane();
-		root.getChildren().add(main);
-		Scene scene = new Scene(root);
 
 
-		primaryStage.setScene(scene);
-		primaryStage.show();
+	public sceneController Load(sceneController controller) throws Exception {
+
+		controller.loadScene(intro, introScene);
+		controller.loadScene(proprieta, proprietaScene);
+		controller.loadScene(esempio, esempioScene);
+		controller.loadScene(gioco, giocoScene);
+		controller.loadScene(end, endScene);
+
+		controller.setScene(intro);
+
+		return controller;
 
 	}
 

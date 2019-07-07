@@ -18,7 +18,6 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-//import com.sun.xml.internal.bind.XmlAccessorFactory;
 
 public class esempioController implements model.ISceneController{
 
@@ -30,11 +29,7 @@ public class esempioController implements model.ISceneController{
     int[] correctCounters = new int[]{0,0,0,0,0,0,0};
 
     @FXML
-    Label result;
-    @FXML
     Button continua;
-    @FXML
-    Button riprova;
 
     @FXML
     Label count1;
@@ -77,12 +72,13 @@ public class esempioController implements model.ISceneController{
     int importo;
 
     void startGame(){
+        disablePanes();
+
         for(int i=0; i<7; i++){
             labelCounters[i] = 0;
             correctCounters[i] = 0;
         }
 
-        riprova.setVisible(false);
         continua.setVisible(false);
 
         Random r = new Random();
@@ -102,7 +98,6 @@ public class esempioController implements model.ISceneController{
 
         imp.setText(Integer.toString(importo));
         updateLabels();
-        result.setText("");
 
     }
 
@@ -191,11 +186,7 @@ public class esempioController implements model.ISceneController{
         }
 
         if(wrong){
-            result.setText("Riprova");
-            riprova.setVisible(true);
         } else{
-            result.setText("Continua");
-            riprova.setVisible(true);
             continua.setVisible(true);
         }
 
@@ -227,11 +218,6 @@ public class esempioController implements model.ISceneController{
         sc.goNext();
     }
 
-    @FXML
-    void retry(){
-        //gioco finito, l'utente preme riprova
-        startGame();
-    }
 
     void disablePanes(){
         money1.setDisable(true);
