@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.ControllerS3">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.ControllerS3">
    <children>
       <Button fx:id="NextB" layoutX="653.0" layoutY="436.0" mnemonicParsing="false" onAction="#NextB" styleClass="buttonlez" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
       <Button fx:id="PrevB" layoutX="10.0" layoutY="437.0" mnemonicParsing="false" onAction="#PrevB" styleClass="buttonlez" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
@@ -131,7 +131,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="OrdAB" layoutX="164.0" layoutY="346.0" mnemonicParsing="false" onAction="#FaiOrdinare" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="Ordina gli archi" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="346.0">
+      <Button fx:id="OrdAB" layoutX="164.0" layoutY="346.0" mnemonicParsing="false" onAction="#FaiOrdinare" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="ORDINA GLI ARCHI" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="346.0">
          <font>
             <Font name="Cambria" size="17.0" />
          </font>
