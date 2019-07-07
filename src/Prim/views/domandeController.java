@@ -3,6 +3,7 @@ package Prim.views;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -40,14 +41,13 @@ public class domandeController  implements model.ISceneController{
   		 
   		 String prova = tentativo.getText();
   		 prova = prova.trim();
-  		 Integer pr;
   		 
   	  if(prova.length()!=0) {
   		  inserisci.setDisable(true);
   		  riprova.setDisable(false); 
   		  
   		 try {
-  			pr = Integer.parseInt(prova);
+  			 Integer.parseInt(prova);
   		 } catch(NumberFormatException e) {
   			 risposta.appendText("Inserimento non valido");
   			 return;
@@ -79,6 +79,7 @@ public class domandeController  implements model.ISceneController{
     void controlla3(ActionEvent event) throws FileNotFoundException { 
 		String prova = tentativo.getText();
 		prova = prova.trim();
+//		try {
 		if(prova.length()!=0) {
 		try {	
 			Scanner s = new Scanner (new File("src/Prim/views/risposte.txt"));
@@ -102,7 +103,7 @@ public class domandeController  implements model.ISceneController{
 				}
 			}
 		    if(!found) risposta.appendText("Sbagliato, riprova");
-		    if((found) && (line < 4)) next.setDisable(false);
+		    else if((found) && (line < 4)) next.setDisable(false);
 		    else menu.setDisable(false);
 		    
 		    inserisci.setDisable(true);
@@ -116,6 +117,9 @@ public class domandeController  implements model.ISceneController{
 	        
 	        }
 		}
+//		} catch (InvocationTargetException e) {
+//			System.out.println("Unable to open file 'risposte.txt'"); 
+//		}
     }
     
     String getLine(Scanner s, Integer line) {
