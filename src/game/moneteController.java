@@ -2,30 +2,20 @@ package game;
 
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.Random;
-import java.util.ResourceBundle;
 
-//import com.sun.xml.internal.bind.XmlAccessorFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.ISceneController;
 import model.sceneController;
 
 public class moneteController implements ISceneController {
 
-    private AnchorPane root;
-    private Scene scene;
     int[] values = new int[]{1,5,10,20,50,100,500};
     int[] labelCounters = new int[]{0,0,0,0,0,0,0};
     int[] correctCounters = new int[]{0,0,0,0,0,0,0};
@@ -68,26 +58,6 @@ public class moneteController implements ISceneController {
     @FXML
     private Label correct500;
 
-    @FXML
-    private Pane money1;
-    @FXML
-    private Pane money5;
-    @FXML
-    private Pane money10;
-    @FXML
-    private Pane money20;
-    @FXML
-    private Pane money50;
-    @FXML
-    private Pane money100;
-    @FXML
-    private Pane money500;
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     int importo;
 
@@ -275,15 +245,6 @@ public class moneteController implements ISceneController {
     }
     @FXML
     void openMenu(ActionEvent event) throws IOException {
-        /*try{
-            AnchorPane mPane = FXMLLoader.load(getClass().getResource("../progetto/greedy/menu.fxml"));
-            Scene mScene = new Scene(mPane);
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(mScene);
-            window.show();
-        }catch(Exception e) {
-            System.out.println(e.getMessage());
-        }*/
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         sc.getProgetto().gotoMenu(window);
     }
