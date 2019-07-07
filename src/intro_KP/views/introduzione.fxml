@@ -5,9 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intro_KP.views.introController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intro_KP.views.introController">
    <children>
       <VBox prefHeight="543.0" prefWidth="985.0">
          <children>
@@ -16,37 +17,40 @@
                   <Insets left="90.0" top="70.0" />
                </VBox.margin>
             </Label>
-            <Text fill="#f5f0f0" strokeType="OUTSIDE" strokeWidth="0.0" text="I due algoritmi seguenti trattano il problema degli alberi di copertura di peso minimo.&#10;&#10;Problema: dato un grafo pesato, determinare come interconnettere tutti i suoi nodi minimizzando il costo del peso associato ai suoi archi." wrappingWidth="775.0390625">
+            <Text fill="#f5f0f0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="I due algoritmi seguenti trattano il problema degli alberi di copertura di peso minimo.&#10;&#10;Problema: dato un grafo pesato, determinare come interconnettere tutti i suoi nodi minimizzando il costo del peso associato ai suoi archi." wrappingWidth="775.0390625">
                <VBox.margin>
-                  <Insets left="90.0" top="50.0" />
+                  <Insets left="90.0" top="25.0" />
                </VBox.margin>
             </Text>
-            <Label text="ALBERO DI COPERTURA" textFill="WHITE">
+            <Label styleClass="testi" text="ALBERO DI COPERTURA" textFill="WHITE">
                <VBox.margin>
                   <Insets left="90.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dato un grafo G = (V, E) non orientato e connesso, un albero dicopertura di G è un sottografo G' = (V, T ) tale che&#10;   &gt; G' è un albero&#10;   &gt; T ⊆ E  &#10;   &gt; G' contiene tutti i vertici di G">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Dato un grafo G = (V, E) non orientato e connesso, un albero dicopertura di G è un sottografo G' = (V, T ) tale che&#10;   &gt; G' è un albero&#10;   &gt; T ⊆ E  &#10;   &gt; G' contiene tutti i vertici di G">
                <VBox.margin>
                   <Insets left="90.0" top="20.0" />
                </VBox.margin>
             </Text>
-            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Gli algoritmi di Kruskale Prim sono due al goritmi di tipo glo so, che si propongono di risolvere tale problema accrescendo un sottoinsieme A di archi in modo tale che A sia  sempre un sottoinsieme di qualche albero di connessione minimo " wrappingWidth="820.8115234375">
+            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Gli algoritmi di Kruskale Prim sono due algoritmi di tipo goloso, che si propongono di risolvere tale problema accrescendo un sottoinsieme A di archi in modo tale che A sia  sempre un sottoinsieme di qualche albero di connessione minimo " wrappingWidth="896.1448974609375">
                <VBox.margin>
-                  <Insets left="90.0" top="40.0" />
+                  <Insets left="90.0" top="20.0" />
                </VBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
             </Text>
-            <Label text="ARCO SICURO" textFill="WHITE">
+            <Label styleClass="testi" text="ARCO SICURO" textFill="WHITE">
                <VBox.margin>
                   <Insets left="90.0" top="30.0" />
                </VBox.margin>
             </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Un arco [u, v] è detto sicuro per A se A ∪ {[u, v]} è ancora unsottoinsieme di qualche albero di connessione minimo.">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Un arco [u, v] è detto sicuro per A se A ∪ {[u, v]} è ancora unsottoinsieme di qualche albero di connessione minimo.">
                <VBox.margin>
                   <Insets left="90.0" top="20.0" />
                </VBox.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Non è detto che l'albero di copertura minimo per un grafo sia univoco.">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Non è detto che l'albero di copertura minimo per un grafo sia univoco.">
                <VBox.margin>
                   <Insets left="90.0" top="20.0" />
                </VBox.margin>

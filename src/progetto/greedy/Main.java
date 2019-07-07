@@ -26,10 +26,11 @@ public class Main extends Application {
 
 
 		try {
-			
+
 			progettoController progetto = new progettoController();
 			progetto.load();
 			progetto.start(primaryStage);
+			
 
 			//progettoController progetto = new progettoController();
 			//progetto.load();

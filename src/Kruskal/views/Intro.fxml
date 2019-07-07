@@ -13,6 +13,6 @@
          </font>
       </Label>
       <Button fx:id="NextB" layoutX="644.0" layoutY="435.0" mnemonicParsing="false" onAction="#NextB" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&gt;&gt;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0" />
-      <Button fx:id="PrevB" layoutX="25.0" layoutY="436.0" mnemonicParsing="false" onAction="#PrevB" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="&lt;&lt;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
+      <Button fx:id="AlgoritmiMenu" layoutX="25.0" layoutY="436.0" mnemonicParsing="false" onAction="#GoToMenu" styleClass="buttonlez" stylesheets="@../../stylesheets/application.css" text="MENU" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="45.0" />
    </children>
 </AnchorPane>
