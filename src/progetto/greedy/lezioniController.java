@@ -31,8 +31,8 @@ public class lezioniController implements ISceneController {
     @FXML
     void openLesson1(ActionEvent event) throws IOException {
     	
-//    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//   	    sc.getProgetto().loadController(4, window);
+    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+   	    sc.getProgetto().loadController(4, window);
     	
     }
 

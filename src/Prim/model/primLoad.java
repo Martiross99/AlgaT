@@ -39,6 +39,7 @@ public class primLoad {
 	     
 	     
 	    public sceneController Load(sceneController controller) {
+	    	
 				try {
 
 				 controller.loadScene(prim, primScene);
