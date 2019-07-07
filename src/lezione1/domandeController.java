@@ -31,8 +31,6 @@ import model.sceneController;
 
 public class domandeController implements model.ISceneController {
 
-    private AnchorPane root;
-    private Scene scene;
     sceneController sc;
 
     @FXML
@@ -52,17 +50,10 @@ public class domandeController implements model.ISceneController {
 
     @FXML
     Button prossimadomanda;
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     BufferedReader f;
     String s;
 
-    String[] domande;
-    int indicedomande = 0;
     String dom;
     String[] opzioni;
     String corretta;
@@ -94,7 +85,6 @@ public class domandeController implements model.ISceneController {
             System.out.println(e);
         }
 
-        //System.out.println(s);
         resetComps();
         String[] tmp = s.split("\\|");
         dom = tmp[0];
@@ -103,7 +93,6 @@ public class domandeController implements model.ISceneController {
 
         domanda.setText(dom);
         domanda.setVisible(true);
-        //System.out.println(tmp[0]);
 
         if(opzioni.length == 1){
             rispostaaperta.setVisible(true);
@@ -145,8 +134,6 @@ public class domandeController implements model.ISceneController {
     @FXML
     void onChangeCheckRisposta(Event e){
         TextArea tmp = (TextArea)e.getSource();
-        //System.out.println(tmp.getText());
-        //System.out.println(corretta);
         if(tmp.getText().equals(corretta)){
             menu.setVisible(true);
             menu.setDisable(false);

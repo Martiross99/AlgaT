@@ -24,7 +24,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button id="risposta3" fx:id="risposta3" layoutX="200.0" layoutY="490.0" mnemonicParsing="false" onMouseClicked="#onClickRisposta" prefHeight="50.0" style="-fx-border-color: white;" text="Button" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+      <Button id="risposta3" fx:id="risposta3" layoutX="200.0" layoutY="490.0" mnemonicParsing="false" onMouseClicked="#onClickRisposta" prefHeight="50.0" style="-fx-border-color: white;" styleClass="risposte" text="Button" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>

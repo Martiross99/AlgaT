@@ -3,27 +3,18 @@ package lezione1;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import model.sceneController;
 
-import java.net.URL;
 import java.util.Random;
-import java.util.ResourceBundle;
 
 
 public class esempioController implements model.ISceneController{
 
     sceneController sc;
-    private AnchorPane root;
-    private Scene scene;
     int[] values = new int[]{1,5,10,20,50,100,500};
     int[] labelCounters = new int[]{0,0,0,0,0,0,0};
     int[] correctCounters = new int[]{0,0,0,0,0,0,0};
@@ -63,11 +54,6 @@ public class esempioController implements model.ISceneController{
     @FXML
     private Pane money500;
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     Pane[] MoneyList;
     int importo;
@@ -221,25 +207,16 @@ public class esempioController implements model.ISceneController{
             checkCorrect();
         }
     }
-    @FXML
-    void openMenu(ActionEvent event) {
-        try{
-            AnchorPane mPane = FXMLLoader.load(getClass().getResource("../progetto/greedy/menu.fxml"));
-            Scene mScene = new Scene(mPane);
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(mScene);
-            window.show();
-        }catch(Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
 
     @FXML
     void nextPage(ActionEvent event){
         sc.goNext();
     }
 
-
+    @FXML
+    void goBack(ActionEvent event){
+        sc.goBack();
+    }
 
 
     @Override
