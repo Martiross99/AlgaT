@@ -1,25 +1,18 @@
 package Prim.views;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
-import java.util.regex.Pattern;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
 import model.sceneController;
 
 
-//gestisce i file : esercizi.fxml
+//gestisce i file : esercizi.fxml, esercizi2.fxml
 
 
 public class eserciziController  implements model.ISceneController{
@@ -44,8 +37,10 @@ public class eserciziController  implements model.ISceneController{
     
   //Funzioni che gestiscono il file esercizi.fxml
 	@FXML
-	 void verifica(ActionEvent event) {
-		    risposta.clear();
+	 void verifica(ActionEvent event) {                    //inserisce tutti i radioButton in un toggleGroup in modo che uno solo di essi sia selezionabile
+		
+		    risposta.clear();           //prima di stampare una nuova risposta pulisce la schermata delle risposte
+		    
 		    rb1.setToggleGroup(rb);rb2.setToggleGroup(rb);rb3.setToggleGroup(rb);rb4.setToggleGroup(rb);
             if(rb2.isSelected() && (secondExercise == null)) {
             	risposta.appendText("Corretto!");
@@ -65,8 +60,9 @@ public class eserciziController  implements model.ISceneController{
 	
  //Funzioni che gestiscono lo scambio tra le pagine	 
     @FXML
-	 void goBack(ActionEvent event) throws IOException {
+	 void goBack(ActionEvent event) throws IOException {      //prima di cambiare scena pulisce i campi delle risposte
 	  sc.goBack();
+	  pulisciSchermata();
 	  }
 	    
 	@FXML

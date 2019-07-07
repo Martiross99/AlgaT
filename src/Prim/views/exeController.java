@@ -18,15 +18,12 @@ import model.sceneController;
 public class exeController implements ISceneController {
 
 	sceneController sc;
-	
 
     @FXML
     private Button back, next;
 
     @FXML
     private StackPane spB,spC,spD,spE,spF,spG,spH;
-    
-   // final StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
     private Integer index = 0;
     
     @FXML
@@ -38,36 +35,33 @@ public class exeController implements ISceneController {
     @FXML
     private CubicCurve firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut;
     
-    
-    CubicCurve curve[] = {firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut};
 
 
     @FXML
-    void toFill(MouseEvent event) {
-    	final StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};
+    void toFill(MouseEvent event) {																			//stackPane, curve e linee sono organizzati in degli array 
+    	final StackPane nodi[] = {spC,spE,spG,spF,spD,spB,spH};                                                //così da poter essere gestiti in sequenza
     	final CubicCurve curve[] = {firstCut,secondCut,thirdCut,fourthCut,fifthCut,sixthCut,seventhCut};
     	final Line[] linee = {firstLine,secondLine,thirdLine,fourthLine,fifthLine,sixthLine,eleventhLine,tenthLine,seventhLine,twelfthLine,eigthLine,ninthLine};
     	
     	
-    	StackPane x = (StackPane) event.getSource();
+    	StackPane x = (StackPane) event.getSource();     //prende lo stackPane sul quale è avvenuto l'evento
     	      
-    	if(index < nodi.length ) {
+    	if(index < nodi.length ) {                         //finchè non sono stati colorati tutti i nodi
    		         if (x.equals(nodi[index])) {
    		        	 
    		            Circle c = (Circle) x.getChildren().get(0);
                 	c.setStroke(Color.rgb(201, 86, 24));
-       	            c.setFill(Color.rgb(195,151,135));
-                   	curve[index].setOpacity(0.0);
+       	            c.setFill(Color.rgb(195,151,135));                         //a seconda dell'indice corrente rende visibili o meno le varie linee e i tagli
+                   	curve[index].setOpacity(0.0);                              
                    	linee[iLine].setStroke(Color.rgb(201, 86, 24));
                    	linee[iLine].setStrokeWidth(4);
                    	if(iLine == iHatch) {
-                   		linee[iLine+5].getStrokeDashArray().addAll(20d,15d);
+                   		linee[iLine+5].getStrokeDashArray().addAll(20d,15d);           //gli archi "scartati" vengono tratteggiati
                    		if(iLine == 4) linee[11].getStrokeDashArray().addAll(25d,10d);
                    		iHatch = iHatch +1;
                    	}
                    
                   	if (index < nodi.length-1) {
-       	            	nodi[index + 1].setDisable(false);
        		            curve[index+1].setOpacity(1);
        	            	
                  	}

@@ -1,11 +1,7 @@
 package Prim.views;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -26,13 +22,12 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import Prim.model.primLoad;
 import model.sceneController;
-import progetto.greedy.progettoController;
+
 
 //gestisce i seguenti file FXML : prim.fxml, overView.fxml, concept.fxml, defProblem.fxml
 
 public class firstController implements model.ISceneController {
 	
-
 	
 		sceneController sc;
 		
@@ -41,8 +36,6 @@ public class firstController implements model.ISceneController {
 	    @FXML
 	    private Button start, back, next, menu, alert,controlla;
 	    
-	    @FXML
-	    private AnchorPane ap;
 		    
 	    @FXML
 		private StackPane sp1,sp2,sp3,sp4,sp5,sp6;    //stackPanes FXML overView
@@ -64,7 +57,7 @@ public class firstController implements model.ISceneController {
 		
 	//FUNZIONI CHE GESTISCONO L'FXML OVERVIEW
 		    @FXML
-		    void information(ActionEvent event) throws FileNotFoundException {
+		    void information(ActionEvent event) throws FileNotFoundException {  //apre un alertBox che informa l'utente delle conoscenze pregresse delle quali necessita
 		         alertWindow aw = new alertWindow();
 		         aw.createAlert(AlertType.WARNING,1, "Nota Bene");
 		    }
@@ -102,7 +95,7 @@ public class firstController implements model.ISceneController {
 
 
 		    @FXML
-		    void toFill(MouseEvent event)  throws IOException {
+		    void toFill(MouseEvent event)  throws IOException {     //colora i cerchi del menù quando ci si passa sopra con il mouse
 		    	StackPane x = (StackPane) event.getSource();
 		    	Circle c = (Circle) x.getChildren().get(0);
 		    	c.setFill(Color.rgb(228,160,160));
@@ -120,19 +113,17 @@ public class firstController implements model.ISceneController {
 		    
 		    @FXML
 		    void verify(ActionEvent event) {
-		    	CheckBox[] check = {check1,check2,check3,check4,check5};
-		    	boolean selected = true;
+		    	CheckBox[] check = {check1,check2,check3,check4,check5};   //controlla i checkBoxes sono stati spuntati e abilita/disabilita
+		    	boolean selected = true;                                    //di conseguenza il pulsante per andare avanti 
 		    	for(int i = 0; i < check.length; i++) {
 		    		if(!check[i].isSelected()) selected = false;
 		    	}
 		    	if (selected) next.setDisable(false);
 		    	else next.setDisable(true);
-//		        if(check1.isSelected() && check2.isSelected() && check3.isSelected() && check4.isSelected()) next.setDisable(false);
-//		        if(!check1.isSelected() || !check2.isSelected() || !check3.isSelected() || !check4.isSelected()) next.setDisable(true);
 		    }
 
 		    @FXML
-		    void tocheck(ActionEvent event) throws IOException {
+		    void tocheck(ActionEvent event) throws IOException {                     //caricare la definizione richiesta aprendo un file txt caricato nel programma
 		        String s = cbox.getValue();
 		        alertWindow info = new alertWindow();
 				if(s == definizioni.get(1))
@@ -149,7 +140,7 @@ public class firstController implements model.ISceneController {
  //FUNZIONI CHE GESTISCONO L'FXML DEFPROBLEM
 		    
 		 @FXML
-		  void gotoKruskal(MouseEvent event) throws IOException {
+		  void gotoKruskal(MouseEvent event) throws IOException {                        //si sposta alla sezione Algoritmo di Kruskal
 			    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                 sc.getProgetto().loadController(3,window);
 		    }		    
@@ -175,8 +166,7 @@ public class firstController implements model.ISceneController {
 
 		@Override
 		public void setSceneParent(sceneController parent) {
-			sc = parent;
-			
+			sc = parent;		
 		}
 		
 
@@ -186,7 +176,6 @@ public class firstController implements model.ISceneController {
 	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'overView.fxml'.";
 	        
 	        //FXML prim
-	        assert ap != null : "fx:id=\"ap\" was not injected: check your FXML file 'prim.fxml'.";
 	        assert start != null : "fx:id=\"start\" was not injected: check your FXML file 'prim.fxml'.";
 	        assert menu != null : "fx:id=\"menu\" was not injected: check your FXML file 'prim.fxml'.";
 	        
