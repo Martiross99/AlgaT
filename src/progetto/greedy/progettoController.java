@@ -129,6 +129,7 @@ public class progettoController extends Application {
 		}
 		
 		public void gotoMenu(Stage window) throws IOException {	
+			progetto[controllerCorrente].setScene(1);
 			controllerCorrente = 0;                       //per andare al menu prende il sceneController in posizione zero nell'array
 			try {                                             //e lo carica
 			//	System.out.println(window.getHeight());

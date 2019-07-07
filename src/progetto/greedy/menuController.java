@@ -33,13 +33,15 @@ public class menuController implements ISceneController {
 
     @FXML
     void openLezioni(ActionEvent event) {
-        sc.goNext();
+       // sc.goNext();
+    	sc.setScene(3);
     }
 
     @FXML
     void openMonete(ActionEvent event) {
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        sc.getProgetto().loadController(5, window);
+//        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//        sc.getProgetto().loadController(5, window);
+    	sc.goNext();
     }
 
     @FXML

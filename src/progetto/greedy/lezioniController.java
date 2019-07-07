@@ -46,7 +46,8 @@ public class lezioniController implements ISceneController {
     void openMenu(ActionEvent event) throws IOException {
 //    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 //    	sc.getProgetto().gotoMenu(window);
-    	sc.goBack();
+    //	sc.goBack();
+    	sc.setScene(1);
     }
 
     @FXML
