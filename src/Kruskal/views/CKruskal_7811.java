@@ -47,9 +47,9 @@ public class CKruskal_7811 implements model.ISceneController {
     
     //funzione di scena11.fxml
     @FXML
-    void GoToMenu(ActionEvent event) throws IOException {
+    void GoToMenu(ActionEvent event) throws IOException {    	
     	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    sc.getProgetto().gotoMenu(window);	
+	    sc.getProgetto().gotoMenu(window);
     }
 
   
