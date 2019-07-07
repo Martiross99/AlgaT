@@ -16,7 +16,7 @@
 
 .button{
     -fx-background-color: #474747;
-    -fx-font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 16px ;
 }
 
@@ -39,7 +39,7 @@
 #BLEZ{
     -fx-text-fill: #e79292;
     -fx-border-color: #e79292;
-    -fx-font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 30px ;
 }
 #BLEZ:hover{
@@ -47,19 +47,10 @@
     -fx-text-fill: #474747;
 }
 
-#BES{
-    -fx-text-fill: #d4ff80;
-    -fx-border-color: #d4ff80;
-}
-#BES:hover{
-    -fx-background-color: #d4ff80;
-    -fx-text-fill: #474747;
-}
-
 #BGAME{
     -fx-text-fill: #7ab4b5;
     -fx-border-color: #7ab4b5;
-    -fx-font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 30px ;
 }
 #BGAME:hover{
@@ -71,14 +62,14 @@
 .buttonlez{
     -fx-background-color: #474747;
     -fx-text-fill: #e4a0a0;
-    -fx-font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 17px ;
 }
 
 .lessons{
     -fx-text-fill: #e79292;
     -fx-border-color: #e79292;
-    -fx-font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 30px ;
 }
 
@@ -123,7 +114,7 @@
 
 
 .buttonesempio{
-    -fx-background-color: #ff7979;
+    -fx-background-color: #e4a0a0;
     -fx-text-fill: #474747;
 }
 
@@ -170,7 +161,7 @@
 }
 
 #domanda{
-    -fx-text-fill: #ff7979;
+    -fx-text-fill: #e4a0a0;
 }
 
 

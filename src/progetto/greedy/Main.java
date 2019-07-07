@@ -27,9 +27,9 @@ public class Main extends Application {
 
 		try {
 			
-			progettoController progetto = new progettoController();
-			progetto.load();
-			progetto.start(primaryStage);
+			//progettoController progetto = new progettoController();
+			//progetto.load();
+			//progetto.start(primaryStage);
 			
 		//    StackPane root = new StackPane();
 //		    
@@ -60,10 +60,10 @@ public class Main extends Application {
 //		     primaryStage.show();
 //			
 
-//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("/Kruskal/views/Intro.fxml"));
-//			Scene mScene = new Scene(mPane);
-//			primaryStage.setScene(mScene);
-//			primaryStage.show();
+			AnchorPane mPane = FXMLLoader.load(getClass().getResource("../../game/monete.fxml"));
+			Scene mScene = new Scene(mPane);
+			primaryStage.setScene(mScene);
+			primaryStage.show();
 
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
