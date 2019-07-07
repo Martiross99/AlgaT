@@ -60,10 +60,10 @@ public class Main extends Application {
 //		     primaryStage.show();
 //			
 
-			AnchorPane mPane = FXMLLoader.load(getClass().getResource("/game/monete.fxml.fxml"));
-			Scene mScene = new Scene(mPane);
-			primaryStage.setScene(mScene);
-			primaryStage.show();
+//			AnchorPane mPane = FXMLLoader.load(getClass().getResource("/Kruskal/views/Intro.fxml"));
+//			Scene mScene = new Scene(mPane);
+//			primaryStage.setScene(mScene);
+//			primaryStage.show();
 
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
