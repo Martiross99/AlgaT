@@ -67,38 +67,6 @@ public class SceneLoader_Kruskal {
 				}
 			
 			}
-	     
-	     
-//		@Override
-//		public void start(Stage primaryStage) throws Exception {
-//			
-//			 sceneController main = new sceneController();
-//			 main.loadScene(kruskal, kruscene);
-//			 main.loadScene(scena1_K, minalbero);
-//			 main.loadScene(scena2_K, intro_K);
-//			 main.loadScene(scena3_K, costo);
-//			 main.loadScene(scena4_K, costop2);
-//			 main.loadScene(scena5_K, parte23);
-//			 main.loadScene(scena6_K, pseudo);
-//			 main.loadScene(scena7_K, esercizio1);
-//			 main.loadScene(scena8_K, esercizio2);
-//			 main.loadScene(scena9_K, domanda1);
-//			 main.loadScene(scena10_K, domanda2);
-//			 main.loadScene(scena11_K, verofalso);
-//			 main.loadScene(scena4b_K, ripasso);
-//			 
-//			 main.setScene(SceneLoader_Kruskal.kruskal);
-//		        
-//		        Group root = new Group();
-//		        root.getChildren().add(main);
-//		        Scene scene = new Scene(root,1080,720);
-//		     
-//		        
-//		        primaryStage.setScene(scene);
-//		       // primaryStage.setResizable(false);
-//		        primaryStage.setFullScreen(false);
-//		        primaryStage.show();
-//		}
 		
 
 	}
