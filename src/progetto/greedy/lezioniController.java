@@ -29,12 +29,13 @@ public class lezioniController implements ISceneController {
     private AnchorPane lessonP;
 
     @FXML
-    void openLesson1(ActionEvent event) throws IOException {
-    	
+
+    void openLesson1(ActionEvent event) {    	
     	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
    	    sc.getProgetto().loadController(4, window);
-    	
     }
+
+
 
     @FXML
     void openAlgoritmi(ActionEvent event) {

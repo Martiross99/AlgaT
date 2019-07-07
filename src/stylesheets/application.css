@@ -22,16 +22,16 @@
 
 .borderButton{
 	-fx-background-color: #474747;
-	-fx-text-fill: #bc8686;
-	-fx-border-color: #bc8686;
+	-fx-text-fill: #e79292;
+	-fx-border-color: #e79292;
 	-fx-font-family: "Segoe UI";
     -fx-font-size: 16px ;
 }
 
 .startButton{
 	-fx-background-color: #474747;
-	-fx-text-fill: #bc8686;
-	-fx-border-color: #bc8686;
+	-fx-text-fill: #e79292;
+	-fx-border-color: #e79292;
 	-fx-font-family: "Segoe UI";
     -fx-font-size: 25px ;
 }
@@ -61,7 +61,7 @@
 
 .buttonlez{
     -fx-background-color: #474747;
-    -fx-text-fill: #e4a0a0;
+    -fx-text-fill: #e79292;
     -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 17px ;
 }
@@ -92,8 +92,8 @@
 
 
 .highlight {
-    -fx-text-fill: #ff7979;
-    -fx-border-color: #ff7979;
+    -fx-text-fill: #e79292;
+    -fx-border-color: #e79292;
 }
 
 
@@ -105,7 +105,7 @@
 
 
 .titoli{
-    -fx-text-fill: #e4a0a0;
+    -fx-text-fill: #e79292;
     -fx-font-size: 19px ;
     -fx-font-weight: bold;
     -fx-font-family: "Segoe UI SemiBold";
@@ -114,7 +114,7 @@
 
 
 .buttonesempio{
-    -fx-background-color: #e4a0a0;
+    -fx-background-color: #e79292;
     -fx-text-fill: #474747;
 }
 
@@ -161,7 +161,7 @@
 }
 
 #domanda{
-    -fx-text-fill: #e4a0a0;
+    -fx-text-fill: #e79292;
 }
 
 
@@ -190,4 +190,8 @@
 .textFieldq {
     -fx-control-inner-background: #474747;
     -fx-text-fill: #ffffff;
+}
+
+.risposte{
+    -fx-border-color: #e79292;
 }

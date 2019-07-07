@@ -1,6 +1,7 @@
 package game;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -18,17 +19,22 @@ import javafx.scene.layout.Pane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.ISceneController;
+import model.sceneController;
 
-public class moneteController {
+public class moneteController implements ISceneController {
 
     private AnchorPane root;
     private Scene scene;
     int[] values = new int[]{1,5,10,20,50,100,500};
     int[] labelCounters = new int[]{0,0,0,0,0,0,0};
     int[] correctCounters = new int[]{0,0,0,0,0,0,0};
+    sceneController sc;
 
     @FXML
     Button riprova;
+    @FXML
+    Label esito;
 
     @FXML
     Label count1;
@@ -141,13 +147,23 @@ public class moneteController {
     }
 
     void setCorrects(){
-        correct1.setText(Integer.toString(labelCounters[0]));
-        correct5.setText(Integer.toString(labelCounters[1]));
-        correct10.setText(Integer.toString(labelCounters[2]));
-        correct20.setText(Integer.toString(labelCounters[3]));
-        correct50.setText(Integer.toString(labelCounters[4]));
-        correct100.setText(Integer.toString(labelCounters[5]));
-        correct500.setText(Integer.toString(labelCounters[6]));
+        correct1.setText(Integer.toString(correctCounters[6]));
+        correct5.setText(Integer.toString(correctCounters[5]));
+        correct10.setText(Integer.toString(correctCounters[4]));
+        correct20.setText(Integer.toString(correctCounters[3]));
+        correct50.setText(Integer.toString(correctCounters[2]));
+        correct100.setText(Integer.toString(correctCounters[1]));
+        correct500.setText(Integer.toString(correctCounters[0]));
+    }
+
+    void showCorrects(){
+        correct1.setVisible(true);
+        correct5.setVisible(true);
+        correct10.setVisible(true);
+        correct20.setVisible(true);
+        correct50.setVisible(true);
+        correct100.setVisible(true);
+        correct500.setVisible(true);
     }
 
     void updateLabels(){
@@ -165,6 +181,14 @@ public class moneteController {
         count50.setText(Integer.toString(labelCounters[4]));
         count100.setText(Integer.toString(labelCounters[5]));
         count500.setText(Integer.toString(labelCounters[6]));
+        count1.setStyle("-fx-text-fill: white;");
+        count5.setStyle("-fx-text-fill: white;");
+        count10.setStyle("-fx-text-fill: white;");
+        count20.setStyle("-fx-text-fill: white;");
+        count50.setStyle("-fx-text-fill: white;");
+        count100.setStyle("-fx-text-fill: white;");
+        count500.setStyle("-fx-text-fill: white;");
+        esito.setText("");
     }
 
     void moneyCount(int value){
@@ -217,6 +241,7 @@ public class moneteController {
         }
 
         if(wrong){
+            esito.setText("Sbagliato!!");
             count1.setStyle("-fx-text-fill: red;");
             count5.setStyle("-fx-text-fill: red;");
             count10.setStyle("-fx-text-fill: red;");
@@ -224,15 +249,17 @@ public class moneteController {
             count50.setStyle("-fx-text-fill: red;");
             count100.setStyle("-fx-text-fill: red;");
             count500.setStyle("-fx-text-fill: red;");
+            showCorrects();
             riprova.setVisible(true);
         } else{
-            count1.setStyle("-fx-text-fill: green;");
-            count5.setStyle("-fx-text-fill: green;");
-            count10.setStyle("-fx-text-fill: green;");
-            count20.setStyle("-fx-text-fill: green;");
-            count50.setStyle("-fx-text-fill: green;");
-            count100.setStyle("-fx-text-fill: green;");
-            count500.setStyle("-fx-text-fill: green;");
+            esito.setText("Corretto!");
+            count1.setStyle("-fx-text-fill: lightgreen;");
+            count5.setStyle("-fx-text-fill: lightgreen;");
+            count10.setStyle("-fx-text-fill: lightgreen;");
+            count20.setStyle("-fx-text-fill: lightgreen;");
+            count50.setStyle("-fx-text-fill: lightgreen;");
+            count100.setStyle("-fx-text-fill: lightgreen;");
+            count500.setStyle("-fx-text-fill: lightgreen;");
             riprova.setVisible(true);
         }
 
@@ -247,8 +274,8 @@ public class moneteController {
         }
     }
     @FXML
-    void openMenu(ActionEvent event) {
-        try{
+    void openMenu(ActionEvent event) throws IOException {
+        /*try{
             AnchorPane mPane = FXMLLoader.load(getClass().getResource("../progetto/greedy/menu.fxml"));
             Scene mScene = new Scene(mPane);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -256,7 +283,9 @@ public class moneteController {
             window.show();
         }catch(Exception e) {
             System.out.println(e.getMessage());
-        }
+        }*/
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        sc.getProgetto().gotoMenu(window);
     }
     @FXML
     void retry(){
@@ -264,5 +293,9 @@ public class moneteController {
         startGame();
     }
 
+    @Override
+    public void setSceneParent(sceneController parent) {
+        sc = parent;
 
+    }
 }

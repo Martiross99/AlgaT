@@ -21,9 +21,15 @@
                         <Font name="Cambria" size="18.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="Tentativo" layoutX="146.0" layoutY="190.0" prefHeight="55.0" prefWidth="251.0" />
+                  <TextField fx:id="Tentativo" layoutX="146.0" layoutY="190.0" prefHeight="55.0" prefWidth="251.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
                   <Button fx:id="Dom1" layoutX="441.0" layoutY="202.0" mnemonicParsing="false" onAction="#GetAnswer" styleClass="buttonlez" text="FATTO" />
-                  <TextArea fx:id="Risultato" layoutX="137.0" layoutY="286.0" prefHeight="44.0" prefWidth="269.0" />
+                  <TextArea fx:id="Risultato" layoutX="137.0" layoutY="286.0" prefHeight="44.0" prefWidth="269.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextArea>
                   <Button fx:id="Riprova" layoutX="441.0" layoutY="294.0" mnemonicParsing="false" onAction="#Clear" styleClass="buttonlez" text="RIPROVA" />
                   <Label layoutX="121.0" layoutY="101.0" styleClass="titoli" text="DOMANDE:" />
                </children>

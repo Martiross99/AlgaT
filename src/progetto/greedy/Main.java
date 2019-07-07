@@ -1,20 +1,9 @@
 package progetto.greedy;
 
-import model.sceneController;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import intro_KP.model.introLoad;
-import Prim.model.primLoad;
 
-import java.util.HashMap;
 
-import Kruskal.model.SceneLoader_Kruskal;
+
 import javafx.application.Application;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 

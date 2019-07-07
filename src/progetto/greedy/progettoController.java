@@ -3,6 +3,7 @@ import java.io.IOException;
 
 import Kruskal.model.SceneLoader_Kruskal;
 import Prim.model.primLoad;
+import game.moneteLoader;
 import intro_KP.model.introLoad;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
@@ -25,7 +26,8 @@ public class progettoController extends Application {
 		
 		public progettoController() {
 			this.controllerCorrente = 0;
-			this.progetto = new sceneController[5];
+			this.progetto = new sceneController[6];
+
 		}
 		
 		
@@ -53,6 +55,11 @@ public class progettoController extends Application {
 				sceneController introController = new sceneController();
 				introSceneLoader intro = new introSceneLoader();	
 				introController = intro.Load(introController);
+
+				sceneController gameController = new sceneController();
+				moneteLoader game = new moneteLoader();
+				gameController = game.Load(gameController);
+
 	
 		   		
 				progetto[0] = mainController;
@@ -61,6 +68,8 @@ public class progettoController extends Application {
 				progetto[2] = primController;
 				
 				progetto[4] = introController;
+				progetto[5] = gameController;
+
 				
 				this.setStructure();                     
 
@@ -129,7 +138,7 @@ public class progettoController extends Application {
 			
 		}
 		
-		public void loadController(Integer i, Stage window) throws IOException {  //prende in input l'indice relativo al sceneController 
+		public void loadController(Integer i, Stage window) {  //prende in input l'indice relativo al sceneController
 			controllerCorrente = i;                             						//che si vuole caricare e chiama la funzione start per caricarlo
 			try {
 				this.start(window);

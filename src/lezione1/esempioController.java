@@ -69,10 +69,12 @@ public class esempioController implements model.ISceneController{
     @FXML
     private URL location;
 
+    Pane[] MoneyList;
     int importo;
 
     void startGame(){
-        disablePanes();
+
+        MoneyList = new Pane[]{money1, money5, money10, money20, money50, money100, money500};
 
         for(int i=0; i<7; i++){
             labelCounters[i] = 0;
@@ -98,6 +100,8 @@ public class esempioController implements model.ISceneController{
 
         imp.setText(Integer.toString(importo));
         updateLabels();
+        disablePanes(calcolaCorrente(importo));
+
 
     }
 
@@ -124,6 +128,23 @@ public class esempioController implements model.ISceneController{
         } else if(name.contains("money5")) {
             moneyClicked(5);
         }
+        disablePanes(calcolaCorrente(importo));
+    }
+
+    void disablePanes (int n){
+        for(int i = 0; i < MoneyList.length; i++)
+            MoneyList[i].setDisable(true);
+
+        MoneyList[n].setDisable(false);
+    }
+
+    int calcolaCorrente(int n){
+        int ix = 6;
+
+        while(values[ix] > n && ix>0){
+            ix--;
+        }
+        return ix;
     }
 
     void updateLabels(){
@@ -219,15 +240,7 @@ public class esempioController implements model.ISceneController{
     }
 
 
-    void disablePanes(){
-        money1.setDisable(true);
-        money5.setDisable(true);
-        money10.setDisable(true);
-        money20.setDisable(true);
-        money50.setDisable(true);
-        money100.setDisable(true);
-        money500.setDisable(true);
-    }
+
 
     @Override
     public void setSceneParent(sceneController sceneParent) {

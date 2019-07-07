@@ -14,7 +14,9 @@ public class introSceneLoader{
 	public static Integer gioco = 4;
 	public static String giocoScene = "/lezione1/esempio.fxml";
 	public static Integer end = 5;
-	public static String endScene = "/views/1_5.fxml";
+	public static String endScene = "/lezione1/1_5.fxml";
+	public static Integer esercizi = 6;
+	public static String eserciziScene = "/lezione1/domande.fxml";
 
 
 
@@ -25,6 +27,7 @@ public class introSceneLoader{
 		controller.loadScene(esempio, esempioScene);
 		controller.loadScene(gioco, giocoScene);
 		controller.loadScene(end, endScene);
+		controller.loadScene(esercizi, eserciziScene);
 
 		controller.setScene(intro);
 
