@@ -95,7 +95,9 @@ public class progettoController extends Application {
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
 
     	  //  Scene scene = new Scene(root, 1080, 720);
-    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
+    	    Double x = primaryStage.getWidth() - 1080;
+    	    Double y = primaryStage.getHeight() - 720;
+    		Scene scene = new Scene(root,primaryStage.getWidth()-x,primaryStage.getHeight()-y);
     		
 
     		primaryStage.setScene(scene);
