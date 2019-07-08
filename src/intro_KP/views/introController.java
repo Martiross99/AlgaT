@@ -1,13 +1,14 @@
 package intro_KP.views;
 
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.sceneController;
 
@@ -26,6 +27,11 @@ public class introController implements model.ISceneController{
 	@FXML
 	private Button back, next, menu, change;
 	
+    @FXML
+    private Text albero;
+    
+
+	
 	
 //Funzioni che gestiscono l'FXML introduzione3.fxml
 	
@@ -33,6 +39,9 @@ public class introController implements model.ISceneController{
 	    void trasforma(ActionEvent event) {
                line1.setStroke(Color.rgb(140, 143, 154));
                line2.setStroke(Color.rgb(228, 11, 11));
+               
+               albero.setText("T'");
+               
 	    }
 
 	  
@@ -67,10 +76,7 @@ public class introController implements model.ISceneController{
 	    assert change != null : "fx:id=\"change\" was not injected: check your FXML file 'introduzione3.fxml'.";
 	    assert line1 != null : "fx:id=\"line1\" was not injected: check your FXML file 'introduzione3.fxml'.";
 	    assert line2 != null : "fx:id=\"line2\" was not injected: check your FXML file 'introduzione3.fxml'.";
-	    assert taglio != null : "fx:id=\"taglio\" was not injected: check your FXML file 'introduzione3.fxml'.";
-	    if(taglio != null)  taglio.getStrokeDashArray().addAll(20d,5d);
-	    
-	    
+	    assert albero != null : "fx:id=\"albero\" was not injected: check your FXML file 'introduzione3.fxml'.";
 	    
     	assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'introduzione.fxml'.";
         assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'introduzione.fxml'.";

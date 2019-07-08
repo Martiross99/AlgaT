@@ -109,7 +109,7 @@ public class progettoController extends Application{
     	  //  Double x = this.larghezza();
 //    	    Double x = primaryStage.getWidth() - 1080;
 //    	    Double y = primaryStage.getHeight() - 720;
-    		Scene scene = new Scene(root,primaryStage.getWidth()-12.800048828125,primaryStage.getHeight()-35.2000122070312);
+
     		
     	    
 //    	    //Scene scene = new Scene(root, 1080, 720);
@@ -117,7 +117,7 @@ public class progettoController extends Application{
 //  	      Double x = primaryStage.getWidth() - 1080;
 //    	      Double y = primaryStage.getHeight() - 720;
 //    	    
-//    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
+    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
     	    
     		primaryStage.setScene(scene);
 

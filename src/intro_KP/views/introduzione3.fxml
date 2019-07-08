@@ -23,7 +23,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Sia T un albero di copertura minimo che contiene A. &#10;Si possono verificare due casi:&#10;&#10;      - (u, v) ∈ T : allora (u, v) è sicuro per A(u, v) &#10;&#10;      - (u,v) ∉ T : trasformiamo T in un albero T' contenente (u, v) e dimostriamo che T' è un albero di copertura minimo" wrappingWidth="952.8203125">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Sia T un albero di copertura minimo che contiene A. &#10;Si possono verificare due casi:&#10;&#10;      - (u, v) ∈ T : allora (u, v) è sicuro per A &#10;&#10;      - (u,v) ∉ T : trasformiamo T in un albero T' contenente (u, v) e dimostriamo che T' è un albero di copertura minimo" wrappingWidth="952.8203125">
                <VBox.margin>
                   <Insets left="90.0" top="30.0" />
                </VBox.margin>
@@ -70,8 +70,13 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Line fx:id="taglio" endX="135.0" layoutX="271.0" layoutY="104.0" startX="-177.0" stroke="WHITE" />
+                        <Line endX="135.0" layoutX="271.0" layoutY="104.0" startX="-177.0" stroke="WHITE" />
                         <Label layoutX="59.0" layoutY="79.0" text="taglio" textFill="WHITE" />
+                        <Text fx:id="albero" fill="RED" layoutX="201.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
                      </children>
                      <HBox.margin>
                         <Insets />
