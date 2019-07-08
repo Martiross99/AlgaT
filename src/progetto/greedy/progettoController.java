@@ -27,7 +27,7 @@ public class progettoController extends Application{
 		
 		public progettoController() {
 			this.controllerCorrente = 0;
-			this.progetto = new sceneController[6];
+			this.progetto = new sceneController[5];
 		}
 		
 		
@@ -56,9 +56,6 @@ public class progettoController extends Application{
 				introSceneLoader intro = new introSceneLoader();	
 				introController = intro.Load(introController);
 
-				sceneController gameController = new sceneController();
-				moneteLoader game = new moneteLoader();
-				gameController = game.Load(gameController);
 
 	
 		   		
@@ -67,7 +64,6 @@ public class progettoController extends Application{
 				progetto[2] = primController;
 				progetto[3] = kruskalController;	
 				progetto[4] = introController;
-				progetto[5] = gameController;
 
 				
 				this.setStructure();                     
