@@ -5,7 +5,6 @@ import java.util.Map.Entry;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import progetto.greedy.progettoController;
@@ -19,7 +18,7 @@ public class sceneController extends StackPane {
 	
 	public sceneController() {
 		super();
-		this.mainProject = new progettoController();
+	//	this.mainProject ;
 		this.scenaCorrente = 1;
 	}
 	
@@ -72,6 +71,7 @@ public class sceneController extends StackPane {
 //                    getChildren().remove(0);                    //viene rimosso il figlio attualmente in posizione zero
 //                    getChildren().add(0,mappa.get(n));     //viene aggiunta la scena corrente in posizione zero      
 //            }
+        	
     		Integer scenaRichiesta = n;
     		if(scenaRichiesta > scenaCorrente) {                 //se la scena richiesta ha un indice maggiore di quello attuale la funzione
     			while(scenaRichiesta > scenaCorrente) {           //chiama goNext() il numero di volte richiesto
@@ -85,6 +85,7 @@ public class sceneController extends StackPane {
     		}
     		scenaCorrente = n;          //aggiorna l'indice della scena attuale
         }
+        
          else {
             getChildren().add(mappa.get(n));       //se non ci sono altri figli la scena viene aggiunta e mostrata come primo figlio
             scenaCorrente = n;
@@ -121,10 +122,10 @@ public class sceneController extends StackPane {
    		 getChildren().add(mappa.get(x));         //e inserisce la scena tra i figli, mettendola in cima
    		
    	     // Node n =  getChildren().get(0);
-   		//Integer x = getIndex(n); 
+   		 //Integer x = getIndex(n); 
    		// setScene(x + 1); 								//setta la scena successiva
    		 
-   	} catch (Exception e) {
+    	} catch (Exception e) {
            System.out.println(e.getMessage());
           
        }
@@ -140,15 +141,4 @@ public class sceneController extends StackPane {
     	return(mainProject);
     }
     
-//    public void gotoMenu(ActionEvent event) {
-//       try{
-//           AnchorPane mPane = FXMLLoader.load(getClass().getResource("/progetto/greedy/menu.fxml"));
-//           Scene mScene = new Scene(mPane);
-//           Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//           window.setScene(mScene);
-//           window.show();
-//       } catch(Exception e) {
-//          System.out.println(e.getMessage());
-//       }
-//    }
 }

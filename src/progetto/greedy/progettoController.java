@@ -17,7 +17,7 @@ import model.sceneController;
 
 //classe che gestisce tutti controller delle lezioni, li inserisce in un array e gestisce le funzioni di interscambio
 
-public class progettoController extends Application {
+public class progettoController extends Application{
 
 
         protected Integer controllerCorrente;     //mantiene l'indice del sceneController attualmente in esecuzione
@@ -28,7 +28,6 @@ public class progettoController extends Application {
 		public progettoController() {
 			this.controllerCorrente = 0;
 			this.progetto = new sceneController[6];
-
 		}
 		
 		
@@ -92,9 +91,10 @@ public class progettoController extends Application {
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			try {																//crea uno stackPane e imposta come figlio il sceneController corrente
-			StackPane root = new StackPane();										
-    		root.getChildren().add(progetto[controllerCorrente]);
-    		
+				
+		    StackPane root = new StackPane();
+			root.getChildren().add(progetto[controllerCorrente]);
+			
     		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
     	    root.getStyleClass().add("stackp");
     		
@@ -105,10 +105,11 @@ public class progettoController extends Application {
     	    progetto[controllerCorrente].scaleXProperty().bind(ScaleX);
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
 
-    	  //Scene scene = new Scene(root, 1080, 720);
-    	    Double x = primaryStage.getWidth() - 1080;
-    	    Double y = primaryStage.getHeight() - 720;
-    		Scene scene = new Scene(root,primaryStage.getWidth()-x,primaryStage.getHeight()-y);
+    	//  Scene scene = new Scene(root, 1080, 720);
+    	 //   Double x = this.larghezza();
+//    	    Double x = primaryStage.getWidth() - 1080;
+//    	    Double y = primaryStage.getHeight() - 720;
+    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
     		
 
     		primaryStage.setScene(scene);
@@ -120,6 +121,7 @@ public class progettoController extends Application {
 			}
     		
 		}
+
 		
 		public void gotoMenu(Stage window) throws IOException {	
 			progetto[controllerCorrente].setScene(1);
