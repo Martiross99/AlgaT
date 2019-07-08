@@ -23,7 +23,7 @@
                      </font>
                   </Text>
                   <Button fx:id="Es3" layoutX="159.0" layoutY="470.0" mnemonicParsing="false" onAction="#GetAnswer" styleClass="buttonlez" text="FATTO" />
-                  <TextArea fx:id="Risultato" layoutX="252.0" layoutY="458.0" prefHeight="58.0" prefWidth="227.0" styleClass="testi" stylesheets="@../../stylesheets/application.css" />
+                  <TextArea fx:id="Risultato" layoutX="252.0" layoutY="458.0" prefHeight="58.0" prefWidth="227.0" styleClass="textAreaq" stylesheets="@../../stylesheets/application.css" />
                   <Label layoutX="121.0" layoutY="101.0" styleClass="titoli" text="DOMANDE:" />
                   <VBox layoutX="121.0" layoutY="197.0" prefHeight="231.0" prefWidth="248.0" spacing="45.0">
                      <children>

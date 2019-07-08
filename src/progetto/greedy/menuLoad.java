@@ -1,9 +1,5 @@
 package progetto.greedy;
 
-import Prim.model.primLoad;
-import intro_KP.model.introLoad;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import model.sceneController;
 
 public class menuLoad {

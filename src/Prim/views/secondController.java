@@ -47,13 +47,13 @@ public class secondController implements model.ISceneController{
 //FUNZIONI DI GESTIONE DELL'FXML CORRETTEZZA
     
    @FXML
-    void checkCorollary(ActionEvent event) throws IOException {
+    void checkCorollary(ActionEvent event) throws IOException {                  //va all'ultima scena dell'introduzione in cui è spiegato il corollario
 	     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 	     sc.getProgetto().loadScene(1,window, 4);
     }
 
     @FXML
-    void checkDefinition(ActionEvent event) throws IOException {
+    void checkDefinition(ActionEvent event) throws IOException {                  //carica la definizione di taglio
     	alertWindow definizione = new alertWindow();
     	definizione.createAlert(AlertType.INFORMATION, 4, "Definizione Taglio");
     }
@@ -61,19 +61,19 @@ public class secondController implements model.ISceneController{
 //FUNZIONI DI GESTIONE DELL'FXML IMPLEMENTAZIONE
     
     @FXML
-    void getAnswer(MouseEvent event) {
+    void getAnswer(MouseEvent event) {                           //ritorna la risposta alla scelta del nodo da parte dell'utente
     	 Circle c = (Circle) event.getSource();
-    	 answer.setFont(Font.font("Arial",FontWeight.BOLD,FontPosture.REGULAR, 17));
+    	 answer.setFont(Font.font("Segoe UI",FontWeight.BOLD,FontPosture.REGULAR, 17));
     	 answer.setOpacity(1.00);
     	 if(c == c2) {
     		 answer.setText("Corretto!");
     		 answer.setDisable(false);
-    		 toColor(c2);
+    		 c2.setStroke(Color.rgb(168,103,103));
     	 }
     	 else {
     		 answer.setText("Sbagliato");
     		 answer.setDisable(false);
-    		 toColor(c1);
+    		 c1.setStroke(Color.rgb(168,103,103));
     	 }
     }
    
@@ -84,14 +84,11 @@ public class secondController implements model.ISceneController{
     }
 
     @FXML
-    void toUncolor(MouseEvent event) {
+    void toUncolor(MouseEvent event) {	
     	Circle c = (Circle) event.getSource();
-        c.setStroke(Color.rgb(72,111,117));;
+        c.setStroke(Color.rgb(72,111,117));
     }
     
-    void toColor(Circle c) {
-    	c.setStroke(Color.rgb(168,103,103));
-    }
     
  
  //funzioni che gestiscono il cambio delle scene   

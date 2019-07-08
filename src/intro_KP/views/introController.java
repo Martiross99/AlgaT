@@ -10,8 +10,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import model.sceneController;
-import progetto.greedy.progettoController;
-
 
 
 //gestisce i file FXML : introduzione1, introduzione2, introduzione3, introduzione4.fxml
@@ -58,8 +56,7 @@ public class introController implements model.ISceneController{
 
 	@Override
 	public void setSceneParent(sceneController parent) {
-		sc = parent;
-		
+		sc = parent;	
 	}
 
 

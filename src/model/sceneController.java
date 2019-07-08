@@ -25,7 +25,7 @@ public class sceneController extends StackPane {
 		mappa.put(n, scene);
 	}
 
-    public Node getScene(Integer n) {
+    public Node getNode(Integer n) {
 	  return(mappa.get(n));
     }
     
@@ -55,33 +55,9 @@ public class sceneController extends StackPane {
          } catch (Exception e) {
              System.out.println(e.getMessage());
          }
-    }
-
-//    public void addMap(sceneController sc) {
-//    	try {
-//    		HashMap<Integer,Node> mappa = getMap(sc);
-//    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
-//    	        this.addScene(entry.getKey(), entry.getValue());
-//    	        System.out.println(entry.getKey());
-//    	        }
-//    	    } catch (Exception e) {
-//    	    	System.out.println(e.getMessage());
-//    	}
-//    }    
+    }    
     
-    
-//PROVA        
-//    public AnchorPane radice(String resource) {
-//    	try {
-//    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-//        AnchorPane ap = (AnchorPane) loader.load();
-//        return(ap);
-//    	} catch (Exception e) {
-//            System.out.println(e.getMessage());
-//            return (null);
-//        }
-//    }
-    
+ 
     public void setScene(Integer n) {     //final?
     	
     	if (mappa.get(n) != null) {   //la scena deve essere stata caricata nella mappa

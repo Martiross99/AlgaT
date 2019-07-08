@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.ControllerS10">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" styleClass="anchorp" stylesheets="@../../stylesheets/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kruskal.views.CKruskal_910">
    <children>
       <BorderPane layoutX="562.0" layoutY="117.0" prefHeight="635.0" prefWidth="1080.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -21,12 +21,12 @@
                         <Font name="Cambria" size="18.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="Tentativo" layoutX="146.0" layoutY="190.0" prefHeight="55.0" prefWidth="251.0">
+                  <TextField fx:id="Tentativo" layoutX="146.0" layoutY="190.0" prefHeight="55.0" prefWidth="251.0" styleClass="textFieldq">
                      <font>
                         <Font size="18.0" />
                      </font></TextField>
-                  <Button fx:id="Dom1" layoutX="441.0" layoutY="202.0" mnemonicParsing="false" onAction="#GetAnswer" styleClass="buttonlez" text="FATTO" />
-                  <TextArea fx:id="Risultato" layoutX="137.0" layoutY="286.0" prefHeight="44.0" prefWidth="269.0">
+                  <Button fx:id="Dom2" layoutX="441.0" layoutY="202.0" mnemonicParsing="false" onAction="#GetAnswer" styleClass="buttonlez" text="FATTO" />
+                  <TextArea fx:id="Risultato" layoutX="137.0" layoutY="286.0" prefHeight="44.0" prefWidth="269.0" styleClass="textAreaq">
                      <font>
                         <Font size="18.0" />
                      </font></TextArea>

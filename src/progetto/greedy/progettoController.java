@@ -81,10 +81,6 @@ public class progettoController extends Application {
 		   	
 	     }
 		
-		
-//		public sceneController getController(Integer i) {
-//			return(progetto[i]);
-//		}
 
         public void setStructure() {       //comunica ad ogni sceneController il progetto al quale devono fare riferimento
         	
@@ -156,7 +152,7 @@ public class progettoController extends Application {
 			sceneController attuale = this.progetto[controllerCorrente];          //prende il sceneController e va avanti fino alla scena richiesta                
 			
 			if(attuale.getMap(attuale).containsKey(scena)) {
-			while(attuale.getChildren().get(0) != attuale.getScene(scena)) {
+			while(attuale.getChildren().get(0) != attuale.getNode(scena)) {
 				attuale.goNext();
 			}
 		  }

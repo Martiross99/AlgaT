@@ -2,6 +2,8 @@ package Prim.model;
 
 import model.sceneController;
 
+//loader per il caricamento delle scene nel sceneController dell'algoritmo di Prim
+
 public class primLoad {
 
 		 public static Integer prim = 1;
@@ -70,42 +72,5 @@ public class primLoad {
 				}
 			
 			}
-
-
-//		@Override
-//		public void start(Stage primaryStage) throws Exception {
-//			
-//			sceneController controller = new sceneController();
-//			
-//			 controller.loadScene(prim, primScene);
-//			 controller.loadScene(overView, overViewScene);
-//			 controller.loadScene(concept, conceptScene);
-//			 controller.loadScene(defProblem, defProblemScene);
-//			 controller.loadScene(idea, ideaScene);
-//			 controller.loadScene(correttezza, correttezzaScene);
-//			 controller.loadScene(implementation, implementScene);
-//			 controller.loadScene(pseudoCodice, codiceScene);
-//			 controller.loadScene(esecuzione, exeScene);
-//			 controller.loadScene(efficienza, efficiencyScene);
-//			 controller.loadScene(esercizi, eserciziScene);
-//			 controller.loadScene(domande, domandeScene);
-//			 controller.loadScene(domande2, domande2Scene);
-//			 controller.loadScene(esercizi2, esercizi2Scene);
-//			 
-//             controller.setScene(prim);
-//             
-//         	StackPane root = new StackPane();
-//    		root.getChildren().add(controller);
-//    		
-//    		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
-//    	    root.getStyleClass().add("stackp");
-//    		
-//    		Scene scene = new Scene(root);
-//
-//
-//    		primaryStage.setScene(scene);
-//    		primaryStage.show();
-//			
-//		}
 
 }

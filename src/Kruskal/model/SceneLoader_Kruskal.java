@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.sceneController;
 
+//loader per il caricamento delle scene nel sceneController dell'introduzione agli algoritmi
+
 public class SceneLoader_Kruskal {
 		
 		 public static Integer kruskal = 1;
@@ -34,8 +36,6 @@ public class SceneLoader_Kruskal {
 		 public static String verofalso = "/Kruskal/views/scena11.fxml";
 		 public static Integer scena4b_K = 13;
 		 public static String ripasso = "/Kruskal/views/scena4bis.fxml";
-		 
-	     //public Stage stage;
 	     
 	     
 	     public sceneController Load(sceneController controller) {
@@ -67,6 +67,4 @@ public class SceneLoader_Kruskal {
 				}
 			
 			}
-		
-
 	}
