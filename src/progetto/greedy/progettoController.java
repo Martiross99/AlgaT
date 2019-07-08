@@ -128,10 +128,11 @@ public class progettoController extends Application{
 		public void gotoMenu(Stage window) throws IOException {	
 			
 			progetto[controllerCorrente].setScene(1);         //riposiziona il sceneController da cui si sta muovendo l'utente alla prima scena
-			
+			controllerCorrente = 0;
 			try {                                                //per andare al menu prende il sceneController in posizione 
-				                                                     //zero nell'array e lo carica
-			   this.loadScene(0, window, 2);
+																	//zero nell'array e lo carica
+				this.start(window);	
+			//   this.loadScene(0, window, 2);
 			   
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
@@ -156,7 +157,8 @@ public class progettoController extends Application{
 			
 			if(attuale.getMap(attuale).containsKey(scena)) {
 			while(attuale.getNode(attuale.getScenaCorrente()) != attuale.getNode(scena)) {
-				attuale.goNext();
+				if(attuale.getScenaCorrente() < scena)	attuale.goNext();
+				else attuale.goBack();
 			}
 		  }
 		}

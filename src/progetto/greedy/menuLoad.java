@@ -25,6 +25,7 @@ public class menuLoad {
 			 controller.loadScene(game, gameScene);
 			 controller.loadScene(lezioni, lezioniScene);
 			 controller.loadScene(algoritmi, algoritmiScene);
+			 
              controller.setScene(presentazione);
 
 		     return(controller);

@@ -51,7 +51,7 @@ public class introController implements model.ISceneController{
     @FXML
     void gotoMenu(ActionEvent event) throws IOException {
 	    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    sc.getProgetto().gotoMenu(window);    
+	    sc.getProgetto().gotoMenu(window);   
        }
 
 	@Override
