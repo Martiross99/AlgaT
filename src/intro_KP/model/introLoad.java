@@ -1,15 +1,8 @@
 package intro_KP.model;
 
-import java.util.HashMap;
-
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import model.sceneController;
-import progetto.greedy.Main;
+
+//loader per il caricamento delle scene nel sceneController dell'introduzione agli algoritmi
 
 public class introLoad {
 
@@ -22,7 +15,6 @@ public class introLoad {
 	public static Integer introIV = 4;
 	public static String fourthIntro = "/intro_KP/views/introduzione4.fxml";
 	
-	public Stage stage;
 	
 
 	public sceneController Load(sceneController main) {		
@@ -42,33 +34,6 @@ public class introLoad {
 		}
 	
 	}
-
-
-//	@Override
-//	public void start(Stage primaryStage) throws Exception {
-//
-//         sceneController main = new sceneController();	
-//         
-//         main.loadScene(introI, firstIntro);
-// 		 main.loadScene(introII, secondIntro);
-// 		 main.loadScene(introIII, thirdIntro);
-// 		 main.loadScene(introIV, fourthIntro);
-//         main.setScene(introI);
-//         
-//     	StackPane root = new StackPane();
-//		root.getChildren().add(main);
-//		
-//		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
-//	    root.getStyleClass().add("stackp");
-//	    
-//		Scene scene = new Scene(root);
-//
-//
-//		primaryStage.setScene(scene);
-//		primaryStage.show();
-//         
-//         
-//	}
 	 
 
 }

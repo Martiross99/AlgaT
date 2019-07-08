@@ -13,19 +13,25 @@ import progetto.greedy.progettoController;
 
 public class sceneController extends StackPane {
 
-	protected HashMap<Integer,Node> mappa = new HashMap<>();
-	protected progettoController mainProject;
+	protected HashMap<Integer, Node> mappa = new HashMap<>();        //hashMap che contiene tutte le scene
+	protected progettoController mainProject;                    //struttura del progetto
+	protected Integer scenaCorrente;     //indice della scena attualmente visibile, in cima allo StackPane
 	
 	public sceneController() {
 		super();
+		this.mainProject = new progettoController();
+		this.scenaCorrente = 1;
 	}
 	
+	public Integer getScenaCorrente() {      //ritorna l'indice della scena attualmente visibile
+		return(scenaCorrente);
+	}
 	
-	public void addScene(Integer n, Node scene) {
+	public void addScene(Integer n, Node scene) {        
 		mappa.put(n, scene);
 	}
 
-    public Node getScene(Integer n) {
+    public Node getNode(Integer n) {
 	  return(mappa.get(n));
     }
     
@@ -39,7 +45,7 @@ public class sceneController extends StackPane {
     	    return null;
     }
     
-    public HashMap<Integer,Node> getMap(sceneController sc) {
+    public HashMap<Integer,Node> getMap(sceneController sc) {    //ritorna la mappa che contiene tutte le scene di uno specifico sceneController
     	return(sc.mappa);
     }
 	    
@@ -47,54 +53,43 @@ public class sceneController extends StackPane {
   public void loadScene(Integer n, String resource) {
     	 try {
              FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-             AnchorPane ap = loader.load();
-             //Parent loadScene = (Parent) loader.load();
-             ISceneController sceneController = ((ISceneController) loader.getController());
+             AnchorPane ap = loader.load();                                                   //carica il filefxml richiesto
+             ISceneController sceneController = ((ISceneController) loader.getController());    //il controller relativo deve implementare la funzione setSceneParent
              sceneController.setSceneParent(this);             
-             addScene(n, ap);           //add this scene to the hashmap
+             addScene(n, ap);                       //aggiungi la scena alla hashMap
          } catch (Exception e) {
              System.out.println(e.getMessage());
          }
-    }
-
-//    public void addMap(sceneController sc) {
-//    	try {
-//    		HashMap<Integer,Node> mappa = getMap(sc);
-//    		for (Entry<Integer, Node> entry : mappa.entrySet()) {
-//    	        this.addScene(entry.getKey(), entry.getValue());
-//    	        System.out.println(entry.getKey());
-//    	        }
-//    	    } catch (Exception e) {
-//    	    	System.out.println(e.getMessage());
-//    	}
-//    }    
+    }    
     
-    
-//PROVA        
-//    public AnchorPane radice(String resource) {
-//    	try {
-//    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-//        AnchorPane ap = (AnchorPane) loader.load();
-//        return(ap);
-//    	} catch (Exception e) {
-//            System.out.println(e.getMessage());
-//            return (null);
-//        }
-//    }
-    
-    public void setScene(Integer n) {     //final?
+ 
+    public void setScene(Integer n) {     
     	
-    	if (mappa.get(n) != null) {   //la scena deve essere stata caricata nella mappa
+    	if (mappa.containsKey(n) && mappa.get(n) != null) {   //la scena deve essere stata caricata nella mappa
 
-         if (!getChildren().isEmpty()) {    // se è presente più di una scena nella mappa
+        if (!getChildren().isEmpty()) {    // se è presente più di una scena nella mappa
   
-                    getChildren().remove(0);                    //viene rimosso il figlio attualmente in posizione zero
-                    getChildren().add(0,mappa.get(n));     //viene aggiunta la scena corrente in posizione zero      
-            }
-
-        else {
-            getChildren().add(mappa.get(n));       //se c'è solo una scena da mostrare viene aggiunta e mostrata
+//                    getChildren().remove(0);                    //viene rimosso il figlio attualmente in posizione zero
+//                    getChildren().add(0,mappa.get(n));     //viene aggiunta la scena corrente in posizione zero      
+//            }
+    		Integer scenaRichiesta = n;
+    		if(scenaRichiesta > scenaCorrente) {                 //se la scena richiesta ha un indice maggiore di quello attuale la funzione
+    			while(scenaRichiesta > scenaCorrente) {           //chiama goNext() il numero di volte richiesto
+    				this.goNext();
+    			}
+    		}
+    		else if (scenaRichiesta < scenaCorrente) {            //altrimenti va indietro finchè non raaggiunge la scena desiderata
+    			while(scenaRichiesta < scenaCorrente) {
+    				this.goBack();
+    			}
+    		}
+    		scenaCorrente = n;          //aggiorna l'indice della scena attuale
         }
+         else {
+            getChildren().add(mappa.get(n));       //se non ci sono altri figli la scena viene aggiunta e mostrata come primo figlio
+            scenaCorrente = n;
+        }
+        
       } else {
         System.out.println("Questa scena non è stata caricata\n");
     }
@@ -103,9 +98,16 @@ public class sceneController extends StackPane {
    
     public void goBack() {
        	try {
-      		 Node actualScene =  getChildren().get(0);    //prende il nodo attualmente visibile
-      		 Integer x = (getIndex(actualScene));         //recupera il suo indice, ovvero il valore associato nell'HashMap
-      		 setScene(x - 1);                              //setta la scena precedente
+       		
+       	 Integer x = scenaCorrente;
+  		 Node attuale = this.getNode(x);         //prende il nodo corrispondente alla scena attuale
+  		 getChildren().remove(attuale);            //e lo rimuove dalla pila così da rendere visibile quello sottostante
+  		 scenaCorrente = scenaCorrente - 1;
+  		 
+      	      //Node actualScene =  getChildren().get(0);    //prende il nodo attualmente visibile
+             //Integer x = (getIndex(actualScene));         //recupera il suo indice, ovvero il valore associato nell'HashMap
+      		// setScene(x - 1);                              //setta la scena precedente
+  		 
       	} catch (Exception e) {
               System.out.println(e.getMessage());             
           }
@@ -113,9 +115,15 @@ public class sceneController extends StackPane {
     
     public void goNext() {
     	try {
-   		 Node n =  getChildren().get(0);
-   		 Integer x = (getIndex(n));
-   		 setScene(x + 1); 								//setta la scena successiva
+   		
+    	 scenaCorrente = scenaCorrente + 1;     //prende l'indice della scena successiva a quella attuale
+   		 Integer x = scenaCorrente; 
+   		 getChildren().add(mappa.get(x));         //e inserisce la scena tra i figli, mettendola in cima
+   		
+   	     // Node n =  getChildren().get(0);
+   		//Integer x = getIndex(n); 
+   		// setScene(x + 1); 								//setta la scena successiva
+   		 
    	} catch (Exception e) {
            System.out.println(e.getMessage());
           

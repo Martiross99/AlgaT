@@ -5,12 +5,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import lezione1.introSceneLoader;
 import model.ISceneController;
 import model.sceneController;
 
@@ -44,9 +41,7 @@ public class lezioniController implements ISceneController {
 
     @FXML
     void openMenu(ActionEvent event) throws IOException {
-//    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//    	sc.getProgetto().gotoMenu(window);
-    	sc.goBack();
+    	sc.setScene(1);
     }
 
     @FXML

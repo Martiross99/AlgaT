@@ -14,18 +14,22 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import model.sceneController;
 
-public class ControllerS9 implements model.ISceneController {
+public class CKruskal_910 implements model.ISceneController {
 
 	sceneController sc;
 	
+	@FXML
+	private Button Dom1;
+	
+	@FXML
+    private Button Dom2;
+	
+	//in comune
     @FXML
     private TextArea Risultato;
 
     @FXML
     private TextField Tentativo;
-
-    @FXML
-    private Button Dom1;
 
     @FXML
     private Button Riprova;
@@ -44,11 +48,18 @@ public class ControllerS9 implements model.ISceneController {
     @FXML
     void GetAnswer(ActionEvent event) throws FileNotFoundException {
     	
+    	String filename;
+    	
+    	Button x = (Button) event.getSource();
+    	
+    	if(x.equals(Dom1)) filename = "src/Kruskal/views/risposte_K.txt";
+    	else filename = "src/Kruskal/views/risposte2_K.txt";
+    	
     	String prova = Tentativo.getText();
     	prova = prova.trim();
     	if(prova.length()!=0) {
     		try {	
-    			Scanner scanner = new Scanner (new File("src/Kruskal/views/risposte_K.txt"));
+    			Scanner scanner = new Scanner (new File(filename));
     			boolean found = false;
     			while(scanner.hasNext()) {
     				String a = scanner.nextLine();
@@ -61,7 +72,7 @@ public class ControllerS9 implements model.ISceneController {
     			if(!found) Risultato.appendText("Sbagliato, riprova");
     	        scanner.close(); }
     		catch(FileNotFoundException ex) {
-    			System.out.println("Unable to open file 'risposte_K.txt'");                
+    			System.out.println("Unable to open answers file");                
     		        }
     			}
     }
@@ -88,6 +99,7 @@ public class ControllerS9 implements model.ISceneController {
         assert Risultato != null : "fx:id=\"Risultato\" was not injected: check your FXML file 'scena9.fxml'.";
         assert Tentativo != null : "fx:id=\"Tentativo\" was not injected: check your FXML file 'scena9.fxml'.";
         assert Dom1 != null : "fx:id=\"Dom1\" was not injected: check your FXML file 'scena9.fxml'.";
+        assert Dom2 != null : "fx:id=\"Dom1\" was not injected: check your FXML file 'scena10.fxml'.";
         assert Riprova != null : "fx:id=\"Riprova\" was not injected: check your FXML file 'scena9.fxml'.";
         assert PrevB != null : "fx:id=\"PrevB\" was not injected: check your FXML file 'scena9.fxml'.";
         assert NextB != null : "fx:id=\"NextB\" was not injected: check your FXML file 'scena9.fxml'.";

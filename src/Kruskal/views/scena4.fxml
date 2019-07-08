@@ -16,7 +16,7 @@
          <top>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="247.0" layoutY="53.0" styleClass="titoli" text="2. ANALISI DEGLI ARCHI" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="101.0" />
+                  <Label layoutX="247.0" layoutY="53.0" styleClass="titoli" text="II. ANALISI DEGLI ARCHI" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="101.0" />
                </children>
             </AnchorPane>
          </top>
@@ -86,7 +86,7 @@
                   </Text>
                   <ImageView fx:id="pseudoK" fitHeight="181.0" fitWidth="307.0" layoutX="684.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true" />
                   <Button fx:id="Ripasso" layoutX="123.0" layoutY="222.0" mnemonicParsing="false" onAction="#GoToMFSet" styleClass="buttonlez" text="RIPASSO DI MFSET" />
-                  <Label layoutX="121.0" layoutY="115.0" styleClass="titoli" text="3. INSERIMENTO DEGLI ARCHI" />
+                  <Label layoutX="121.0" layoutY="115.0" styleClass="titoli" text="III. INSERIMENTO DEGLI ARCHI" />
                   <Text fill="#cbe6ff" layoutX="101.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* [while count &lt; n-1 and i ≤ m] ⥤ finché non si è ottenuto l'albero e&#10;il vettore non è arrivato all'ultimo elemento&#10;* [M.merge(A[i].u, A[i].v)] ⥤ unisci i due estremi dell'arco corrente">
                      <font>
                         <Font name="Segoe UI" size="18.0" />

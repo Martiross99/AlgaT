@@ -1,17 +1,9 @@
 package progetto.greedy;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import model.ISceneController;
 import model.sceneController;
 
@@ -33,13 +25,12 @@ public class menuController implements ISceneController {
 
     @FXML
     void openLezioni(ActionEvent event) {
-        sc.goNext();
+    	sc.setScene(3);
     }
 
     @FXML
     void openMonete(ActionEvent event) {
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        sc.getProgetto().loadController(5, window);
+    	sc.goNext();
     }
 
     @FXML

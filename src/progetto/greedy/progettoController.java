@@ -65,9 +65,8 @@ public class progettoController extends Application {
 		   		
 				progetto[0] = mainController;
 				progetto[1] = introKPController;
-				progetto[3] = kruskalController;
 				progetto[2] = primController;
-				
+				progetto[3] = kruskalController;	
 				progetto[4] = introController;
 				progetto[5] = gameController;
 
@@ -81,10 +80,6 @@ public class progettoController extends Application {
 		   	
 	     }
 		
-		
-//		public sceneController getController(Integer i) {
-//			return(progetto[i]);
-//		}
 
         public void setStructure() {       //comunica ad ogni sceneController il progetto al quale devono fare riferimento
         	
@@ -99,7 +94,6 @@ public class progettoController extends Application {
 			try {																//crea uno stackPane e imposta come figlio il sceneController corrente
 			StackPane root = new StackPane();										
     		root.getChildren().add(progetto[controllerCorrente]);
-    		//System.out.println(root.getScene().getHeight());
     		
     		root.getStylesheets().add(getClass().getResource("/stylesheets/application.css").toExternalForm());
     	    root.getStyleClass().add("stackp");
@@ -111,14 +105,13 @@ public class progettoController extends Application {
     	    progetto[controllerCorrente].scaleXProperty().bind(ScaleX);
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
 
-    	  //  Scene scene = new Scene(root, 1080, 720);
+    	  //Scene scene = new Scene(root, 1080, 720);
     	    Double x = primaryStage.getWidth() - 1080;
     	    Double y = primaryStage.getHeight() - 720;
     		Scene scene = new Scene(root,primaryStage.getWidth()-x,primaryStage.getHeight()-y);
     		
 
     		primaryStage.setScene(scene);
-    		//primaryStage.setMaximized(true);
 
     		primaryStage.show();
     		
@@ -129,9 +122,9 @@ public class progettoController extends Application {
 		}
 		
 		public void gotoMenu(Stage window) throws IOException {	
+			progetto[controllerCorrente].setScene(1);
 			controllerCorrente = 0;                       //per andare al menu prende il sceneController in posizione zero nell'array
 			try {                                             //e lo carica
-			//	System.out.println(window.getHeight());
 			   this.start(window);
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
@@ -140,7 +133,7 @@ public class progettoController extends Application {
 		}
 		
 		public void loadController(Integer i, Stage window) {  //prende in input l'indice relativo al sceneController
-			controllerCorrente = i;                             						//che si vuole caricare e chiama la funzione start per caricarlo
+			controllerCorrente = i;                             //che si vuole caricare e chiama la funzione start per caricarlo
 			try {
 				this.start(window);
 			} catch (Exception e) {
@@ -155,7 +148,7 @@ public class progettoController extends Application {
 			sceneController attuale = this.progetto[controllerCorrente];          //prende il sceneController e va avanti fino alla scena richiesta                
 			
 			if(attuale.getMap(attuale).containsKey(scena)) {
-			while(attuale.getChildren().get(0) != attuale.getScene(scena)) {
+			while(attuale.getNode(attuale.getScenaCorrente()) != attuale.getNode(scena)) {
 				attuale.goNext();
 			}
 		  }
