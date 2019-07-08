@@ -62,6 +62,7 @@ public class moneteController implements ISceneController {
     int importo;
 
     void startGame(){
+        //Azzeramento contatori
         for(int i=0; i<7; i++){
             labelCounters[i] = 0;
             correctCounters[i] = 0;
@@ -75,6 +76,7 @@ public class moneteController implements ISceneController {
         int i = 6;
         int tempImporto = importo;
 
+        //Calcolo soluzione greedy
         while(tempImporto > 0){
             if(tempImporto >= values[i]) {
                 tempImporto -= values[i];
@@ -243,11 +245,11 @@ public class moneteController implements ISceneController {
             checkCorrect();
         }
     }
+
     @FXML
     void openMenu(ActionEvent event) throws IOException {
-//        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//        sc.getProgetto().gotoMenu(window);
-    	sc.goBack();
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        sc.getProgetto().gotoMenu(window);
     }
     @FXML
     void retry(){
