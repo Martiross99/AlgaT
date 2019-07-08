@@ -32,7 +32,7 @@
                   <Insets left="90.0" top="20.0" />
                </VBox.margin>
             </Text>
-            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Gli algoritmi di Kruskale Prim sono due algoritmi di tipo goloso, che si propongono di risolvere tale problema accrescendo un sottoinsieme A di archi in modo tale che A sia  sempre un sottoinsieme di qualche albero di connessione minimo " wrappingWidth="896.1448974609375">
+            <Text fill="#f27e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Gli algoritmi di Kruskal e Prim sono due algoritmi di tipo greedy, che si propongono di risolvere tale problema accrescendo un sottoinsieme A di archi in modo tale che A sia  sempre un sottoinsieme di qualche albero di connessione minimo " wrappingWidth="896.1448974609375">
                <VBox.margin>
                   <Insets left="90.0" top="20.0" />
                </VBox.margin>
@@ -45,7 +45,7 @@
                   <Insets left="90.0" top="30.0" />
                </VBox.margin>
             </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Un arco [u, v] è detto sicuro per A se A ∪ {[u, v]} è ancora unsottoinsieme di qualche albero di connessione minimo.">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Un arco [u, v] è detto sicuro per A se A ∪ {[u, v]} è ancora un sottoinsieme di qualche albero di connessione minimo.">
                <VBox.margin>
                   <Insets left="90.0" top="20.0" />
                </VBox.margin>

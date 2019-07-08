@@ -19,7 +19,7 @@ import model.sceneController;
 public class domandeController  implements model.ISceneController{
 
 	sceneController sc;
-	Integer numeroDomanda = 6;   
+	Integer numeroDomanda = 1;   
 
     @FXML
     private Button back, next, menu, inserisci,done, riprova;
@@ -49,18 +49,20 @@ public class domandeController  implements model.ISceneController{
 			
 		try {	
 			Scanner s = new Scanner (new File("src/Prim/views/domande.txt"));
-			Integer line = numeroDomanda - 5;                      //a seconda di quale è la domanda si richiede allo scanner di leggere una diversa riga del file txt
+			Integer line = numeroDomanda + 1;                      //a seconda di quale è la domanda si richiede allo scanner di leggere una diversa riga del file txt
 			
 			String riga = getLine(s,line);
 			
 			Scanner scanner = new Scanner(riga);
 			scanner.useDelimiter("/");
 			
-			if (numeroDomanda == 6) {             //se si è alla prima domanda si ha un'ulteriore controllo
+			if (numeroDomanda == 1) {             //se si è alla prima domanda si ha un'ulteriore controllo
 				 try {
 		  			 Integer.parseInt(prova);                   //se l'inserimento non è un numero, la risposta non è valida
 		  		 } catch(NumberFormatException e) {
 		  			 risposta.appendText("Inserimento non valido");
+		  			 inserisci.setDisable(true);
+		 		     riprova.setDisable(false);
 		  			 scanner.close();
 		  			 return;
 		  		 }		
@@ -75,7 +77,7 @@ public class domandeController  implements model.ISceneController{
 				}
 			}
 		    if(!found) risposta.appendText("Sbagliato, riprova");
-		    else if((found) && (line < 4)) {
+		    else if((found) && (line < 8)) {
 		    	next.setDisable(false);
 		    }
 		    else  {
@@ -119,22 +121,23 @@ public class domandeController  implements model.ISceneController{
     
     @FXML
 	 void goBack(ActionEvent event) throws IOException {
-	   if (numeroDomanda == 6) sc.goBack();          //se si è alla prima domanda si torna alle domande a risposta multipla
+	   if (numeroDomanda == 1) sc.goBack();          //se si è alla prima domanda si torna alle domande a risposta multipla
 	   else {                   
-	    numeroDomanda--;                     //altrimenti viene caricata la domanda precedente
+	    numeroDomanda = numeroDomanda -2;                     //altrimenti viene caricata la domanda precedente
 	    this.setQuestion();
+	    next.setText(">>");
 	   }
 	   this.clean(event);
 	  }
 	    
 	@FXML
 	  void goNext(ActionEvent event) throws IOException {
-		
+		this.clean(event);
+		if (numeroDomanda == 7) {
 		this.gotoMenu(event);                  //se si è all'ultima scena l'utente viene mandato al menù principale
-		
-		 this.clean(event);
-	    numeroDomanda++;                     //altrimenti viene caricata la domanda successiva
-	    if(numeroDomanda < 10) {
+		}
+		else {
+	    numeroDomanda = numeroDomanda + 2;                     //altrimenti viene caricata la domanda successiva
 	      this.setQuestion();
 	    }
       }		 
@@ -142,7 +145,7 @@ public class domandeController  implements model.ISceneController{
 	public void setQuestion() throws FileNotFoundException {       //setta la domanda che deve essere caricata
 		try {
 		  Scanner scanner = new Scanner (new File("src/Prim/views/domande.txt"));
-	      domanda.setText(getLine(scanner,numeroDomanda));
+	      domanda.setText(getLine(scanner, numeroDomanda));
 	      scanner.close();
 	      next.setDisable(true);
 		}catch (Exception e) {
@@ -188,7 +191,7 @@ public class domandeController  implements model.ISceneController{
 	        assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'domande.fxml'.";
 	        assert riprova != null : "fx:id=\"riprova\" was not injected: check your FXML file 'domande.fxml'.";
 	        assert domanda != null : "fx:id=\"domanda\" was not injected: check your FXML file 'domande.fxml'.";
-	        if(numeroDomanda == 6) this.setQuestion();
+	        if(numeroDomanda == 1) this.setQuestion();
 	        
 	    }
 

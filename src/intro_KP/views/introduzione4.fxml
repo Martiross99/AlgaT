@@ -20,7 +20,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="   &gt; Sia G = (V, E) un grafo non orientato e connesso&#10;&#10;   &gt; Sia w : V × V → R (insieme dei pesi)&#10;&#10;   &gt; Sia A ⊆ E un sottoinsieme contenuto in un qualche albero di copertura minimo per G&#10;&#10;   &gt; Sia C una componente connessa (un albero) nella foresta G° = (V, A)&#10;&#10;   &gt; Sia [u, v] un arco leggero che connette C a qualche altra componente in G°&#10;&#10;Allora l’arco [u, v] è SICURO per A" wrappingWidth="975.4140625">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="   &gt; Sia G = (V, E) un grafo non orientato e connesso&#10;&#10;   &gt; Sia w : V × V → R (insieme dei pesi)&#10;&#10;   &gt; Sia A ⊆ E un sottoinsieme contenuto in un qualche albero di copertura minimo per G&#10;&#10;   &gt; Sia C una componente connessa (un albero) nella foresta G' = (V, A)&#10;&#10;   &gt; Sia [u, v] un arco leggero che connette C a qualche altra componente in G'&#10;&#10;Allora l’arco [u, v] è SICURO per A" wrappingWidth="975.4140625">
                <VBox.margin>
                   <Insets left="90.0" top="40.0" />
                </VBox.margin>
