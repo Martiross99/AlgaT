@@ -22,6 +22,7 @@
                      </font>
                   </Text>
                   <Label layoutX="121.0" layoutY="101.0" styleClass="titoli" text="PSEUDOCODICE" />
+                  <Button fx:id="Correttezza" layoutX="787.0" layoutY="99.0" mnemonicParsing="false" onAction="#GoToCorrettezza" styleClass="borderButton" text="⥤ CORRETTEZZA" />
                </children>
             </Pane>
          </center>

@@ -46,7 +46,7 @@
                      </children>
                   </VBox>
                   <Button fx:id="Es2" layoutX="202.0" layoutY="477.0" mnemonicParsing="false" onAction="#GetAnswer" styleClass="buttonlez" text="FATTO" />
-                  <TextArea fx:id="Risultato" layoutX="301.0" layoutY="464.0" prefHeight="58.0" prefWidth="227.0" styleClass="testi" stylesheets="@../../stylesheets/application.css" />
+                  <TextArea fx:id="Risultato" layoutX="301.0" layoutY="464.0" prefHeight="58.0" prefWidth="227.0" styleClass="textAreaq" stylesheets="@../../stylesheets/application.css" />
                   <Label layoutX="121.0" layoutY="101.0" styleClass="titoli" text="DOMANDE:" />
                </children>
             </Pane>

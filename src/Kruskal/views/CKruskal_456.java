@@ -5,9 +5,11 @@ import java.io.IOException;
 import Kruskal.model.SceneLoader_Kruskal;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import model.sceneController;
 
 //CONTROLLER DI scena4.fxml - scena5.fxml - scena6.fxml
@@ -37,6 +39,9 @@ public class CKruskal_456 implements model.ISceneController {
     @FXML
     private ImageView costoK;
     
+    @FXML
+    private Button Correttezza;
+    
     //scena6
     @FXML
     private ImageView pseudoTotK;
@@ -54,6 +59,13 @@ public class CKruskal_456 implements model.ISceneController {
     @FXML
     void GoToScene4(ActionEvent event) {
     	sc.setScene(SceneLoader_Kruskal.scena4_K);
+    }
+    
+    //scena5
+    @FXML
+    void GoToCorrettezza(ActionEvent event) throws IOException {
+    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    sc.getProgetto().loadScene(1, window, 1);
     }
     
     //cambio scena - in comune

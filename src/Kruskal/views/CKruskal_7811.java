@@ -47,9 +47,9 @@ public class CKruskal_7811 implements model.ISceneController {
     
     //funzione di scena11.fxml
     @FXML
-    void GoToMenu(ActionEvent event) throws IOException {
+    void GoToMenu(ActionEvent event) throws IOException {    	
     	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    sc.getProgetto().gotoMenu(window);	
+	    sc.getProgetto().gotoMenu(window);
     }
 
   
@@ -66,7 +66,7 @@ public class CKruskal_7811 implements model.ISceneController {
     	WrongOpt3.setToggleGroup(Tg);
     	
     	if(RightOpt.isSelected()) {
-    		Risultato.setFont(Font.font("Cambria", FontWeight.NORMAL, FontPosture.REGULAR, 18));
+    		Risultato.setFont(Font.font("Segoe UI", FontWeight.NORMAL, FontPosture.REGULAR, 18));
         	Risultato.setOpacity(1.00);
         	Risultato.appendText("Corretto!");
         	
@@ -78,7 +78,7 @@ public class CKruskal_7811 implements model.ISceneController {
     	}
     	
     	if(WrongOpt1.isSelected()||WrongOpt2.isSelected()||WrongOpt3.isSelected()) {
-    		Risultato.setFont(Font.font("Cambria", FontWeight.NORMAL, FontPosture.REGULAR, 18));
+    		Risultato.setFont(Font.font("Segoe UI", FontWeight.NORMAL, FontPosture.REGULAR, 18));
         	Risultato.setOpacity(1.00);
         	Risultato.appendText("Sbagliato, riprova");
     	}
