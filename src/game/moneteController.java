@@ -243,6 +243,7 @@ public class moneteController implements ISceneController {
             checkCorrect();
         }
     }
+
     @FXML
     void openMenu(ActionEvent event) throws IOException {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
