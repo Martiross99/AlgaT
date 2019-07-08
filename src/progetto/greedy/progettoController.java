@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import Kruskal.model.SceneLoader_Kruskal;
 import Prim.model.primLoad;
-import game.moneteLoader;
 import intro_KP.model.introLoad;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
@@ -83,6 +82,11 @@ public class progettoController extends Application{
         	}
         	
         }
+        
+        public void dimensioniStage(Stage window) {
+        	System.out.println(window.getWidth() - 1080);
+        	System.out.println(window.getHeight() - 1080);
+        }
 		
 		@Override
 		public void start(Stage primaryStage) throws Exception {
@@ -101,16 +105,18 @@ public class progettoController extends Application{
     	    progetto[controllerCorrente].scaleXProperty().bind(ScaleX);
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
 
-    	//  Scene scene = new Scene(root, 1080, 720);
-    	 //   Double x = this.larghezza();
-//    	    Double x = primaryStage.getWidth() - 1080;
-//    	    Double y = primaryStage.getHeight() - 720;
-    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
-    		
+    	    //Scene scene = new Scene(root, 1080, 720);
+    	    
+//    	      Double x = primaryStage.getWidth() - 1080;
+//    	      Double y = primaryStage.getHeight() - 720;
+    	    
+    		  Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
+    	    
 
     		primaryStage.setScene(scene);
 
     		primaryStage.show();
+
     		
 			} catch (Exception e) {	
 				System.out.println(e.getMessage());
