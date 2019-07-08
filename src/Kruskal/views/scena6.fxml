@@ -15,12 +15,12 @@
          <center>
             <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Text fill="WHITE" layoutX="101.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Il maggior sforzo computazionale dell'algoritmo di Kruskal è dato dall'ordinamento iniziale e dalla verifica&#10;che l'aggiunta di un nuovo arco non provochi la formazione di un circuito.&#10;&#10;Questo ordinamento ha costo O(m logn) tempo, dato che logm ≤ 2logn&#10;&#10;⥤ Utilizzando una struttura merge-find MFSET, la verifica che un arco appartenga a due componenti distinte (ed anche il suo eventuale inserimento in T) richiede tempo ammortizzato costante O(1) poich utilizzano le operazioni find() e merge().&#10;&#10;Inoltre, poiché il ciclo for è ripetuto m volte, la complessità dell'algoritmo risulta essere O(m logn)" wrappingWidth="868.2301025390625">
+                  <Text fill="WHITE" layoutX="101.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Il maggior sforzo computazionale dell'algoritmo di Kruskal è dato dall'ordinamento iniziale e dalla verifica&#10;che l'aggiunta di un nuovo arco non provochi la formazione di un circuito.&#10;⥤ Questo ordinamento ha costo O(m logn) tempo, dato che logm ≤ 2logn&#10;&#10;⥤ Utilizzando una struttura merge-find MFSET, la verifica che un arco appartenga a due componenti distinte (ed anche il suo eventuale inserimento in T) richiede tempo ammortizzato costante O(1) poich utilizzano le operazioni find() e merge().&#10;&#10;Inoltre, poiché il ciclo for è ripetuto m volte, la complessità dell'algoritmo risulta essere O(m logn)" wrappingWidth="868.2301025390625">
                      <font>
                         <Font name="Cambria" size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fx:id="costoK" fitHeight="184.0" fitWidth="472.0" layoutX="305.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="costoK" fitHeight="184.0" fitWidth="472.0" layoutX="298.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true" />
                   <Label layoutX="121.0" layoutY="101.0" styleClass="titoli" text="EFFICIENZA" />
                </children>
             </Pane>
