@@ -39,7 +39,7 @@
 #BLEZ{
     -fx-text-fill: #e79292;
     -fx-border-color: #e79292;
-    -fx-font-family: "Segoe UI SemiBold";
+    -fx-font-family: "Segoe UI";
     -fx-font-size: 30px ;
 }
 #BLEZ:hover{
@@ -50,7 +50,7 @@
 #BGAME{
     -fx-text-fill: #7ab4b5;
     -fx-border-color: #7ab4b5;
-    -fx-font-family: "Segoe UI SemiBold";
+    -fx-font-family: "Segoe UI";
     -fx-font-size: 30px ;
 }
 #BGAME:hover{
@@ -69,7 +69,7 @@
 .lessons{
     -fx-text-fill: #e79292;
     -fx-border-color: #e79292;
-    -fx-font-family: "Segoe UI SemiBold";
+    -fx-font-family: "Segoe UI";
     -fx-font-size: 30px ;
 }
 

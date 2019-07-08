@@ -19,6 +19,7 @@ import model.sceneController;
 public class domandeController  implements model.ISceneController{
 
 	sceneController sc;
+	Integer numeroDomanda = 6;   
 
     @FXML
     private Button back, next, menu, inserisci,done, riprova;
@@ -27,60 +28,19 @@ public class domandeController  implements model.ISceneController{
     private AnchorPane ap;
     
     @FXML
+    private Text domanda;
+    
+    @FXML
     private TextField tentativo;
 
     @FXML
     private TextArea risposta;
-    
-    @FXML
-    private Text thirdQuestion,fourthQuestion;
-    
-    
-  //Funzioni che gestiscono il file esercizi2.fxml
-    
-  	 @FXML
-  	  void controlla2(ActionEvent event) throws FileNotFoundException {
-  		 
-  		 String prova = tentativo.getText();      //prende la risposta dell'utente
-  		 prova = prova.trim();                     //senza gli spazi
-  		 
-  	  if(prova.length()!=0) {             //se l'utente ha inserito qualcosa controlla la risposta
-  		  
-  		  inserisci.setDisable(true);
-  		  riprova.setDisable(false); 
-  		  
-  		 try {
-  			 Integer.parseInt(prova);                   //se l'inserimento non è un numero, la risposta non è valida
-  		 } catch(NumberFormatException e) {
-  			 risposta.appendText("Inserimento non valido");
-  			 return;
-  		 }		 
 
-  		try {	
-  			Scanner scanner = new Scanner (new File("src/Prim/views/risposte.txt")); //apre uno scanner che scorre il file di testo risposte
-  			String anno = scanner.next();
-  				if(anno.equals(prova)) {
-  					    risposta.appendText("Corretto!"); 
-  		            	next.setDisable(false);
-  					}
-  				
-  				else risposta.appendText("Hai sbagliato, riprova");
-  				
-  			 scanner.close();
-  		}    catch(FileNotFoundException ex) {
-  	        System.out.println("Unable to open file 'risposte.txt'");                
-  	        }
-  		 }
-
-         }	
-  	 
-  
     
-    
-  //funzioni che gestiscono il file esercizi3.fxml
+  //funzioni che gestiscono il file delle domande
 	 
     @FXML
-    void controlla3(ActionEvent event) throws FileNotFoundException { 
+    void controlla(ActionEvent event) throws FileNotFoundException { 
     	
 		String prova = tentativo.getText();
 		prova = prova.trim();
@@ -88,16 +48,23 @@ public class domandeController  implements model.ISceneController{
 		if(prova.length()!=0) {
 			
 		try {	
-			Scanner s = new Scanner (new File("src/Prim/views/risposte.txt"));
-			Integer line = 0;
-			if(thirdQuestion != null) line = 3;                       //a seconda di quale è la domanda si richiede allo scanner di leggere una diversa rig del file txt
-			else if(fourthQuestion != null) line = 4;
-			else line = 2;
+			Scanner s = new Scanner (new File("src/Prim/views/domande.txt"));
+			Integer line = numeroDomanda - 5;                      //a seconda di quale è la domanda si richiede allo scanner di leggere una diversa riga del file txt
 			
 			String riga = getLine(s,line);
 			
 			Scanner scanner = new Scanner(riga);
 			scanner.useDelimiter("/");
+			
+			if (numeroDomanda == 6) {             //se si è alla prima domanda si ha un'ulteriore controllo
+				 try {
+		  			 Integer.parseInt(prova);                   //se l'inserimento non è un numero, la risposta non è valida
+		  		 } catch(NumberFormatException e) {
+		  			 risposta.appendText("Inserimento non valido");
+		  			 scanner.close();
+		  			 return;
+		  		 }		
+			}
 			
 			boolean found = false;
 			while(scanner.hasNext() ) {
@@ -108,8 +75,13 @@ public class domandeController  implements model.ISceneController{
 				}
 			}
 		    if(!found) risposta.appendText("Sbagliato, riprova");
-		    else if((found) && (line < 4)) next.setDisable(false);
-		    else menu.setDisable(false);
+		    else if((found) && (line < 4)) {
+		    	next.setDisable(false);
+		    }
+		    else  {
+		    	next.setText("MENU");
+		    	next.setDisable(false);
+		    }
 		    
 		    inserisci.setDisable(true);
 		    riprova.setDisable(false);
@@ -118,21 +90,19 @@ public class domandeController  implements model.ISceneController{
            
 		}    catch(FileNotFoundException ex) {
 			
-	        System.out.println("Unable to open file 'risposte.txt'");  
+	        System.out.println("Unable to open file 'risposte.txt'");        
 	        
 	        }
 		}
     }
     
   String getLine(Scanner s, Integer line) {       //funzione che restituisce la riga da cui leggere le risposte
-	  
     	String riga = new String();
     	while(line > 0) {
     		    riga = s.nextLine();
 				line = line-1;
     	}
-    	return(riga);
-    	
+    	return(riga);	
     }
     
     @FXML
@@ -143,32 +113,49 @@ public class domandeController  implements model.ISceneController{
     	riprova.setDisable(true);
     }
     
+   
+    
   //Funzioni che gestiscono lo scambio tra le pagine	 
     
     @FXML
 	 void goBack(ActionEvent event) throws IOException {
-	    sc.goBack();
-	    pulisciSchermata();
+	   if (numeroDomanda == 6) sc.goBack();          //se si è alla prima domanda si torna alle domande a risposta multipla
+	   else {                   
+	    numeroDomanda--;                     //altrimenti viene caricata la domanda precedente
+	    this.setQuestion();
+	   }
+	   this.clean(event);
 	  }
 	    
 	@FXML
 	  void goNext(ActionEvent event) throws IOException {
-	    sc.goNext();
-	    pulisciSchermata();
-      }		    
-
-	public void pulisciSchermata() {
-		   risposta.clear();
-	       tentativo.clear();
-	       inserisci.setDisable(false);
-	       riprova.setDisable(true);
-		   risposta.clear();
-	}
+		
+		this.gotoMenu(event);                  //se si è all'ultima scena l'utente viene mandato al menù principale
+		
+		 this.clean(event);
+	    numeroDomanda++;                     //altrimenti viene caricata la domanda successiva
+	    if(numeroDomanda < 10) {
+	      this.setQuestion();
+	    }
+      }		 
 	
-    @FXML
-	 void gotoMenu(ActionEvent event) throws IOException { 
-	   Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	   sc.getProgetto().gotoMenu(window);
+	public void setQuestion() throws FileNotFoundException {       //setta la domanda che deve essere caricata
+		try {
+		  Scanner scanner = new Scanner (new File("src/Prim/views/domande.txt"));
+	      domanda.setText(getLine(scanner,numeroDomanda));
+	      scanner.close();
+	      next.setDisable(true);
+		}catch (Exception e) {
+			System.out.println("File not found");
+		}
+	}
+
+
+	 void gotoMenu(ActionEvent event) throws IOException {    //riporta l'utente al menu se ha risposto correttamente all'ultima domanda
+		 if(next.getText().equals("MENU")) {
+	        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        sc.getProgetto().gotoMenu(window);
+		 }
 	  }
 	
 	@Override
@@ -176,15 +163,9 @@ public class domandeController  implements model.ISceneController{
 		sc = parent;	
 	}
 	
-
-	
 	
 	 @FXML
-		void initialize() {
-	    	
-	        assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'domande.fxml'.";
-	        assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'domande.fxml'.";
-	        assert ap != null : "fx:id=\"ap\" was not injected: check your FXML file 'domande4.fxml'.";
+		void initialize() throws FileNotFoundException {	
 	        
 	  	  if (ap != null) {                              //se viene premuto il tasto invio, mette in azione di tasto inserisci 
 	  	      ap.setOnKeyPressed(e -> {                   //e controlla la risposta
@@ -199,17 +180,15 @@ public class domandeController  implements model.ISceneController{
 	            }
 	          
 	     //FXML domande  
+	  	    assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'domande.fxml'.";
+            assert next != null : "fx:id=\"next\" was not injected: check your FXML file 'domande.fxml'.";
+            assert ap != null : "fx:id=\"ap\" was not injected: check your FXML file 'domande.fxml'.";
 	        assert inserisci != null : "fx:id=\"inserisci\" was not injected: check your FXML file 'domande.fxml'.";  
 	        assert tentativo != null : "fx:id=\"tentativo\" was not injected: check your FXML file 'domande.fxml'.";
 	        assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'domande.fxml'.";
 	        assert riprova != null : "fx:id=\"riprova\" was not injected: check your FXML file 'domande.fxml'.";
-	        
-	     //FXML domande3
-	        assert thirdQuestion != null : "fx:id=\"thirdQuestion\" was not injected: check your FXML file 'domande3.fxml'.";
-	        
-	     //FXML domande4
-	        assert fourthQuestion != null : "fx:id=\"fourthQuestion\" was not injected: check your FXML file 'domande4.fxml'.";
-	        assert menu != null : "fx:id=\"menu\" was not injected: check your FXML file 'domande4.fxml'.";
+	        assert domanda != null : "fx:id=\"domanda\" was not injected: check your FXML file 'domande.fxml'.";
+	        if(numeroDomanda == 6) this.setQuestion();
 	        
 	    }
 
