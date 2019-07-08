@@ -28,13 +28,20 @@ public class SceneLoader_Kruskal {
 		 public static String esercizio1 = "/Kruskal/views/scena7.fxml";
 		 public static Integer scena8_K = 9;
 		 public static String esercizio2 = "/Kruskal/views/scena8.fxml";
-		 public static Integer scena9_K = 10;
-		 public static String domanda1 = "/Kruskal/views/scena9.fxml";
-		 public static Integer scena10_K = 11;
-		 public static String domanda2 = "/Kruskal/views/scena10.fxml";
-		 public static Integer scena11_K = 12;
+//		 public static Integer scena9_K = 10;
+//		 public static String domanda1 = "/Kruskal/views/scena9.fxml";
+//		 public static Integer scena10_K = 11;
+//		 public static String domanda2 = "/Kruskal/views/scena10.fxml";
+//		 public static Integer scena11_K = 12;
+//		 public static String verofalso = "/Kruskal/views/scena11.fxml";
+//		 public static Integer scena4b_K = 13;
+//		 public static String ripasso = "/Kruskal/views/scena4bis.fxml";
+		 
+		 public static Integer scena10_K = 10;
+		 public static String domande = "/Kruskal/views/domande.fxml";
+		 public static Integer scena11_K = 11;
 		 public static String verofalso = "/Kruskal/views/scena11.fxml";
-		 public static Integer scena4b_K = 13;
+		 public static Integer scena4b_K = 12;
 		 public static String ripasso = "/Kruskal/views/scena4bis.fxml";
 	     
 	     
@@ -50,8 +57,9 @@ public class SceneLoader_Kruskal {
 					controller.loadScene(scena6_K, pseudo);
 					controller.loadScene(scena7_K, esercizio1);
 					controller.loadScene(scena8_K, esercizio2);
-					controller.loadScene(scena9_K, domanda1);
-					controller.loadScene(scena10_K, domanda2);
+//					controller.loadScene(scena9_K, domanda1);
+//					controller.loadScene(scena10_K, domanda2);
+					controller.loadScene(scena10_K, domande);
 					controller.loadScene(scena11_K, verofalso);
 					controller.loadScene(scena4b_K, ripasso);
 				
