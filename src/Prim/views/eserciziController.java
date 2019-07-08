@@ -37,11 +37,10 @@ public class eserciziController  implements model.ISceneController{
     
   //Funzioni che gestiscono il file esercizi.fxml
 	@FXML
-	 void verifica(ActionEvent event) {                    //inserisce tutti i radioButton in un toggleGroup in modo che uno solo di essi sia selezionabile
-		
-		    risposta.clear();           //prima di stampare una nuova risposta pulisce la schermata delle risposte
-		    
-		    rb1.setToggleGroup(rb);rb2.setToggleGroup(rb);rb3.setToggleGroup(rb);rb4.setToggleGroup(rb);
+	 void verifica(ActionEvent event) {                 
+
+			    risposta.clear();       //prima di stampare una nuova risposta pulisce la schermata delle risposte
+ 
             if(rb2.isSelected() && (secondExercise == null)) {
             	risposta.appendText("Corretto!");
             	next.setDisable(false); 
@@ -53,8 +52,9 @@ public class eserciziController  implements model.ISceneController{
             else {
             	risposta.setText("Sbagliato, riprova");
             	next.setDisable(true);
-            }
-	    }
+             }
+		    }
+	   // }
 
  
 	
@@ -96,7 +96,11 @@ public class eserciziController  implements model.ISceneController{
         assert done != null : "fx:id=\"done\" was not injected: check your FXML file 'esercizi.fxml'.";
         assert risposta != null : "fx:id=\"risposta\" was not injected: check your FXML file 'esercizi.fxml'.";
         
+        if(rb1 != null)   { rb1.setToggleGroup(rb); rb2.setToggleGroup(rb); rb3.setToggleGroup(rb); rb4.setToggleGroup(rb); }    //inserisce tutti i radioButton in un toggleGroup in modo che uno solo di essi sia selezionabile
+        
+        
      //FXML esercizi2
         assert secondExercise != null : "fx:id=\"secondQuestion\" was not injected: check your FXML file 'esercizi2.fxml'.";
+        
     }
 }
