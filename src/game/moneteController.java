@@ -1,16 +1,12 @@
 package game;
 
-
 import java.io.IOException;
 import java.util.Random;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 import model.ISceneController;
 import model.sceneController;
 

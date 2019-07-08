@@ -1,9 +1,5 @@
 package Kruskal.model;
 
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import model.sceneController;
 
 //loader per il caricamento delle scene nel sceneController dell'introduzione agli algoritmi
