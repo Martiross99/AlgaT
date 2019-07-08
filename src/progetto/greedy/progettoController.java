@@ -126,10 +126,13 @@ public class progettoController extends Application{
 
 		
 		public void gotoMenu(Stage window) throws IOException {	
-			progetto[controllerCorrente].setScene(1);
-			controllerCorrente = 0;                       //per andare al menu prende il sceneController in posizione zero nell'array
-			try {                                             //e lo carica
-			   this.start(window);
+			
+			progetto[controllerCorrente].setScene(1);         //riposiziona il sceneController da cui si sta muovendo l'utente alla prima scena
+			
+			try {                                                //per andare al menu prende il sceneController in posizione 
+				                                                     //zero nell'array e lo carica
+			   this.loadScene(0, window, 2);
+			   
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}

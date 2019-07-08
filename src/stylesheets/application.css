@@ -36,6 +36,14 @@
     -fx-font-size: 25px ;
 }
 
+.avviaButton{
+	-fx-background-color: #474747;
+	-fx-text-fill: #ffffff;
+	-fx-border-color: #ffffff;
+	-fx-font-family: "Segoe UI Light";
+    -fx-font-size: 20px ;
+}
+
 #BLEZ{
     -fx-text-fill: #e79292;
     -fx-border-color: #e79292;

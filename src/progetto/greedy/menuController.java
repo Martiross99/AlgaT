@@ -23,9 +23,10 @@ public class menuController implements ISceneController {
     @FXML
     private Button BGAME;
 
+
     @FXML
     void openLezioni(ActionEvent event) {
-    	sc.setScene(3);
+    	sc.setScene(4);
     }
 
     @FXML
@@ -39,7 +40,6 @@ public class menuController implements ISceneController {
         BLEZ.setOnAction(event -> openLezioni(event));
         assert BGAME != null : "fx:id=\"BGAME\" was not injected: check your FXML file 'menu.fxml'.";
         BGAME.setOnAction(event -> openMonete(event));
-
     }
 
 	@Override
