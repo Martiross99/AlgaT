@@ -248,8 +248,7 @@ public class moneteController implements ISceneController {
 
     @FXML
     void openMenu(ActionEvent event) throws IOException {
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        sc.getProgetto().gotoMenu(window);
+        sc.goBack();
     }
     @FXML
     void retry(){
