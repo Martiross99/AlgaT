@@ -63,7 +63,7 @@ public class ControllerS3 implements model.ISceneController {
     	Line x = (Line) event.getSource();
     	
 
-    	if(x.equals(lines[index])) {
+    	if(x.equals(lines[index])) {				//quando la linea cliccata è quella successiva all'ordine crescente
     		panes[index].setVisible(true);
     		index=index+1;
     	}
@@ -77,7 +77,7 @@ public class ControllerS3 implements model.ISceneController {
     void NextB(ActionEvent event) throws IOException {
     	sc.goNext();
     	
-    	AnchorPane[] panes = {V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12};
+    	AnchorPane[] panes = {V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12};  //torno alle condizioni di partenza
     	
     	for(int i=0; i<12; i++)
     		panes[i].setVisible(false);
