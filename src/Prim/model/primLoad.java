@@ -57,9 +57,6 @@ public class primLoad {
 				 controller.loadScene(esercizi, eserciziScene);
 				 controller.loadScene(esercizi2, esercizi2Scene);
 				 controller.loadScene(domande, domandeScene);
-//				 controller.loadScene(domande2, domande2Scene);
-//				 controller.loadScene(domande3, domande3Scene);
-//				 controller.loadScene(domande4, domande4Scene);
 				 
 	             controller.setScene(prim);
 	 

@@ -105,19 +105,10 @@ public class progettoController extends Application{
     	    progetto[controllerCorrente].scaleXProperty().bind(ScaleX);
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
 
-    	//  Scene scene = new Scene(root, 1080, 720);
-    	  //  Double x = this.larghezza();
-//    	    Double x = primaryStage.getWidth() - 1080;
-//    	    Double y = primaryStage.getHeight() - 720;
-
-    		
     	    
-//    	    //Scene scene = new Scene(root, 1080, 720);
-//    	    
-//  	      Double x = primaryStage.getWidth() - 1080;
-//    	      Double y = primaryStage.getHeight() - 720;
-//    	    
-    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
+//    	    Scene scene = new Scene(root, 1080, 720);
+ 	    
+    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);  // setta la scena della dimensione corretta
     	    
     		primaryStage.setScene(scene);
 
@@ -139,7 +130,6 @@ public class progettoController extends Application{
 			try {                                                //per andare al menu prende il sceneController in posizione 
 																	//zero nell'array e lo carica
 				this.start(window);	
-			//   this.loadScene(0, window, 2);
 			   
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
@@ -160,10 +150,10 @@ public class progettoController extends Application{
 																						      
 			this.loadController(i,window);
 			
-			sceneController attuale = this.progetto[controllerCorrente];          //prende il sceneController e va avanti fino alla scena richiesta                
+			sceneController attuale = this.progetto[controllerCorrente];          //prende il sceneController richiesto              
 			
-			if(attuale.getMap(attuale).containsKey(scena)) {
-			while(attuale.getNode(attuale.getScenaCorrente()) != attuale.getNode(scena)) {
+			if(attuale.getMap(attuale).containsKey(scena)) {                                     //se la scena è contenuta nell'hashMap
+			while(attuale.getNode(attuale.getScenaCorrente()) != attuale.getNode(scena)) {        //si muove avanti o indietro fino alla scena richiesta
 				if(attuale.getScenaCorrente() < scena)	attuale.goNext();
 				else attuale.goBack();
 			}

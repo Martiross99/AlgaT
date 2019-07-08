@@ -95,8 +95,8 @@ public class firstController implements model.ISceneController {
 
 		    @FXML
 		    void toFill(MouseEvent event)  throws IOException {     //colora i cerchi del menù quando ci si passa sopra con il mouse
-		    	StackPane x = (StackPane) event.getSource();
-		    	Circle c = (Circle) x.getChildren().get(0);
+		    	StackPane x = (StackPane) event.getSource();       
+		    	Circle c = (Circle) x.getChildren().get(0);           //recupera il cerchio che è l'ultimo figlio dello stackPane
 		    	c.setFill(Color.rgb(228,160,160));
 		    }
 

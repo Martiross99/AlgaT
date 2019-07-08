@@ -36,12 +36,11 @@ public class introController implements model.ISceneController{
 //Funzioni che gestiscono l'FXML introduzione3.fxml
 	
 	  @FXML
-	    void trasforma(ActionEvent event) {
+	    void trasforma(ActionEvent event) {                    //trasforma l'albero T nell'albero T' 
                line1.setStroke(Color.rgb(140, 143, 154));
                line2.setStroke(Color.rgb(228, 11, 11));
                
-               albero.setText("T'");
-               
+               albero.setText("T'");       
 	    }
 
 	  

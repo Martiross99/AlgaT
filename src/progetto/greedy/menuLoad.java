@@ -2,6 +2,8 @@ package progetto.greedy;
 
 import model.sceneController;
 
+//loader per il caricamento delle scene nel sceneController che gestisce il menù
+
 public class menuLoad {
       
 	public static Integer presentazione = 1;

@@ -37,7 +37,7 @@ public class alertWindow {
  				message = scanner.nextLine();
  				line = line-1;
  			   }
- 			 			 scanner.close();
+ 			 	 scanner.close();
  		    } catch(FileNotFoundException ex) {
  	        System.out.println(
  	                "Unable to open file 'avvisi.txt'");                

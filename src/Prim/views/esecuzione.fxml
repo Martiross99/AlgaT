@@ -22,7 +22,7 @@
                   <Insets left="40.0" />
                </VBox.margin>
             </Label>
-            <Text fill="#8ab5b1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Prova ora a costruire un albero di copertura minimo per il seguente grafo:">
+            <Text fill="#8ab5b1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Prova ora a costruire un albero di copertura minimo per il seguente grafo :">
                <VBox.margin>
                   <Insets left="40.0" top="30.0" />
                </VBox.margin>

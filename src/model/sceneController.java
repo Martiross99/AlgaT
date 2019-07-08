@@ -66,10 +66,6 @@ public class sceneController extends StackPane {
     	if (mappa.containsKey(n) && mappa.get(n) != null) {   //la scena deve essere stata caricata nella mappa
 
         if (!getChildren().isEmpty()) {    // se è presente più di una scena nella mappa
-  
-//                    getChildren().remove(0);                    //viene rimosso il figlio attualmente in posizione zero
-//                    getChildren().add(0,mappa.get(n));     //viene aggiunta la scena corrente in posizione zero      
-//            }
         	
     		Integer scenaRichiesta = n;
     		if(scenaRichiesta > scenaCorrente) {                 //se la scena richiesta ha un indice maggiore di quello attuale la funzione
@@ -97,17 +93,12 @@ public class sceneController extends StackPane {
    }
    
     public void goBack() {
-       	try {
-       		
+       	try {	
        	 Integer x = scenaCorrente;
   		 Node attuale = this.getNode(x);         //prende il nodo corrispondente alla scena attuale
   		 getChildren().remove(attuale);            //e lo rimuove dalla pila così da rendere visibile quello sottostante
   		 scenaCorrente = scenaCorrente - 1;
-  		 
-      	      //Node actualScene =  getChildren().get(0);    //prende il nodo attualmente visibile
-             //Integer x = (getIndex(actualScene));         //recupera il suo indice, ovvero il valore associato nell'HashMap
-      		// setScene(x - 1);                              //setta la scena precedente
-  		 
+  
       	} catch (Exception e) {
               System.out.println(e.getMessage());             
           }
@@ -119,11 +110,7 @@ public class sceneController extends StackPane {
     	 scenaCorrente = scenaCorrente + 1;     //prende l'indice della scena successiva a quella attuale
    		 Integer x = scenaCorrente; 
    		 getChildren().add(mappa.get(x));         //e inserisce la scena tra i figli, mettendola in cima
-   		
-   	     // Node n =  getChildren().get(0);
-   		 //Integer x = getIndex(n); 
-   		// setScene(x + 1); 								//setta la scena successiva
-   		 
+ 
     	} catch (Exception e) {
            System.out.println(e.getMessage());
           

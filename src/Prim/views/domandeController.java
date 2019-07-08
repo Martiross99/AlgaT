@@ -19,7 +19,7 @@ import model.sceneController;
 public class domandeController  implements model.ISceneController{
 
 	sceneController sc;
-	Integer numeroDomanda = 1;   
+	Integer numeroDomanda = 1;   //linea corrispondente alla domanda corrente nel file txt
 
     @FXML
     private Button back, next, menu, inserisci,done, riprova;
@@ -42,7 +42,7 @@ public class domandeController  implements model.ISceneController{
     @FXML
     void controlla(ActionEvent event) throws FileNotFoundException { 
     	
-		String prova = tentativo.getText();
+		String prova = tentativo.getText();     
 		prova = prova.trim();
 		
 		if(prova.length()!=0) {
@@ -51,7 +51,7 @@ public class domandeController  implements model.ISceneController{
 			Scanner s = new Scanner (new File("src/Prim/views/domande.txt"));
 			Integer line = numeroDomanda + 1;                      //a seconda di quale è la domanda si richiede allo scanner di leggere una diversa riga del file txt
 			
-			String riga = getLine(s,line);
+			String riga = getLine(s,line);               //prende la riga delle risposte nel file txt
 			
 			Scanner scanner = new Scanner(riga);
 			scanner.useDelimiter("/");

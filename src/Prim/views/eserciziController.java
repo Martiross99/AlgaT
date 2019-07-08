@@ -41,8 +41,8 @@ public class eserciziController  implements model.ISceneController{
 
 			    risposta.clear();       //prima di stampare una nuova risposta pulisce la schermata delle risposte
  
-            if(rb2.isSelected() && (secondExercise == null)) {
-            	risposta.appendText("Corretto!");
+            if(rb2.isSelected() && (secondExercise == null)) {    //controlla quale è l'esercizio corrente e quale risposta è stata
+            	risposta.appendText("Corretto!");                   //selezionata dall'utente
             	next.setDisable(false); 
             }
             else if (rb4.isSelected() && (secondExercise != null)) {
@@ -53,16 +53,16 @@ public class eserciziController  implements model.ISceneController{
             	risposta.setText("Sbagliato, riprova");
             	next.setDisable(true);
              }
-		    }
-	   // }
+		}
+
 
  
 	
  //Funzioni che gestiscono lo scambio tra le pagine	 
     @FXML
 	 void goBack(ActionEvent event) throws IOException {      //prima di cambiare scena pulisce i campi delle risposte
-	  sc.goBack();
-	  pulisciSchermata();
+	     sc.goBack();
+	     pulisciSchermata();
 	  }
 	    
 	@FXML
