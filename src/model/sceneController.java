@@ -18,7 +18,6 @@ public class sceneController extends StackPane {
 	
 	public sceneController() {
 		super();
-	//	this.mainProject ;
 		this.scenaCorrente = 1;
 	}
 	

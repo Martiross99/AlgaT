@@ -82,6 +82,11 @@ public class progettoController extends Application{
         	}
         	
         }
+        
+        public void dimensioniStage(Stage window) {
+        	System.out.println(window.getWidth() - 1080);
+        	System.out.println(window.getHeight() - 1080);
+        }
 		
 		@Override
 		public void start(Stage primaryStage) throws Exception {
@@ -106,10 +111,18 @@ public class progettoController extends Application{
 //    	    Double y = primaryStage.getHeight() - 720;
     		Scene scene = new Scene(root,primaryStage.getWidth()-12.800048828125,primaryStage.getHeight()-35.2000122070312);
     		
-
+    	    
+//    	    //Scene scene = new Scene(root, 1080, 720);
+//    	    
+//  	      Double x = primaryStage.getWidth() - 1080;
+//    	      Double y = primaryStage.getHeight() - 720;
+//    	    
+//    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);
+    	    
     		primaryStage.setScene(scene);
 
     		primaryStage.show();
+
     		
     		
 			} catch (Exception e) {	
@@ -120,10 +133,14 @@ public class progettoController extends Application{
 
 		
 		public void gotoMenu(Stage window) throws IOException {	
-			progetto[controllerCorrente].setScene(1);
-			controllerCorrente = 0;                       //per andare al menu prende il sceneController in posizione zero nell'array
-			try {                                             //e lo carica
-			   this.start(window);
+			
+			progetto[controllerCorrente].setScene(1);         //riposiziona il sceneController da cui si sta muovendo l'utente alla prima scena
+			controllerCorrente = 0;
+			try {                                                //per andare al menu prende il sceneController in posizione 
+																	//zero nell'array e lo carica
+				this.start(window);	
+			//   this.loadScene(0, window, 2);
+			   
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -147,7 +164,8 @@ public class progettoController extends Application{
 			
 			if(attuale.getMap(attuale).containsKey(scena)) {
 			while(attuale.getNode(attuale.getScenaCorrente()) != attuale.getNode(scena)) {
-				attuale.goNext();
+				if(attuale.getScenaCorrente() < scena)	attuale.goNext();
+				else attuale.goBack();
 			}
 		  }
 		}

@@ -43,18 +43,30 @@ public class CKruskal_domande implements model.ISceneController {
     @FXML
     private Button PrevB, NextB;
     
-
     
-//    void leggiDomande() throws IOException {
-//    	
-//    	BufferedReader b = new BufferedReader(new FileReader("domandeK.txt"));
-//    	
-//        String s = b.readLine();
-//        String[] dom = s.split("|");
-//        
-//        domanda.setText(dom[indexScene]);
-//    }
-//    
+    
+    void setDomanda(Integer n) {
+    	
+    	Integer x=0;
+    	String a=null;
+    	
+    	n=n+1;							//n indica l'indice della domanda, c'è il +1 perché le linee del file partono da 1
+    	
+    	try {
+    		Scanner scanner = new Scanner (new File("src/Kruskal/views/domandeK.txt"));
+    		while(x<n && scanner.hasNext()) {
+    			a = scanner.nextLine();
+    			x=x+1;
+    		}
+    		scanner.close();
+    		
+    		domanda.setText(a);
+    	}
+    	catch(FileNotFoundException ex) {
+			System.out.println("Unable to open answers file");                
+        }
+    	
+    }
     
     @FXML
     void Clear(ActionEvent event) {
@@ -104,17 +116,16 @@ public class CKruskal_domande implements model.ISceneController {
     @FXML
     void NextB(ActionEvent event) throws IOException {
     	
-    	int j=0;
-    	
     	Tentativo.clear();
 		Risultato.clear();
 		
-		indexScene = indexScene + 1;
+		indexScene = indexScene + 1;	//aumenta l'indice che indica la domanda
     	
-    	
-    	if(indexScene.equals(2)) {
+    	if(indexScene.equals(2)) {		//quando le domande sono finite si passa alla scena successiva
     		sc.goNext();
     	}
+    	
+    	else this.setDomanda(indexScene);		//setta la domanda
     	
     }
 
@@ -126,10 +137,11 @@ public class CKruskal_domande implements model.ISceneController {
     	
     	indexScene = indexScene - 1;
     	
-    	
     	if(indexScene.equals(-1)) {
     		sc.goBack();
     	}	
+    	
+    	else this.setDomanda(indexScene);
     }
     
 

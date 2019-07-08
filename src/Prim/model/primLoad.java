@@ -28,12 +28,12 @@ public class primLoad {
 		 public static String efficiencyScene = "/Prim/views/efficienza.fxml";
 		 public static Integer esercizi = 11;
 		 public static String eserciziScene = "/Prim/views/esercizi.fxml";
-		 public static Integer domande = 12;
-		 public static String domandeScene = "/Prim/views/domande.fxml";
-		 public static Integer domande2 = 13;
-		 public static String domande2Scene = "/Prim/views/domande2.fxml";
-		 public static Integer esercizi2 = 14;
+		 public static Integer esercizi2 = 12;
 		 public static String esercizi2Scene = "/Prim/views/esercizi2.fxml";
+		 public static Integer domande = 13;
+		 public static String domandeScene = "/Prim/views/domande.fxml";
+		 public static Integer domande2 = 14;
+		 public static String domande2Scene = "/Prim/views/domande2.fxml";	
 		 public static Integer domande3 = 15;
 		 public static String domande3Scene = "/Prim/views/domande3.fxml";
 		 public static Integer domande4 = 16;
@@ -55,11 +55,11 @@ public class primLoad {
 				 controller.loadScene(esecuzione, exeScene);
 				 controller.loadScene(efficienza, efficiencyScene);
 				 controller.loadScene(esercizi, eserciziScene);
-				 controller.loadScene(domande, domandeScene);
-				 controller.loadScene(domande2, domande2Scene);
 				 controller.loadScene(esercizi2, esercizi2Scene);
-				 controller.loadScene(domande3, domande3Scene);
-				 controller.loadScene(domande4, domande4Scene);
+				 controller.loadScene(domande, domandeScene);
+//				 controller.loadScene(domande2, domande2Scene);
+//				 controller.loadScene(domande3, domande3Scene);
+//				 controller.loadScene(domande4, domande4Scene);
 				 
 	             controller.setScene(prim);
 	 

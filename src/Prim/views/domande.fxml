@@ -20,7 +20,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Text fill="#e1dcdc" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="In quale anno è stato pubblicato l'algoritmo di Prim?" wrappingWidth="429.1025390625">
+            <Text fx:id="domanda" fill="#e1dcdc" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="In quale anno è stato pubblicato l'algoritmo di Prim?" wrappingWidth="429.1025390625">
                <font>
                   <Font size="20.0" />
                </font>
@@ -35,7 +35,7 @@
                         <Insets />
                      </HBox.margin>
                   </TextField>
-                  <Button fx:id="inserisci" mnemonicParsing="false" onAction="#controlla2" prefHeight="33.0" prefWidth="93.0" styleClass="borderButton" stylesheets="@../../stylesheets/application.css" text="Inserisci">
+                  <Button fx:id="inserisci" mnemonicParsing="false" onAction="#controlla" prefHeight="33.0" prefWidth="93.0" styleClass="borderButton" stylesheets="@../../stylesheets/application.css" text="Inserisci">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>

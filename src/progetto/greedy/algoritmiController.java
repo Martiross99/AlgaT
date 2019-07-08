@@ -45,7 +45,6 @@ public class algoritmiController implements ISceneController {
 
     @FXML
     void openPrim (ActionEvent event) throws IOException {
-
     	 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
     	 sc.getProgetto().loadController(2, window);
     }

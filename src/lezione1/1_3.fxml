@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #474747;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lezione1.navController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #474747;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lezione1.navController">
    <children>
       <Button fx:id="next" layoutX="975.0" layoutY="646.0" mnemonicParsing="false" onAction="#goNext" styleClass=".button" stylesheets="@../stylesheets/application.css" text="&gt;&gt;" textFill="#e79292" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0">
          <font>

@@ -41,7 +41,7 @@ public class lezioniController implements ISceneController {
 
     @FXML
     void openMenu(ActionEvent event) throws IOException {
-    	sc.setScene(1);
+    	sc.setScene(2);
     }
 
     @FXML
