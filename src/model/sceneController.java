@@ -16,6 +16,7 @@ public class sceneController extends StackPane {
 	protected progettoController mainProject;                    //struttura del progetto
 	protected Integer scenaCorrente;     //indice della scena attualmente visibile, in cima allo StackPane
 	
+	
 	public sceneController() {
 		super();
 		this.scenaCorrente = 1;

@@ -89,12 +89,6 @@ public class progettoController extends Application{
         	
         }
         
-        public void scala(NumberBinding x, NumberBinding y) {
-        	for(int i = 0; i < progetto.length; i++) {
-        		progetto[i].scaleXProperty().bind(x);
-        	    progetto[i].scaleYProperty().bind(y);
-        	}
-        }
         
         public void calcolaX(Stage window) {
         	this.stageWidth = window.getWidth() - 1080;  //calcola la differenza tra la larghezza dello stage e quella della scena
@@ -122,7 +116,6 @@ public class progettoController extends Application{
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
           
     	    
-    	   
  	    
     		Scene scene = new Scene(root,primaryStage.getWidth()-this.stageWidth,primaryStage.getHeight()-this.stageHeight);  // setta la scena 
     	    																													//della dimensione corretta
