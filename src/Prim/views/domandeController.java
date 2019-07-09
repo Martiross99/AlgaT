@@ -3,7 +3,11 @@ package Prim.views;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Scanner;
+
+import javax.annotation.Resource;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -40,7 +44,8 @@ public class domandeController  implements model.ISceneController{
   //funzioni che gestiscono il file delle domande
 	 
     @FXML
-    void controlla(ActionEvent event) throws FileNotFoundException { 
+    void controlla(ActionEvent event) throws IOException {
+    //throws FileNotFoundException { 
     	
 		String prova = tentativo.getText();     
 		prova = prova.trim();
@@ -48,7 +53,9 @@ public class domandeController  implements model.ISceneController{
 		if(prova.length()!=0) {
 			
 		try {	
-			Scanner s = new Scanner (new File("src/Prim/views/domande.txt"));
+			
+			InputStream input = Resource.class.getResourceAsStream("/domandePrim.txt");
+			Scanner s = new Scanner (input);
 			Integer line = numeroDomanda + 1;                      //a seconda di quale è la domanda si richiede allo scanner di leggere una diversa riga del file txt
 			
 			String riga = getLine(s,line);               //prende la riga delle risposte nel file txt
@@ -90,7 +97,7 @@ public class domandeController  implements model.ISceneController{
 		    
            scanner.close();
            
-		}    catch(FileNotFoundException ex) {
+		}    catch(Exception ex) {
 			
 	        System.out.println("Unable to open file 'risposte.txt'");        
 	        
@@ -144,7 +151,8 @@ public class domandeController  implements model.ISceneController{
 	
 	public void setQuestion() throws FileNotFoundException {       //setta la domanda che deve essere caricata
 		try {
-		  Scanner scanner = new Scanner (new File("src/Prim/views/domande.txt"));
+		 InputStream input = Resource.class.getResourceAsStream("/domandePrim.txt");
+		  Scanner scanner = new Scanner (input);
 	      domanda.setText(getLine(scanner, numeroDomanda));
 	      scanner.close();
 	      next.setDisable(true);

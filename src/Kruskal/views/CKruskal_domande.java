@@ -3,7 +3,11 @@ package Kruskal.views;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Scanner;
+
+import javax.annotation.Resource;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -39,7 +43,7 @@ public class CKruskal_domande implements model.ISceneController {
     
     
     
-    void setDomanda(Integer n) {
+    void setDomanda(Integer n) throws IOException{
     	
     	Integer x=0;
     	String a=null;
@@ -47,7 +51,9 @@ public class CKruskal_domande implements model.ISceneController {
     	n=n+1;							//n indica l'indice della domanda, c'è il +1 perché le linee del file partono da 1
     	
     	try {
-    		Scanner scanner = new Scanner (new File("src/Kruskal/views/domandeK.txt"));
+    		InputStream input = Resource.class.getResourceAsStream("/domandeK.txt");
+  		    Scanner scanner = new Scanner (input);
+//    		Scanner scanner = new Scanner (new File("src/Kruskal/views/domandeK.txt"));
     		while(x<n && scanner.hasNext()) {
     			a = scanner.nextLine();
     			x=x+1;
@@ -56,7 +62,7 @@ public class CKruskal_domande implements model.ISceneController {
     		
     		domanda.setText(a);
     	}
-    	catch(FileNotFoundException ex) {
+    	catch(Exception ex) {
 			System.out.println("Unable to open answers file");                
         }
     	
@@ -74,15 +80,17 @@ public class CKruskal_domande implements model.ISceneController {
     void GetAnswer(ActionEvent event) throws IOException {
     	
     	String filename;
-    	if(indexScene.equals(0)) filename = "src/Kruskal/views/risposte_K.txt";
-    	else filename = "src/Kruskal/views/risposte2_K.txt";
+    	if(indexScene.equals(0)) filename = "/risposte_K.txt";// filename = "src/Kruskal/views/risposte_K.txt"; 
+    	else filename = "/risposte2_K.txt"; // filename = "src/Kruskal/views/risposte2_K.txt";
     	
     	String prova = Tentativo.getText();
     	prova = prova.trim();
     	
     	if(prova.length()!=0) { //se c'è scritto qualcosa
     		try {	
-    			Scanner scanner = new Scanner (new File(filename));
+    			InputStream input = Resource.class.getResourceAsStream(filename);
+    			Scanner scanner = new Scanner (input);
+//    			Scanner scanner = new Scanner (new File(filename));
     			boolean found = false;
     			while(scanner.hasNext()) {
     				String a = scanner.nextLine();
@@ -94,7 +102,7 @@ public class CKruskal_domande implements model.ISceneController {
     			}
     			if(!found) Risultato.appendText("Sbagliato, riprova");
     	        scanner.close(); }
-    		catch(FileNotFoundException ex) {
+    		catch(Exception ex) {
     			System.out.println("Unable to open answers file");                
     		        }
     			}

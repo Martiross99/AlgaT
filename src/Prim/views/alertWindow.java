@@ -3,7 +3,12 @@ package Prim.views;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Scanner;
+
+import javax.annotation.Resource;
+
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.DialogPane;
@@ -29,16 +34,18 @@ public class alertWindow {
     	 }
     }
 
-     public String findMessage(Integer line) throws FileNotFoundException {
+     public String findMessage(Integer line) throws IOException {
     	 String message = new String();
          try {	
- 			Scanner scanner = new Scanner (new File("src/Prim/views/avvisi.txt")); 
+           InputStream input = Resource.class.getResourceAsStream("/avvisi.txt");
+   		    Scanner scanner = new Scanner (input);
+ 
  			while(line > 0) {
  				message = scanner.nextLine();
  				line = line-1;
  			   }
  			 	 scanner.close();
- 		    } catch(FileNotFoundException ex) {
+ 		    } catch(Exception ex) {
  	        System.out.println(
  	                "Unable to open file 'avvisi.txt'");                
  	        }

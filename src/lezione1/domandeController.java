@@ -2,8 +2,14 @@ package lezione1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Scanner;
+
+import javax.annotation.Resource;
+
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -130,8 +136,10 @@ public class domandeController implements model.ISceneController {
         menu.setDisable(true);
         menu.setVisible(false);
         try {
-
-            f = Files.newBufferedReader((Paths.get("src/lezione1/domande.txt")));
+        	 InputStream input = Resource.class.getResourceAsStream("/domande.txt");
+        	 BufferedReader br = new BufferedReader(new InputStreamReader(input));
+        	 f = br;
+           // f = Files.newBufferedReader((Paths.get("src/lezione1/domande.txt")));
         } catch (Exception e){
             System.out.println(e);
         }
