@@ -53,7 +53,7 @@ public class CKruskal_domande implements model.ISceneController {
     	try {
     		InputStream input = Resource.class.getResourceAsStream("/domandeK.txt");
   		    Scanner scanner = new Scanner (input);
-//    		Scanner scanner = new Scanner (new File("src/Kruskal/views/domandeK.txt"));
+
     		while(x<n && scanner.hasNext()) {
     			a = scanner.nextLine();
     			x=x+1;
@@ -80,8 +80,8 @@ public class CKruskal_domande implements model.ISceneController {
     void GetAnswer(ActionEvent event) throws IOException {
     	
     	String filename;
-    	if(indexScene.equals(0)) filename = "/risposte_K.txt";// filename = "src/Kruskal/views/risposte_K.txt"; 
-    	else filename = "/risposte2_K.txt"; // filename = "src/Kruskal/views/risposte2_K.txt";
+    	if(indexScene.equals(0)) filename = "/risposte_K.txt";
+    	else filename = "/risposte2_K.txt";
     	
     	String prova = Tentativo.getText();
     	prova = prova.trim();
@@ -90,7 +90,6 @@ public class CKruskal_domande implements model.ISceneController {
     		try {	
     			InputStream input = Resource.class.getResourceAsStream(filename);
     			Scanner scanner = new Scanner (input);
-//    			Scanner scanner = new Scanner (new File(filename));
     			boolean found = false;
     			while(scanner.hasNext()) {
     				String a = scanner.nextLine();

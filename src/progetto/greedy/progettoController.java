@@ -23,10 +23,16 @@ public class progettoController extends Application{
         
 		protected sceneController[] progetto ;    //array che contiene tutti i sceneController del progetto
 		
+		protected double stageWidth;          //parametri per regolare le dimensioni della finestra
+		protected double stageHeight;
+		protected boolean inzia;
 		
 		public progettoController() {
 			this.controllerCorrente = 0;
 			this.progetto = new sceneController[5];
+			this.stageHeight = 0;
+			this.stageWidth = 0;
+			this.inzia = true;
 		}
 		
 		
@@ -83,9 +89,19 @@ public class progettoController extends Application{
         	
         }
         
-        public void dimensioniStage(Stage window) {
-        	System.out.println(window.getWidth() - 1080);
-        	System.out.println(window.getHeight() - 1080);
+        public void scala(NumberBinding x, NumberBinding y) {
+        	for(int i = 0; i < progetto.length; i++) {
+        		progetto[i].scaleXProperty().bind(x);
+        	    progetto[i].scaleYProperty().bind(y);
+        	}
+        }
+        
+        public void calcolaX(Stage window) {
+        	this.stageWidth = window.getWidth() - 1080;  //calcola la differenza tra la larghezza dello stage e quella della scena
+        }
+        
+        public void calcolaY(Stage window) {
+           	this.stageHeight = window.getHeight() - 720;   //calcola la differenza tra l'altezza dello stage e quella della scena
         }
 		
 		@Override
@@ -104,17 +120,21 @@ public class progettoController extends Application{
 
     	    progetto[controllerCorrente].scaleXProperty().bind(ScaleX);
     	    progetto[controllerCorrente].scaleYProperty().bind(ScaleY);
-
+          
     	    
-//    	    Scene scene = new Scene(root, 1080, 720);
+    	   
  	    
-    		Scene scene = new Scene(root,primaryStage.getWidth()-18,primaryStage.getHeight()-47);  // setta la scena della dimensione corretta
-    	    
+    		Scene scene = new Scene(root,primaryStage.getWidth()-this.stageWidth,primaryStage.getHeight()-this.stageHeight);  // setta la scena 
+    	    																													//della dimensione corretta
     		primaryStage.setScene(scene);
 
     		primaryStage.show();
 
-    		
+    		if(inzia) {
+    		   this.calcolaX(primaryStage);     //calcola la differenza tra le dimensioni dello stage e quelle della scena
+    		   this.calcolaY(primaryStage);      //tali dimensioni rimangono costanti, per cui la funzione è chiamata una volta
+    		   inzia = false;                      //all'avvio
+    		}
     		
 			} catch (Exception e) {	
 				System.out.println(e.getMessage());

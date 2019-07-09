@@ -19,7 +19,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Qual è la complessità dell'algoritmo di Prim se invece di utilizzare una realizzazione della coda con priorità basata su heap binario, si utilizza un heap di Fibonacci (capitolo 11,5) ?" wrappingWidth="709.75439453125">
+            <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="testi" text="Qual è la complessità dell'algoritmo di Prim se invece di utilizzare una realizzazione della coda con priorità basata su heap binario, si utilizza un heap di Fibonacci (capitolo 11,5) ?&#10;(Si consideri un grafo T di n nodi ed m archi)" wrappingWidth="709.75439453125">
                <font>
                   <Font size="18.0" />
                </font>

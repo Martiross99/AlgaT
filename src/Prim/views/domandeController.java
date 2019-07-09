@@ -1,13 +1,9 @@
 package Prim.views;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
-
 import javax.annotation.Resource;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -45,7 +41,6 @@ public class domandeController  implements model.ISceneController{
 	 
     @FXML
     void controlla(ActionEvent event) throws IOException {
-    //throws FileNotFoundException { 
     	
 		String prova = tentativo.getText();     
 		prova = prova.trim();
@@ -149,7 +144,7 @@ public class domandeController  implements model.ISceneController{
 	    }
       }		 
 	
-	public void setQuestion() throws FileNotFoundException {       //setta la domanda che deve essere caricata
+	public void setQuestion() throws IOException {       //setta la domanda che deve essere caricata
 		try {
 		 InputStream input = Resource.class.getResourceAsStream("/domandePrim.txt");
 		  Scanner scanner = new Scanner (input);
@@ -176,7 +171,7 @@ public class domandeController  implements model.ISceneController{
 	
 	
 	 @FXML
-		void initialize() throws FileNotFoundException {	
+		void initialize() throws IOException {	
 	        
 	  	  if (ap != null) {                              //se viene premuto il tasto invio, mette in azione di tasto inserisci 
 	  	      ap.setOnKeyPressed(e -> {                   //e controlla la risposta
